@@ -12,6 +12,7 @@ The datasets include:
 
 ## Directory Structure
 
+```text
 data/
 ├── README.md # this file
 ├── dumps/
@@ -20,6 +21,7 @@ data/
 │ └── imago-toponyms.ttl.gz # Dante’s Latin toponyms
 └── checksums/
 └── sha256sums.txt # integrity checksums
+```
 
 All dataset files are compressed using gzip to reduce repository size.
 
