@@ -1,0 +1,523 @@
+@prefix : <https://imagoarchive.it/ontology/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@base <http://www.w3.org/2002/07/owl#> .
+
+[ rdf:type owl:Ontology ;
+   owl:imports <http://imagoarchive.it/ilrmoo/> ,
+               <https://imagoarchive.it/thes/tid/> ;
+   dcterms:contributor "Emanuele Lenzi" ,
+                       "Irene Parlanti" ;
+   dcterms:creator <https://www.isti.cnr.it/en/about/people-detail/38/Valentina_Bartalesi_Lenzi> ,
+                   <https://www.isti.cnr.it/en/about/people-detail/820/Nicol%C3%B2_Pratelli> ;
+   dcterms:description "The IMAGO ontology provides elements of description for  Middle Ages and Renaissance manuscripts and printed edition, in particular those defined in the IMAGO project."@en ;
+   dcterms:issued "2021-07-12" ;
+   dcterms:modified "2022-11-22" ;
+   dcterms:publisher <https://www.isti.cnr.it/> ;
+   dcterms:title "The IMAGO Ontology" ;
+   vann:preferredNamespacePrefix "imago" ;
+   vann:preferredNamespaceUri : ;
+   rdfs:comment """Modifications from version 0.1:
+          Deleted: Pubblication Place Appellation, is composed of place name
+          Modified: unnecessary axioms in many classes"""@en ;
+   rdfs:isDefinedBy :imago-221122.ttl ;
+   owl:Import <http://imagoarchive.it/ilrmoo/> ;
+   owl:priorVersion <https://imagoarchive.it/onto/imago-220930.ttl> ;
+   foaf:homepage <https://imagoarchive.it/documentation/doc/index-en.html>
+ ] .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/contributor
+dcterms:contributor rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/creator
+dcterms:creator rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/description
+dcterms:description rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/issued
+dcterms:issued rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/modified
+dcterms:modified rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/publisher
+dcterms:publisher rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+dcterms:title rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespacePrefix
+vann:preferredNamespacePrefix rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespaceUri
+vann:preferredNamespaceUri rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2002/07/owl#Import
+owl:Import rdf:type owl:AnnotationProperty .
+
+
+###  http://xmlns.com/foaf/0.1/homepage
+foaf:homepage rdf:type owl:AnnotationProperty .
+
+
+###  http://xmlns.com/foaf/0.1/workplaceHomepage
+foaf:workplaceHomepage rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://erlangen-crm.org/211015/P14_carried_out_by
+<http://erlangen-crm.org/211015/P14_carried_out_by> rdf:type owl:ObjectProperty .
+
+
+###  http://erlangen-crm.org/211015/P1_is_identified_by
+<http://erlangen-crm.org/211015/P1_is_identified_by> rdf:type owl:ObjectProperty .
+
+
+###  http://erlangen-crm.org/211015/P50_has_current_keeper
+<http://erlangen-crm.org/211015/P50_has_current_keeper> rdf:type owl:ObjectProperty .
+
+
+###  http://erlangen-crm.org/211015/P74_has_current_or_former_residence
+<http://erlangen-crm.org/211015/P74_has_current_or_former_residence> rdf:type owl:ObjectProperty .
+
+
+###  https://imagoarchive.it/ontology/has_curator
+:has_curator rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf <http://erlangen-crm.org/211015/P14_carried_out_by> ;
+             rdfs:domain <http://imagoarchive.it/ilrmoo/F30_Manifestation_Creation> ;
+             rdfs:range :Curator ;
+             rdfs:comment "In the IMAGO Ontology 'has curator' links a F30 Manifestation Creation to a Curator"@en ;
+             rdfs:label "has curator"@en .
+
+
+###  https://imagoarchive.it/ontology/has_genre
+:has_genre rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf <http://erlangen-crm.org/211015/P2_has_type> ;
+           rdfs:domain <http://imagoarchive.it/ilrmoo/F2_Expression> ;
+           rdfs:range :Genre ;
+           rdfs:comment "In the IMAGO Ontology property hasGenre links F2 Expression to class Genre."@en ;
+           rdfs:label "has genre"@en .
+
+
+###  https://imagoarchive.it/ontology/has_publisher
+:has_publisher rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf <http://erlangen-crm.org/211015/P14_carried_out_by> ;
+               rdfs:domain <http://imagoarchive.it/ilrmoo/F30_Manifestation_Creation> ;
+               rdfs:range :Publisher ;
+               rdfs:comment "In the IMAGO Ontology 'has publisher' links a F30 Manifestation Creation to a Publisher"@en ;
+               rdfs:label "has publisher"@en .
+
+
+###  https://imagoarchive.it/ontology/is_explicit_dedication
+:is_explicit_dedication rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf <http://erlangen-crm.org/211015/P106i_forms_part_of> ;
+                        rdfs:domain <http://erlangen-crm.org/211015/E90_Symbolic_Object> ;
+                        rdfs:range <http://imagoarchive.it/ilrmoo/F3_Manifestation> ;
+                        rdfs:comment "In the IMAGO Ontology 'is explicit dedication of' links E90 Symbolic Object to Manuscript class"@en ;
+                        rdfs:label "is explicit dedication of"@en .
+
+
+###  https://imagoarchive.it/ontology/is_identified_by_toponym
+:is_identified_by_toponym rdf:type owl:ObjectProperty ;
+                          rdfs:subPropertyOf <http://erlangen-crm.org/211015/P1_is_identified_by> ;
+                          rdfs:domain <http://erlangen-crm.org/211015/E53_Place> ;
+                          rdfs:range :Toponym ;
+                          rdfs:comment "In the IMAGO Ontology is identified by toponym relates a place to its toponym."@en ;
+                          rdfs:label "is identified by toponym"@en .
+
+
+###  https://imagoarchive.it/ontology/is_identified_in_the_printed_edition_by
+:is_identified_in_the_printed_edition_by rdf:type owl:ObjectProperty ;
+                                         rdfs:subPropertyOf <http://erlangen-crm.org/211015/P1_is_identified_by> ;
+                                         rdfs:domain <http://erlangen-crm.org/211015/E53_Place> ;
+                                         rdfs:range <http://erlangen-crm.org/211015/E41_Appellation> ;
+                                         rdfs:comment "In the IMAGO Ontology is identified in the printed edition by links E53 Place to E41 Appellation, hence a place to the name it is identified by in a printed edition."@en ;
+                                         rdfs:label "is identified in the printed edition by"@en .
+
+
+###  https://imagoarchive.it/ontology/is_incipit_dedication_of
+:is_incipit_dedication_of rdf:type owl:ObjectProperty ;
+                          rdfs:subPropertyOf <http://erlangen-crm.org/211015/P106i_forms_part_of> ;
+                          rdfs:domain <http://erlangen-crm.org/211015/E90_Symbolic_Object> ;
+                          rdfs:range <http://imagoarchive.it/ilrmoo/F3_Manifestation> ;
+                          rdfs:comment "In the IMAGO Ontology 'is incipit dedication of' links E90 Symbolic Object to class Manuscript"@en ;
+                          rdfs:label "is incipit dedication of"@en .
+
+
+###  https://imagoarchive.it/ontology/is_text_explicit_of
+:is_text_explicit_of rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf <http://erlangen-crm.org/211015/P106i_forms_part_of> ;
+                     rdfs:domain <http://erlangen-crm.org/211015/E90_Symbolic_Object> ;
+                     rdfs:range <http://imagoarchive.it/ilrmoo/F3_Manifestation> ;
+                     rdfs:comment "In the IMAGO Ontology 'is text explicit of' links E90 Symbolic Object to class Manuscript"@en ;
+                     rdfs:label "is text explicit of"@en .
+
+
+###  https://imagoarchive.it/ontology/is_text_incipit_of
+:is_text_incipit_of rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf <http://erlangen-crm.org/211015/P106i_forms_part_of> ;
+                    rdfs:domain <http://erlangen-crm.org/211015/E90_Symbolic_Object> ;
+                    rdfs:range <http://imagoarchive.it/ilrmoo/F3_Manifestation> ;
+                    rdfs:comment "In the IMAGO Ontology 'is text incipit of' links E90 Symbolic Object to class Manuscript"@en ;
+                    rdfs:label "is text incipit of"@en .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://erlangen-crm.org/211015/P190_has_symbolic_content
+<http://erlangen-crm.org/211015/P190_has_symbolic_content> rdf:type owl:DatatypeProperty .
+
+
+###  http://xmlns.com/foaf/0.1/name
+foaf:name rdf:type owl:DatatypeProperty .
+
+
+###  https://imagoarchive.it/ontology/has_VDL_explanation
+:has_VDL_explanation rdf:type owl:DatatypeProperty ;
+                     rdfs:domain :Toponym ;
+                     rdfs:range xsd:string ;
+                     rdfs:label "has VDL explanation"@en .
+
+
+###  https://imagoarchive.it/ontology/has_figure_note
+:has_figure_note rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf <http://erlangen-crm.org/211015/P3_has_note> ;
+                 rdfs:domain :Printed_Edition ;
+                 rdfs:range xsd:string ;
+                 rdfs:comment "In the IMAGO Ontology 'has figure note' links Print Edition to a literal (string) in order to express knowledge about figures in the print edition"@en ;
+                 rdfs:label "has figure note"@en .
+
+
+###  https://imagoarchive.it/ontology/has_genre_name
+:has_genre_name rdf:type owl:DatatypeProperty ;
+                rdfs:domain :Genre ;
+                rdfs:range xsd:string ;
+                rdfs:comment "In the IMAGO Ontology has genre name links tha class Genre to the corresponding literal (a string)."@en ;
+                rdfs:label "has genre name"@en .
+
+
+###  https://imagoarchive.it/ontology/has_iconographic_apparatus
+:has_iconographic_apparatus rdf:type owl:DatatypeProperty ;
+                            rdfs:subPropertyOf <http://erlangen-crm.org/211015/P3_has_note> ;
+                            rdfs:domain :Manuscript ;
+                            rdfs:range xsd:string ;
+                            rdfs:comment "In the IMAGO Ontology has iconographic apparatus links Manuscript to a literal ( a string) in order to express knowledge about the iconographic apparatus of a manuscript."@en ;
+                            rdfs:label "has iconographic apparatus"@en .
+
+
+###  https://imagoarchive.it/ontology/has_introduction_note
+:has_introduction_note rdf:type owl:DatatypeProperty ;
+                       rdfs:subPropertyOf <http://erlangen-crm.org/211015/P3_has_note> ;
+                       rdfs:domain :Printed_Edition ;
+                       rdfs:range xsd:string ;
+                       rdfs:comment "In the IMAGO Ontology has introduction note links Print Edition to a literal (string) in order to express knowledge about the author of the introduction and dedications in a print edition"@en ;
+                       rdfs:label "has introduction note"@en .
+
+
+###  https://imagoarchive.it/ontology/has_other_contents
+:has_other_contents rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf <http://erlangen-crm.org/211015/P3_has_note> ;
+                    rdfs:domain :Printed_Edition ;
+                    rdfs:range xsd:string ;
+                    rdfs:comment "In the IMAGO Ontology 'has other contents' links Print Edition to a literal (string) in order to express knowledge about other contents in the print edition"@en ;
+                    rdfs:label "has other contents"@en .
+
+
+###  https://imagoarchive.it/ontology/has_primary_source
+:has_primary_source rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf <http://erlangen-crm.org/211015/P3_has_note> ;
+                    rdfs:domain <http://erlangen-crm.org/211015/E1_CRM_Entity> ;
+                    rdfs:range xsd:string ;
+                    rdfs:comment "In the IMAGO Ontology 'has primary source' links Print Edition to a literal (string) in order to express knowledge about primary sources in the print edition"@en ;
+                    rdfs:label "has primary source"@en .
+
+
+###  https://imagoarchive.it/ontology/has_reprint_date
+:has_reprint_date rdf:type owl:DatatypeProperty ;
+                  rdfs:subPropertyOf <http://erlangen-crm.org/211015/P3_has_note> ;
+                  rdfs:domain <http://erlangen-crm.org/211015/E1_CRM_Entity> ;
+                  rdfs:range xsd:string ;
+                  rdfs:comment "In the IMAGO Ontology 'has reprint date' links Print Edition to a literal (string) in order to express knowledge about the date of reprints, facsimile or anastatic edition in the print edition"@en ;
+                  rdfs:label "has reprint date"@en .
+
+
+###  https://imagoarchive.it/ontology/has_secondary_source
+:has_secondary_source rdf:type owl:DatatypeProperty ;
+                      rdfs:subPropertyOf <http://erlangen-crm.org/211015/P3_has_note> ;
+                      rdfs:domain <http://erlangen-crm.org/211015/E1_CRM_Entity> ;
+                      rdfs:range xsd:string ;
+                      rdfs:comment "In the IMAGO Ontology 'has figure note' links Print Edition to a literal (string) in order to express knowledge about figures in the print edition and manuscript"@en ;
+                      rdfs:label "has secondary source"@en .
+
+
+###  https://imagoarchive.it/ontology/has_textual_place
+:has_textual_place rdf:type owl:DatatypeProperty ;
+                   rdfs:subPropertyOf owl:topDataProperty ;
+                   rdfs:domain <http://erlangen-crm.org/211015/E90_Symbolic_Object> ;
+                   rdfs:range xsd:string ;
+                   rdfs:label "has textual place"@en .
+
+
+###  https://imagoarchive.it/ontology/has_url_manuscript
+:has_url_manuscript rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf <http://erlangen-crm.org/211015/P3_has_note> ;
+                    rdfs:domain :Manuscript ;
+                    rdfs:range xsd:string ;
+                    rdfs:comment "In the IMAGO Ontology 'has url manuscript' links Manuscript to a literal (anyURI) in order to express the URI of the digital representation of the manuscript"@en ;
+                    rdfs:label "has url manuscript"@en .
+
+
+###  https://imagoarchive.it/ontology/has_url_manuscript_description
+:has_url_manuscript_description rdf:type owl:DatatypeProperty ;
+                                rdfs:subPropertyOf <http://erlangen-crm.org/211015/P3_has_note> ;
+                                rdfs:domain :Manuscript ;
+                                rdfs:range xsd:string ;
+                                rdfs:comment "In the IMAGO Ontology 'has url manuscript description' links Manuscript to a literal (anyURI) in order to express the URI of the digital description of the manuscript"@en ;
+                                rdfs:label "has url manuscript description"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://erlangen-crm.org/211015/E19_Physical_Object
+<http://erlangen-crm.org/211015/E19_Physical_Object> rdf:type owl:Class .
+
+
+###  http://erlangen-crm.org/211015/E41_Appellation
+<http://erlangen-crm.org/211015/E41_Appellation> rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                   owl:onProperty <http://erlangen-crm.org/211015/P190_has_symbolic_content> ;
+                                                                   owl:someValuesFrom xsd:string
+                                                                 ] .
+
+
+###  http://erlangen-crm.org/211015/E42_Identifier
+<http://erlangen-crm.org/211015/E42_Identifier> rdf:type owl:Class ;
+                                                rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                  owl:onProperty <http://erlangen-crm.org/211015/P190_has_symbolic_content> ;
+                                                                  owl:someValuesFrom xsd:string
+                                                                ] .
+
+
+###  http://erlangen-crm.org/211015/E53_Place
+<http://erlangen-crm.org/211015/E53_Place> rdf:type owl:Class .
+
+
+###  http://erlangen-crm.org/211015/E90_Symbolic_Object
+<http://erlangen-crm.org/211015/E90_Symbolic_Object> rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                       owl:onProperty <http://erlangen-crm.org/211015/P190_has_symbolic_content> ;
+                                                                       owl:someValuesFrom xsd:string
+                                                                     ] .
+
+
+###  http://imagoarchive.it/ilrmoo/F28_Expression_Creation
+<http://imagoarchive.it/ilrmoo/F28_Expression_Creation> rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                          owl:onProperty <http://erlangen-crm.org/211015/P14_carried_out_by> ;
+                                                                          owl:someValuesFrom :Author
+                                                                        ] ,
+                                                                        [ rdf:type owl:Restriction ;
+                                                                          owl:onProperty <http://imagoarchive.it/ilrmoo/R17_created> ;
+                                                                          owl:someValuesFrom <http://imagoarchive.it/ilrmoo/F2_Expression>
+                                                                        ] .
+
+
+###  http://imagoarchive.it/ilrmoo/F30_Manifestation_Creation
+<http://imagoarchive.it/ilrmoo/F30_Manifestation_Creation> rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                             owl:onProperty <http://imagoarchive.it/ilrmoo/R24_created> ;
+                                                                             owl:someValuesFrom <http://imagoarchive.it/ilrmoo/F3_Manifestation>
+                                                                           ] .
+
+
+###  http://imagoarchive.it/ilrmoo/F3_Manifestation
+<http://imagoarchive.it/ilrmoo/F3_Manifestation> rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                   owl:onProperty <http://imagoarchive.it/ilrmoo/R4_embodies> ;
+                                                                   owl:someValuesFrom <http://imagoarchive.it/ilrmoo/F2_Expression>
+                                                                 ] .
+
+
+###  http://xmlns.com/foaf/0.1/Organization
+foaf:Organization rdf:type owl:Class .
+
+
+###  http://xmlns.com/foaf/0.1/Person
+foaf:Person rdf:type owl:Class .
+
+
+###  https://imagoarchive.it/ontology/Author
+:Author rdf:type owl:Class ;
+        rdfs:subClassOf <http://erlangen-crm.org/211015/E39_Actor> ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty <http://erlangen-crm.org/211015/P1_is_identified_by> ;
+                          owl:someValuesFrom <http://erlangen-crm.org/211015/E41_Appellation>
+                        ] ;
+        rdfs:comment "In the IMAGO Ontology class Author represents one of the main categories of the conceptualization, the Author."@en ;
+        rdfs:label "Author"@en .
+
+
+###  https://imagoarchive.it/ontology/Curator
+:Curator rdf:type owl:Class ;
+         rdfs:subClassOf <http://erlangen-crm.org/211015/E39_Actor> ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty <http://erlangen-crm.org/211015/P1_is_identified_by> ;
+                           owl:someValuesFrom <http://erlangen-crm.org/211015/E41_Appellation>
+                         ] ;
+         rdfs:comment "In the IMAGO Ontology Curator class expresses knowledge about the curator of a printed edition."@en ;
+         rdfs:label "Curator"@en .
+
+
+###  https://imagoarchive.it/ontology/Edition
+:Edition rdf:type owl:Class ;
+         rdfs:subClassOf <http://erlangen-crm.org/211015/E55_Type> ;
+         rdfs:comment "In the IMAGO Ontology Edition is defined in order to express knowledge about first editions or reprinted editions"@en ;
+         rdfs:label "Edition"@en .
+
+
+###  https://imagoarchive.it/ontology/Folios
+:Folios rdf:type owl:Class ;
+        rdfs:subClassOf <http://erlangen-crm.org/211015/E19_Physical_Object> ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty <http://erlangen-crm.org/211015/P1_is_identified_by> ;
+                          owl:someValuesFrom <http://erlangen-crm.org/211015/E41_Appellation>
+                        ] ;
+        rdfs:comment "In the IMAGO Ontology class Folios is used to represent the folios of a manuscript."@en ;
+        rdfs:label "Folios"@en .
+
+
+###  https://imagoarchive.it/ontology/Format
+:Format rdf:type owl:Class ;
+        rdfs:subClassOf <http://erlangen-crm.org/211015/E55_Type> ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty <http://erlangen-crm.org/211015/P1_is_identified_by> ;
+                          owl:someValuesFrom <http://erlangen-crm.org/211015/E41_Appellation>
+                        ] ;
+        rdfs:comment "In the IMAGO Ontology Format class expresses knowledge about the format of a printed edition."@en ;
+        rdfs:label "Format"@en .
+
+
+###  https://imagoarchive.it/ontology/Genre
+:Genre rdf:type owl:Class ;
+       rdfs:subClassOf <http://erlangen-crm.org/211015/E55_Type> ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :has_genre_name ;
+                         owl:someValuesFrom xsd:string
+                       ] ;
+       rdfs:comment "In the IMAGO Ontology the Genre class represents the literary genre of a F2 Expression, namely a work."@en ;
+       rdfs:label "Genre"@en .
+
+
+###  https://imagoarchive.it/ontology/Library
+:Library rdf:type owl:Class ;
+         rdfs:subClassOf <http://imagoarchive.it/ilrmoo/F11_Corporate_Body> ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty <http://erlangen-crm.org/211015/P74_has_current_or_former_residence> ;
+                           owl:someValuesFrom <http://erlangen-crm.org/211015/E53_Place>
+                         ] ;
+         rdfs:comment "In the IMAGO Ontology class Library represents the library where a manuscript is stored."@en ;
+         rdfs:label "Library"@en .
+
+
+###  https://imagoarchive.it/ontology/Manuscript
+:Manuscript rdf:type owl:Class ;
+            rdfs:subClassOf <http://imagoarchive.it/ilrmoo/F5_Item> ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty <http://erlangen-crm.org/211015/P1_is_identified_by> ;
+                              owl:someValuesFrom <http://erlangen-crm.org/211015/E42_Identifier>
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty <http://erlangen-crm.org/211015/P50_has_current_keeper> ;
+                              owl:someValuesFrom :Library
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty <http://imagoarchive.it/ilrmoo/R7_is_materialization_of> ;
+                              owl:someValuesFrom <http://imagoarchive.it/ilrmoo/F3_Manifestation>
+                            ] ;
+            rdfs:comment "In the IMAGO Ontology class Manuscript represents a kind of resource, the manuscript of a work."@en ;
+            rdfs:label "Manuscript"@en .
+
+
+###  https://imagoarchive.it/ontology/Printed_Edition
+:Printed_Edition rdf:type owl:Class ;
+                 rdfs:subClassOf <http://imagoarchive.it/ilrmoo/F3_Manifestation> ;
+                 rdfs:comment "In the IMAGO Ontology class Printed Edition represents a kind of resource, the printed edition of a work."@en ;
+                 rdfs:label "Printed Edition"@en .
+
+
+###  https://imagoarchive.it/ontology/Publisher
+:Publisher rdf:type owl:Class ;
+           rdfs:subClassOf <http://erlangen-crm.org/211015/E39_Actor> ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty <http://erlangen-crm.org/211015/P1_is_identified_by> ;
+                             owl:someValuesFrom <http://erlangen-crm.org/211015/E41_Appellation>
+                           ] ;
+           rdfs:comment "In the IMAGO Ontology Publisher class expresses knowledge about the editor/publisher of a printed edition."@en ;
+           rdfs:label "Publisher"@en .
+
+
+###  https://imagoarchive.it/ontology/Toponym
+:Toponym rdf:type owl:Class ;
+         rdfs:subClassOf <http://erlangen-crm.org/211015/E41_Appellation> ;
+         rdfs:comment "In the IMAGO Ontology Toponym class is defined as a subclass of CRM E41 Appellation class to represents toponyms."@en ;
+         rdfs:label "Toponym"@en .
+
+
+###  https://imagoarchive.it/ontology/Typology
+:Typology rdf:type owl:Class ;
+          rdfs:subClassOf <http://erlangen-crm.org/211015/E55_Type> ;
+          rdfs:comment "In the IMAGO Ontology Typology is defined in order to express knowledge about ecdotic typology"@en ;
+          rdfs:label "Typology"@en .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  https://www.isti.cnr.it/
+<https://www.isti.cnr.it/> rdf:type owl:NamedIndividual ,
+                                    foaf:Organization ;
+                           rdfs:label "ISTI-CNR" ;
+                           foaf:homepage <https://www.isti.cnr.it/en/> .
+
+
+###  https://www.isti.cnr.it/en/about/people-detail/38/Valentina_Bartalesi_Lenzi
+<https://www.isti.cnr.it/en/about/people-detail/38/Valentina_Bartalesi_Lenzi> rdf:type owl:NamedIndividual ,
+                                                                                       foaf:Person ;
+                                                                              foaf:name "Valentina Bartalesi Lenzi" ;
+                                                                              rdfs:label "Valentina Bartalesi" ;
+                                                                              foaf:workplaceHomepage <https://www.isti.cnr.it/en/> .
+
+
+###  https://www.isti.cnr.it/en/about/people-detail/820/Nicol%C3%B2_Pratelli
+<https://www.isti.cnr.it/en/about/people-detail/820/Nicol%C3%B2_Pratelli> rdf:type owl:NamedIndividual ,
+                                                                                   foaf:Person ;
+                                                                          foaf:name "Nicolò Pratelli" ;
+                                                                          rdfs:label "Nicolò Pratelli" ;
+                                                                          foaf:workplaceHomepage <https://www.isti.cnr.it/en/> .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

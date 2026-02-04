@@ -1,0 +1,50 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+
+title: "IMAGO Software Tools"
+abstract: >
+  The IMAGO Software Tools provide an open-source pipeline for the scholarly
+  annotation, triplification, linking, and publication of cultural heritage data
+  as Linked Open Data. The software includes a web-based annotation tool, a
+  Java-based triplifier, a linking tool for external authority reconciliation,
+  and a web frontend for SPARQL-based access to the resulting RDF dataset.
+
+type: software
+
+authors:
+  - family-names: Pratelli
+    given-names: Nicolò
+  - family-names: Bartalesi
+    given-names: Valentina
+  - family-names: Lenzi
+    given-names: Emanuele
+
+repository-code: "https://github.com/AIMH-DHgroup/IMAGO"
+url: "https://github.com/AIMH-DHgroup/IMAGO"
+
+license: GPL-3.0-or-later
+
+keywords:
+  - Digital Humanities
+  - Linked Open Data
+  - Semantic Web
+  - CIDOC CRM
+  - RDF
+  - SPARQL
+  - Cultural Heritage
+
+preferred-citation:
+  type: article
+  title: "IMAGO: A Linked Open Data Framework for the Description of Medieval Cartographic Sources"
+  authors:
+    - family-names: Pratelli
+      given-names: Nicolò
+    - family-names: Bartalesi
+      given-names: Valentina
+    - family-names: Lenzi
+      given-names: Emanuele
+  year: 2024
+  journal: "Journal or Conference under review"
+  notes: >
+    Please update the bibliographic details (venue, year, DOI) once the paper
+    is published.

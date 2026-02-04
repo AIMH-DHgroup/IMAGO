@@ -1,0 +1,11 @@
+Name: imago-archive.ttl.gz
+Size: 24000085 bytes (22 MiB)
+SHA256: 995215d8b7e8203463fcf0f83ebc3a16657a7dae5a440698935e61972fb99283
+
+Name: imago-mmm.ttl.gz
+Size: 97432 bytes (95 KiB)
+SHA256: 69d87d2122cdd82eabfc543feeba13f378cee23627905e09779388df7f88bbe7
+
+Name: imago-toponyms.ttl.gz
+Size: 168064 bytes (164 KiB)
+SHA256: a125996e8c3846dac1223c26d510142062159df236954ff2db92a60c489f78a1

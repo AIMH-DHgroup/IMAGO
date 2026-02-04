@@ -1,0 +1,2410 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://imagoarchive.it/ilrmoo/"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://imagoarchive.it/ilrmoo/">
+    <Prefix name="" IRI="http://imagoarchive.it/ilrmoo/"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Import>http://erlangen-crm.org/200717/</Import>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal xml:lang="en">Changelog:
+100222 (Nicolò Pratelli)
+- Initial version</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal xml:lang="en">ISTI-CNR LRMoo - An OWL DL implementation of the LRMoo (formerly FRBRoo)
+version 0.7, created by Digital Humanities Group at AIMH Lab at Institute of Information Science and Technologies &quot;Alessandro Faedo&quot;. It is based on the Draft Version v.0.7 of LRMoo (https://www.cidoc-crm.org/frbroo/sites/default/files/LRMoo_V0.7%28draft%202021-06-29%29.pdf). This implementation is currently under development by ISTI group. The ISTI-CNR LRMoo implementation is licensed under a Creative Commons Attribution-ShareAlike 3.0 Unported License.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <Literal xml:lang="en">ISTI CNR LRMoo</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <Literal xml:lang="en">ILRMoo 100222 / LRMoo v.0.7 / ECRM 200717 / CIDOC-CRM 6.2.9</Literal>
+    </Annotation>
+    <Declaration>
+        <Class IRI="F11_Corporate_Body"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="F12_Nomen"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="F18_Serial_Work"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="F1_Work"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="F27_Work_Conception"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="F28_Expression_Creation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="F29_Recording_Event"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="F2_Expression"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="F30_Manifestation_Creation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="F31_Performance"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="F32_Carrier_Production_Event"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="F33_Reproduction_Event"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="F34_Controlled_Vocabulary"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="F36_Script_Conversion"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="F38_Character"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="F39_Family"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="F3_Manifestation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="F51_Pursuit"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="F52_Name_Use_Activity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="F55_Collective_Agent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="F56_Externalization_Event"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="F5_Item"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="R10_has_member"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="R10i_is_member_of"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="R11_has_issuing_rule"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="R11i_is_issuing_rule_of"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="R15_has_fragment"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="R15i_is_fragment_of"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="R16_initiated"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="R16i_was_initiated_by"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="R17_created"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="R17i_was_created_by"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="R18_created"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="R18i_was_created_by"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="R19_created_a_realisation_of"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="R19i_was_realised_through"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="R1_is_logical_successor_of"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="R1i_has_successor"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="R20_recorded"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="R20i_was_recorded_through"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="R24_created"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="R24i_was_created_through"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="R26_produced_things_of_type"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="R26i_was_produced_by"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="R27_materialized"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="R27i_was_materialized_by"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="R28_produced"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="R28i_was_produced_by"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="R29_reproduced_object"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="R29i_was_object_reproduced_by"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="R2_is_derivative_of"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="R2i_has_derivative"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="R30_reproduced_publication"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="R30i_was_publication_reproduced_by"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="R34_has_validity_period"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="R34i_is_validity_period_of"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="R35_is_specified_by"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="R35i_specifies"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="R36_uses_script_conversion"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="R36i_is_script_conversion_used_in"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="R3_is_realised_in"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="R3i_realises"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="R45_assigned_to"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="R45_was_assigned_by"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="R4_embodies"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="R4i_is_embodied_in"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="R54_has_language"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="R54i_is_language_of"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="R56_is_related_to"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="R56i_is_related_to"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="R57_is_based_on"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="R57i_is_basis_for"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="R58_has_fictional_member"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="R58i_is_fictional_member_of"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="R59_had_typical_subject"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="R59i_was_typical_subject_of"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="R5_has_component"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="R5i_is_component_of"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="R60_used_to_use_language"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="R60i_was_language_used_by"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="R61_occurred_in_kind_of_context"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="R61i_was_kind_of_context_for"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="R62_was_used_for_membership_in"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="R62i_was_context_for"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="R63_named"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="R63i_was_named_by"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="R64_used_name"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="R64i_was_name_used_by"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="R65_recorded_aspects_of"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="R65i_had_aspects_recorded_through"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="R66_included_performed_version_of"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="R66i_had_a_performed_version_through"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="R67_has_part"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="R67i_forms_part_of"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="R68_is_inspired_by"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="R68i_is_inspiration_for"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="R69_has_physical_form"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="R69i_is_physical_form_of"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="R70_has_dimension"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="R70i_is_dimension_of"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="R71_has_part"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="R71i_is_part_of"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="R73_takes_representative_attribute_from"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="R73i_bears_representative_attribute_for"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="R74_uses_expression_of"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="R74i_has_expression_used_in"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="R75_incorporates"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="R75i_is_incorporated_in"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="R7_is_materialization_of"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="R7i_is_materialized_in"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="R8_combines"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="R8i_is_combined_to_form"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="R33_has_content"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="F11_Corporate_Body"/>
+        <Class IRI="F55_Collective_Agent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="F12_Nomen"/>
+        <Class IRI="http://erlangen-crm.org/200717/E89_Propositional_Object"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="F18_Serial_Work"/>
+        <Class IRI="F1_Work"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="F1_Work"/>
+        <Class IRI="http://erlangen-crm.org/200717/E89_Propositional_Object"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="F27_Work_Conception"/>
+        <Class IRI="http://erlangen-crm.org/200717/E65_Creation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="F28_Expression_Creation"/>
+        <Class IRI="http://erlangen-crm.org/200717/E12_Production"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="F28_Expression_Creation"/>
+        <Class IRI="http://erlangen-crm.org/200717/E65_Creation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="F28_Expression_Creation"/>
+        <Class IRI="F56_Externalization_Event"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="F29_Recording_Event"/>
+        <Class IRI="F28_Expression_Creation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="F2_Expression"/>
+        <Class IRI="http://erlangen-crm.org/200717/E73_Information_Object"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="F30_Manifestation_Creation"/>
+        <Class IRI="F28_Expression_Creation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="F31_Performance"/>
+        <Class IRI="F56_Externalization_Event"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="F32_Carrier_Production_Event"/>
+        <Class IRI="http://erlangen-crm.org/200717/E12_Production"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="F33_Reproduction_Event"/>
+        <Class IRI="http://erlangen-crm.org/200717/E12_Production"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="F33_Reproduction_Event"/>
+        <Class IRI="F30_Manifestation_Creation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="F34_Controlled_Vocabulary"/>
+        <Class IRI="http://erlangen-crm.org/200717/E29_Design_or_Procedure"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="F34_Controlled_Vocabulary"/>
+        <Class IRI="http://erlangen-crm.org/200717/E32_Authority_Document"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="F34_Controlled_Vocabulary"/>
+        <Class IRI="F2_Expression"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="F36_Script_Conversion"/>
+        <Class IRI="http://erlangen-crm.org/200717/E29_Design_or_Procedure"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="F38_Character"/>
+        <Class IRI="http://erlangen-crm.org/200717/E28_Conceptual_Object"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="F39_Family"/>
+        <Class IRI="F55_Collective_Agent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="F3_Manifestation"/>
+        <Class IRI="F2_Expression"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="F51_Pursuit"/>
+        <Class IRI="http://erlangen-crm.org/200717/E7_Activity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="F52_Name_Use_Activity"/>
+        <Class IRI="http://erlangen-crm.org/200717/E13_Attribute_Assignment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="F55_Collective_Agent"/>
+        <Class IRI="http://erlangen-crm.org/200717/E74_Group"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="F56_Externalization_Event"/>
+        <Class IRI="http://erlangen-crm.org/200717/E7_Activity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="F5_Item"/>
+        <Class IRI="http://erlangen-crm.org/200717/E24_Physical_Human-Made_Thing"/>
+    </SubClassOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="R10_has_member"/>
+        <ObjectProperty IRI="http://erlangen-crm.org/200717/P148_has_component"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="R10i_is_member_of"/>
+        <ObjectProperty IRI="http://erlangen-crm.org/200717/P148i_is_component_of"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="R15_has_fragment"/>
+        <ObjectProperty IRI="http://erlangen-crm.org/200717/P106_is_composed_of"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="R15i_is_fragment_of"/>
+        <ObjectProperty IRI="http://erlangen-crm.org/200717/P106i_forms_part_of"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="R16_initiated"/>
+        <ObjectProperty IRI="http://erlangen-crm.org/200717/P94_has_created"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="R16i_was_initiated_by"/>
+        <ObjectProperty IRI="http://erlangen-crm.org/200717/P94i_was_created_by"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="R17_created"/>
+        <ObjectProperty IRI="http://erlangen-crm.org/200717/P94_has_created"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="R17i_was_created_by"/>
+        <ObjectProperty IRI="http://erlangen-crm.org/200717/P94i_was_created_by"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="R18_created"/>
+        <ObjectProperty IRI="http://erlangen-crm.org/200717/P108_has_produced"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="R18i_was_created_by"/>
+        <ObjectProperty IRI="http://erlangen-crm.org/200717/P108i_was_produced_by"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="R19_created_a_realisation_of"/>
+        <ObjectProperty IRI="http://erlangen-crm.org/200717/P16_used_specific_object"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="R19i_was_realised_through"/>
+        <ObjectProperty IRI="http://erlangen-crm.org/200717/P16i_was_used_for"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="R1_is_logical_successor_of"/>
+        <ObjectProperty IRI="http://erlangen-crm.org/200717/P130_shows_features_of"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="R1i_has_successor"/>
+        <ObjectProperty IRI="http://erlangen-crm.org/200717/P130i_features_are_also_found_on"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="R20_recorded"/>
+        <ObjectProperty IRI="http://erlangen-crm.org/200717/P15_was_influenced_by"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="R20i_was_recorded_through"/>
+        <ObjectProperty IRI="http://erlangen-crm.org/200717/P15i_influenced"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="R24_created"/>
+        <ObjectProperty IRI="R17_created"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="R24i_was_created_through"/>
+        <ObjectProperty IRI="R17i_was_created_by"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="R26_produced_things_of_type"/>
+        <ObjectProperty IRI="http://erlangen-crm.org/200717/P186_produced_thing_of_product_type"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="R26i_was_produced_by"/>
+        <ObjectProperty IRI="http://erlangen-crm.org/200717/P186i_is_produced_by"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="R27_materialized"/>
+        <ObjectProperty IRI="http://erlangen-crm.org/200717/P16_used_specific_object"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="R27i_was_materialized_by"/>
+        <ObjectProperty IRI="http://erlangen-crm.org/200717/P16i_was_used_for"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="R28_produced"/>
+        <ObjectProperty IRI="http://erlangen-crm.org/200717/P108_has_produced"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="R28i_was_produced_by"/>
+        <ObjectProperty IRI="http://erlangen-crm.org/200717/P108i_was_produced_by"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="R29_reproduced_object"/>
+        <ObjectProperty IRI="http://erlangen-crm.org/200717/P16_used_specific_object"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="R29i_was_object_reproduced_by"/>
+        <ObjectProperty IRI="http://erlangen-crm.org/200717/P16i_was_used_for"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="R2_is_derivative_of"/>
+        <ObjectProperty IRI="http://erlangen-crm.org/200717/P130_shows_features_of"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="R2i_has_derivative"/>
+        <ObjectProperty IRI="http://erlangen-crm.org/200717/P130i_features_are_also_found_on"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="R30_reproduced_publication"/>
+        <ObjectProperty IRI="http://erlangen-crm.org/200717/P16_used_specific_object"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="R30i_was_publication_reproduced_by"/>
+        <ObjectProperty IRI="http://erlangen-crm.org/200717/P16i_was_used_for"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="R35_is_specified_by"/>
+        <ObjectProperty IRI="http://erlangen-crm.org/200717/P67i_is_referred_to_by"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="R35i_specifies"/>
+        <ObjectProperty IRI="http://erlangen-crm.org/200717/P67_refers_to"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="R3_is_realised_in"/>
+        <ObjectProperty IRI="http://erlangen-crm.org/200717/P130_shows_features_of"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="R3i_realises"/>
+        <ObjectProperty IRI="http://erlangen-crm.org/200717/P130i_features_are_also_found_on"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="R45_assigned_to"/>
+        <ObjectProperty IRI="http://erlangen-crm.org/200717/P140_assigned_attribute_to"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="R45_was_assigned_by"/>
+        <ObjectProperty IRI="http://erlangen-crm.org/200717/P140i_was_attributed_by"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="R4_embodies"/>
+        <ObjectProperty IRI="http://erlangen-crm.org/200717/P165_incorporates"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="R4i_is_embodied_in"/>
+        <ObjectProperty IRI="http://erlangen-crm.org/200717/P165i_is_incorporated_in"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="R54_has_language"/>
+        <ObjectProperty IRI="http://erlangen-crm.org/200717/P2_has_type"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="R54i_is_language_of"/>
+        <ObjectProperty IRI="http://erlangen-crm.org/200717/P2i_is_type_of"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="R5_has_component"/>
+        <ObjectProperty IRI="http://erlangen-crm.org/200717/P148_has_component"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="R5i_is_component_of"/>
+        <ObjectProperty IRI="http://erlangen-crm.org/200717/P148i_is_component_of"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="R62_was_used_for_membership_in"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="R63_named"/>
+        <ObjectProperty IRI="http://erlangen-crm.org/200717/P140_assigned_attribute_to"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="R63i_was_named_by"/>
+        <ObjectProperty IRI="http://erlangen-crm.org/200717/P140i_was_attributed_by"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="R64_used_name"/>
+        <ObjectProperty IRI="http://erlangen-crm.org/200717/P16_used_specific_object"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="R64i_was_name_used_by"/>
+        <ObjectProperty IRI="http://erlangen-crm.org/200717/P16i_was_used_for"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="R65_recorded_aspects_of"/>
+        <ObjectProperty IRI="http://erlangen-crm.org/200717/P15_was_influenced_by"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="R65i_had_aspects_recorded_through"/>
+        <ObjectProperty IRI="http://erlangen-crm.org/200717/P15i_influenced"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="R66_included_performed_version_of"/>
+        <ObjectProperty IRI="http://erlangen-crm.org/200717/P16_used_specific_object"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="R66i_had_a_performed_version_through"/>
+        <ObjectProperty IRI="http://erlangen-crm.org/200717/P16i_was_used_for"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="R67_has_part"/>
+        <ObjectProperty IRI="R10_has_member"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="R67i_forms_part_of"/>
+        <ObjectProperty IRI="R10i_is_member_of"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="R68_is_inspired_by"/>
+        <ObjectProperty IRI="R2_is_derivative_of"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="R68i_is_inspiration_for"/>
+        <ObjectProperty IRI="R2i_has_derivative"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="R69_has_physical_form"/>
+        <ObjectProperty IRI="http://erlangen-crm.org/200717/P2_has_type"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="R69i_is_physical_form_of"/>
+        <ObjectProperty IRI="http://erlangen-crm.org/200717/P2i_is_type_of"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="R70_has_dimension"/>
+        <ObjectProperty IRI="http://erlangen-crm.org/200717/P43_has_dimension"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="R70i_is_dimension_of"/>
+        <ObjectProperty IRI="http://erlangen-crm.org/200717/P43i_is_dimension_of"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="R71_has_part"/>
+        <ObjectProperty IRI="http://erlangen-crm.org/200717/P148_has_component"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="R71i_is_part_of"/>
+        <ObjectProperty IRI="http://erlangen-crm.org/200717/P148i_is_component_of"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="R74_uses_expression_of"/>
+        <ObjectProperty IRI="http://erlangen-crm.org/200717/P130_shows_features_of"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="R74i_has_expression_used_in"/>
+        <ObjectProperty IRI="http://erlangen-crm.org/200717/P130i_features_are_also_found_on"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="R75_incorporates"/>
+        <ObjectProperty IRI="http://erlangen-crm.org/200717/P165_incorporates"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="R75i_is_incorporated_in"/>
+        <ObjectProperty IRI="http://erlangen-crm.org/200717/P165i_is_incorporated_in"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="R7_is_materialization_of"/>
+        <ObjectProperty IRI="http://erlangen-crm.org/200717/P128_carries"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="R7i_is_materialized_in"/>
+        <ObjectProperty IRI="http://erlangen-crm.org/200717/P128i_is_carried_by"/>
+    </SubObjectPropertyOf>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="http://erlangen-crm.org/200717/P106i_forms_part_of"/>
+        <ObjectProperty IRI="R15_has_fragment"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="R10_has_member"/>
+        <ObjectProperty IRI="R10i_is_member_of"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="R11_has_issuing_rule"/>
+        <ObjectProperty IRI="R11i_is_issuing_rule_of"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="R16_initiated"/>
+        <ObjectProperty IRI="R16i_was_initiated_by"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="R17_created"/>
+        <ObjectProperty IRI="R17i_was_created_by"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="R18_created"/>
+        <ObjectProperty IRI="R18i_was_created_by"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="R19_created_a_realisation_of"/>
+        <ObjectProperty IRI="R19i_was_realised_through"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="R1_is_logical_successor_of"/>
+        <ObjectProperty IRI="R1i_has_successor"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="R20_recorded"/>
+        <ObjectProperty IRI="R20i_was_recorded_through"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="R24_created"/>
+        <ObjectProperty IRI="R24i_was_created_through"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="R26_produced_things_of_type"/>
+        <ObjectProperty IRI="R26i_was_produced_by"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="R27_materialized"/>
+        <ObjectProperty IRI="R27i_was_materialized_by"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="R28_produced"/>
+        <ObjectProperty IRI="R28i_was_produced_by"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="R29_reproduced_object"/>
+        <ObjectProperty IRI="R29i_was_object_reproduced_by"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="R2_is_derivative_of"/>
+        <ObjectProperty IRI="R2i_has_derivative"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="R30_reproduced_publication"/>
+        <ObjectProperty IRI="R30i_was_publication_reproduced_by"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="R34_has_validity_period"/>
+        <ObjectProperty IRI="R34i_is_validity_period_of"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="R35_is_specified_by"/>
+        <ObjectProperty IRI="R35i_specifies"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="R36_uses_script_conversion"/>
+        <ObjectProperty IRI="R36i_is_script_conversion_used_in"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="R3_is_realised_in"/>
+        <ObjectProperty IRI="R3i_realises"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="R45_assigned_to"/>
+        <ObjectProperty IRI="R45_was_assigned_by"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="R4_embodies"/>
+        <ObjectProperty IRI="R4i_is_embodied_in"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="R54_has_language"/>
+        <ObjectProperty IRI="R54i_is_language_of"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="R56_is_related_to"/>
+        <ObjectProperty IRI="R56i_is_related_to"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="R57_is_based_on"/>
+        <ObjectProperty IRI="R57i_is_basis_for"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="R58_has_fictional_member"/>
+        <ObjectProperty IRI="R58i_is_fictional_member_of"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="R5_has_component"/>
+        <ObjectProperty IRI="R5i_is_component_of"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="R60_used_to_use_language"/>
+        <ObjectProperty IRI="R60i_was_language_used_by"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="R61_occurred_in_kind_of_context"/>
+        <ObjectProperty IRI="R61i_was_kind_of_context_for"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="R62_was_used_for_membership_in"/>
+        <ObjectProperty IRI="R62i_was_context_for"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="R63_named"/>
+        <ObjectProperty IRI="R63i_was_named_by"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="R64_used_name"/>
+        <ObjectProperty IRI="R64i_was_name_used_by"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="R65_recorded_aspects_of"/>
+        <ObjectProperty IRI="R65i_had_aspects_recorded_through"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="R66_included_performed_version_of"/>
+        <ObjectProperty IRI="R66i_had_a_performed_version_through"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="R67_has_part"/>
+        <ObjectProperty IRI="R67i_forms_part_of"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="R68_is_inspired_by"/>
+        <ObjectProperty IRI="R68i_is_inspiration_for"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="R69_has_physical_form"/>
+        <ObjectProperty IRI="R69i_is_physical_form_of"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="R70_has_dimension"/>
+        <ObjectProperty IRI="R70i_is_dimension_of"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="R71_has_part"/>
+        <ObjectProperty IRI="R71i_is_part_of"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="R73_takes_representative_attribute_from"/>
+        <ObjectProperty IRI="R73i_bears_representative_attribute_for"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="R74_uses_expression_of"/>
+        <ObjectProperty IRI="R74i_has_expression_used_in"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="R75_incorporates"/>
+        <ObjectProperty IRI="R75i_is_incorporated_in"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="R7_is_materialization_of"/>
+        <ObjectProperty IRI="R7i_is_materialized_in"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="R8_combines"/>
+        <ObjectProperty IRI="R8i_is_combined_to_form"/>
+    </InverseObjectProperties>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="R10_has_member"/>
+        <Class IRI="F1_Work"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="R10i_is_member_of"/>
+        <Class IRI="F1_Work"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="R11_has_issuing_rule"/>
+        <Class IRI="F18_Serial_Work"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="R11i_is_issuing_rule_of"/>
+        <Class IRI="http://erlangen-crm.org/200717/E29_Design_or_Procedure"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="R15_has_fragment"/>
+        <Class IRI="F2_Expression"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="R16_initiated"/>
+        <Class IRI="F27_Work_Conception"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="R16i_was_initiated_by"/>
+        <Class IRI="F1_Work"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="R17_created"/>
+        <Class IRI="F28_Expression_Creation"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="R17i_was_created_by"/>
+        <Class IRI="F2_Expression"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="R18_created"/>
+        <Class IRI="F28_Expression_Creation"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="R18i_was_created_by"/>
+        <Class IRI="F5_Item"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="R19_created_a_realisation_of"/>
+        <Class IRI="F28_Expression_Creation"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="R19i_was_realised_through"/>
+        <Class IRI="F1_Work"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="R1_is_logical_successor_of"/>
+        <Class IRI="F1_Work"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="R1i_has_successor"/>
+        <Class IRI="F1_Work"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="R20_recorded"/>
+        <Class IRI="F29_Recording_Event"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="R20i_was_recorded_through"/>
+        <Class IRI="F31_Performance"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="R24_created"/>
+        <Class IRI="F30_Manifestation_Creation"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="R24i_was_created_through"/>
+        <Class IRI="F3_Manifestation"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="R26_produced_things_of_type"/>
+        <Class IRI="F32_Carrier_Production_Event"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="R26i_was_produced_by"/>
+        <Class IRI="http://erlangen-crm.org/200717/E99_Product_Type"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="R27_materialized"/>
+        <Class IRI="F32_Carrier_Production_Event"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="R27i_was_materialized_by"/>
+        <Class IRI="F3_Manifestation"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="R28_produced"/>
+        <Class IRI="F32_Carrier_Production_Event"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="R28i_was_produced_by"/>
+        <Class IRI="F5_Item"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="R29_reproduced_object"/>
+        <Class IRI="F33_Reproduction_Event"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="R29i_was_object_reproduced_by"/>
+        <Class IRI="F5_Item"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="R2_is_derivative_of"/>
+        <Class IRI="F1_Work"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="R2i_has_derivative"/>
+        <Class IRI="F1_Work"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="R30_reproduced_publication"/>
+        <Class IRI="F33_Reproduction_Event"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="R30i_was_publication_reproduced_by"/>
+        <Class IRI="F3_Manifestation"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="R34_has_validity_period"/>
+        <Class IRI="F34_Controlled_Vocabulary"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="R34i_is_validity_period_of"/>
+        <Class IRI="http://erlangen-crm.org/200717/E52_Time-Span"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="R35_is_specified_by"/>
+        <Class IRI="F12_Nomen"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="R35i_specifies"/>
+        <Class IRI="F2_Expression"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="R36_uses_script_conversion"/>
+        <Class IRI="F12_Nomen"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="R3_is_realised_in"/>
+        <Class IRI="F1_Work"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="R3i_realises"/>
+        <Class IRI="F2_Expression"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="R45_assigned_to"/>
+        <Class IRI="F52_Name_Use_Activity"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="R4_embodies"/>
+        <Class IRI="F3_Manifestation"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="R4i_is_embodied_in"/>
+        <Class IRI="F2_Expression"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="R54_has_language"/>
+        <Class IRI="F12_Nomen"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="R56_is_related_to"/>
+        <Class IRI="F12_Nomen"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="R57_is_based_on"/>
+        <Class IRI="F38_Character"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="R58_has_fictional_member"/>
+        <Class IRI="F38_Character"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="R59_had_typical_subject"/>
+        <Class IRI="F51_Pursuit"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="R5_has_component"/>
+        <Class IRI="F2_Expression"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="R5i_is_component_of"/>
+        <Class IRI="F2_Expression"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="R60_used_to_use_language"/>
+        <Class IRI="F51_Pursuit"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="R61_occurred_in_kind_of_context"/>
+        <Class IRI="F52_Name_Use_Activity"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="R62_was_used_for_membership_in"/>
+        <Class IRI="F52_Name_Use_Activity"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="R63_named"/>
+        <Class IRI="F52_Name_Use_Activity"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="R64_used_name"/>
+        <Class IRI="F52_Name_Use_Activity"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="R65_recorded_aspects_of"/>
+        <Class IRI="F29_Recording_Event"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="R66_included_performed_version_of"/>
+        <Class IRI="F31_Performance"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="R67_has_part"/>
+        <Class IRI="F1_Work"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="R68_is_inspired_by"/>
+        <Class IRI="F1_Work"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="R69_has_physical_form"/>
+        <Class IRI="F3_Manifestation"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="R70_has_dimension"/>
+        <Class IRI="F3_Manifestation"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="R71_has_part"/>
+        <Class IRI="F3_Manifestation"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="R73_takes_representative_attribute_from"/>
+        <Class IRI="F1_Work"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="R74_uses_expression_of"/>
+        <Class IRI="F1_Work"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="R75_incorporates"/>
+        <Class IRI="F2_Expression"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="R7_is_materialization_of"/>
+        <Class IRI="F5_Item"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="R7i_is_materialized_in"/>
+        <Class IRI="F3_Manifestation"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="R8_combines"/>
+        <Class IRI="F12_Nomen"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="R8i_is_combined_to_form"/>
+        <Class IRI="http://erlangen-crm.org/200717/E89_Propositional_Object"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="R10_has_member"/>
+        <Class IRI="F1_Work"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="R10i_is_member_of"/>
+        <Class IRI="F1_Work"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="R11_has_issuing_rule"/>
+        <Class IRI="http://erlangen-crm.org/200717/E29_Design_or_Procedure"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="R11i_is_issuing_rule_of"/>
+        <Class IRI="F18_Serial_Work"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="R15_has_fragment"/>
+        <Class IRI="http://erlangen-crm.org/200717/E90_Symbolic_Object"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="R16_initiated"/>
+        <Class IRI="F1_Work"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="R16i_was_initiated_by"/>
+        <Class IRI="F27_Work_Conception"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="R17_created"/>
+        <Class IRI="F2_Expression"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="R17i_was_created_by"/>
+        <Class IRI="F28_Expression_Creation"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="R18_created"/>
+        <Class IRI="F5_Item"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="R18i_was_created_by"/>
+        <Class IRI="F28_Expression_Creation"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="R19_created_a_realisation_of"/>
+        <Class IRI="F1_Work"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="R19i_was_realised_through"/>
+        <Class IRI="F28_Expression_Creation"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="R1_is_logical_successor_of"/>
+        <Class IRI="F1_Work"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="R1i_has_successor"/>
+        <Class IRI="F1_Work"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="R20_recorded"/>
+        <Class IRI="F31_Performance"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="R20i_was_recorded_through"/>
+        <Class IRI="F29_Recording_Event"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="R24_created"/>
+        <Class IRI="F3_Manifestation"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="R24i_was_created_through"/>
+        <Class IRI="F30_Manifestation_Creation"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="R26_produced_things_of_type"/>
+        <Class IRI="http://erlangen-crm.org/200717/E99_Product_Type"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="R26i_was_produced_by"/>
+        <Class IRI="F32_Carrier_Production_Event"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="R27_materialized"/>
+        <Class IRI="F3_Manifestation"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="R27i_was_materialized_by"/>
+        <Class IRI="F32_Carrier_Production_Event"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="R28_produced"/>
+        <Class IRI="F5_Item"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="R28i_was_produced_by"/>
+        <Class IRI="F32_Carrier_Production_Event"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="R29_reproduced_object"/>
+        <Class IRI="F5_Item"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="R29i_was_object_reproduced_by"/>
+        <Class IRI="F33_Reproduction_Event"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="R2_is_derivative_of"/>
+        <Class IRI="F1_Work"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="R2i_has_derivative"/>
+        <Class IRI="F1_Work"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="R30_reproduced_publication"/>
+        <Class IRI="F3_Manifestation"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="R30i_was_publication_reproduced_by"/>
+        <Class IRI="F33_Reproduction_Event"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="R34_has_validity_period"/>
+        <Class IRI="http://erlangen-crm.org/200717/E52_Time-Span"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="R34i_is_validity_period_of"/>
+        <Class IRI="F34_Controlled_Vocabulary"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="R35_is_specified_by"/>
+        <Class IRI="F2_Expression"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="R35i_specifies"/>
+        <Class IRI="F12_Nomen"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="R36_uses_script_conversion"/>
+        <Class IRI="F36_Script_Conversion"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="R3_is_realised_in"/>
+        <Class IRI="F2_Expression"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="R3i_realises"/>
+        <Class IRI="F1_Work"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="R45_assigned_to"/>
+        <Class IRI="http://erlangen-crm.org/200717/E1_CRM_Entity"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="R4_embodies"/>
+        <Class IRI="F2_Expression"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="R4i_is_embodied_in"/>
+        <Class IRI="F3_Manifestation"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="R54_has_language"/>
+        <Class IRI="http://erlangen-crm.org/200717/E55_Type"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="R56_is_related_to"/>
+        <Class IRI="F12_Nomen"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="R57_is_based_on"/>
+        <Class IRI="http://erlangen-crm.org/200717/E39_Actor"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="R58_has_fictional_member"/>
+        <Class IRI="F38_Character"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="R59_had_typical_subject"/>
+        <Class IRI="http://erlangen-crm.org/200717/E1_CRM_Entity"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="R5_has_component"/>
+        <Class IRI="F2_Expression"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="R5i_is_component_of"/>
+        <Class IRI="F2_Expression"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="R60_used_to_use_language"/>
+        <Class IRI="http://erlangen-crm.org/200717/E56_Language"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="R61_occurred_in_kind_of_context"/>
+        <Class IRI="http://erlangen-crm.org/200717/E55_Type"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="R62_was_used_for_membership_in"/>
+        <Class IRI="http://erlangen-crm.org/200717/E74_Group"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="R63_named"/>
+        <Class IRI="http://erlangen-crm.org/200717/E1_CRM_Entity"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="R64_used_name"/>
+        <Class IRI="http://erlangen-crm.org/200717/E41_Appellation"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="R65_recorded_aspects_of"/>
+        <Class IRI="http://erlangen-crm.org/200717/E18_Physical_Thing"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="R66_included_performed_version_of"/>
+        <Class IRI="http://erlangen-crm.org/200717/E89_Propositional_Object"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="R67_has_part"/>
+        <Class IRI="F1_Work"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="R68_is_inspired_by"/>
+        <Class IRI="F1_Work"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="R69_has_physical_form"/>
+        <Class IRI="http://erlangen-crm.org/200717/E55_Type"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="R70_has_dimension"/>
+        <Class IRI="http://erlangen-crm.org/200717/E54_Dimension"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="R71_has_part"/>
+        <Class IRI="F3_Manifestation"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="R73_takes_representative_attribute_from"/>
+        <Class IRI="F2_Expression"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="R74_uses_expression_of"/>
+        <Class IRI="F1_Work"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="R75_incorporates"/>
+        <Class IRI="F2_Expression"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="R7_is_materialization_of"/>
+        <Class IRI="F3_Manifestation"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="R7i_is_materialized_in"/>
+        <Class IRI="F5_Item"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="R8_combines"/>
+        <Class IRI="http://erlangen-crm.org/200717/E89_Propositional_Object"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="R8i_is_combined_to_form"/>
+        <Class IRI="F12_Nomen"/>
+    </ObjectPropertyRange>
+    <SubDataPropertyOf>
+        <DataProperty IRI="R33_has_content"/>
+        <DataProperty IRI="http://erlangen-crm.org/200717/P3_has_note"/>
+    </SubDataPropertyOf>
+    <DataPropertyDomain>
+        <DataProperty IRI="R33_has_content"/>
+        <Class IRI="F12_Nomen"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="R33_has_content"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://erlangen-crm.org/200717/P165_incorporates</IRI>
+        <Literal xml:lang="en">P165 incorporates</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://erlangen-crm.org/200717/P165i_is_incorporated_in</IRI>
+        <Literal xml:lang="en">P165i is incorporated in</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>F11_Corporate_Body</IRI>
+        <Literal xml:lang="en">This class comprises organisations and groups of two or more people and/or organisations acting as a unit.
+
+To be considered an instance of F11 Corporate Body a gathering of people needs to bear a name and exhibit organisational characteristics sufficient to allow the body as a whole to participate in the creation, modification or production of an E73 Information Object. Groups such as conferences, congresses, expeditions, exhibitions, festivals, fairs, etc. are modelled as F11
+Corporate Bodies when they are named and can take collective action, such as approving a report or publishing their proceedings.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>F11_Corporate_Body</IRI>
+        <Literal xml:lang="en">F11 Corporate Body</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>F12_Nomen</IRI>
+        <Literal xml:lang="en">This class comprises associations between an instance of any class, and signs or arrangements of signs following a specific syntax (sequences of alphanumeric characters, chemical structure symbols, sound symbols, ideograms, etc.) that are used, or can be used, to refer to and identify
+that instance. The scripts or type sets for the types of symbols used to compose an instance of F12 Nomen have to be explicitly specified. Spelling variants are regarded as different nomina, whereas the use of different fonts (visual representation variants) or different digital encodings does not change the identity.
+
+An arbitrary combination of signs or symbols cannot be regarded as an appellation or designation until it is associated with something in some context. In that sense, the F12 Nomen class can be understood as the reification of a relationship between an instance of E1 CRM Entity and an instance of E41 Appellation. Two instances of F12 Nomen can happen to be
+associated with two identical instances of E62 String and yet remain distinct, as long as they either refer to distinct instances of E1 CRM Entity, or as long as they are associated with distinct instances of other classes through one or more than one of the other properties of the F12 Nomen class (while referring to the same instance of E1 CRM Entity).
+
+An instance of F12 Nomen associates a combination of signs with an instance of E1 CRM Entity on the basis of a cultural or linguistic convention: by associating a string with anything, the instance of F12 Nomen establishes a meaning that is not inherent in the instance of E62 String that is associated with it. Depending on context of use, nomens associated with identical strings
+can involve instances of different things in the real world even within the same language (polysemy and homonymy). Conversely, the same thing can be referred to through any number of nomens (synonymy). In the controlled environment of a bibliographic information system, though, synonymy is avoided and the instances of E62 String associated with a given instance of
+F12 Nomen would generally be disambiguated, so that each string is associated with only one instance of E1 CRM Entity within the specific scheme.
+
+The identity of an instance of F12 Nomen is determined by the combination of the thing it refers to, the choice and order of the symbols used within the instance of E62 String that represents it, and the specific instances of the various classes with which it is associated through all other properties of the F12 Nomen class. Variation in the symbols used (such as transliteration into
+another script), or variation in their ordering, usually results in a distinct instance of F12 Nomen, but variation in the visual representation of the symbols present in the instance of E62 String that represents the instance of F12 Nomen (such as different fonts that may be used to present alpha-numeric or character strings) does not result in a different instance of F12 Nomen.
+
+Instances of F12 Nomen are assigned and associated with instances of E1 CRM Entity either formally (such as by bibliographic agencies) or informally through common usage. When they are assigned formally, the construction of the instances of E62 String that represent them may follow predetermined rules.
+
+The act of naming something may involve the combination of various symbolic objects, which may be instances of F12 Nomen in their own right, and therefore refer to distinct instances of E1 CRM Entity, or just be used as qualifiers. A frequent example is provided by the tradition consisting of naming persons by juxtaposing a given name (such as ‘John’), and a last name
+(such as ‘Smith’) which is shared by all members of the same family. The given name alone can be sufficient to refer unambiguously to a given individual in a given context, but not in a wider context, in which the combination of given name plus last name proves necessary. Similarly, the
+combination of given name plus last name may be ambiguous in an even wider context, in which case the need for further qualifiers (such as a nickname, or, in the context of bibliographic control, dates and statement of occupation) can be felt. An instance of F12 Nomen can therefore
+be decomposed into further reifications that refer to distinct things through distinct strings, and/or instances of E90 Symbolic Object that serve merely as qualifiers and do not refer to anything in particular.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>F12_Nomen</IRI>
+        <Literal xml:lang="en">F12 Nomen</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>F18_Serial_Work</IRI>
+        <Literal xml:lang="en">This class comprises works that are, or have been, planned to result in sequences of Expressions or Manifestations with common features. Whereas a work can acquire new members during the time it evolves, Expressions and Manifestations are identified with a certain state achieved at a particular point in time. Therefore there is in general no single Expression or Manifestation
+representing a complete serial work, unless the serial work has ended.
+
+Serial Works may or may not have a plan for an overall expression.
+
+The retrospective reprinting of all issues of a Serial Work at once, in the form of a monograph, is regarded to be another member of the F1 Work, which contains the Serial Work and the Work realised in the monograph. This does not make the monograph part of the Serial Work.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>F18_Serial_Work</IRI>
+        <Literal xml:lang="en">F18 Serial Work</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>F1_Work</IRI>
+        <Literal xml:lang="en">This class comprises distinct intellectual ideas conveyed in artistic and intellectual creations, such a poems, stories or musical compositions. 
+
+A Work is the outcome of an intellectual process of one or more persons. Inherent to the notion of work is the existence of recognisable realizations of the work in the form of one or more expressions. Works are often regarded as finished and discrete e.g. when declared as such by the creator of the work or based on the elaboration or logical coherence of its content. However, works
+may be recognized as existing but unfinished e.g. if the creators deliberately or accidentally never explicitly finished a particular Expression but have left behind partial expressions.
+
+In the absence of explicit information about the initial conception, which is rarely available, the first expression created constitutes witness of the beginning of existence of a Work.
+
+A Work can evolve over time, such as through revised editions. A Work may be elaborated by one or more Actors simultaneously, in parallel, or over time. Additional expressions of a Work can continue to be created over time.
+
+The boundaries of a Work have nothing to do with the value of the intellectual achievement but only with the dominance of a concept. 
+
+The main purpose of this class is to enable bringing together intellectually equivalent Expressions in order to display to a user all available alternatives of the same intellectual or artistic content.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>F1_Work</IRI>
+        <Literal xml:lang="en">F1 Work</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>F27_Work_Conception</IRI>
+        <Literal xml:lang="en">This class comprises beginnings of evolutions of works.
+
+An instance of F27 Work Conception marks the initiation of the creation of an instance of F1 Work. The work, as an intellectual construction, evolves from this point on, until the last known expression of it. An instance of E39 Actor with which a work is associated through the chain of properties F1 Work. R16i was initiated by: F27 Work Conception. P14 carried out by: E39 Actor corresponds to the notion of the “creator” of the work. In the case of commissioned works, it
+is not the commissioning that is regarded as the work conception, but the acceptance of the commission.
+
+This event does not always correlate with the date assigned in common library practice to the work, which is usually a later event (such as the date of completion of the first clean draft).
+
+In addition, F27 Work Conception can serve to document the circumstances that surrounded the appearance of the original idea for a work, when these are known.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>F27_Work_Conception</IRI>
+        <Literal xml:lang="en">F27 Work Conception</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>F28_Expression_Creation</IRI>
+        <Literal xml:lang="en">This class comprises activities that result in instances of F2 Expression coming into existence. This class characterises the externalisation of an F1 Work. The creation of an instance of F1 Work is considered to occur at the time of creation (F28) of its first F2 Expression.
+
+Although F2 Expression is an abstract entity, a conceptual object, the creation of an expression inevitably also affects the physical world: when you scribble the first draft of a poem on a sheet of paper, you produce an instance of F3 Manifestation. F28 Expression Creation is a subclass of E12 Production because the recording of the expression causes a physical modification of the
+E18 Physical Thing that serves as the carrier. The work becomes manifest by being expressed on a physical carrier other than the creator’s brain. The spatio-temporal circumstances under whichthe expression is created are necessarily the same spatio-temporal circumstances under which the first instance of F3 Manifestation is produced. 
+
+The mechanisms through which oral tradition (of myths, tales, music, etc.) operates are not further investigated in this model. As far as bibliographic practice is concerned, only those instances of F2 Expression that are externalised on physical carriers other than both the creator’s brain and the auditor’s brain are taken into account (for a discussion of the modelling of oral
+traditions, see: Nicolas, Yann. ‘Folklore Requirements for Bibliographic Records: oral traditions and FRBR.’ In: Cataloging &amp; Classification Quarterly (2005). Vol. 39, No. 3-4. P. 179-195).
+
+It is possible to use the P2 has type (is type of) property in order to specify that the creation of a given expression of a given work played a particular role with regard to the overall bibliographic history of that work (e.g., that it was the  creation of the progenitor expression on which all other expressions of the same work are based; or that it was the creation of the critical edition that
+served as the basis for canonical references to the work).
+
+An instance of F28 Expression Creation may use as source material a specific existing instance of F2 Expression. The property P16 used specific object (was used for) can be used to specify the source expression for the derivation. In cases such as a translation or a revised edition, etc., a new instance of F2 Expression of the same F1 Work, a derived expression, is created. In the situation where an expression of one instance of F1 Work serves as source material for the creation of the first expression of a new instance of F1 Work, the relationship is indicated using the property R2 is derivative of (has derivative) between the two instances of F1 Work. Path: F1 Work(1). R3 is realised in: F2 Expression(1). P16i was used for: F28 Expression Creation. R17 created: F2 Expression(2). R3i realises: F1 Work(2). R2 is derivative of: F1 Work(1)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>F28_Expression_Creation</IRI>
+        <Literal xml:lang="en">F28 Expression Creation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>F29_Recording_Event</IRI>
+        <Literal xml:lang="en">This class comprises activities that intend to convey (and preserve) the features of perdurants in a recording, such as a live recording of a performance, a documentary, or other capture of a perdurant. Such activities may follow the directions of a recording plan. They may include postproduction.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>F29_Recording_Event</IRI>
+        <Literal xml:lang="en">F29 Recording Event</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>F2_Expression</IRI>
+        <Literal xml:lang="en">This class comprises the intellectual or artistic realisations of Works in the form of identifiable immaterial objects, such as texts, poems, jokes, musical or choreographic notations, movement pattern, sound pattern, images, multimedia objects, or any combination of such forms that have objectively recognisable structures. The substance of F2 Expression is signs.
+
+An Expression is the outcome of the intellectual or creative process of realizing a Work. Subsequent expressions conveying the same work may be created over time.
+
+Expressions do not depend on a specific physical carrier and can exist on one or more carriers simultaneously, including human memory, but expressions cannot persist without a carrier.
+ 
+The form of F2 Expression is an inherent characteristic of the F2 Expression. Differences in form implies different Expressions (e.g., from text to spoken word, a transcript of a recording). Similarly, differences in language or means of performance imply different Expressions (e.g., translations or arrangements for different instruments). Thus, if a text is revised or modified, the result is considered to be a new F2 Expression. While theoretically any change in signs will result in a new Expression, conventionally the context and use will determine the rules for distinguishing among expressions.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>F2_Expression</IRI>
+        <Literal xml:lang="en">F2 Expression</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>F30_Manifestation_Creation</IRI>
+        <Literal xml:lang="en">This class comprises the activities of selecting, arranging and presenting one or more instances of F2 Expression on a carrier or other persistent presentation means with the purpose of communicating it to some public. It includes the specification of the presentation as to sensory impression (such as visual appearance or audio rendition).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>F30_Manifestation_Creation</IRI>
+        <Literal xml:lang="en">F30 Manifestation Creation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>F31_Performance</IRI>
+        <Literal xml:lang="en">This class comprises activities that follow the directions of a plan for any kind of performance, such as a theatrical play, an expression of a choreographic work or a musical work; i.e., they are intended to communicate directly or indirectly to an audience.
+
+Such activities can be identified at various levels of granularity, and can be contiguous or not. Any individual performance (with or without intermissions) is a single instance of F31 Performance. In addition, a complete run of performances can also be seen as an instance of F31 Performance, with individual performances as parts. A complete run of performances may comprise an original run plus any of its extensions and tours.
+
+Note that a performance plan may be more or less elaborate, and may even foresee just improvisation.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>F31_Performance</IRI>
+        <Literal xml:lang="en">F31 Performance</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>F32_Carrier_Production_Event</IRI>
+        <Literal xml:lang="en">This class comprises activities that result in instances of F5 Item coming into existence. Both the production of a series of physical objects (printed books, scores, CDs, DVDs, CD-ROMs, etc.) and the creation of a new copy of a file on an electronic carrier are regarded as instances of F32 Carrier Production Event.
+
+Typically, the production of copies of a publication (no matter whether it is a book, a sound recording, a DVD, a cartographic resource, etc.) strives to produce items all as similar as possible to a prototype that displays all the features that all the copies of the publication should also display, which is reflected in the property R27 materialized: F3 Manifestation. In the case where the instance of F3 Manifestation that is materialized is also an instance of E99 Product Type, the property R26 produced things of type is the preferred method to associate the instance of F32 Carrier Production Event directly with the instance of E99 Product Type</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>F32_Carrier_Production_Event</IRI>
+        <Literal xml:lang="en">F32 Carrier Production Event</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>F33_Reproduction_Event</IRI>
+        <Literal xml:lang="en">This class comprises activities that consist in producing items of a new instance of F3 Manifestation that preserve both the content and layout found on items of a pre-existing instance of F3 Manifestation. The individual instance or instances of F5 Item that was or were used as a source for this process may be precisely identified or not. Such activities result in products known as facsimiles, reproductions, reprints, reissues, or new releases.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>F33_Reproduction_Event</IRI>
+        <Literal xml:lang="en">F33 Reproduction Event</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>F34_Controlled_Vocabulary</IRI>
+        <Literal xml:lang="en">This class comprises documents that establish controlled terminology (nomina) for consistent use. They may also describe relationships between entities and controlled terminology and relationships between entities. Note that any meaningful change in a Controlled vocabulary that affects the validity status of its elements defines a new release (instance of F2 Expression) of the Controlled vocabulary. Note that identifiers created following a rule in a Controlled vocabulary are to be regarded as being taken from this Controlled vocabulary, even though not explicitly spelled out. This definition of Controlled vocabulary reflects current library practice and not the use of the term in general. Knowledge Organisation Systems (KOS) are regarded as special cases of F34 Controlled Vocabulary.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>F34_Controlled_Vocabulary</IRI>
+        <Literal xml:lang="en">F34 Controlled Vocabulary</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>F36_Script_Conversion</IRI>
+        <Literal xml:lang="en">F36 Script Conversion</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>F36_Script_Conversion</IRI>
+        <Literal xml:lang="en">This class comprises rule sets for converting signs or arrangements of signs from one script or type set to another.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>F38_Character</IRI>
+        <Literal xml:lang="en">This class comprises fictional or iconographic individuals or groups of individuals (including families) appearing in works in a way relevant as subjects. Characters may be purely fictitious or based on real persons or groups, but as characters they may exhibit properties that would be inconsistent with a real person or group. Rather than merging characters with real persons, they should be described as disjoint, but related entities.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>F38_Character</IRI>
+        <Literal xml:lang="en">F38 Character</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>F39_Family</IRI>
+        <Literal xml:lang="en">This class comprises groups of two or more persons presented as a family and justified by relationships of birth, marriage, adoption, civil union, or similar social or legal status and an assumed common tradition, including examples such as royal families, dynasties, houses of nobility, etc.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>F39_Family</IRI>
+        <Literal xml:lang="en">F39 Family</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>F3_Manifestation</IRI>
+        <Literal xml:lang="en">This class comprises products rendering one or more Expressions. A Manifestation is defined by both the overall content, and the form of its presentation. The substance of F3 Manifestation is not only signs, but also the manner in which they are presented to be consumed by users, including
+the kind of media adopted.
+
+An F3 Manifestation is the outcome of a publication process where one or more F2 Expressions are prepared for public dissemination, but it may also be a unique form created directly on some carrying material without the intent of being formally published.
+
+An instance of F3 Manifestation typically incorporates one or more instances of F2 Expression representing a distinct logical content and all additional input by a publisher such as text layout and cover design, in particular if labour is divided between an author and a publisher. Additionally an F3 Manifestation can be identified by the physical features for the medium of distribution, if applicable. For example, publications in the form of hardcover and paperback
+editions would be two distinct instances of F3 Manifestation, even though authorial and editorial content are otherwise identical in both publications.
+
+In the case of industrial products such as printed books or music CDs, but also digital material, an instance of F3 Manifestation can be regarded as the prototype for all copies of it. In these cases, an instance of F3 Manifestation specifies all of the features or traits that instances of F5 Item display in order to be copies of a particular publication. In the case of industrial products, instances of F3 Manifestation are also instances of E99 Product Type, normally nowadays
+identified by characteristic identifiers such as ISBN numbers.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>F3_Manifestation</IRI>
+        <Literal xml:lang="en">F3 Manifestation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>F51_Pursuit</IRI>
+        <Literal xml:lang="en">This class comprises periods of continuous activity of an Actor in a specific professional or creative domain or field.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>F51_Pursuit</IRI>
+        <Literal xml:lang="en">F51 Pursuit</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>F52_Name_Use_Activity</IRI>
+        <Literal xml:lang="en">This class comprises periods of continuous use of a specific instance of E41 Appellation for a particular instance of E1 CRM Entity by an E39 Actor. It includes in particular the use of the name by its carrier. Characteristically, actors performing an activity may choose a particular appellation for themselves in the context of this activity. Such cases should be modelled by additionally classifying these activities as instances of F52 Name Use Activity.
+
+It is possible to specify the type of name use, through the P2 has type property, e.g.: use of a pseudonym, use of a married name, use of a birth name, use of a blended name, use of a religious name, etc.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>F52_Name_Use_Activity</IRI>
+        <Literal xml:lang="en">F52 Name Use Activity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>F55_Collective_Agent</IRI>
+        <Literal xml:lang="en">This class comprises recognizable groups or organizations of persons that have the potential of acting as a unit to produce some intentional result of bibliographic interest for which they can be collectively considered responsible.
+
+A group of people becomes an instance of F55 Collective Agent when it identifies itself by a name that identifies it within an appropriate context and exhibits sufficient organizational characteristics to permit it to perform actions that reflect agency. Groups that are constituted as meetings, conferences, congresses, expeditions, festivals, fairs, etc. are examples of F55 Collective Agent as long as they self-identify by a specific name, rather than being referred to by a generic description of the gathering, and can act as a unit (such as by publishing their proceedings, or approving a report). These collective actions may be performed by representatives selected by the whole, rather than by all individual members acting together.
+
+Instances of F55 Collective Agent include commercial or corporate entities and other legally registered bodies, as well as organizations and associations, musical, artistic or performing groups, governments, and any of their sub-units. Collective Agents may be members of other Collective Agents, although directly or indirectly all Collective Agents are composed of persons.
+The membership of many types of Collective Agents will continue to evolve over time. A Collective Agent may continue to exist even if it has no members for a time (for example, a committee whose members all resign prior to the expiration of their terms but then a new complement of members is appointed). 
+
+Married couples and other concepts of family (F39) are regarded as particular examples of F55 Collective Agent.
+
+In the wider sense, this class also comprises holders of official positions viewed collectively, independent of the current holder of the office, such as the president of a country. In such cases, it is possible that the instance of F55 Collective Agent has only ever had a single member. 
+
+A group of persons known by/using a joint pseudonym (i.e., a name that seems indicative of an individual but that is actually adopted as a persona by two or more people acting together) is a particular case of F55 Collective Agent.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>F55_Collective_Agent</IRI>
+        <Literal xml:lang="en">F55 Collective Agent</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>F56_Externalization_Event</IRI>
+        <Literal xml:lang="en">This class comprises activities that produce signs or sensory impressions as organized and complete wholes, typically intended to be received, in this completeness, by some audience, either directly via their senses or via persistent media at some later time. It comprises in particular novel externalizations of thought – art in all forms – including rendering existing
+expressions such as musical scores, theatre plays, scripts or texts, in a particular manner, including through the performing arts, writing or other methods of externalization.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>F56_Externalization_Event</IRI>
+        <Literal xml:lang="en">F56 Externalization Event</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>F5_Item</IRI>
+        <Literal xml:lang="en">This class comprises physical objects (printed books, scores, CDs, DVDs, CD-ROMS, etc.) that were produced by (P186i) an industrial process involving a given instance of F3 Manifestation. As a result, all the instances of F5 Item associated with a given instance of F3 Manifestation are expected to carry the content defined in that instance of F3 Manifestation, although some or even all of them may happen to carry a content that significantly differs from it, due to either an accident in the course of industrial production, or subsequent physical modification or degradation.
+
+An instance of F5 Item that consists of a physical object or set of objects with clear physical boundaries is also an instance of E22 Human-Made Object. An instance of F5 Item that is stored on a part of a larger physical support (such as an electronic file among others on a disc) can also be considered to be an instance of E25 Human-Made Feature.
+
+The notion of F5 Item is only relevant with regard to the production process, from a bibliographic point of view. Cultural heritage institutions&apos; holdings are a distinct notion: a holding certainly can be equal to an instance of F5 Item, but it also can be either &quot;bigger&quot; than one (e.g., when two instances of F5 Item are bound together (in the case of printed books), or physically united in any other way, or when an instance of F5 Item is enhanced through the addition of manuscript annotations, or any material that was not intended by the publisher, such as press clippings, dried flowers, etc.), or &quot;smaller&quot; than one (e.g., when a one-volume instance of F5 Item (in the case of printed books) is interleaved and rebound as two volumes, or when pages were torn away from it, or when one CD from a two-CD set is missing, etc.). From an operational point of view, cultural heritage institutions do not deal with instances of F5 Item, but with storage units. However, it was not deemed necessary to declare an additional class for the notion of Storage Unit. Storage units can be easily accounted for through the E19 Physical Object class from CIDOC CRM, and the relationships between storage units and instances of F5 Item through the P46 is composed of (forms part of) property from CIDOC CRM. If needed, an instance of E19 Physical Object can be typed as a storage unit through the P2 has type (is type of) property.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>F5_Item</IRI>
+        <Literal xml:lang="en">F5 Item</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>R10_has_member</IRI>
+        <Literal xml:lang="en">This property associates an instance of F1 Work with another instance of F1 Work that forms a part of it. This property is transitive. An instance of F1 Work may neither directly nor indirectly be a member of itself. Instances of F1 Work that are not members of one another may not share a common member.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>R10_has_member</IRI>
+        <Literal xml:lang="en">R10 has member</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>R10i_is_member_of</IRI>
+        <Literal xml:lang="en">R10i is member of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>R11_has_issuing_rule</IRI>
+        <Literal xml:lang="en">R11 has issuing rule</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>R11i_is_issuing_rule_of</IRI>
+        <Literal xml:lang="en">R11i is issuing rule of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>R15_has_fragment</IRI>
+        <Literal xml:lang="en">This property associates an instance of E90 Symbolic Object with an instance of F2 Expression of which it is a fragment. The fragment is not itself an instance of F2 Expression as it does not express any instance of F1 Work. When the fragment consists of intelligible words it is an instance of E33 Linguistic Object.
+
+An instance of E90 Symbolic Object can be extracted from an instance of F2 Expression due to an accident, such as loss of material over time, e.g. the only remaining manuscript of an ancient text being partially eaten by worms, or due to deliberate isolation, such as excerpts taken from a text by the compiler of a collection of excerpts.
+
+An instance of E90 Symbolic Object is only considered a fragment of an instance of F2 Expression when related to its occurrence in a known or assumed whole by the R15 has fragment (is fragment of) property. The size of an instance of E90 Symbolic Object ranges from more than 99% of an instance of F2 Expression to tiny bits (a few words from a text, one bar from a musical composition, one detail from a still image, a two-second clip from a video, etc.).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>R15_has_fragment</IRI>
+        <Literal xml:lang="en">R15 has fragment</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>R15i_is_fragment_of</IRI>
+        <Literal xml:lang="en">R15i is fragment of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>R16_initiated</IRI>
+        <Literal xml:lang="en">This property associates the first conception of a work and the instance of F1 Work itself that ensued from a given initial idea.
+
+It marks the origin of the causality chain that results in a work’s coming into existence.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>R16_initiated</IRI>
+        <Literal xml:lang="en">R16 initiated</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>R16i_was_initiated_by</IRI>
+        <Literal xml:lang="en">R16i was initiated by</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>R17_created</IRI>
+        <Literal xml:lang="en">This property associates the instance of F2 Expression that was first externalised during a particular instance of F28 Expression Creation event with that particular creation event.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>R17_created</IRI>
+        <Literal xml:lang="en">R17 created</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>R17i_was_created_by</IRI>
+        <Literal xml:lang="en">R17i was created by</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>R18_created</IRI>
+        <Literal xml:lang="en">This property associates an instance of F28 Expression Creation with the first physical objects, instances of F5 Item, in which the resulting instance of F2 Expression was embodied.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>R18_created</IRI>
+        <Literal xml:lang="en">R18 created</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>R18i_was_created_by</IRI>
+        <Literal xml:lang="en">R18i was created by</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>R19_created_a_realisation_of</IRI>
+        <Literal xml:lang="en">This property associates an instance of F28 Expression Creation with the instance of F1 Work which was externalised in the instance of F2 Expression created by this creation event.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>R19_created_a_realisation_of</IRI>
+        <Literal xml:lang="en">R19 created a realisation of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>R19i_was_realised_through</IRI>
+        <Literal xml:lang="en">R19i was realised through</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>R1_is_logical_successor_of</IRI>
+        <Literal xml:lang="en">R1 is logical successor of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>R1i_has_successor</IRI>
+        <Literal xml:lang="en">R1i has successor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>R20_recorded</IRI>
+        <Literal xml:lang="en">R20 recorded</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>R20i_was_recorded_through</IRI>
+        <Literal xml:lang="en">R20i was recorded through</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>R24_created</IRI>
+        <Literal xml:lang="en">This property associates the instance of F3 Manifestation that was created during a particular instance of F30 Manifestation Creation with that instance of F30 Manifestation Creation event.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>R24_created</IRI>
+        <Literal xml:lang="en">R24 created</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>R24i_was_created_through</IRI>
+        <Literal xml:lang="en">R24i was created through</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>R26_produced_things_of_type</IRI>
+        <Literal xml:lang="en">This property associates an instance of F32 Carrier Production Event directly with the instance of E99 Product Type that is the prototype displaying the features that all of the F5 Items produced should display. This property is used in preference to R27 materialized (was materialized by) when the instance of F3 Manifestation that is materialized by the instance of F32 Carrier Production Event is also an instance of E99 Product Type.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>R26_produced_things_of_type</IRI>
+        <Literal xml:lang="en">R26 produced things of type</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>R26i_was_produced_by</IRI>
+        <Literal xml:lang="en">R26i was produced by</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>R27_materialized</IRI>
+        <Literal xml:lang="en">This property associates an instance of F32 Carrier Production Event with the set of signs provided by the publisher to be carried by all of the produced items (i.e., the instances of F5 Item) and any other physical features foreseen as integral to the instance of F3 Manifestation that is materialised.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>R27_materialized</IRI>
+        <Literal xml:lang="en">R27 materialized</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>R27i_was_materialized_by</IRI>
+        <Literal xml:lang="en">R27i was materialized by</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>R28_produced</IRI>
+        <Literal xml:lang="en">This property associates an instance of F32 Carrier Production Event with any one of the produced items (i.e., the instances of F5 Item).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>R28_produced</IRI>
+        <Literal xml:lang="en">R28 produced</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>R28i_was_produced_by</IRI>
+        <Literal xml:lang="en">R28i was produced by</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>R29_reproduced_object</IRI>
+        <Literal xml:lang="en">This property associates an instance of F33 Reproduction Event with an instance of F5 Item it reproduces.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>R29_reproduced_object</IRI>
+        <Literal xml:lang="en">R29 reproduced object</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>R29i_was_object_reproduced_by</IRI>
+        <Literal xml:lang="en">R29i was object reproduced by</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>R2_is_derivative_of</IRI>
+        <Literal xml:lang="en">This property associates an instance of F1 Work which modifies the content of another instance of F1 Work with the latter. This property is transitive. 
+
+The property R2.1 has type of this property allows for specifying the kind of derivation, such as adaptation, summarisation, etc.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>R2_is_derivative_of</IRI>
+        <Literal xml:lang="en">R2 is derivative of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>R2i_has_derivative</IRI>
+        <Literal xml:lang="en">R2i has derivative</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>R30_reproduced_publication</IRI>
+        <Literal xml:lang="en">This property associates an instance of F33 Reproduction Event with an instance of F3 Manifestation it reproduces.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>R30_reproduced_publication</IRI>
+        <Literal xml:lang="en">R30 reproduced publication</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>R30i_was_publication_reproduced_by</IRI>
+        <Literal xml:lang="en">R30i was publication reproduced by</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>R33_has_content</IRI>
+        <Literal xml:lang="en">This property associates an instance of F12 Nomen with a sign or arrangement of signs that is used to refer to something through that instance of F12 Nomen.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>R33_has_content</IRI>
+        <Literal xml:lang="en">R33 has content</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>R34_has_validity_period</IRI>
+        <Literal xml:lang="en">This property associates an instance of F34 Controlled Vocabulary with the instance of E52 Time-Span describing the period for which the particular expression of the controlled vocabulary was regarded as valid by its maintainers. Each change of validity status of a nomen within the controlled vocabulary should be associated with a release change of the controlled vocabulary. The individual time-span of a validity state of a nomen would be the union of the time-spans of the controlled vocabulary in which the nomen was declared to have the particular validity status (provisional, accepted, obsolete, etc.)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>R34_has_validity_period</IRI>
+        <Literal xml:lang="en">R34 has validity period</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>R34i_is_validity_period_of</IRI>
+        <Literal xml:lang="en">R34i is validity period of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>R35_is_specified_by</IRI>
+        <Literal xml:lang="en">R35 is specified by</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>R35i_specifies</IRI>
+        <Literal xml:lang="en">R35i specifies</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>R36_uses_script_conversion</IRI>
+        <Literal xml:lang="en">This property associates an instance of F12 Nomen with the instance of F36 Script Conversion that was used to create the instance of F12 Nomen. The source of this conversion may or may not be explicitly mentioned.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>R36_uses_script_conversion</IRI>
+        <Literal xml:lang="en">R36 uses script conversion</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>R36i_is_script_conversion_used_in</IRI>
+        <Literal xml:lang="en">R36i is script conversion used in</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>R3_is_realised_in</IRI>
+        <Literal xml:lang="en">This property associates an instance of F2 Expression with an instance of F1 Work.
+
+This property expresses the association that exists between an expression and the work that this expression conveys. Our factual knowledge of how a given work is historically realised into expressions is often limited. Therefore, this property makes it possible to express the association between an instance of F2 Expression and the instance of F1 Work it conveys without identifying the particular instances of F2 Expression that were part of a chain of derivation from the source.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>R3_is_realised_in</IRI>
+        <Literal xml:lang="en">R3 is realised in</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>R3i_realises</IRI>
+        <Literal xml:lang="en">R3i realises</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>R45_assigned_to</IRI>
+        <Literal xml:lang="en">R45 assigned to</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>R45_was_assigned_by</IRI>
+        <Literal xml:lang="en">R45i was assigned by</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>R4_embodies</IRI>
+        <Literal xml:lang="en">This property associates an instance of F3 Manifestation with one or more instances of F2 Expression which are rendered by this instance of F3 Manifestation. The manifestation formats the expression(s) in the way they are to be presented to some public, including specifying the intended sensory impression (such as visual appearance or audio rendition). The content of the embodied instances of F2 Expression should be defined at a symbolic level (such as a text or notated music) more abstract than the embodying instance of F3 Manifestation (such as a book or a notated score).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>R4_embodies</IRI>
+        <Literal xml:lang="en">R4 embodies</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>R4i_is_embodied_in</IRI>
+        <Literal xml:lang="en">R4i is embodied in</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>R54_has_language</IRI>
+        <Literal xml:lang="en">This property associates an instance of F12 Nomen with an instance of E56 Language which is the language used for or associated with the nomen.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>R54_has_language</IRI>
+        <Literal xml:lang="en">R54 has language</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>R54i_is_language_of</IRI>
+        <Literal xml:lang="en">R54i is language of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>R56_is_related_to</IRI>
+        <Literal xml:lang="en">R56 is related to</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>R56i_is_related_to</IRI>
+        <Literal xml:lang="en">R56i is related to</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>R57_is_based_on</IRI>
+        <Literal xml:lang="en">This property associates an instance of F38 Character with an instance of E39 Actor that the character is motivated by or is intended to represent. An instance of F38 Character may be based on a combination of features taken from several actors. This property is a shortcut of the more fully developed path from E28 Conceptual Object, restricted to F38 Character, through the inverse of P94 has created (was created by): E65 Creation. P17 was motivated by (motivated) to E1 CRM Entity restricted to E39 Actor.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>R57_is_based_on</IRI>
+        <Literal xml:lang="en">R57 is based on</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>R57i_is_basis_for</IRI>
+        <Literal xml:lang="en">R57i is basis for</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>R58_has_fictional_member</IRI>
+        <Literal xml:lang="en">This property associates an instance of F38 Character representing a group with another instance of F38 Character that is presented in relevant fiction as a member of the fictional group</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>R58_has_fictional_member</IRI>
+        <Literal xml:lang="en">R58 has fictional member</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>R58i_is_fictional_member_of</IRI>
+        <Literal xml:lang="en">R58i is fictional member of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>R59_had_typical_subject</IRI>
+        <Literal xml:lang="en">R59 had typical subject</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>R59i_was_typical_subject_of</IRI>
+        <Literal xml:lang="en">R59i was typical subject of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>R5_has_component</IRI>
+        <Literal xml:lang="en">This property associates an instance of an F2 Expression X with a structural component Y that conveys a part of the overall work realized by X, such as volumes, chapters, paragraphs. This property is transitive.
+
+Any part of an expression that conveys complete propositions, such as a single phrase, can be documented using the more general property P148 has component (is component of).
+
+Any part of an expression that does not completely follow meaningful boundaries, such as lines or pages of text or portions visible on images, can be documented using the property P106 is composed of (forms part of), and not with R5 has component (is component of). Fragments, in particular, can be documented with the more specific property R15 has fragment (is fragment of).
+
+This property does not cover the relationship that exists between pre-existing expressions that are re-used in a new, larger expression and that new, larger expression. Such a relationship is modelled by R75 incorporates (is incorporated in).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>R5_has_component</IRI>
+        <Literal xml:lang="en">R5 has component</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>R5i_is_component_of</IRI>
+        <Literal xml:lang="en">R5i is component of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>R60_used_to_use_language</IRI>
+        <Literal xml:lang="en">R60 used to use language</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>R60i_was_language_used_by</IRI>
+        <Literal xml:lang="en">R60i was language used by</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>R61_occurred_in_kind_of_context</IRI>
+        <Literal xml:lang="en">R61 occurred in kind of context</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>R61i_was_kind_of_context_for</IRI>
+        <Literal xml:lang="en">R61i was kind of context for</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>R62_was_used_for_membership_in</IRI>
+        <Literal xml:lang="en">R62 was used for membership in</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>R62i_was_context_for</IRI>
+        <Literal xml:lang="en">R62i was context for</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>R63_named</IRI>
+        <Literal xml:lang="en">This property associates an instance of F52 Name Use Activity with the instance of E1 CRM Entity that the associated name was used for.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>R63_named</IRI>
+        <Literal xml:lang="en">R63 named</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>R63i_was_named_by</IRI>
+        <Literal xml:lang="en">R63i was named by</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>R64_used_name</IRI>
+        <Literal xml:lang="en">R64 used name</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>R64i_was_name_used_by</IRI>
+        <Literal xml:lang="en">R64i was name used by</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>R65_recorded_aspects_of</IRI>
+        <Literal xml:lang="en">R65 recorded aspects of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>R65i_had_aspects_recorded_through</IRI>
+        <Literal xml:lang="en">R65i had aspects recorded through</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>R66_included_performed_version_of</IRI>
+        <Literal xml:lang="en">R66 included performed version of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>R66i_had_a_performed_version_through</IRI>
+        <Literal xml:lang="en">R66i had a performed version through</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>R67_has_part</IRI>
+        <Literal xml:lang="en">This property associates an instance of F1 Work with another instance of F1 Work that forms part of it in a complementary role to other sibling parts, conceived at some point in time to form together a logical whole, such as the parts of a trilogy. This property is transitive. 
+
+In contrast, the property R10 has member (is member of) may, for instance, also associate with the overall instance of F1 Work translations, adaptations and other derivative works that do not form a logical whole with sibling parts.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>R67_has_part</IRI>
+        <Literal xml:lang="en">R67 has part</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>R67i_forms_part_of</IRI>
+        <Literal xml:lang="en">R67i forms part of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>R68_is_inspired_by</IRI>
+        <Literal xml:lang="en">This property associates an instance of F1 Work with another instance of F1 Work whose content was inspired by that instance of F1 Work. The content of the range work instance served in some way as a source of ideas for the domain work instance. Neither instance of F1 Work may be a part of the other.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>R68_is_inspired_by</IRI>
+        <Literal xml:lang="en">R68 is inspired by</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>R68i_is_inspiration_for</IRI>
+        <Literal xml:lang="en">R68i is inspiration for</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>R69_has_physical_form</IRI>
+        <Literal xml:lang="en">R69 has physical form</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>R69i_is_physical_form_of</IRI>
+        <Literal xml:lang="en">R69i is physical form of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>R70_has_dimension</IRI>
+        <Literal xml:lang="en">R70 has dimension</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>R70i_is_dimension_of</IRI>
+        <Literal xml:lang="en">R70i is dimension of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>R71_has_part</IRI>
+        <Literal xml:lang="en">R71 has part</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>R71i_is_part_of</IRI>
+        <Literal xml:lang="en">R71i is part of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>R73_takes_representative_attribute_from</IRI>
+        <Literal xml:lang="en">R73 takes representative attribute from</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>R73i_bears_representative_attribute_for</IRI>
+        <Literal xml:lang="en">R73i bears representative attribute for</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>R74_uses_expression_of</IRI>
+        <Literal xml:lang="en">R74 uses expression of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>R74i_has_expression_used_in</IRI>
+        <Literal xml:lang="en">R74i has expression used in</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>R75_incorporates</IRI>
+        <Literal xml:lang="en">R75 incorporates</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>R75i_is_incorporated_in</IRI>
+        <Literal xml:lang="en">R75i is incorporated in</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>R7_is_materialization_of</IRI>
+        <Literal xml:lang="en">This property associates an instance of F3 Manifestation with an instance of F5 Item that is one of its exemplars or its only exemplar.
+
+Instances of F5 Item correspond to the kinds of physical unit(s) specified in the manifestation, regardless of possible later changes.
+
+Even though an item may exhibit defects with respect to the intended manifestation, it is still regarded to carry the manifestation, as long as it is produced or made accessible as a functional item by its creators.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>R7_is_materialization_of</IRI>
+        <Literal xml:lang="en">R7 is materialization of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>R7i_is_materialized_in</IRI>
+        <Literal xml:lang="en">R7i is materialized in</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>R8_combines</IRI>
+        <Literal xml:lang="en">R8 combines</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>R8i_is_combined_to_form</IRI>
+        <Literal xml:lang="en">R8i is combined to form</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

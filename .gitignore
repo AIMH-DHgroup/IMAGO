@@ -1,0 +1,12 @@
+# exlude config.properties
+config.properties
+
+#exclude json
+*.json
+
+#exclude sparql
+#*.rq
+
+#exclude turtle
+data/dumps/*.ttl
+catalog-v001.xml
