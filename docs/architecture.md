@@ -9,12 +9,12 @@ It is intended to support transparency, reproducibility, and long-term maintaina
 
 The IMAGO system follows a **modular, pipeline-based architecture** designed to support the scholarly creation, transformation, enrichment, and publication of cultural heritage data as Linked Open Data.
 
-Each module has a clearly defined role and communicates with the others through explicit data formats (JSON, RDF), allowing components to be developed, tested, and reused independently.
+Each module has a clearly defined role and communicates with the others through explicit data formats (JSON, OWL), allowing components to be developed, tested, and reused independently.
 
 At a high level, the architecture consists of four main layers:
 
 1. **Annotation layer** – scholarly data creation  
-2. **Transformation layer** – conversion to RDF  
+2. **Transformation layer** – conversion to OWL  
 3. **Linking and enrichment layer** – alignment with external authorities  
 4. **Publication and access layer** – querying and exploration  
 
@@ -45,16 +45,16 @@ Annotated records are exported as **structured JSON**, representing the authorit
 **Component:** `tools/triplifier/`  
 **Technology:** Java, Apache Jena  
 
-The triplifier is a standalone Java application that converts the JSON exports produced by the annotation tool into RDF.
+The triplifier is a standalone Java application that converts the JSON exports produced by the annotation tool into OWL.
 
 Its responsibilities include:
 
 - Mapping the internal IMAGO data model to established ontologies
-- Generating RDF compliant with:
+- Generating OWL compliant with:
   - CIDOC CRM
   - ILRMoo
   - IMAGO project-specific extensions
-- Producing RDF in standard serializations (RDF/XML and Turtle)
+- Producing OWL in standard serializations (RDF/XML and Turtle)
 
 This explicit transformation step ensures a **clear separation** between data creation and semantic representation.
 
@@ -68,18 +68,17 @@ OWL/RDF files ready for ingestion into a triple store.
 **Component:** `tools/linking/`  
 **Technology:** Python  
 
-The linking tool supports the reconciliation and alignment of IMAGO entities with external authority resources, such as Wikidata.
+The linking tool supports the reconciliation and alignment of IMAGO entities with external authority resources, such as Wikidata and MIRABILE.
 
 Typical tasks include:
 
-- Matching places, institutions, or agents to external identifiers
-- Producing explicit equivalence or close-match relations
-- Generating linksets that can be incorporated into the RDF dataset
+- Matching places, institutions, authors, works to external identifiers
+- Generating individuals that can be incorporated into the IMAGO anntoation tool
 
-Linking is performed as a **post-triplification step**, allowing the core dataset to remain stable while enrichment can be iterated or refined over time.
+Linking is performed as a **pre-annotation step**, allowing the scholars to annotate data with the aligned individuals.
 
 **Output:**  
-Additional RDF statements or mapping files integrated into the published dataset.
+Mapping files integrated into the annotation tool.
 
 ---
 
@@ -104,9 +103,9 @@ This layer supports both expert users (via SPARQL) and non-technical users (via 
 
 The complete workflow can be summarized as follows:
 
+1. **Individuals → Linking Tool → Aligned Individuals**  
 1. **Annotation Tool → JSON export**  
 2. **JSON → Triplifier → RDF (OWL/Turtle)**  
-3. **RDF → Linking Tool → Enriched RDF**  
 4. **RDF → Fuseki → SPARQL Endpoint → Archive Frontend**
 
 Each step uses open, documented formats to ensure interoperability and long-term reuse.
@@ -125,19 +124,6 @@ The IMAGO architecture is guided by the following principles:
 
 ---
 
-## Relation to the Paper
-
-The components described here correspond directly to the software mentioned in the paper, including:
-
-- the Java-based triplifier,
-- the linking tool,
-- the annotation environment,
-- and the SPARQL-based access layer used to demonstrate the dataset.
-
-This document complements the paper by providing a system-level view of how these components interact.
-
----
-
 ## Future Extensions
 
 The modular design of the IMAGO architecture allows for:
@@ -148,5 +134,3 @@ The modular design of the IMAGO architecture allows for:
 - integration with other CIDOC CRM–based datasets.
 
 Such extensions can be introduced without altering the core annotation or transformation logic.
-
----

@@ -1,6 +1,6 @@
 # IMAGO Dataset
 
-This directory contains the RDF datasets produced within the IMAGO project and used in the analyses presented in the paper.  
+This directory contains the OWL datasets produced within the IMAGO project and used in the analyses presented in the paper.  
 All data are released in **Turtle (TTL)** format and are intended to support transparency, inspection, and reuse.
 
 The datasets include:
@@ -31,12 +31,11 @@ All dataset files are compressed using gzip to reduce repository size.
 
 ### imago-archive.ttl.gz
 
-This file contains the **core RDF dataset of the IMAGO archive**.
+This file contains the **core OWL dataset of the IMAGO archive**.
 
 It includes:
 - Works, expressions, manuscripts, and agents described in the IMAGO project
-- Resources identified by **IMAGO-minted IRIs**
-- Descriptive metadata expressed using CIDOC CRM, ILRMoo, and project-specific extensions
+- Resources identified by **IMAGO IRIs**
 - References to external identifiers (e.g. Wikidata, Mirabile) where available
 
 This dataset represents the primary body of data curated and published by the IMAGO project.
@@ -49,8 +48,7 @@ This file contains **linking statements between the IMAGO dataset and the Mappin
 
 It includes:
 - Alignments between IMAGO resources and corresponding entities in the MMM dataset
-- Explicit links expressed using standard RDF predicates (e.g. `owl:sameAs`, `skos:exactMatch`, or `skos:closeMatch`)
-- No duplication of external data; only identifiers and linking assertions are provided
+- Explicit links expressed using CIDOC-CRM predicates (e.g. `ecrm:P46_is_composed_of`)
 
 This file supports interoperability and reuse across related projects.
 
@@ -61,9 +59,9 @@ This file supports interoperability and reuse across related projects.
 This file contains **Dante’s Latin toponyms** curated within the IMAGO project.
 
 It includes:
-- IMAGO-minted IRIs identifying toponyms
+- IMAGO IRIs identifying toponyms
 - Lexical and descriptive information associated with Latin place names
-- Geographic references and links to external authority files (e.g. Wikidata, Mirabile) where applicable
+- Geographic references and links to external authority files (e.g. Wikidata and Pleiades) where applicable
 
 The separation of toponym data supports focused reuse and independent analysis.
 
@@ -85,7 +83,7 @@ Users are encouraged to load the ontology alongside the datasets to ensure corre
 
 The datasets clearly distinguish between:
 
-- **IMAGO-minted IRIs**, created and maintained by the project
+- **IMAGO IRIs**, created and maintained by the project
 - **External IRIs**, reused from authoritative external sources
 
 External resources are **referenced, not replicated**.  

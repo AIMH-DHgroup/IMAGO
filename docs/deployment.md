@@ -1,7 +1,7 @@
 # IMAGO Deployment Guide
 
 This document describes how the IMAGO software components can be deployed and configured.  
-It is intended to support reproducibility of the system described in the paper and to clarify the relationship between the different tools in the IMAGO pipeline.
+It is intended to support reproducibility of the system and to clarify the relationship between the different tools in the IMAGO pipeline.
 
 The deployment described here reflects the setup used during development and evaluation; alternative configurations are possible due to the modular architecture of the system.
 
