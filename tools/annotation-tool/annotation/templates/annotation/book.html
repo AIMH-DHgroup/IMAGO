@@ -1,0 +1,128 @@
+{% extends 'annotation/base.html' %}
+
+{% block content %}
+
+<!-- <form class="form" action="" method="post">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Submit">
+</form>
+
+<p>{{ json}}</p> -->
+<dl class="row">
+    <dt class="col-sm-3">Testo</dt>
+    <dd class="col-sm-9">{{ data.Nota.FrammentoDante}}</dd>
+
+    <dt class="col-sm-3">Corpo della nota</dt>
+    <dd class="col-sm-9">{{ data.Nota.BodyNota }}</dd>
+
+    <dt class="col-sm-3">Commento</dt>
+    <dd class="col-sm-9">{{ data.Nota.Commento }}</dd>
+
+    <dt class="col-sm-3">Cantica</dt>
+    <dd class="col-sm-9">{{ data.Nota.OperaDante.Cantica }}</dd>
+    <dt class="col-sm-3">Canto</dt>
+    <dd class="col-sm-9">{{ data.Nota.OperaDante.Canto }}</dd>
+    <dt class="col-sm-3">Verso</dt>
+    <dd class="col-sm-9">{{ data.Nota.OperaDante.Verso }}</dd>
+</dl>
+
+<div id="accordion">
+    {% for citazione in data.Nota.Citazioni %}
+
+    <div class="card">
+      <div class="card-header" id="heading{{ forloop.counter }}">
+        <h5 class="mb-0">
+          <button class="btn btn-link" data-toggle="collapse" data-target="#collapse{{ forloop.counter }}" aria-expanded="true" aria-controls="collapse{{ forloop.counter }}">
+            Citazione {{ forloop.counter }}
+          </button>
+        </h5>
+      </div>
+      <div id="collapse{{ forloop.counter }}" class="collapse" aria-labelledby="heading{{ forloop.counter }}" data-parent="#accordion">
+        <div class="card-body">
+            <dl class="row">
+                <dt class="col-sm-3">Frammento Nota</dt>
+                <dd class="col-sm-9">{{ citazione.FrammentoNota}}</dd>
+            
+                <dt class="col-sm-3">Tipo citazione</dt>
+                <dd class="col-sm-9">{{ citazione.TipoCitazione }}</dd>
+            
+                <dt class="col-sm-3">Fonte citata</dt>
+                <dd class="col-sm-9">{{ citazione.InfoCitazione.Fonte }}</dd>
+            
+                <dt class="col-sm-3">Autore citato</dt>
+                <dd class="col-sm-9">{{ citazione.InfoCitazione.Autore  }}</dd>
+                <dt class="col-sm-3">Area tematica</dt>
+                <dd class="col-sm-9">{{ citazione.InfoCitazione.Area }}</dd>
+                <dt class="col-sm-3">Tipo fonte</dt>
+                <dd class="col-sm-9">{{ citazione.InfoCitazione.TipoFonte }}</dd>
+            </dl>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+
+
+<form action="" method="post">
+    {% csrf_token %}
+    <div class="form-group">
+        <legend>{{ title }}</legend>
+        {% for field in form %}
+        <div class="form-group row">
+        <label  class="col-sm-3 col-form-label">{{ field.label }}</label>
+        <div class="col-sm-9">
+            {{ field }}
+          </div>
+        </div>
+        
+        {% endfor %}
+    </div>
+    <div class="form-actions">
+        <button type="submit" class="btn btn-primary" >Salva nota</button>
+    </div>
+</form>
+
+<h2>Json</h2>
+
+<pre>{{ json }}</pre> 
+
+<!-- 
+
+<form action="" method="post">
+    {% csrf_token %}
+    <div class="form-group">
+        <legend>{{ title }}</legend>
+        {% for field in form %}
+        <label>{{ field.label }}</label>
+        {{ field }}
+            {% if field.errors %}
+                <div class="form-group error">
+                    <label class="form-label">{{ field.label }}</label> 
+                     <div class="controls">{{ field }}
+                        <span class="help-inline">
+                            {% for error in  field.errors %}{{ error }}{% endfor %}
+                        </span>
+                    </div>
+                </div>
+            {% else %}
+                <div class="control-group">
+                    <label class="control-label">{{ field.label }}</label> 
+                    <div class="controls">{{ field }}
+                        {% if field.help_text %}
+                            <p class="help-inline"><small>{{ field.help_text }}</small></p>
+                        {% endif %}
+                    </div>
+                </div>
+            {% endif %}
+        {% endfor %}
+            </div>
+    <div class="form-actions">
+        <button type="submit" class="btn btn-primary" >Submit</button>
+    </div>
+</form>
+
+<p>{{ json }}</p> -->
+
+
+{% endblock %} 

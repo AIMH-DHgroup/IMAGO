@@ -1,0 +1,241 @@
+Q1. The SPARQL query retrieves author–work pairs (i.e. lemma) using name and title input.
+
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX ecrm: <http://erlangen-crm.org/200717/>
+PREFIX ilrm: <http://imagoarchive.it/ilrmoo/>
+PREFIX : <https://imagoarchive.it/ontology/>
+
+SELECT ?exp_cre ?title ?authorName ?alias
+FROM <https://imagoarchive.it/fuseki/imago/archive>
+WHERE {
+  ?exp_cre a ilrm:F28_Expression_Creation ;
+           ilrm:R17_created ?work ;
+           ecrm:P14_carried_out_by ?author .
+
+  ?author a :Author ;
+          ecrm:P1_is_identified_by/ecrm:P190_has_symbolic_content ?authorName ;
+          ecrm:P1_is_identified_by/:has_alias ?alias .
+
+  ?work a ilrm:F2_Expression ;
+        ecrm:P102_has_title/ecrm:P190_has_symbolic_content ?title .
+
+  FILTER (?title = "Descriptio insule Crete")
+  FILTER (?authorName = "Christophorus Bondelmontius")
+}
+ORDER BY ?authorName ?title
+
+
+
+Q2. The query retrieves the works classified under the Cartography literary genre. For each work, the title and author name are extracted. The genre is identified by the IRI https://imagoarchive.it/thes/tid/10003
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX ecrm: <http://erlangen-crm.org/200717/>
+PREFIX ilrm: <http://imagoarchive.it/ilrmoo/>
+PREFIX : <https://imagoarchive.it/ontology/>
+
+SELECT ?exp_cre ?title ?authorName
+FROM <https://imagoarchive.it/fuseki/imago/archive>
+WHERE {
+  BIND(<https://imagoarchive.it/thes/tid/10003> AS ?genre)
+
+  ?exp_cre a ilrm:F28_Expression_Creation ;
+           ilrm:R17_created ?work ;
+           ecrm:P14_carried_out_by ?author .
+
+  ?author a :Author ;
+          ecrm:P1_is_identified_by/ecrm:P190_has_symbolic_content ?authorName .
+
+  ?work a ilrm:F2_Expression ;
+        ecrm:P102_has_title/ecrm:P190_has_symbolic_content ?title ;
+        :has_genre ?genre .
+}
+ORDER BY ?authorName
+
+
+
+Q3. The query retrieves all works in which the city of Genoa is mentioned. The query also extracts the title of the work and the author’s name, and links the toponym to its geographic representation.
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX ecrm: <http://erlangen-crm.org/200717/>
+PREFIX ilrm: <http://imagoarchive.it/ilrmoo/>
+PREFIX : <https://imagoarchive.it/ontology/>
+
+SELECT DISTINCT ?exp_cre ?authorName ?title
+FROM <https://imagoarchive.it/fuseki/imago/archive>
+WHERE {
+  BIND(<https://imagoarchive.it/ontology/resources/toponym/genova> AS ?toponym)
+
+  ?exp_cre a ilrm:F28_Expression_Creation ;
+           ilrm:R17_created ?work ;
+           ecrm:P14_carried_out_by ?author .
+
+  ?author a :Author ;
+          ecrm:P1_is_identified_by/ecrm:P190_has_symbolic_content ?authorName .
+
+  ?work a ilrm:F2_Expression ;
+        ecrm:P102_has_title/ecrm:P190_has_symbolic_content ?title ;
+        ecrm:P106_is_composed_of ?toponym .
+
+  ?place :is_identified_by_toponym ?toponym ;
+         ecrm:P168_place_is_defined_by/ecrm:P190_has_symbolic_content ?coord .
+
+  ?toponym ecrm:P190_has_symbolic_content ?placeName .
+}
+
+
+Q4. The SPARQL query retrieves manuscripts currently held by the Biblioteca Nazionale di Firenze. The query returns information on each manuscript’s shelfmark, number of folios, holding institution, and associated geographic location.
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX ecrm: <http://erlangen-crm.org/200717/>
+PREFIX ilrm: <http://imagoarchive.it/ilrmoo/>
+PREFIX : <https://imagoarchive.it/ontology/>
+
+SELECT ?manuscript ?placeName ?libraryName ?shelfmark ?folios
+FROM <https://imagoarchive.it/fuseki/imago/archive>
+WHERE {
+  BIND(<http://www.wikidata.org/entity/Q460907> AS ?library)
+
+  ?exp_cre a ilrm:F28_Expression_Creation ;
+           ilrm:R17_created ?work ;
+           ecrm:P14_carried_out_by ?author .
+
+  ?author a :Author ;
+          ecrm:P1_is_identified_by/ecrm:P190_has_symbolic_content ?authorName .
+
+  ?work a ilrm:F2_Expression ;
+        ecrm:P102_has_title/ecrm:P190_has_symbolic_content ?title .
+
+  ?exp_cre ilrm:R18_created ?manuscript .
+
+  ?manuscript 
+    ecrm:P1_is_identified_by/ecrm:P190_has_symbolic_content ?shelfmark ;
+    ecrm:P50_has_current_keeper ?library ;
+    ecrm:P46_is_composed_of/ecrm:P1_is_identified_by/ecrm:P190_has_symbolic_content ?folios .
+
+  ?manifestation ilrm:R7i_is_materialized_in ?manuscript .
+
+  ?library 
+    ecrm:P74_has_current_or_former_residence ?libraryPlace ;
+    ecrm:P1_is_identified_by/ecrm:P190_has_symbolic_content ?libraryName .
+
+  ?libraryPlace 
+    :is_identified_by_toponym ?toponym ;
+    ecrm:P168_place_is_defined_by/ecrm:P190_has_symbolic_content ?coord .
+
+  ?toponym ecrm:P190_has_symbolic_content ?placeName .
+}
+ORDER BY ?placeName ?libraryName ?shelfmark
+
+
+Q5. The query retrieves all printed editions of manuscripts published in Bologna. The query includes information about the edition’s title, author, place of publication, and - where available - publisher, date, and curator.
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX ecrm: <http://erlangen-crm.org/200717/>
+PREFIX ilrm: <http://imagoarchive.it/ilrmoo/>
+PREFIX : <https://imagoarchive.it/ontology/>
+
+SELECT ?print_author ?print_edition ?print_title ?l_datazione ?placeName ?publisher
+FROM <https://imagoarchive.it/fuseki/imago/archive>
+WHERE {
+  BIND(<http://www.wikidata.org/entity/Q1891> AS ?toponym)
+
+  ?exp_cre a ilrm:F28_Expression_Creation ;
+           ilrm:R17_created ?work ;
+           ecrm:P14_carried_out_by ?author .
+
+  ?author a :Author ;
+          ecrm:P1_is_identified_by/ecrm:P190_has_symbolic_content ?authorName .
+
+  ?work a ilrm:F2_Expression ;
+        ecrm:P102_has_title/ecrm:P190_has_symbolic_content ?title .
+
+  ?printEditionCreation ilrm:R24_created ?print_edition .
+
+  ?print_edition 
+    ilrm:R4_embodies ?work ;
+    ecrm:P106_is_composed_of/ecrm:P190_has_symbolic_content ?print_author ;
+    ecrm:P102_has_title/ecrm:P190_has_symbolic_content ?print_title .
+
+  ?print_creation ilrm:R24_created ?print_edition ;
+                  ecrm:P7_took_place_at ?toponym .
+
+  ?toponym :is_identified_by_toponym/ecrm:P190_has_symbolic_content ?placeName .
+
+  OPTIONAL {
+    ?printEditionCreation 
+      ecrm:P4_has_time-span/ecrm:P170i_time_is_defined_by ?l_datazione .
+  }
+
+  OPTIONAL {
+    ?print_creation :has_curator/ecrm:P1_is_identified_by
+    /ecrm:P190_has_symbolic_content ?curator .
+  }
+
+  OPTIONAL {
+    ?print_creation :has_publisher/ecrm:P1_is_identified_by
+    /ecrm:P190_has_symbolic_content ?publisher .
+  }
+}
+
+
+
+
+Q6. The query retrieves the data associated (i.e., library, place in which the library is located, and shelf mark) with the manuscripts dated to the 10\textsuperscript{th} and 11\textsuperscript{th} century.
+
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX ecrm: <http://erlangen-crm.org/200717/>
+PREFIX ilrm: <http://imagoarchive.it/ilrmoo/>
+PREFIX : <https://imagoarchive.it/ontology/>
+
+SELECT DISTINCT ?manuscript ?placeName ?libraryName ?shelfmark 
+                ?folios ?date_manuscript ?start_date_manuscript 
+                ?end_date_manuscript
+FROM <https://imagoarchive.it/fuseki/imago/archive>
+WHERE {
+  ?exp_cre ilrm:R18_created ?manuscript .
+  ?manuscript 
+    ecrm:P1_is_identified_by/ecrm:P190_has_symbolic_content ?shelfmark ;
+    ecrm:P50_has_current_keeper ?library ;
+    ecrm:P46_is_composed_of/
+        ecrm:P1_is_identified_by/
+            ecrm:P190_has_symbolic_content ?folios .
+  
+  ?manifestation ilrm:R7i_is_materialized_in ?manuscript .
+  ?manifestation_creation 
+    ilrm:R24_created  ?manifestation ;
+    ecrm:P4_has_time-span/ecrm:P170i_time_is_defined_by ?date_manuscript ;
+    :has_start_date ?start_date_manuscript ;
+    :has_end_date ?end_date_manuscript .
+
+  ?library 
+    ecrm:P74_has_current_or_former_residence ?libraryPlace ;
+    ecrm:P1_is_identified_by/ecrm:P190_has_symbolic_content ?libraryName .
+
+  ?libraryPlace :is_identified_by_toponym ?toponym .
+  ?toponym ecrm:P190_has_symbolic_content ?placeName .
+
+  FILTER((
+    "901-01-01T00:00:00Z"^^xsd:dateTime <= ?start_date_manuscript &&
+    ?start_date_manuscript <= "1000-01-01T00:00:00Z"^^xsd:dateTime
+  ) || (
+    "1001-01-01T00:00:00Z"^^xsd:dateTime <= ?start_date_manuscript &&
+    ?start_date_manuscript <= "1100-01-01T00:00:00Z"^^xsd:dateTime
+  ))
+
+  FILTER((
+    "901-01-01T00:00:00Z"^^xsd:dateTime <= ?end_date_manuscript &&
+    ?end_date_manuscript <= "1000-01-01T00:00:00Z"^^xsd:dateTime
+  ) || (
+    "1001-01-01T00:00:00Z"^^xsd:dateTime <= ?end_date_manuscript &&
+    ?end_date_manuscript <= "1100-01-01T00:00:00Z"^^xsd:dateTime
+  ))
+}
+ORDER BY ?start_date_manuscript ?end_date_manuscript ?placeName ?libraryName ?shelfmark

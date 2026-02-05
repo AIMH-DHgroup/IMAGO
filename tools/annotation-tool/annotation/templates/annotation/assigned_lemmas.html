@@ -1,0 +1,37 @@
+{% extends 'annotation/base.html' %}
+
+
+{% block content %}
+
+<h1 class="mt-2">Lemmi assegnati</h1>
+<hr class="mt-0 mb-4">
+<!-- <input type="text" id="search" placeholder="Search..."> -->
+{% if lemmas_list %}
+<table class="table" id="tableNotes">
+    <tr class="header">
+      <th>Autore</th>
+      <th>Opera</th>
+    </tr>
+
+    {% for lemma in lemmas_list %}
+    
+    <tr>
+        <td><a href="../authors/{{ lemma.author_id }}">{{ lemma.author_name }}</a></td>
+        <td><a href="../lemma/{{ lemma.author_id }}/{{ lemma.work_id }}/">{{ lemma.work_title }}</a></td>
+    </tr>
+
+    {% endfor %}
+</table>
+{% else %}
+    <p>No notes are available.</p>
+{% endif %}
+
+
+
+{% endblock %} 
+{% block script %}
+{% load static %}
+
+<script src="{% static 'hdn/js/search.js' %}"></script>
+{% endblock %} 
+

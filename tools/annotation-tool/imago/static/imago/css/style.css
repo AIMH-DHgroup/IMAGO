@@ -1,0 +1,310 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,100,300,700,500,900);
+
+body, input, select, textarea, .popover {
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+} 
+
+#logo{
+  width: 95%;
+}
+
+.form-field input, .form-field textarea, .form-field select {
+  width: 100%;
+}
+
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  /* transition: 0.5s; */
+  padding-top: 60px;
+  padding-left: 2%;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.openbtn {
+  font-size: 12px;
+  cursor: pointer;
+  background-color: #b50000;
+  color: white;
+  padding: 5px 7px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color: #444;
+  color: white;
+  text-decoration: none;
+}
+
+#main {
+  /* transition: margin-left .5s; */
+  padding: 16px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+
+#general-info{
+  margin-top: 3%;
+}
+
+ /* The Modal (background) */
+
+ .del-modal, .add-modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 9999; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content/Box */
+  .del-modal-content, .add-modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 40%; /* Could be more or less, depending on screen size */
+  }
+  
+  /* The Close Button */
+  .close-icon {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close-icon:hover,
+  .close-icon:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  } 
+
+   /* Style the buttons that are used to open and close the accordion panel */
+.pe-accordion, .m-accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+  }
+  
+  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+  .pe-accordion.active, .pe-accordion:hover, .m-accordion.active, .m-accordion:hover {
+    background-color: #ccc;
+  }
+  
+  /* Style the accordion panel. Note: hidden by default */
+  .pe-panel, .m-panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+  } 
+
+  .pe-accordion:after, .m-accordion:after {
+    content: '\02795'; /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+    color: #777;
+    float: right;
+    margin-left: 5px;
+  }
+  
+  .pe-accordion.active:after, .m-accordion.active:after {
+    content: "\2796"; /* Unicode character for "minus" sign (-) */
+  }
+
+  /* #update-lemma{
+    display: none;
+  }
+
+  #new-lemma{
+    display: none;
+  } */
+
+  #btn-json{
+    margin-top: 3%;
+    margin-bottom: 3%;
+  }
+
+  #json-field{
+    display: none;
+  }
+
+  /* FIXME: should we use percentage width? */
+  .popover {
+	  max-width: 220px;
+  }
+
+/* Index page */
+  #search {
+    background-image: url('/css/searchicon.png'); /* Add a search icon to input */
+    background-position: 10px 12px; /* Position the search icon */
+    background-repeat: no-repeat; /* Do not repeat the icon image */
+    width: 100%; /* Full-width */
+    font-size: 16px; /* Increase font-size */
+    padding: 12px 20px 12px 40px; /* Add some padding */
+    border: 1px solid #ddd; /* Add a grey border */
+    margin-bottom: 12px; /* Add some space below the input */
+  }
+  
+  #tableNotes {
+    border-collapse: collapse; /* Collapse borders */
+    width: 100%; /* Full-width */
+    border: 1px solid #ddd; /* Add a grey border */
+    font-size: 18px; /* Increase font-size */
+  }
+  
+  #tableNotes th, #tableNotes td {
+    text-align: left; /* Left-align text */
+    padding: 12px; /* Add padding */
+  }
+  
+  #tableNotes tr {
+    /* Add a bottom border to all table rows */
+    border-bottom: 1px solid #ddd;
+  }
+  
+  #tableNotes tr.header, #tableNotes tr:hover {
+    /* Add a grey background color to the table header and on hover */
+    background-color: #f1f1f1;
+  }
+
+
+  /* Tree view */
+
+  ul, #tree-view {
+    list-style-type: none;
+  }
+  
+  #tree-view {
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+  }
+  
+  .caret {
+    cursor: pointer;
+    -webkit-user-select: none; /* Safari 3.1+ */
+    -moz-user-select: none; /* Firefox 2+ */
+    -ms-user-select: none; /* IE 10+ */
+    user-select: none;
+  }
+
+  
+  
+  .caret::before {
+    content: "\25B6";
+    color: black;
+    display: inline-block;
+    margin-right: 4px;
+  }
+  
+  .caret-down::before {
+    -ms-transform: rotate(90deg); /* IE 9 */
+    -webkit-transform: rotate(90deg); /* Safari */
+    transform: rotate(90deg);  
+  }
+  
+  .nested {
+    display: none;
+    padding-left: 10px;
+  }
+  
+  #tree-view .active {
+    display: block;
+  }
+  
+  .activeNote{
+    border-width: 1px;
+    border-style: solid;
+  }
+  /* to do */
+   /* unvisited link */
+.to-do:link {
+  color: #6c757d;
+}
+
+/* visited link */
+.to-do:visited {
+  color: #6c757d;
+}
+
+/* mouse over link */
+.to-do:hover {
+  color: #6c757d;
+}
+
+/* selected link */
+.to-do:active {
+  color: #6c757d;
+} 
+
+  /* doing */
+   /* unvisited link */
+   .doing:link {
+    color: #ffc107;
+  }
+  
+  /* visited link */
+  .doing:visited {
+    color: #ffc107;
+  }
+  
+  /* mouse over link */
+  .doing:hover {
+    color: #ffc107;
+  }
+  
+  /* selected link */
+  .doing:active {
+    color: #ffc107;
+  } 
+
+    /* done*/
+   /* unvisited link */
+.done:link {
+  color: #28a745;
+}
+
+/* visited link */
+.done:visited {
+  color: #28a745;
+}
+
+/* mouse over link */
+.done:hover {
+  color: #28a745;
+}
+
+/* selected link */
+.done:active {
+  color: #28a745;
+} 

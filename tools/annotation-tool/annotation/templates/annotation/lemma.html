@@ -1,0 +1,1254 @@
+{% extends 'annotation/base.html' %}
+
+{% block content %}
+
+
+<!-- Title of the page -->
+<!-- <h1> Lemma </h1> -->
+
+<!-- Buttons for update or insert a new lemma. They are show only if the lemma is compiled -->
+<!-- {% if work_title == "" %}
+<button type="button" id="update-lemma" class="btn btn-success btn-sm update-lemma" hidden>
+    Modifica Lemma
+</button>
+<button type="button" href="../lemma" id="new-lemma" class="btn btn-success btn-sm" hidden>
+    Nuovo Lemma
+</button>
+{% else %}
+<button type="button" id="update-lemma" class="btn btn-success btn-sm update-lemma">
+    Modifica Lemma
+</button>
+<button type="button" id="new-lemma" class="btn btn-success btn-sm">
+    Nuovo Lemma
+</button>
+{% endif %} -->
+<div id="lemmaContainer">
+
+
+    <form action="" id="authorForm" method="post" hidden>
+        {% csrf_token %}
+        <div class="form-group">
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label font-weight-bold">Nome autore</label>
+                <div class="form-field col-sm-9">
+                    {{ author_form.name }}
+                    {{ author_form.name_iri }}
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label font-weight-bold">Alias autore</label>
+                <div class="form-field col-sm-9">
+                    {{ author_form.alias }}
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label font-weight-bold"></label>
+                <!-- <div class="form-field col-sm-9">
+                    {{ author_form.date_type}}
+                    </div> -->
+                    <div class="form-check form-check-inline">
+                        {{ author_form.birth_death}}
+                        <label class="form-check-label" for="id_birth_death">Nascita/Morte</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        {{ author_form.floruit}}
+                        <!-- <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2"> -->
+                        <label class="form-check-label" for="id_floruit">Floruit</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        {{ author_form.bishop}}
+                        <!-- <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3"> -->
+                        <label class="form-check-label" for="id_floruit">Vescovo</label>
+                      </div>
+            </div>
+            <div id="block-floruit" class="form-group row">
+                <label class="col-sm-3 col-form-label font-weight-bold">Data floruit</label>
+                <div class="form-group row col-sm-9">
+                    <div class="form-group col-sm-6">
+                        <div class="form-field">
+                        {{ author_form.date_floruit_start }}
+                        <small id="invalid-feedback-id_date_floruit" class="invalid-feedback"></small>
+                         </div>
+                        <div class="form-check">
+                            {{ author_form.uncertainty_floruit }}
+                            <label class="form-check-label" for="id_uncertainty_floruit">
+                                Incertezza
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            {{ author_form.ante_floruit }}
+                            <label class="form-check-label" for="id_ante_floruit">
+                                Ante
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            {{ author_form.post_floruit }}
+                            <label class="form-check-label" for="id_post_floruit">
+                                Post
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            {{ author_form.saec_floruit }}
+                            <label class="form-check-label" for="id_saec_floruit">
+                                Secolo in numeri romani
+                            </label>
+                            
+                          </div>
+                    </div>
+                    <div class="form-group col-sm-6">
+                        <div class="form-field">
+                            {{ author_form.date_floruit_end }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="block-bishop" class="form-group row">
+                <label class="col-sm-3 col-form-label font-weight-bold">Data episcopus</label>
+                <div class="form-group row col-sm-9">
+                    <div class="form-group col-sm-6">
+                        <div class="form-field">
+                        {{ author_form.date_bishop_start }}
+                        <small id="invalid-feedback-id_date_bishop" class="invalid-feedback"></small>
+                         </div>
+                        <div class="form-check">
+                            {{ author_form.uncertainty_bishop }}
+                            <label class="form-check-label" for="id_uncertainty_bishop">
+                                Incertezza
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            {{ author_form.ante_bishop }}
+                            <label class="form-check-label" for="id_ante_bishop">
+                                Ante
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            {{ author_form.post_bishop }}
+                            <label class="form-check-label" for="id_post_bishop">
+                                Post
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            {{ author_form.saec_bishop }}
+                            <label class="form-check-label" for="id_saec_bishop">
+                                Secolo in numeri romani
+                            </label>
+                            
+                          </div>
+                    </div>
+                    <div class="form-group col-sm-6">
+                        <div class="form-field">
+                            {{ author_form.date_bishop_end }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="block-birth" class="form-group row">
+                <label class="col-sm-3 col-form-label font-weight-bold">Data nascita</label>
+                <div class="form-group row col-sm-9">
+                    <div class="form-group col-sm-6">
+                        <div class="form-field">
+                        {{ author_form.date_birth_start }}
+                        <small id="invalid-feedback-id_date_birth" class="invalid-feedback"></small>
+                         </div>
+                        <div class="form-check">
+                            {{ author_form.uncertainty_birth }}
+                            <label class="form-check-label" for="id_uncertainty_birth">
+                                Incertezza
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            {{ author_form.ante_birth }}
+                            <label class="form-check-label" for="id_ante_birth">
+                                Ante
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            {{ author_form.post_birth }}
+                            <label class="form-check-label" for="id_post_birth">
+                                Post
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            {{ author_form.saec_birth }}
+                            <label class="form-check-label" for="id_saec_birth">
+                                Secolo in numeri romani
+                            </label>
+                            
+                          </div>
+                    </div>
+                    <div class="form-group col-sm-6">
+                        <div class="form-field">
+                            {{ author_form.date_birth_end }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="block-death" class="form-group row">
+                <label class="col-sm-3 col-form-label font-weight-bold">Data morte</label>
+                <div class="form-group row col-sm-9">
+                    <div class="form-group col-sm-6">
+                        <div class="form-field">
+                        {{ author_form.date_death_start }}
+                        <small id="invalid-feedback-id_date_death" class="invalid-feedback"></small>
+                         </div>
+                        <div class="form-check">
+                            {{ author_form.uncertainty_death }}
+                            <label class="form-check-label" for="id_uncertainty_death">
+                                Incertezza
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            {{ author_form.ante_death }}
+                            <label class="form-check-label" for="id_ante_death">
+                                Ante
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            {{ author_form.post_death }}
+                            <label class="form-check-label" for="id_post_death">
+                                Post
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            {{ author_form.saec_death }}
+                            <label class="form-check-label" for="id_saec_death">
+                                Secolo in numeri romani
+                            </label>
+                            
+                          </div>
+                    </div>
+                    <div class="form-group col-sm-6">
+                        <div class="form-field">
+                            {{ author_form.date_death_end }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-3 col-form-label font-weight-bold"></label>
+                <div class="form-group row col-sm-9">
+                    {% load static %}
+                    <a href="{% static 'imago/guide/Lineeguida_inserimento_date_tool.pdf' %}" download>Lineeguida per l'inserimento delle date</a>
+            </div> 
+        </div>
+        
+        
+        <div class="form-group row">
+            <label class="col-sm-3 col-form-label font-weight-bold"></label>
+                <div class="form-group row col-sm-9">
+            <button type="button" id="save-author" class="btn btn-primary btn-sm">
+                Salva
+            </button>   
+            </div> 
+        </div>
+    
+    </form>
+
+<form action="" id="lemmaForm" method="post">
+    {% csrf_token %}
+    <div class="form-group">
+        <legend>{{ title }}</legend>
+        {% for field in lemma_form.visible_fields %}
+            <div class="form-group row lemma-text">
+                <label class="col-sm-3 col-form-label font-weight-bold">{{ field.label }}</label>
+                <div class="form-field col-sm-9">
+                    <a class="lemma-link">{{ field.value }} <i class="far fa-edit"></i></a>
+                    <!-- {{ field }} -->
+                </div>
+            </div>
+        {% endfor %}
+        {% for field in lemma_form.hidden_fields %}
+            <div class="form-field col-sm-9">
+                {{ field }}
+            </div>
+        {% endfor %}
+    </div>
+    <div class="form-actions">
+        {% if work_title == "" %}
+        <button type="submit" id="insert-lemma" class="btn btn-primary btn-sm">
+            Inserisci Lemma
+        </button>
+        {% endif %} 
+        <button type="submit" id="insert-lemma" class="btn btn-primary btn-sm" hidden>
+            Inserisci Lemma
+        </button>      
+    </div> 
+</form>
+
+
+<form action="" id="workForm" method="post" hidden>
+    {% csrf_token %}
+    <div class="form-group">
+        <legend>{{ title }}</legend>
+        {% for field in work_form.visible_fields %}
+            <div class="form-group row lemma-text">
+                <label class="col-sm-3 col-form-label font-weight-bold">{{ field.label }}</label>
+                <div class="form-field col-sm-9">
+                    {{ field }}
+                </div>
+            </div>
+        {% endfor %}
+        {% for field in work_form.hidden_fields %}
+            <div class="form-field col-sm-9">
+                {{ field }}
+            </div>
+        {% endfor %}
+    </div>
+    <div class="form-group row">
+        <label class="col-sm-3 col-form-label font-weight-bold"></label>
+            <div class="form-group row col-sm-9">
+        <button type="button" id="save-work" class="btn btn-primary btn-sm">
+            Salva
+        </button>   
+        </div> 
+    </div>
+</form>
+
+{% if request.path == "/tool/annotation/lemma/" %}
+<div id="topography-group" class="form-group row" hidden>
+{% else %}
+<div id="topography-group" class="form-group row">
+{% endif %}
+<label class="col-sm-3 col-form-label font-weight-bold">Luoghi citati nell'opera</label>
+<div class="col-sm-9">
+    <span id="topography-text">
+        {% for luogo in data.lemma.toponimi %}
+            <a href="{{ luogo }}" target="_blank" class="is-iri badge badge-light" title="{{ luogo }}">{{ luogo }}</a>
+        {% endfor %}
+    </span>
+    {% if data.lemma.toponimi %}
+        <button type="button" id="insert-topography" class="btn btn-primary btn-sm">
+            Modifica luogo
+        </button>   
+    {% else %}
+    <button type="button" id="insert-topography" class="btn btn-primary btn-sm">
+        Inserisci luogo
+    </button>
+    {% endif %}
+    <form id="id_topography-group" class="form-group" hidden>
+        {{ topography_formset.management_form }}
+        {% for topography_form in topography_formset %}
+
+                <div id="link-formset-topography" class="link-formset form-field">
+                    {{ topography_form.topography }}
+                    {{ topography_form.topography_iri }}
+                </div>
+            
+        {% endfor %}
+        </form>
+</div>
+</div>
+
+
+
+<div id="genre-group" class="form-group row">
+{% load static %}
+<label class="col-sm-3 col-form-label font-weight-bold"><a href="{% static 'imago/guide/IMAGO_genres.pdf' %}" style="color:#212529"download>Genere</a></label>
+<div class="col-sm-9">
+    <span id="genre-text">
+        {% for genere in data.lemma.generi %}
+            <a href="{{ genere }}" target="_blank" class="is-iri badge badge-light" title="{{ genere }}">{{ genere }}</a>
+        {% endfor %}
+    </span>
+    {% if data.lemma.generi %}
+    <button type="button" id="insert-genre" class="btn btn-primary btn-sm">
+        Modifica genere
+    </button>
+    {% else %}
+    <button type="button" id="insert-genre" class="btn btn-primary btn-sm">
+        Inserisci genere
+    </button>
+    {% endif %}
+<form id="id_genre-group" class="form-group" hidden>
+    {{ genre_formset.management_form }}
+    {% for genre_form in genre_formset %}
+
+            <div id="link-formset-genre" class="link-formset form-field">
+                {{ genre_form.genre }}
+                {{ genre_form.genre_iri }}
+            </div>
+        
+    {% endfor %}
+</form>
+</div>
+</div>
+
+<div id="abstract-group" class="form-group row">
+    <label class="col-sm-3 col-form-label font-weight-bold">Abstract</label>
+    <div class="col-sm-9">
+        <span id="abstract-text">{{ data.lemma.abstract }}</span>
+        {% if data.lemma.abstract %}
+        <button type="button" id="insert-abstract" class="btn btn-primary btn-sm">
+            Modifica abstract
+        </button>
+        {% else %}
+        <button type="button" id="insert-abstract" class="btn btn-primary btn-sm">
+            Inserisci abstract
+        </button>
+        {% endif %}
+    <form id="id_abstract" class="form-group" hidden>
+        {% csrf_token %}
+        {% for field in abstract_form %}
+            <div class="form-field col-sm-9">
+                {{ field }}
+            </div>
+            
+        {% endfor %}
+    </form>
+    </div>
+    </div>
+
+    {% if user.get_username  in 'paolo.pontari,luca.ruggio' %}
+    <div id="review-group" class="form-group row">
+        <label class="col-sm-3 col-form-label font-weight-bold">Revisione</label>
+        <div class="col-sm-9">
+            {% if data.lemma.review %}
+                <button type="button" id="delete-review" class="btn btn-success btn-sm">
+                    Revisionato
+                </button>
+                <button type="button" id="insert-review" class="btn btn-danger btn-sm" hidden>
+                    Da revisionare
+                </button>
+            {% else %}
+            <button type="button" id="delete-review" class="btn btn-success btn-sm" hidden>
+                Revisionato
+            </button>
+            <button type="button" id="insert-review" class="btn btn-danger btn-sm">
+                Da revisionare
+            </button>
+            {% endif %}
+            <form id="id_review_form" class="form-group" hidden>
+                {% csrf_token %}
+                {% for field in review_form %}
+                    <div class="form-field col-sm-9">
+                        {{ field }}
+                    </div>
+                    
+                {% endfor %}
+            </form>
+      
+        </div>
+        </div>
+        {% else %}
+        <div id="review-group" class="form-group row" hidden>
+            <label class="col-sm-3 col-form-label font-weight-bold">Revisione</label>
+            <div class="col-sm-9">
+                {% if data.lemma.review %}
+                    <button type="button" id="delete-review" class="btn btn-success btn-sm">
+                        Revisionato
+                    </button>
+                    <button type="button" id="insert-review" class="btn btn-danger btn-sm" hidden>
+                        Da revisionare
+                    </button>
+                {% else %}
+                <button type="button" id="delete-review" class="btn btn-success btn-sm" hidden>
+                    Revisionato
+                </button>
+                <button type="button" id="insert-review" class="btn btn-danger btn-sm">
+                    Da revisionare
+                </button>
+                {% endif %}
+                <form id="id_review_form" class="form-group" hidden>
+                    {% csrf_token %}
+                    {% for field in review_form %}
+                        <div class="form-field col-sm-9">
+                            {{ field }}
+                        </div>
+                        
+                    {% endfor %}
+                </form>
+          
+            </div>
+            </div>
+        {% endif %}
+
+
+
+
+
+
+<br/>
+<br/>
+
+
+<!-- Manuscript accordion show the manuscripts that are already inserted in the lemmas -->
+<div id="manuscript-accordion">
+    {% for manoscritto in data.lemma.manoscritti %}
+    <button id="btn-exp-m-{{ forloop.counter0 }}" class="m-accordion">Manoscritto {{ forloop.counter }}</button>
+    <div id="panel-m-{{ forloop.counter0 }}" class="m-panel">
+    <div class="manuscript-information">
+      <dl class="row">
+        <dt class="col-sm-3">Autore</dt>
+        <dd class="col-sm-9">{{ manoscritto.autore }}</dd>
+
+        <dt class="col-sm-3">Opera</dt>
+        <dd class="col-sm-9">{{ manoscritto.titolo }}</dd>
+
+        <dt class="col-sm-3">Località</dt>
+        <dd class="col-sm-9 is-iri">{{ manoscritto.luogoBiblioteca }}</dd>
+
+        <dt class="col-sm-3">Biblioteca</dt>
+        <dd class="col-sm-9 is-iri">{{ manoscritto.biblioteca }}</dd>
+
+        <dt class="col-sm-3">Segnatura</dt>
+        <dd class="col-sm-9">{{ manoscritto.segnatura }}</dd>
+
+        <dt class="col-sm-3">Fogli</dt>
+        <dd class="col-sm-9">{{ manoscritto.fogli }}</dd>
+
+        <dt class="col-sm-3">Incipit dedica / proemio</dt>
+        <dd class="col-sm-9">{{ manoscritto.incipitDedica }}</dd>
+
+        <dt class="col-sm-3">Explicit dedica / proemio</dt>
+        <dd class="col-sm-9">{{ manoscritto.explicitDedica }}</dd>
+
+        <dt class="col-sm-3">Incipit testo</dt>
+        <dd class="col-sm-9">{{ manoscritto.incipitTesto }}</dd>
+
+        <dt class="col-sm-3">Explicit testo</dt>
+        <dd class="col-sm-9">{{ manoscritto.explicitTesto }}</dd>
+
+        <dt class="col-sm-3">Datazione</dt>
+        <dd class="col-sm-9">{{ manoscritto.datazioneString }}</dd>
+
+        <dt class="col-sm-3">Decorazione / apparato iconografico</dt>
+        <dd class="col-sm-9">{{ manoscritto.decorazione }}</dd>
+
+        <dt class="col-sm-3">Link al manoscritto</dt>
+        <dd class="col-sm-9"><a href="{{ manoscritto.url }}">{{ manoscritto.url }}</a></dd>
+
+        <dt class="col-sm-3">Link alla descrizione del manoscritto</dt>
+        <dd class="col-sm-9"><a href="{{ manoscritto.urlDescrizione }}">{{ manoscritto.urlDescrizione }}</a></dd>
+
+        <dt class="col-sm-3">Fonti delle notizie</dt>
+        <dd id="source-manuscript" class="col-sm-9">
+        {% for fonte in manoscritto.fonti %}
+        <div><span class='is-iri'>{{ fonte.iri }}</span>, <span>{{ fonte.specific }}</span><span class="source-manuscript-iri" hidden>{{ fonte.iri }}</span></div>
+        {% endfor %}
+        </dd>
+
+        <dt class="col-sm-3">Altre eventuali notizie</dt>
+        <dd class="col-sm-9">{{ manoscritto.note }}</dd>
+
+        <dt class="col-sm-3">Schedatore</dt>
+        <dd class="col-sm-9 is-user">{{ manoscritto.schedatore }}</dd>
+
+        <dt class="col-sm-3">Ultima modifica</dt>
+        {% load timestamp_to_time %}
+        <dd class="col-sm-9">{{ manoscritto.lastMod|timestamp_to_time }}</dd>
+      </dl>
+    <button type="button" id="m-{{ forloop.counter0 }}" class="btn btn-primary btn-sm btn-m float-right">
+      <i class="far fa-edit"></i> Modifica
+    </button>
+    <button type="button" id="btn-modal-m-{{ forloop.counter0 }}" class="btn btn-danger btn-sm btn-modal-m float-left"> 
+      <i class="fas fa-trash"></i> Cancella
+    </button>
+    </div>
+    
+    <div class="manuscript-form-space"></div>
+    </div>
+
+    {% endfor %}
+</div>
+
+<!-- Print edition accordion show the print editions that are already inserted in the lemmas -->
+<div id="print-edition-accordion">
+    {% for printEdition in data.lemma.edizioniStampa %}
+    <button id="btn-exp-pe-{{ forloop.counter0 }}" class="pe-accordion">Edizione a stampa {{ forloop.counter }}</button>
+    <div id="panel-pe-{{ forloop.counter0 }}" class="pe-panel">
+    <div class="print-edition-information">
+      <dl class="row">
+        <dt class="col-sm-3">Autore</dt>
+        <dd class="col-sm-9">{{ printEdition.autore }}</dd>
+
+        <dt class="col-sm-3">Opera</dt>
+        <dd class="col-sm-9">{{ printEdition.titolo }}</dd>
+
+        <dt class="col-sm-3">Curatore</dt>
+        <dd class="col-sm-9">{{ printEdition.curatore }}</dd>
+
+        <dt class="col-sm-3">Luogo</dt>
+        <dd class="col-sm-9 is-iri">{{ printEdition.luogo }}</dd>
+
+        <dt class="col-sm-3">Luogo come indicato nell'edizione</dt>
+        <dd class="col-sm-9">{{ printEdition.luogoEdizione }}</dd>
+
+        <dt class="col-sm-3">Data</dt>
+        <dd class="col-sm-9">{{ printEdition.dataString }}</dd>
+
+        <dt class="col-sm-3">Tipografo / Casa editrice</dt>
+        <dd class="col-sm-9">{{ printEdition.editore }}</dd>
+
+        <dt class="col-sm-3">Formato</dt>
+        <dd class="col-sm-9">{{ printEdition.formato }}</dd>
+
+        <dt class="col-sm-3">Pagine</dt>
+        <dd class="col-sm-9">{{ printEdition.pagine }}</dd>
+
+        <dt class="col-sm-3">Illustrazioni</dt>
+        <dd class="col-sm-9">{{ printEdition.figure }}</dd>
+
+        <dt class="col-sm-3">Altre eventuali notizie</dt>
+        <dd class="col-sm-9">{{ printEdition.note }}</dd>
+
+        <dt class="col-sm-3">Prefatore ed eventuali dediche, prefazioni o premesse all’edizione</dt>
+        <dd class="col-sm-9">{{ printEdition.prefatore }}</dd>
+
+        <dt class="col-sm-3">Altri contenuti</dt>
+        <dd class="col-sm-9">{{ printEdition.altriContenuti }}</dd>
+
+        <dt class="col-sm-3">Prima edizione/ristampa</dt>
+        <dd class="col-sm-9">{{ printEdition.edizione }}</dd>
+
+        <dt class="col-sm-3">Data dell'edizione</dt>
+        <dd class="col-sm-9">{{ printEdition.dataEdizione }}</dd>
+
+        <dt class="col-sm-3">Fonti dell'edizione</dt>
+        <dd class="col-sm-9">{{ printEdition.fontiPrimarie }}</dd>
+
+        <dt class="col-sm-3">Tipologia ecdotica dell’edizione</dt>
+        <dd class="col-sm-9">{{ printEdition.ecdotica }} 
+            {% if printEdition.linguaTraduzione != "" %}
+                {{ printEdition.linguaTraduzione }} 
+            {% endif %}
+        </dd>
+
+        <dt class="col-sm-3">Fonti delle notizie</dt>
+        <dd class="col-sm-9">
+            {% for fonte in printEdition.fontiSecondarie %}
+            <div><span class='is-iri'>{{ fonte.iri }}</span>, <span>{{ fonte.specific }}</span><span class="source-manuscript-iri" hidden>{{ fonte.iri }}</span></div>
+            {% endfor %}
+        </dd>
+
+        <dt class="col-sm-3">Schedatore</dt>
+        {% load timestamp_to_time %}
+        <dd class="col-sm-9 is-user">{{ printEdition.schedatore }}</dd>
+
+        <dt class="col-sm-3">Ultima modifica</dt>
+        {% load timestamp_to_time %}
+        <dd class="col-sm-9">{{ printEdition.lastMod|timestamp_to_time }}</dd>
+
+    </dl>
+    <button type="button" id="pe-{{ forloop.counter0 }}" class="btn btn-primary btn-sm btn-pe float-right">
+      <i class="far fa-edit"></i> Modifica
+    </button>
+    <button type="button" id="btn-modal-pe-{{ forloop.counter0 }}" class="btn btn-danger btn-sm btn-modal-pe float-left"> 
+      <i class="fas fa-trash"></i> Cancella
+    </button>
+    </div>
+        
+    <div class="print-edition-form-space"></div>
+    </div>
+
+    {% endfor %}
+</div>
+
+<br/>
+
+{% if work_title == "" %}
+<button type="button" id="insert-sheet" class="btn btn-primary btn-sm" hidden>
+    Inserisci una scheda
+</button> 
+{% else %}
+<button type="button" id="insert-sheet" class="btn btn-primary btn-sm">
+    Inserisci una scheda
+</button> 
+{% endif %}
+
+
+<div class="forms-sheets">
+
+
+<form id="workTypeForm" hidden>
+    {% csrf_token %}
+    <div class="form-group">
+        <legend>{{ title }}</legend>
+        {% for field in work_type_form %}
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label font-weight-bold">{{ field.label }}</label>
+                <div class="form-field col-sm-9">
+                    {{ field }}
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</form>
+
+<!-- <select name="tipoEdizione" id="tipoEdizione">
+    <option value="MANOSCRITTO">Manoscritto</option>
+    <option value="EDIZIONESTAMPA">Edizione a stampa</option>
+</select>
+<button type="button" id="aggiungiEdizione" class="btn btn-primary btn-sm">
+    <i class="fa fa-plus"></i>
+  </button>
+
+<br/> -->
+
+
+<div id="container-manuscript-form">
+<form action="" id="manuscriptForm" method="post" hidden>
+    {% csrf_token %}
+    <div class="form-group">
+        <legend>{{ title }}</legend>
+        {% for field in manuscript_form.visible_fields %}
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label font-weight-bold">{{ field.label }}</label>                
+                    {% if field.auto_id == "id_secondary_sources" %}
+                    <div class="form-field col-sm-9">
+                        <div id="{{ field.auto_id }}-group" class="double-form">
+                        {{ source_manuscript_formset.management_form }}
+
+                            {% for source_form in source_manuscript_formset %}
+                                <div id="link-formset-{{ field.auto_id }}"class="link-formset">
+                                    {{ source_form.source_manuscript }}
+                                    {{ source_form.source_manuscript_iri }}
+                                    {{ source_form.specific_manuscript }}
+                                </div>
+                            {% endfor %}
+                            </div>
+                        </div>
+                    {% elif field.auto_id == "id_date" %}
+                    <div class="form-group row col-sm-9">
+                        <div class="form-group col-sm-6">
+                            <div class="form-field">
+                            {{ date_manuscript_form.date_manuscript_start }}
+                            <small id="invalid-feedback-id_date_manuscript" class="invalid-feedback"></small>
+                            </div>
+                            <div class="form-check">
+                                {{ date_manuscript_form.uncertainty_manuscript }}
+                                <label class="form-check-label" for="id_uncertainty_manuscript">
+                                    Incertezza
+                                </label>                                
+                            </div>
+                            <div class="form-check">
+                                {{ date_manuscript_form.ante_manuscript }}
+                                <label class="form-check-label" for="id_ante_manuscript">
+                                    Ante
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                {{ date_manuscript_form.post_manuscript }}
+                                <label class="form-check-label" for="id_post_manuscript">
+                                    Post
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                {{ date_manuscript_form.saec_manuscript }}
+                                <label class="form-check-label" for="id_saec_manuscript">
+                                    Secolo in numeri romani 
+                                </label>
+                                
+                            </div>
+                        </div>
+                        <div class="form-group col-sm-6">
+                            <div class="form-field">
+                                {{ date_manuscript_form.date_manuscript_end }}
+                            </div>
+                        </div>
+                        
+                        {% load static %}
+                        <a href="{% static 'imago/guide/Lineeguida_inserimento_date_tool.pdf' %}" download>Lineeguida per l'inserimento delle date</a>
+                          
+                    </div>
+                    {% else %}
+                    <div class="form-field col-sm-9">
+                            {{ field }}
+                            {% if field.help_text %}
+                            <small id="invalid-feedback-{{ field.auto_id }}" class="invalid-feedback">{{ field.help_text }}</small>
+                        {% endif %}
+                        </div>
+                        
+                    {% endif %}
+            </div>
+        {% endfor %}
+        {% for field in manuscript_form.hidden_fields %}
+            <div class="form-field col-sm-9">
+                {{ field }}
+            </div>
+        {% endfor %}
+    </div>
+         <div class="form-actions">
+            <button type="button" id="cancel-manuscript" class="btn btn-danger btn-sm float-left">
+                <i class="fas fa-times"></i> Annulla
+                </button>
+        <button type="button" id="insert-manuscript" class="btn btn-primary btn-sm float-right" >
+          <i class="fas fa-save"></i> Salva scheda
+        </button>
+    </div> 
+</form>
+</div>
+
+<div id="container-print-edition-form">
+<form action="" id="printEditionForm" method="post" hidden>
+    {% csrf_token %}
+    <div class="form-group">
+        <legend>{{ title }}</legend>
+        {% for field in print_edition_form.visible_fields %}
+            <div class="form-group row">
+                             
+                    {% if field.auto_id == "id_secondary_sources_pe" %}
+                    <label class="col-sm-3 col-form-label font-weight-bold">{{ field.label }}</label>  
+                    <div class="form-field col-sm-9">
+                        <div id="{{ field.auto_id }}-group" class="double-form">
+                        {{ source_print_edition_formset.management_form }}
+
+                            {% for source_form in source_print_edition_formset %}
+                                <div id="link-formset-{{ field.auto_id }}"class="link-formset">
+                                    {{ source_form.source_print_edition }}
+                                    {{ source_form.source_print_edition_iri }}
+                                    {{ source_form.specific_print_edition }}
+                                </div>
+                            {% endfor %}
+                            </div>
+                        </div>
+                    {% elif field.auto_id == "id_date" %}
+                    <label class="col-sm-3 col-form-label font-weight-bold">{{ field.label }}</label>  
+                    <div class="form-group row col-sm-9">
+                        <div class="form-group col-sm-6">
+                            <div class="form-field">
+                            {{ date_print_edition_form.date_print_edition_start }}
+                            <small id="invalid-feedback-id_date_print_edition" class="invalid-feedback"></small>
+                            </div>
+                            <div class="form-check">
+                                {{ date_print_edition_form.uncertainty_print_edition }}
+                                <label class="form-check-label" for="id_uncertainty_print_edition">
+                                    Incertezza
+                                </label>                                
+                            </div>
+                            <div class="form-check">
+                                {{ date_print_edition_form.ante_print_edition }}
+                                <label class="form-check-label" for="id_ante_print_edition">
+                                    Ante
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                {{ date_print_edition_form.post_print_edition }}
+                                <label class="form-check-label" for="id_post_print_edition">
+                                    Post
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                {{ date_print_edition_form.saec_print_edition }}
+                                <label class="form-check-label" for="id_saec_print_edition">
+                                    Secolo in numeri romani
+                                </label>
+                                
+                            </div>
+                        </div>
+                        <div class="form-group col-sm-6">
+                            <div class="form-field">
+                                {{ date_print_edition_form.date_print_edition_end }}
+                            </div>
+                        </div>
+                        {% load static %}
+                        <a href="{% static 'imago/guide/Lineeguida_inserimento_date_tool.pdf' %}" download>Lineeguida per l'inserimento delle date</a>
+                    </div>
+                    {% elif field.label == "Data edizione" %}
+                        <label id="label-date-edition" class="col-sm-3 col-form-label font-weight-bold" hidden>{{ field.label }}</label>
+                        <div id="field-date-edition" class="form-field col-sm-9" hidden>
+                            {{ field }}
+                        </div>
+                    {% elif field.label == "Lingua traduzione" %}
+                        <label id="label-language" class="col-sm-3 col-form-label font-weight-bold" hidden>{{ field.label }}</label>
+                        <div id="field-language" class="form-field col-sm-9" hidden>
+                            {{ field }}
+                        </div>
+                    {% else %}
+                    <label class="col-sm-3 col-form-label font-weight-bold">{{ field.label }}</label>  
+                    <div class="form-field col-sm-9">
+                            {{ field }}
+                        </div>
+                    {% endif %}
+            </div>
+        {% endfor %}
+        {% for field in print_edition_form.hidden_fields %}
+            <div class="form-field col-sm-9">
+                {{ field }}
+            </div>
+        {% endfor %}
+    </div>
+         <div class="form-actions">
+        <button type="button" id="cancel-print-edition" class="btn btn-danger btn-sm float-left" >
+            <i class="fas fa-times"></i> Annulla
+            </button>
+        <button type="button" id="insert-print-edition" class="btn btn-primary btn-sm float-right" >
+          <i class="fas fa-save"></i> Salva scheda
+        </button>
+    </div> 
+</form>
+</div>
+
+</div>
+<!-- <button id="btn-json" type="button" class="btn btn-info btn-sm">Mostra JSON</button>
+<pre id="json-field">{{ json }}</pre>  -->
+
+
+<!-- Modal duplicate lemma -->
+<div id="duplicate-modal" class="dup-modal">
+
+    <!-- Modal content -->
+    <div class="dup-modal-content">
+      <span class="close-icon close-modal">&times;</span>
+      <br/>
+      <div class="modal-body">
+        Il lemma che hai provato a inserire è già presente
+      </div>
+      <div class="modal-footer">
+          <button type="button" class="btn btn-secondary close-modal">Annulla</button>
+          <button type="button" id="go-duplicate" class="btn btn-primary btn-go-lemma">
+                <i class="far fa-folder-open"></i> Vai al lemma
+          </button>
+      </div>
+    </div>
+</div>
+
+<!-- Modal to delete manuscript -->
+<div id="del-manuscript-modal" class="del-modal">
+
+    <!-- Modal content -->
+    <div class="del-modal-content">
+      <span class="close-icon close-modal">&times;</span>
+      <br/>
+      <div class="modal-body">
+        Vuoi davvero cancellare il manoscritto?
+      </div>
+      <div class="modal-footer">
+          <button type="button" class="btn btn-secondary close-modal">Annulla</button>
+          <button type="button" id="del-manuscript" class="btn btn-danger btn-del-manuscript">
+              <i class="fas fa-trash"></i> Cancella manoscritto
+          </button>
+      </div>
+    </div>
+</div>
+
+<!-- Modal to delete print edition -->
+<div id="del-print-edition-modal" class="del-modal">
+
+    <!-- Modal content -->
+    <div class="del-modal-content">
+      <span class="close-icon close-modal">&times;</span>
+      <br/>
+      <div class="modal-body">
+        Vuoi davvero cancellare l'edizione a stampa?
+      </div>
+      <div class="modal-footer">
+          <button type="button" class="btn btn-secondary close-modal">Annulla</button>
+          <button type="button" id="del-print-edition" class="btn btn-danger btn-del-print-edition">
+              <i class="fas fa-trash"></i> Cancella ediziona a stampa
+          </button>
+      </div>
+    </div>
+</div>
+
+
+<!-- Modal to add new work -->
+<div id="add-work-modal" class="add-modal">
+    <div class="add-modal-content">
+        <span class="close-icon close-modal">&times;</span>
+        <h5 class="modal-title">Inserisci una nuova opera</h5>
+        <div class="modal-body">
+            <ul class="nav nav-tabs" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" id="work-wd" data-toggle="tab" href="#work-wd-tab">
+                        Cerca in Wikidata
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="work-manual" data-toggle="tab" href="#work-manual-tab">
+                        Inserisci manualmente
+                    </a>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane fade show active" role="tabpanel" id="work-wd-tab" aria-labelledby="work-wd">
+                    <div class="form-group tab-form">
+                        <label for="add-work-wd">Inserisci il titolo da cercare:</label>
+                        <input id="add-work-wd" type="text" class="form-control autocomplete" autocomplete="off" />
+                        <input id="add-work-wd_iri" type="hidden" class="form-control" />
+                        <label><i>Se hai inserito un titolo parziale e la ricerca non
+                            restituisce risultati, prova a inserire più caratteri. Se l'opera
+                            non è presente in Wikidata, passa all'inserimento manuale.</i></label>
+                    </div>
+                </div>
+                <div class="tab-pane fade" role="tabpanel" id="work-manual-tab" aria-labelledby="work-manual">
+                    <div class="form-group tab-form">
+                        <label for="add-work-title">Inserisci il titolo dell'opera:</label>
+                        <input id="add-work-title" type="text" class="form-control" autocomplete="off" />
+                        <label for="add-work-desc">Inserisci una breve descrizione:</label>
+                        <input id="add-work-desc" type="text" class="form-control" autocomplete="off" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary close-modal">Annulla</button>
+            <button type="button" id="work-btn" class="btn btn-danger btn-del-cit">
+                Inserisci Opera
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- Modal to add new authors -->
+<div id="add-author-modal" class="add-modal">
+    <div class="add-modal-content">
+        <span class="close-icon close-modal">&times;</span>
+        <h5 class="modal-title">Inserisci un nuovo autore</h5>
+        <div class="modal-body">
+            <ul class="nav nav-tabs" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" id="author-wd" data-toggle="tab" href="#author-wd-tab">
+                        Cerca in Wikidata
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="author-manual" data-toggle="tab" href="#author-manual-tab">
+                        Inserisci manualmente
+                    </a>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane fade show active" role="tabpanel" id="author-wd-tab">
+                    <div class="form-group tab-form">
+                        <label for="add-author-wd">Inserisci il nome da cercare:</label>
+                        <input id="add-author-wd" type="text" class="form-control autocomplete" autocomplete="off" />
+                        <input id="add-author-wd_iri" type="hidden" class="form-control" />
+                        <label><i>Se hai inserito un nome parziale e la ricerca non
+                            restituisce risultati, prova a inserire più caratteri. Se l'autore
+                            non è presente in Wikidata, passa all'inserimento manuale.</i></label>
+                    </div>
+                </div>
+                <div class="tab-pane fade" role="tabpanel" id="author-manual-tab">
+                    <div class="form-group tab-form">
+                        <label for="add-author-name">Inserisci il nome dell'autore:</label>
+                        <input id="add-author-name" type="text" class="form-control" autocomplete="off" />
+                        <label for="add-author-desc">Inserisci una breve descrizione:</label>
+                        <input id="add-author-desc" type="text" class="form-control" autocomplete="off" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary close-modal">Annulla</button>
+            <button type="button" id="author-btn" class="btn btn-danger btn-del-cit">
+                Inserisci Autore
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- Modal to add new librarys -->
+<div id="add-library-modal" class="add-modal">
+    <div class="add-modal-content">
+        <span class="close-icon close-modal">&times;</span>
+        <h5 class="modal-title">Inserisci una nuova biblioteca</h5>
+        <div class="modal-body">
+            <ul class="nav nav-tabs" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" id="library-wd" data-toggle="tab" href="#library-wd-tab">
+                        Cerca in Wikidata
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="library-manual" data-toggle="tab" href="#library-manual-tab">
+                        Inserisci manualmente
+                    </a>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane fade show active" role="tabpanel" id="library-wd-tab">
+                    <div class="form-group tab-form">
+                        <label for="add-library-wd">Inserisci il nome da cercare:</label>
+                        <input id="add-library-wd" type="text" class="form-control autocomplete" autocomplete="off" />
+                        <input id="add-library-wd_iri" type="hidden" class="form-control" />
+                        <label><i>Se hai inserito un nome parziale la ricerca non
+                            restituisce risultati. Inserisci almeno una parola completa (es. Bibliothèque) per
+                            avere dei risultati nella ricerca.
+                            Se la biblioteca non è presente in Wikidata, passa all'inserimento manuale.</i></label>
+                    </div>
+                </div>
+                <div class="tab-pane fade" role="tabpanel" id="library-manual-tab">
+                    <div class="form-group tab-form">
+                        <label for="add-library-name">Inserisci il nome della biblioteca:</label>
+                        <input id="add-library-name" type="text" class="form-control" autocomplete="off" />
+                        <label for="add-library-desc">Inserisci una breve descrizione:</label>
+                        <input id="add-library-desc" type="text" class="form-control" autocomplete="off" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary close-modal">Annulla</button>
+            <button type="button" id="library-btn" class="btn btn-danger btn-del-cit">
+                Inserisci Biblioteca
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- Modal to add new locations -->
+<div id="add-location-modal" class="add-modal">
+    <div class="add-modal-content">
+        <span class="close-icon close-modal">&times;</span>
+        <h5 class="modal-title">Inserisci un nuovo luogo</h5>
+        <div class="modal-body">
+            <ul class="nav nav-tabs" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" id="location-wd" data-toggle="tab" href="#location-wd-tab">
+                        Cerca in Wikidata
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="location-manual" data-toggle="tab" href="#location-manual-tab">
+                        Inserisci manualmente
+                    </a>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane fade show active" role="tabpanel" id="location-wd-tab">
+                    <div class="form-group tab-form">
+                        <label for="add-location-wd">Inserisci il nome da cercare:</label>
+                        <input id="add-location-wd" type="text" class="form-control autocomplete" autocomplete="off" />
+                        <input id="add-location-wd_iri" type="hidden" class="form-control" />
+                        <label><i>Se hai inserito un nome parziale e la ricerca non
+                            restituisce risultati, prova a inserire più caratteri. Se il luogo
+                            non è presente in Wikidata, passa all'inserimento manuale.</i></label>
+                    </div>
+                </div>
+                <div class="tab-pane fade" role="tabpanel" id="location-manual-tab">
+                    <div class="form-group tab-form">
+                        <label for="add-location-name">Inserisci il nome del luogo:</label>
+                        <input id="add-location-name" type="text" class="form-control" autocomplete="off" />
+                        <label for="add-location-desc">Inserisci una breve descrizione:</label>
+                        <input id="add-location-desc" type="text" class="form-control" autocomplete="off" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary close-modal">Annulla</button>
+            <button type="button" id="location-btn" class="btn btn-danger btn-del-cit">
+                Inserisci Luogo
+            </button>
+        </div>
+    </div>
+</div>
+<!-- Modal to add new places -->
+<div id="add-place-modal" class="add-modal">
+    <div class="add-modal-content">
+        <span class="close-icon close-modal">&times;</span>
+        <h5 class="modal-title">Inserisci un nuovo luogo</h5>
+        <div class="modal-body">
+            <ul class="nav nav-tabs" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" id="place-wd" data-toggle="tab" href="#place-wd-tab">
+                        Cerca in Wikidata
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="place-manual" data-toggle="tab" href="#place-manual-tab">
+                        Inserisci manualmente
+                    </a>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane fade show active" role="tabpanel" id="place-wd-tab">
+                    <div class="form-group tab-form">
+                        <label for="add-place-wd">Inserisci il nome da cercare:</label>
+                        <input id="add-place-wd" type="text" class="form-control autocomplete" autocomplete="off" />
+                        <input id="add-place-wd_iri" type="hidden" class="form-control" />
+                        <label><i>Se hai inserito un nome parziale e la ricerca non
+                            restituisce risultati, prova a inserire più caratteri. Se il luogo
+                            non è presente in Wikidata, passa all'inserimento manuale.</i></label>
+                    </div>
+                </div>
+                <div class="tab-pane fade" role="tabpanel" id="place-manual-tab">
+                    <div class="form-group tab-form">
+                        <label for="add-place-name">Inserisci il nome del luogo:</label>
+                        <input id="add-place-name" type="text" class="form-control" autocomplete="off" />
+                        <label for="add-place-desc">Inserisci una breve descrizione:</label>
+                        <input id="add-place-desc" type="text" class="form-control" autocomplete="off" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary close-modal">Annulla</button>
+            <button type="button" id="place-btn" class="btn btn-danger btn-del-cit">
+                Inserisci Luogo
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- Modal to add new source -->
+<div id="add-source-modal" class="add-modal">
+    <div class="add-modal-content">
+        <span class="close-icon close-modal">&times;</span>
+        <h5 class="modal-title">Inserisci una nuova fonte</h5>
+        <p id="error-source"></p>
+        <div class="modal-body">
+            <ul class="nav nav-tabs" role="tablist">
+                <!-- <li class="nav-item">
+                    <a class="nav-link active" id="place-wd" data-toggle="tab" href="#place-wd-tab">
+                        Cerca in Wikidata
+                    </a>
+                </li> -->
+                <li class="nav-item">
+                    <a class="nav-link active" id="source-manual" data-toggle="tab" href="#source-manual-tab">
+                        Inserisci
+                    </a>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <!-- <div class="tab-pane fade show active" role="tabpanel" id="place-wd-tab">
+                    <div class="form-group tab-form">
+                        <label for="add-place-wd">Inserisci il nome da cercare:</label>
+                        <input id="add-place-wd" type="text" class="form-control autocomplete" autocomplete="off" />
+                        <input id="add-place-wd_iri" type="hidden" class="form-control" />
+                        <label><i>Se hai inserito un nome parziale e la ricerca non
+                            restituisce risultati, prova a inserire più caratteri. Se il luogo
+                            non è presente in Wikidata, passa all'inserimento manuale.</i></label>
+                    </div>
+                </div> -->
+                <div class="tab-pane fade show active" role="tabpanel" id="source-manual-tab">
+                    <div class="form-group tab-form">
+                        <label for="add-source-name">Inserisci l'abbreviazione:</label>
+                        <input id="add-source-name" type="text" class="form-control" autocomplete="off" />
+                        <label for="add-source-desc">Inserisci la fonte estesa:</label>
+                        <input id="add-source-desc" type="text" class="form-control" autocomplete="off" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary close-modal">Annulla</button>
+            <button type="button" id="source-btn" class="btn btn-danger btn-del-cit">
+                Inserisci Fonte
+            </button>
+        </div>
+    </div>
+</div>
+<div id="modal-open-form" class="add-modal">
+    <div class="add-modal-content">
+        <span class="close-icon close-modal">&times;</span>
+        <h5 class="modal-title">Attenzione: hai una scheda in modifica aperta</h5>
+        <div class="modal-body">
+            Salva la scheda aperta prima di aprirne un'altra in modifica.
+        </div>
+        
+    </div>
+</div>
+
+</div>
+</div>
+
+{% endblock %} 
+{% block script %}
+{% load static %}
+<script src="{% static 'imago/js/app.js' %}"></script>
+<script src="{% static 'imago/js/autocomplete.js' %}"></script>
+{% endblock %} 

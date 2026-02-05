@@ -1,0 +1,75 @@
+{% extends 'annotation/base.html' %}
+
+
+{% block content %}
+
+<h1 class="mt-2">Ricerca per autore</h1>
+<hr class="mt-0 mb-4">
+<input type="text" id="search" placeholder="Search...">
+
+<nav aria-label="Page navigation">
+    <ul class="pagination justify-content-center">
+        {% for p in page.paginator.pages %}
+
+        {% if p == page %}
+            <li class="page-item">
+                <a class="page-link" href="?page={{ page.number }}">{{ page }}</a>
+            </li>
+        {% else %}
+        <li class="page-item">
+            <a class="page-link" href="?page={{ p.number }}">{{ p }}</a>
+        </li>
+        {% endif %}
+        {% endfor %}
+    </ul>
+  </nav>
+  
+{% if page.object_list %}
+{% if request.GET.page %}
+        <table class="table" id="tableNotesPage">
+    {% else %}
+        <table class="table" id="tableNotesPage" hidden>
+    {% endif %}
+    <tr class="header">
+      <th>Author</th>
+    </tr>
+  
+    {% for object in page.object_list %}
+    <tr>
+        <td><a href="../authors/{{ object.id }}">{{ object.autore }}, {{ object.datazione }}</a></td>
+    </tr>
+    {% endfor %}
+   
+</table>
+{% else %}
+    <p>No notes are available.</p>
+{% endif %}
+
+{% if lemmas_list %}
+
+    <table class="table" id="tableNotes" hidden>
+    <tr class="header">
+      <th>Autore</th>
+    </tr>
+  
+    {% for author in lemmas_list %}
+    <tr>
+        <td><a href="../authors/{{ author.id }}">{{ author.autore }}, {{ author.datazione }}</a></td>
+    </tr>
+    {% endfor %}
+   
+</table>
+{% else %}
+    <p>No notes are available.</p>
+{% endif %}
+
+
+<!-- <a class="btn btn-primary" href="../lemma/" role="button">Inserisci un nuovo lemma</a> -->
+
+{% endblock %} 
+{% block script %}
+{% load static %}
+
+<script src="{% static 'imago/js/search.js' %}"></script>
+{% endblock %} 
+

@@ -1,0 +1,219 @@
+{
+    'Aberystwyth, National Library of Wales' : 'http://www.wikidata.org/entity/Q666063', #located in Ceredigion (Q217829)
+    'Admont, Bibliothek des Benediktinerstifts' : 'http://www.wikidata.org/entity/Q304668',#Admont Abbey Library (Q304668)
+    'Aix-en-Provence, Cité du Livre - Bibliothèque Méjanes' : 'http://www.wikidata.org/entity/Q2901297', #Bibliothèque Méjanes (Q2901297)
+    'Albi, Médiathèque Pierre Amalric' : 'http://www.wikidata.org/entity/Q2901551' , #Libraries of Albi (Q2901551)
+    'Alençon, Médiathèque de la Communauté Urbaine (olim Bibliothèque Municipale)' : 'http://www.wikidata.org/entity/Q18170054' , #Bibliothèque municipale d'Alençon (Q18170054)
+    'Amiens, Bibliothèque municipale' : 'http://www.wikidata.org/entity/Q22966499' , #Amiens (France). Bibliothèque municipale (Q22966499)
+    'Amsterdam, Biblioteca Universitaria' : 'http://www.wikidata.org/entity/Q2017571' , #Amsterdam University Library (Q2017571)
+    'Archivio del castello di Praga' : '' , #The Archives of Prague Castle
+    'Archivio Segreto Vaticano' : 'http://www.wikidata.org/entity/Q536580' , #Vatican Apostolic Archives (Q536580)
+    'Arras, Archives du Pas-de-Calais' : 'http://www.wikidata.org/entity/Q2860515' , #Departmental archives of Pas-de-Calais (Q2860515)
+    'Arras, Bibliothèque Municipale' : 'http://www.wikidata.org/entity/Q18599881' , #Bibliotheque Municipale d'Arras (Q18599881)
+    'Arxiu capitular de Gerona' : '' , #Arxiu Capitular de la Catedral de Girona
+    'Assisi, Biblioteca comunale' : 'http://www.wikidata.org/entity/Q112875464' , #Biblioteca Comunale di Assisi (Q112875464)
+    'Assisi, Biblioteca del Sacro Convento' : 'http://www.wikidata.org/entity/Q3639655' , #Biblioteca del Centro di documentazione francescana della Basilica e Sacro convento di San Francesco in Assisi (Q3639655)
+    'Auxerre, Bibliothèque Jacques Lacarrièr' : '' , #Bibliothèque Jacques-Lacarrière
+    'Avignon, Bibliothèque Municipale Ceccano (olim Musée Calvet)' : 'http://www.wikidata.org/entity/Q1142988' , #Calvet Museum (Q1142988) or https://fr.wikipedia.org/wiki/M%C3%A9diath%C3%A8que_Ceccano
+    'Barcelona, Biblioteca de Catalunya' : 'http://www.wikidata.org/entity/Q1200925' , #National Library of Catalonia (Q1200925)
+    'Beaune, Bibliothèque Municipale' : '' , #Bibliothèque municipale Gaspard Monge - Beaune
+    'Belluno, Biblioteca Lolliana Gregoriana' : '' ,
+    'Berna, Burgerbibliothek' : 'http://www.wikidata.org/entity/Q669509' , #Burgerbibliothek of Berne (Q669509)
+    'Besançon, Bibliothèque Municipale' : 'http://www.wikidata.org/entity/Q2901451' , #Bibliothèque municipale de Besançon (Q2901451)
+    'Biblioteca Balear de La Real' : 'http://www.wikidata.org/entity/Q17405595' , #No label defined (Q17405595)
+    "Biblioteca dell'Abbazia benedettina di S. Georgenberg-Fiecht" : '' , #Stiftsbibliothek des Benediktinerstifts St. Georgenberg Fiecht 
+    "Biblioteca dell'Ospedale di San Nicola" : '' , #Biblioteca dell'Ospedale di san Nicola a Bernkastel-Kues?
+    'Biblioteca di Palazzo Piccolomini' : 'http://www.wikidata.org/entity/Q3237948' , #Piccolomini Library (Q3237948)
+    'Biblioteca municipale di Tours' : 'http://www.wikidata.org/entity/Q2901455' , #Library of Tours (Q2901455)
+    'Biblioteca nazionale e universitaria di Zagabria' : 'http://www.wikidata.org/entity/Q631375' , #National and University Library in Zagreb (Q631375)
+    'Biblioteca privata "Arditi di Castelvetere"' : '' ,
+    'Biblioteca statale berlinese - Patrimonio culturale prussiano' : 'http://www.wikidata.org/entity/' , # Prussian Cultural Heritage Foundation (Q685171) or Staatsbibliothek zu Berlin (Kulturforum) (Q1675021) : Biblioteca di Stato di Berlino
+    'Biblioteca statale e universitaria di Amburgo' : 'http://www.wikidata.org/entity/Q2324644' , #Hamburg State and University Library Carl von Ossietzky (Q2324644)
+    'Biblioteca universitaria di Eichstätt-Ingolstadt' : 'http://www.wikidata.org/entity/Q22694379' , #University library Eichstätt-Ingolstadt (Q22694379)
+    'Biblioteka Akademii Nauk' : 'http://www.wikidata.org/entity/Q9170826' , #No label defined (Q9170826)
+    'Biblioteka Gdanska Polskiej Akademii Nauk' : 'http://www.wikidata.org/entity/Q9170771' , #Library of the Polish Academy of Sciences (Q9170771)
+    'Biblioteka Muzeum Narodowego w Krakowie' : '' ,
+    'Biblioteka Samostana Male Brace' : '' , #Franciscan Monastery Library, Dubrovnik
+    'Bibliothek des Augustiner Chorherrenstiftes' : '' , 
+    'Bibliothèque du Séminaire Notre-Dame de Namur' : '' , #? No label defined (Q86675314)
+    'Bibliothèque Municipale de Lille' : 'http://www.wikidata.org/entity/Q50642141' , #Bibliotheque municipale Jean Lévy (Q50642141)
+    'Bildungscampus Stadtbibliothek Nürnberg' : 'http://www.wikidata.org/entity/Q2326885' , #Nuremberg City Library (Q2326885)
+    'Bloomington, Indiana University, Lilly University' : 'http://www.wikidata.org/entity/Q6548368' , #Lilly Library (Q6548368)
+    'Bourges, Bibliothèque de la Ville' : 'http://www.wikidata.org/entity/Q111207547' , #No label defined (Q111207547)
+    'Bratislava,  Archív Hlavného Mesta' : '' , #Archív hlavného mesta Bratislavy
+    'Bridlington, Augustinian Priory' : 'http://www.wikidata.org/entity/Q4525670' , #Bridlington Priory (Q4525670)
+    'Brno, Moravská Zemská Knihovna (olim Státní Vedecká Knihovna - Universitní Knihovna)' : 'http://www.wikidata.org/entity/Q1957240' , #Moravian Library (Q1957240)
+    'Bruxelles, KBR (olim Bibliothèque Royale «Albert Ier»)' : 'http://www.wikidata.org/entity/Q383931' , #Royal Library of Belgium (Q383931)
+    'Budapest, Eötvös Loránd Tudományegyetem, Egyetemi Könyvtár' : 'http://www.wikidata.org/entity/Q772557' , #Budapest University Library (Q772557)
+    'Burgo de Osma, S. Iglesia Catedral' : 'http://www.wikidata.org/entity/Q509931' , #Burgo de Osma Cathedral (Q509931)
+    'Cambrai, Le Labo' : 'http://www.wikidata.org/entity/Q55598713' , #Mediathèque municipale, Cambrai (Q55598713)
+    'Cambrai, Médiathèque Municipale (olim Bibliothèque Municipale)' : 'http://www.wikidata.org/entity/Q55598713' , #Mediathèque municipale, Cambrai (Q55598713)
+    'Casa Cavalli' : 'http://www.wikidata.org/entity/Q28668065' , #No label defined (Q28668065)
+    'Chantilly, Bibliothèque et Archives du Château' : '' , 
+    "Chartres, Médiathèque «L'Apostrophe» (olim Bibliothèque Municipale" : 'http://www.wikidata.org/entity/Q3146242' , #Hôtel des Postes de Chartres (Q3146242)
+    'Chicago, IL, The Newberry Library Case' : 'http://www.wikidata.org/entity/Q616527' , #Newberry Library (Q616527)
+    'Clermont-Ferrand, Bibliothèque Municipale et Interuniversitaire' : 'http://www.wikidata.org/entity/Q93879995' , #No label defined (Q93879995)
+    'Colmar, Bibliothèque des Dominicains (olim Bibliothèque Municipale)' : 'http://www.wikidata.org/entity/Q23907657' , #Bibliothèque patrimoniale des Dominicains (Q23907657)
+    'Copenaghen, Kongelige Bibliotek' : 'http://www.wikidata.org/entity/Q867885' ,  #Royal Danish Library (Q867885)
+    "Cortona, Pubblica Biblioteca Comunale e dell'Accademia etrusca" : 'http://www.wikidata.org/entity/Q86537302' , #Biblioteca del Comune e dell'Accademia etrusca di Cortona (Q86537302)
+    'Den Haag, Sammlung Schinkel' : '' , #? Collezione Schinkel in quale biblioteca?
+    'Descrizione desunta Sankt Gallen, Stiftsbibliothek' : 'http://www.wikidata.org/entity/Q689896' , #Abbey library of St. Gallen (Q689896)
+    'Diözesanarchiv  - Ordinariatsbibliothek di Eichstätt' : '' , #University Archive Catholic University Eichstätt-Ingolstadt (Q107145511)?
+    'Diözesanbibliothek St. Pölten' : 'http://www.wikidata.org/entity/Q81164495' , #Archive of the Diocese of St. Pölten (Q81164495)
+    'Dominikanski Samostan' : '' , #WHERE?
+    'Douai, Bibliothèque Marceline Desbordes-Valmore (olim Bibliothèque Municipale)' : 'http://www.wikidata.org/entity/Q4903512' , #Bibliothèque municipale de Douai (Q4903512)
+    "Dover, St. Martin's Priory" : 'http://www.wikidata.org/entity/Q5302511' , #Dover Priory (Q5302511)
+    'Düsseldorf, Universitäts- und Landesbibliothek' : 'http://www.wikidata.org/entity/Q2496254' , #University and State Library Düsseldorf (Q2496254)
+    'El Escorial, Real Biblioteca de San Lorenzo' : 'http://www.wikidata.org/entity/Q3848863' , #Library of the Monastery of El Escorial (Q3848863)
+    'Engelberg, Stiftsbibliothek' : 'http://www.wikidata.org/entity/Q27480201' , #Monastic library (Q27480201)
+    'Epinal, Bibliothèque Multimédia Intercommunale Epinal-Goldbey (olim Bibliothèque Municipale)' : 'http://www.wikidata.org/entity/Q20971801' , #Bibliothèque municipale d'Épinal (Q20971801)
+    'Fabriano, Biblioteca Multimediale (già comunale) "R. Sassi"' : 'http://www.wikidata.org/entity/Q28003706' , #Romualdo Sassi public library (Q28003706)
+    'Falconara Marittima (Ancona), Biblioteca Storico-Francescana e Picena dei Minori delle Marche' : 'http://www.wikidata.org/entity/Q112076088' , #Biblioteca storico-francescana e picena (Q112076088)
+    'Firenze, Archivio Provinciale dei Frati Minori' : '' ,
+    'Forlì, Biblioteca Comunale' : 'http://www.wikidata.org/entity/Q16268189' , #Aurelio Saffi Town Library (Q16268189)
+    'Fritzlar, Dombibliothek' : '' ,
+    'Fulda, Hessische Landesbibliothek' : '' , #Fulda University and State Library (Q1622057)?
+    'Gdansk, Marienbibliothek' : '' , #?
+    'Gerleve, Klosterbibliothek' : 'http://www.wikidata.org/entity/Q28738574' , #Abtei Gerleve, Library (Q28738574)
+    'Gotha, Herzogliche Bibliothek' : 'http://www.wikidata.org/entity/Q28738121' , #Gotha Research Library (Q28738121)
+    'Gottinga, Bibliothek des Benediktinerstifts' : 'http://www.wikidata.org/entity/Q77350508' , #Library of Göttweig Abbey (Q77350508)
+    'Göttweig, Stiftsbibliothek' : 'http://www.wikidata.org/entity/Q77350508' , #Library of Göttweig Abbey (Q77350508)
+    'Haarlem, City Library' : 'http://www.wikidata.org/entity/Q2140069' , #Haarlem central public library (Q2140069)
+    'Halberstadt, Dom-Gymnasium' : 'http://www.wikidata.org/entity/Q123476025' , #No label defined (Q123476025)
+    'Halle a.d. Saale, UniUniversitäts- und Landesbibliothek' : 'http://www.wikidata.org/entity/Q1600777' , #University and State Library of Saxony-Anhalt (Q1600777)
+    'Halle a.d. Saale, versitäts- und Landesbibliothek Sachsen-Anhalt der Martin-Luther-Universität Halle-Wittenberg' : 'http://www.wikidata.org/entity/Q1600777' , #University and State Library of Saxony-Anhalt (Q1600777)
+    'Heiligenkreuz, Bibliothek des Zisterzienserstifts' : '' , 
+    'Heiligenkreuz, Stiftsbibliothek' : '' , #La stessa di sopra?
+    'Hildesheim, Bibliothek des bischöflichen Gymnasium Josephinum' : '' , 
+    'Hildesheim, Bibliothek des Priesterseminars' : '' ,
+    'Hildesheim, Dombibliothek' : 'http://www.wikidata.org/entity/Q1236928' , #Hildesheim cathedral library (Q1236928)
+    "Hulne, Carmelites' Library" : '' , #Hulne Priory (Q17646138) ?
+    'Innsbruck, Universitätsbibliothek' : 'http://www.wikidata.org/entity/Q1347881' , #University and State Library Tyrol (Q1347881)
+    'Irkutsk, Universitetskaja Biblioteka' : '' ,
+    'Isny, St. Nikolaus' : 'http://www.wikidata.org/entity/Q42000795' , #Nikolaikirche (Q42000795)
+    'Ithaca (New York), Cornell University Library' : 'http://www.wikidata.org/entity/Q5171572' , #Cornell University Library (Q5171572)
+    "Jena, Biblioteca dell'Università" : 'http://www.wikidata.org/entity/' , #Thuringian State and University Library (Q1255096)?
+    'Kaliningradskaja Oblastnaja Biblioteka' : '' , #Scritto nella forma giusta?
+    'Klagenfurt, Universitätsbibliothek' : 'http://www.wikidata.org/entity/Q2496301' , #Klagenfurt University Library (Q2496301)
+    'Klosterneuburg, Bibliothek des Augustiner Chorherrenstiftes' : '' ,
+    'Köln, Erzbischöfliche Diözesan- und Dombibliothek' : 'http://www.wikidata.org/entity/Q1363860' , #Archbishop's Diocesan and Cathedral Library (Q1363860)
+    'Königsberg, Bibliotheca Regia et Universitatis' : 'http://www.wikidata.org/entity/Q2324646' , #Königsberg State and University Library (Q2324646)
+    'Košice, Archiv Košickej Arcidiecézy' : '' ,
+    'Laon, Bibliothèque Municipale «Suzanne Martinet»' : 'http://www.wikidata.org/entity/Q22966414' , #Bibliothèque Municipale de Laon (Q22966414)
+    'Lawrence, University of Kansas, Kenneth Spencer Research Library' : 'http://www.wikidata.org/entity/Q48977616' , #Kenneth Spencer Research Library (Q48977616)
+    'León, Archivo-Biblioteca de la Santa Iglesia Catedral' : 'http://www.wikidata.org/entity/Q85688853' , #No label defined (Q85688853)
+    'Le Puy-en-Velay, Chapître de la Cathédrale' : '' , #Le Puy Cathedral (Q1537302) Chapitre è giusto?
+    'Liège, Grand Séminaire' : 'http://www.wikidata.org/entity/Q120721497' , #Grootseminarie Luik (Q120721497)
+    'Lilienfeld, Stiftsbibliothek' : '' ,
+    'Lincoln, Cathedral Library' : 'http://www.wikidata.org/entity/Q6550514' , #Lincoln Cathedral Library (Q6550514)
+    'Lindau, Stadtarchiv und Stadtbibliothek' : 'http://www.wikidata.org/entity/Q1303266' , #Former Library of the Imperial City of Lindau (Q1303266)
+    'Linz, Oberösterreichische Landesbibliothek' : 'http://www.wikidata.org/entity/Q1439945' , #Upper Austrian State Library (Q1439945)
+    'Lisbona, Biblioteca Nazionale del Portogallo' : 'http://www.wikidata.org/entity/Q245966' , #National Library of Portugal (Q245966)
+    'Longleat House (Warminster, Wiltshire), Library of the Marquess of Bath' : '' ,
+    'Lubiana, Biblioteca Nazionale' : 'http://www.wikidata.org/entity/Q1520466' , #National and University Library of Slovenia (Q1520466)
+    'Lüneburg, Ratsbücherei' : 'http://www.wikidata.org/entity/Q28733506' , #Ratsbücherei Lüneburg (Q28733506)
+    'Magdalene College' : '' , #Magdalene College (Q776807)?
+    'Magdeburgo,  Bibliothek des Domgymnasium ': '' , #Correggere Magdeburgo
+    'Mainz, Wissenschaftliche Stadtbibliothek' : 'http://www.wikidata.org/entity/Q872144' , #Municipal Scientific Library Mainz (Q872144)
+    'Maria Saal, Stiftsbibliothek' : '' ,
+    'Maynooth, St. Patrick College of Kildare. Russell Library' : 'http://www.wikidata.org/entity/Q65080797' , #Russell Library (Q65080797)
+    'Médiathèque du Grand Troyes (olim Bibliothèque Municipale)' : 'http://www.wikidata.org/entity/Q17347133' , #Médiathèque de l'agglomération troyenne (Q17347133)
+    'Melk, Benediktinerstift' : 'http://www.wikidata.org/entity/Q660082' , #Melk Abbey (Q660082)
+    'Melk, Stiftsbibliothek' : 'http://www.wikidata.org/entity/Q1589808' , #Library of Melk Abbey (Q1589808)
+    'Metz, Bibliothèque municipale' : 'http://www.wikidata.org/entity/Q2901549' , #Metz libraries (Q2901549)
+    'Michaelbeuern, Stiftsbibliothek' : '' ,
+    'Milano, Archivio Storico Civico e Biblioteca Trivulziana' : 'http://www.wikidata.org/entity/Q81172328' , #Comune di Milano. Archivio storico civico-Biblioteca Trivulziana, Milano (MI) (Q81172328)
+    'Minneapolis, University of Minnesota, Wilson Library, James Ford Bell Library' : 'http://www.wikidata.org/entity/Q6134064' , #James Ford Bell Library (Q6134064)
+    'Modena, Biblioteca e Archivio Capitolare' : 'http://www.wikidata.org/entity/Q113092745' , #Biblioteca capitolare e Archivio (Q113092745)
+    'Montserrat, Biblioteca del Monestir' : '' , #Biblioteca de Montserrat (Q11680213)?
+    'München,  Antiquariat Jacques Rosenthal' : 'http://www.wikidata.org/entity/Q114667678' , #Jacques Rosenthal (Q114667678)
+    'Münster, Universitäts-und Landesbibliothek' : 'http://www.wikidata.org/entity/Q2496255' , #University and State Library Münster (Q2496255)
+    'Namur, Musée des Arts Anciens du Namurois' : 'http://www.wikidata.org/entity/Q2401304' , #Musée provincial des Arts anciens (Q2401304)
+    'Napoli, Archivio Ansaldo' : '' ,
+    'Národní Knihovna Ceské Republiky' : 'http://www.wikidata.org/entity/Q1967876' , #National Library of the Czech Republic (Q1967876)
+    'Naumburg, Domstiftsbibliothek' : '' ,
+    'Neuburg a.d. Donau, Staatliche Bibliothek' : 'http://www.wikidata.org/entity/Q2324315' , #Staatliche Bibliothek Neuburg an der Donau (Q2324315)
+    'New York, Collezioni private' : '' , #?
+    'New York, Columbia University, Butler Library' : 'http://www.wikidata.org/entity/Q5002628' , #Butler Library (Q5002628)
+    'Notre Dame, Indiana, University Library' : 'http://www.wikidata.org/entity/Q4499851' , #Theodore Hesburgh Library (Q4499851)
+    'Nottingham, Priory of St. Peter' : '' , #Priory Church of St. Peter, Thurgarton (Q7245491)?
+    'Olomouc, Státní Archív, Kapitulní Knihovna' : '' ,
+    'Opladen, Archiv Fürstenberg-Stammheim' : '' ,
+    'Orleans, Biblioteca Municipale' : 'http://www.wikidata.org/entity/Q1266155' , #Orléans city library (Q1266155)
+    'Oslo, National Archives' : 'http://www.wikidata.org/entity/Q4793570' , #National Archives of Norway (Q4793570)
+    'Osnabrück, Archivio Episcopale' : 'http://www.wikidata.org/entity/Q28735007' , #No label defined (Q28735007)
+    'Oxford, All Souls College' : 'http://www.wikidata.org/entity/Q5140364' , #All Souls College Library (Q5140364) or All Souls College (Q81092)?
+    'Oxford, Oriel College' : 'http://www.wikidata.org/entity/Q81170' , #Oriel College (Q81170)
+    'Oxford, University College' : 'http://www.wikidata.org/entity/Q81087' , #University College, Oxford (Q81087)
+    'Paderborn, Archiv des Paderborner Studienfonds' : '' ,
+    "Paris, Bibliothéque de l'Institut de France" : 'http://www.wikidata.org/entity/Q18571193' , #Bibliothèque de l'Institut de France (Q18571193)
+    'Pelplin, Biblioteka Seminarium Duchownego' : '' ,
+    'Périgueux, Archives Départementales de la Dordogne' : 'http://www.wikidata.org/entity/Q19606444' , #Departmental archives of Dordogne (Q19606444)
+    'Peterborough Abbey Library' : '' ,
+    'Philadelphia, Free Library' : 'http://www.wikidata.org/entity/Q3087288' , #Free Library of Philadelphia (Q3087288)
+    'Poitiers, Biblioteca Municipale' : 'http://www.wikidata.org/entity/Q18763377' , #Médiathèque François-Mitterrand (Q18763377)
+    'Pommersfelden, Gräflich Schönbornsche Bibliothek' : '' ,
+    'Porto, Biblioteca Pública Municipal' : 'http://www.wikidata.org/entity/Q630086' , #Municipal Public Library of Porto (Q630086)
+    'Praga, Biblioteca Nazionale' : 'http://www.wikidata.org/entity/Q1967876' , #National Library of the Czech Republic (Q1967876)
+    'Praga, Knihovna Metropolitní Kapituly' : 'http://www.wikidata.org/entity/Q20755622' , #Library of the Metropolitan Chapter of Prague (Q20755622)
+    'Providence, (Rhode Island), John Carter Brouwn Library' : 'http://www.wikidata.org/entity/Q6225372' , #John Carter Brown Library (Q6225372)
+    'Rein, Stiftsbibliothek' : '' ,
+    'Romont, Bibliothek des Kapuzinerklosters' : '' ,
+    'Rouen, Bibliothèque Municipale' : 'http://www.wikidata.org/entity/Q2901555' , #Bibliothèque Jacques Villon (Q18573998) or Rn'Bi (Q2901555)?
+    'Saint Bonaventure University' : 'http://www.wikidata.org/entity/Q93662' , #St. Bonaventure University (Q93662)
+    "Saint-Omer, Bibliothèque de l'Agglomération du Pays de Saint-Omer" : 'http://www.wikidata.org/entity/Q61931287' , #Bibliothèque d'Agglomération du Pays de Saint-Omer (Q61931287)
+    'Saint-Remi' : 'http://www.wikidata.org/entity/Q122763379' , #Saint Remi library (Q122763379)?
+    'Salisbury, Cathedral Library' : '' ,
+    'Saluzzo, Biblioteca Civica' : '' , #Biblioteca Civica "Andrej Sacharov" (Q117192532) o Biblioteca Civica Lidia Beccaria Rolfi (Q112924851) o Biblioteca Civica Matteo Blengino (Q112924856)? 
+    'Salzburg, Benediktiner-Erzabtei Sankt Peter' : 'http://www.wikidata.org/entity/Q675735' ,  #St Peter's Archabbey Salzburg (Q675735)
+    'San Gallo, Stiftsbibliothek' : 'http://www.wikidata.org/entity/Q689896' , #Abbey library of St. Gallen (Q689896)
+    'Sankt Florian, Stiftsbibliothek' : '' ,
+    'Sankt Paul im Lavanttal, Bibliothek des Benediktinerstifts' : 'http://www.wikidata.org/entity/Q123423410' , #Library of the Benedictine Abbey of St. Paul's in Lavanttal (Q123423410)
+    'San Marino, CA, H.E. Hungtington Library' : 'http://www.wikidata.org/entity/Q1400558' , #The Huntington Library, Art Museum, and Botanical Gardens (Q1400558)
+    'Schlägl, Stiftsbibliothek' : '' , 
+    'Schlierbach, Stiftsbibliothek' : '' ,
+    'Sélestat, Bibliothèque Municipale' : '' , #Humanist Library of Sélestat (Q1636682)?
+    'Soissons, Bibliothèque municipale' : '' ,
+    'Stoccolma, Archivio Nazionale' : 'http://www.wikidata.org/entity/Q1724971' , #National Archives of Sweden (Q1724971)
+    "St. Paul's Cathedral Library" : '' ,
+    'Strasburgo, Bibliothèque municipale' : 'http://www.wikidata.org/entity/Q3332595' , #Médiathèque André-Malraux de Strasbourg (Q3332595)?
+    'Straßburg, Bibliothèque de la Ville' : 'http://www.wikidata.org/entity/Q3332595' , #Coincide con quella sopra?
+    'Stuttgart, Württembergische Landesbibliothek' : 'http://www.wikidata.org/entity/Q317950' , #Württembergische Landesbibliothek (Q317950)
+    'Tarragona, Biblioteca publica del Estado' : 'http://www.wikidata.org/entity/Q11909310' , #Tarragona Public Library (Q11909310)
+    'Todi (Perugia), Biblioteca Comunale «Lorenzo Leonii»' : 'http://www.wikidata.org/entity/Q112875483' , #Biblioteca Comunale "Lorenzo Leoni" (Q112875483)
+    'Toledo, Archivo y Biblioteca Capitulares' : 'http://www.wikidata.org/entity/Q85692455' , #Catedral de Toledo. Biblioteca (Q85692455)
+    'Toledo (Ohio), Art Museum' : 'http://www.wikidata.org/entity/Q1743116' , #Toledo Museum of Art (Q1743116)
+    "Torino, Biblioteca dell'Accademia delle Scienze" : 'http://www.wikidata.org/entity/Q113515722' , #Biblioteca dell'Accademia delle scienze (Q113515722)
+    'Torun, Biblioteka Glówna Uniwersytetu Mikolaja Kopernika' : 'http://www.wikidata.org/entity/Q7029922' , #Nicolaus Copernicus University Library (Q7029922)
+    'Tournai, Bibliothèque Communale' : 'http://www.wikidata.org/entity/Q120869227' , #Bibliotheque de la Ville de Tournai (Q120869227)
+    'Třeboň, Státní Oblástní Archiv' : 'http://www.wikidata.org/entity/Q12056841' , #Regional State Archives in Třeboň (Q12056841)
+    'Trier, Bistumsarchiv (Bischöfliches Archiv, olim Dombibliothek)' : 'http://www.wikidata.org/entity/Q28735003' , #Catholic Diocese of Trier Archives (Q28735003)
+    'Universitätsbibliothek Basilea' : 'http://www.wikidata.org/entity/Q81164649' , #Basel University Library (Q81164649)
+    'Universitätsbibliothek Graz' : 'http://www.wikidata.org/entity/Q604066' , #University of Graz Library (Q604066)
+    'Universitätsbibliothek Lipsia' : 'http://www.wikidata.org/entity/Q872896' , #Leipzig University Library (Q872896)
+    'University Library of Cincinnati' : 'http://www.wikidata.org/entity/Q73495388' , #University of Cincinnati Libraries (Q73495388)
+    'University of Groningen Library' : 'http://www.wikidata.org/entity/Q200899' , #University of Groningen Library (Q200899)
+    'Varsavia, Biblioteca Nazionale' : 'http://www.wikidata.org/entity/Q856423' , #National Library of Poland (Q856423)
+    'Vesoul, Biblioteca Municipale' : 'http://www.wikidata.org/entity/Q2901287' , #Louis-Garret library (Q2901287)
+    "Vorau, Biblioteca dell'abbazia" : '' , #in quale lingua?
+    'Vyssi Brod, Biblioteca del monastero' : '' , #Vyšebrodská klášterní knihovna
+    'Weimar, Herzogin Anna Amalia Bibliothek' : 'http://www.wikidata.org/entity/Q50711' , #Duchess Anna Amalia Library (Q50711)
+    'Wellesley, University Library' : 'http://www.wikidata.org/entity/Q49205' , #Wellesley College (Q49205) 
+    'Wien, Dominikanerkonvent' : 'http://www.wikidata.org/entity/Q1238007' , #Dominican monastery, Vienna (Q1238007)
+    'Wien, Schottenkloster, Stiftsbibliothek' : '' , #Schottenstift Stiftsbibliothek
+    'Wiesbaden, Hochschul- und Landesbibliothek' : 'http://www.wikidata.org/entity/Q119810789' , #Hessian State Library Wiesbaden (Q119810789)
+    'Windsheim, Stadtbibliothek' : 'http://www.wikidata.org/entity/Q77475046' , #Ratsbibliothek Bad Windsheim (Q77475046)
+    'Wissenschaftliche Allgemein-Bibliothek der Stadt Erfurt' : '' ,
+    'Worcester, Cathedral and Chapter Library' : '' , #Worcester Cathedral Library
+    'Wroclaw, Biblioteka Kapitulna' : 'http://www.wikidata.org/entity/Q110416522' , #No label defined (Q110416522)
+    'Wroclaw, Biblioteka Uniwersytecka' : 'http://www.wikidata.org/entity/Q1720553' , #Wrocław University Library (Q1720553) o Wrocław University Library (Q30059757)
+    'Wroclaw, Biblioteka Zakladu Narodowego im. Ossolinskich (Ossolineum)' : 'http://www.wikidata.org/entity/Q110979037' , #No label defined (Q110979037)
+    'Württemberg, Kupferstich Sammlung des fürstlichen Schlosses Wolfegg' : 'http://www.wikidata.org/entity/Q1649788' , #Schloss Wolfegg (Q1649788)
+    "York, Austin Friars' Library" : 'http://www.wikidata.org/entity/Q4821239' , #Augustinian Friary, York (Q4821239)
+    'York, Minster Library' : 'http://www.wikidata.org/entity/Q120869294' , #York Minster Library (Q120869294)
+    'Zeitz, Stiftsbibliotheck' : '' , #Stiftsbibliothek Zeitz
+    'Zug, Pfarrbibliothek Sankt Michael' : 'http://www.wikidata.org/entity/Q27490188' , #Pfarrbibliothek St. Michael (Q27490188)
+    'Zutphen, St. Walburgskerk' : 'http://www.wikidata.org/entity/Q2922482' , #Librije (Q2922482)
+    'Zwettl, Bibliothek des Zisterzienserstifts' : '' ,
+    'Zwickau, Ratsschulbibliothek (Stadtarchiv)' : 'http://www.wikidata.org/entity/Q2132885' , #Ratsschulbibliothek Zwickau (Q2132885)
+}

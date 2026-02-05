@@ -1,0 +1,298 @@
+# Estrae tutti i lemmi 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX ecrm: <http://erlangen-crm.org/211015/>
+PREFIX ilrm: <http://imagoarchive.it/ilrmoo/>
+PREFIX : <https://imagoarchive.it/ontology/>
+SELECT ?exp_cre ?title ?authorName
+FROM <https://imagoarchive.it/fuseki/imago/archive>
+WHERE {
+  ?exp_cre a ilrm:F28_Expression_Creation ;
+  		 ilrm:R17_created ?work ;
+  		 ecrm:P14_carried_out_by ?author .	
+  ?author a :Author ;
+     ecrm:P1_is_identified_by/ecrm:P190_has_symbolic_content ?authorName .
+  ?work a ilrm:F2_Expression ;
+     ecrm:P102_has_title/ecrm:P190_has_symbolic_content ?title .
+  
+}
+  
+
+# Estrae tutti i manoscritti ordinati per luogo, biblioteca e segnatura
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX ecrm: <http://erlangen-crm.org/211015/>
+PREFIX ilrm: <http://imagoarchive.it/ilrmoo/>
+PREFIX : <https://imagoarchive.it/ontology/>
+SELECT ?title ?authorName ?placeName ?libraryName ?signature
+FROM <https://imagoarchive.it/fuseki/imago/archive>
+WHERE {
+  ?exp_cre a ilrm:F28_Expression_Creation ;
+  		 ilrm:R17_created ?work ;
+  		 ecrm:P14_carried_out_by ?author .	
+   ?author a :Author ;
+     ecrm:P1_is_identified_by/ecrm:P190_has_symbolic_content ?authorName .
+  ?work a ilrm:F2_Expression ;
+     ecrm:P102_has_title/ecrm:P190_has_symbolic_content ?title .
+  ?exp_cre ilrm:R18_created ?manuscript .
+  ?manuscript ecrm:P1_is_identified_by/ecrm:P190_has_symbolic_content ?signature ;
+              ecrm:P50_has_current_keeper ?library ;
+              ecrm:P46_is_composed_of/ecrm:P1_is_identified_by/ecrm:P190_has_symbolic_content ?folios .
+  ?manifestation ilrm:R7i_is_materialized_in ?manuscript .
+  ?library ecrm:P74_has_current_or_former_residence ?libraryPlace ;
+  	ecrm:P1_is_identified_by/ecrm:P190_has_symbolic_content ?libraryName .
+   ?libraryPlace :is_identified_by_toponym ?toponym .
+   ?toponym ecrm:P190_has_symbolic_content ?placeName .
+  
+} ORDER BY ?placeName ?libraryName ?signature
+
+# Estrae tutte le opere che sono contenute nello stesso manoscritto
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX ecrm: <http://erlangen-crm.org/200717/>
+PREFIX ilrm: <http://imagoarchive.it/ilrmoo/>
+PREFIX : <https://imagoarchive.it/ontology/>
+SELECT ?title ?authorName ?placeName ?libraryName ?signature
+FROM <https://imagoarchive.it/fuseki/imago/archive>
+WHERE {
+  ?exp_cre a ilrm:F28_Expression_Creation ;
+  		 ilrm:R17_created ?work ;
+  		 ecrm:P14_carried_out_by ?author .	
+   ?author a :Author ;
+     ecrm:P1_is_identified_by/ecrm:P190_has_symbolic_content ?authorName .
+  ?work a ilrm:F2_Expression ;
+     ecrm:P102_has_title/ecrm:P190_has_symbolic_content ?title .
+  ?exp_cre ilrm:R18_created ?manuscript .
+  ?manuscript ecrm:P1_is_identified_by/ecrm:P190_has_symbolic_content ?signature ;
+              ecrm:P50_has_current_keeper ?library ;
+              ecrm:P46_is_composed_of/ecrm:P1_is_identified_by/ecrm:P190_has_symbolic_content ?folios .
+  ?manifestation ilrm:R7i_is_materialized_in ?manuscript .
+  ?library ecrm:P74_has_current_or_former_residence ?libraryPlace ;
+  	ecrm:P1_is_identified_by/ecrm:P190_has_symbolic_content ?libraryName .
+   ?libraryPlace :is_identified_by_toponym ?toponym .
+   ?toponym ecrm:P190_has_symbolic_content ?placeName .
+{
+  SELECT ?libraryPlace ?library ?signature (COUNT(?manuscript) AS ?count)
+WHERE {
+  ?manuscript ecrm:P1_is_identified_by/ecrm:P190_has_symbolic_content ?signature ;
+              ecrm:P50_has_current_keeper ?library .
+  ?manifestation ilrm:R7i_is_materialized_in ?manuscript .
+  ?library ecrm:P74_has_current_or_former_residence ?libraryPlace ;
+  			ecrm:P1_is_identified_by/ecrm:P190_has_symbolic_content ?libraryName .
+  ?libraryPlace :is_identified_by_toponym ?toponym .
+   ?toponym ecrm:P190_has_symbolic_content ?placeName .
+           
+  
+} GROUP BY ?libraryPlace ?library ?signature HAVING((?count) >1)
+  }
+  
+} ORDER BY ?placeName ?libraryName ?signature
+  
+  
+
+# Estrae tutti i manoscritti di un dato lemma autore-opera (es. Beda Venerabilis - De locis sanctis )
+# Estrae tutti i lemmi 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX ecrm: <http://erlangen-crm.org/211015/>
+PREFIX ilrm: <http://imagoarchive.it/ilrmoo/>
+PREFIX : <https://imagoarchive.it/ontology/>
+SELECT ?title ?authorName ?manuscript ?print_edition
+FROM <https://imagoarchive.it/fuseki/imago/archive>
+WHERE {
+  BIND(<http://www.mirabileweb.it/title/de-locis-sanctis-beda-venerabilis-n-672-673-ca-m-2-title/8029> AS ?work)
+  BIND(<http://www.mirabileweb.it/author/beda-venerabilis-n-672-673-ca-m-26-5-735-author/19243> AS ?author)
+  
+  ?exp_cre a ilrm:F28_Expression_Creation ;
+  		 ilrm:R17_created ?work ;
+  		 ecrm:P14_carried_out_by ?author .	
+  ?author a :Author ;
+     ecrm:P1_is_identified_by/ecrm:P190_has_symbolic_content ?authorName .
+  ?work a ilrm:F2_Expression ;
+  ecrm:P102_has_title/ecrm:P190_has_symbolic_content ?title .
+{ 
+  ?exp_cre ilrm:R18_created ?manuscript .
+}UNION{
+  ?print_edition ilrm:R4_embodies ?work .
+}
+  
+}
+
+  # Estrae le informazioni di un manoscritto 
+  PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+  PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+  PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+  PREFIX ecrm: <http://erlangen-crm.org/211015/>
+  PREFIX ilrm: <http://imagoarchive.it/ilrmoo/>
+  PREFIX : <https://imagoarchive.it/ontology/>
+  SELECT ?placeName ?libraryName ?signature ?folios ?s_coordinates ?l_manuscript_author ?l_m_title
+  FROM <https://imagoarchive.it/fuseki/imago/archive>
+  WHERE {
+    BIND(<https://imagoarchive.it/ontology/resources/manuscript/firenze/biblioteca_medicea_laurenziana/strozzi_7/161v.164r> AS ?manuscript)
+    ?manuscript ecrm:P1_is_identified_by/ecrm:P190_has_symbolic_content ?signature ;
+                ecrm:P50_has_current_keeper ?library ;
+                ecrm:P46_is_composed_of/ecrm:P1_is_identified_by/ecrm:P190_has_symbolic_content ?folios .
+    ?manifestation ilrm:R7i_is_materialized_in ?manuscript .
+    ?library ecrm:P74_has_current_or_former_residence ?libraryPlace ;
+      ecrm:P1_is_identified_by/ecrm:P190_has_symbolic_content ?libraryName .
+    ?libraryPlace :is_identified_by_toponym ?toponym ;
+                    ecrm:P168_place_is_defined_by ?coordinates .
+      ?coordinates ecrm:P190_has_symbolic_content ?s_coordinates .
+    ?toponym ecrm:P190_has_symbolic_content ?placeName .
+    OPTIONAL{
+    ?m_author ecrm:P106i_forms_part_of ?manifestation ;
+          ecrm:P190_has_symbolic_content ?l_manuscript_author .
+    }
+    OPTIONAL{
+    ?manuscript ecrm:P102_has_title ?m_title .
+    ?m_title ecrm:P190_has_symbolic_content ?l_m_title .
+    }
+    
+  }
+  
+
+
+# TOPONIMI
+
+
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX : <https://www.imagoarchive.it/ontology/>
+PREFIX efrbroo: <http://erlangen-crm.org/efrbroo/> 
+PREFIX ilrmoo: <http://imagoarchive.it/ilrmoo/> 
+PREFIX ecrm: <http://erlangen-crm.org/200717/> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+SELECT DISTINCT ?label ?labelWork ?textualPlace ?text (?place AS ?wikidata) ?pleiades ?coord
+FROM <https://imagoarchive.it/fuseki/imago/toponyms>
+WHERE { 
+	?toponym a :Toponym ;
+   			rdfs:label ?label .
+    ?place a ecrm:E53_Place ;
+            :is_identified_by_toponym ?toponym ;
+             ecrm:P168_place_is_defined_by ?coord .
+      OPTIONAL{
+             ?place owl:sameAs ?pleiades .
+            }
+  ?context a ecrm:E90_Symbolic_Object ;
+            :has_textual_place ?textualPlace ;
+               ecrm:P190_has_symbolic_content ?text ;
+               ecrm:P106_is_composed_of ?toponym .
+            ?work ilrmoo:R15_has_fragment ?context ;
+                   rdfs:label  ?labelWork .
+    FILTER(LANG(?label) = 'la') .
+} ORDER BY ?label
+
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX : <https://www.imagoarchive.it/ontology/>
+PREFIX efrbroo: <http://erlangen-crm.org/efrbroo/> 
+PREFIX ilrmoo: <http://imagoarchive.it/ilrmoo/> 
+PREFIX ecrm: <http://erlangen-crm.org/200717/> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+
+SELECT ?label ?labelWork ?textualPlace ?text (?place AS ?wikidata) ?pleiades ?coord
+FROM <https://imagoarchive.it/fuseki/imago/toponyms> 
+WHERE { 
+	?toponym a :Toponym ;
+   			rdfs:label ?label .
+    ?place a ecrm:E53_Place ;
+            :is_identified_by_toponym ?toponym ;
+             ecrm:P168_place_is_defined_by ?coord .
+      OPTIONAL{
+             ?place owl:sameAs ?pleiades .
+            }
+  ?context a ecrm:E90_Symbolic_Object ;
+            :has_textual_place ?textualPlace ;
+               ecrm:P190_has_symbolic_content ?text ;
+               ecrm:P106_is_composed_of ?toponym .
+            ?work ilrmoo:R15_has_fragment ?context ;
+                   rdfs:label  ?labelWork .
+    FILTER(LANG(?label) = 'la') .
+}
+
+
+PREFIX : <https://www.imagoarchive.it/ontology/> 
+PREFIX efrbroo: <http://erlangen-crm.org/efrbroo/> 
+PREFIX ilrmoo: <http://imagoarchive.it/ilrmoo/>
+PREFIX ecrm: <http://erlangen-crm.org/200717/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+SELECT ?label ?labelWork (COUNT(?label) as ?n_occ) 
+FROM <https://imagoarchive.it/fuseki/imago/toponyms>
+WHERE {
+    ?context a ecrm:E90_Symbolic_Object . 
+    ?work ilrmoo:R15_has_fragment ?context ;
+  			rdfs:label  ?labelWork .
+    ?context ecrm:P106_is_composed_of ?toponym .
+    ?toponym rdfs:label ?label .
+    FILTER(LANG(?label) = 'la') . 
+} GROUP BY ?label ?labelWork ORDER BY DESC(?n_occ)
+
+
+
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX : <https://www.imagoarchive.it/ontology/>
+PREFIX efrbroo: <http://erlangen-crm.org/efrbroo/> 
+PREFIX ilrmoo: <http://imagoarchive.it/ilrmoo/> 
+PREFIX ecrm: <http://erlangen-crm.org/200717/> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+SELECT ?label ?labelWork ?textualPlace ?text (?place AS ?wikidata) ?pleiades ?coord ?n_occ
+FROM <https://imagoarchive.it/fuseki/imago/toponyms>
+WHERE { 
+	?toponym a :Toponym ;
+   			rdfs:label ?label .
+    ?place a ecrm:E53_Place ;
+            :is_identified_by_toponym ?toponym ;
+             ecrm:P168_place_is_defined_by ?coord .
+      OPTIONAL{
+             ?place owl:sameAs ?pleiades .
+            }
+  ?context a ecrm:E90_Symbolic_Object ;
+            :has_textual_place ?textualPlace ;
+               ecrm:P190_has_symbolic_content ?text ;
+               ecrm:P106_is_composed_of ?toponym .
+            ?work ilrmoo:R15_has_fragment ?context ;
+                   rdfs:label  ?labelWork .
+    FILTER(LANG(?label) = 'la') .
+    {
+        SELECT ?label ?labelWork (COUNT(?label) as ?n_occ) 
+        WHERE {
+            ?context a ecrm:E90_Symbolic_Object . 
+            ?work ilrmoo:R15_has_fragment ?context ;
+                rdfs:label  ?labelWork .
+            ?context ecrm:P106_is_composed_of ?toponym .
+            ?toponym rdfs:label ?label .
+            FILTER(LANG(?label) = 'la') . 
+        } GROUP BY ?label ?labelWork 
+    }
+}
+
+PREFIX osmrel: <https://www.openstreetmap.org/relation/>
+PREFIX geo: <http://www.opengis.net/ont/geosparql#>
+PREFIX osm: <https://www.openstreetmap.org/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX osmkey: <https://www.openstreetmap.org/wiki/Key:>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX osm2rdf: <https://osm2rdf.cs.uni-freiburg.de/rdf#>
+
+SELECT ?region ?name ?geometry
+WHERE {
+  
+
+
+  SERVICE <https://qlever.cs.uni-freiburg.de/api/osm-planet> {
+    BIND(osmrel:42527 AS ?region) 
+#  osmrel:42527 osm2rdf:contains_area+ ?region .
+#  ?region osmkey:boundary "administrative" .
+#  ?region osmkey:admin_level "3"^^xsd:int .
+  ?region rdf:type osm:relation .
+  ?region osmkey:name ?name .
+  ?region geo:hasGeometry ?geometry .
+
+  }
+
+ 
+ 
+} 
+LIMIT 10

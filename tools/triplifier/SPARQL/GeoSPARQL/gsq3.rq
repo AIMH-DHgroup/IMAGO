@@ -1,0 +1,56 @@
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX ecrm: <http://erlangen-crm.org/200717/>
+PREFIX ilrm: <http://imagoarchive.it/ilrmoo/>
+PREFIX : <https://imagoarchive.it/ontology/>
+PREFIX geo: <http://www.opengis.net/ont/geosparql#>
+PREFIX osm: <https://www.openstreetmap.org/>
+PREFIX osm2rdfkey: <https://osm2rdf.cs.uni-freiburg.de/rdf/key#>
+PREFIX geof: <http://www.opengis.net/def/function/geosparql/> 
+PREFIX wd: <http://www.wikidata.org/entity/>
+SELECT DISTINCT ?authorName ?title ?toponymName ?wktPlace 
+	FROM <https://geosparql.isti.cnr.it/fuseki/imago/archive>
+		WHERE {
+    ?exp_cre a ilrm:F28_Expression_Creation ;
+  		     ilrm:R17_created ?work ;
+         ecrm:P14_carried_out_by ?author ;
+      		 ilrm:R18_created ?manuscript .
+  ?author a :Author ;
+          ecrm:P1_is_identified_by/ecrm:P190_has_symbolic_content ?authorName .
+  ?work a ilrm:F2_Expression ;
+        ecrm:P102_has_title/ecrm:P190_has_symbolic_content ?title ;
+        ecrm:P106_is_composed_of ?toponym . 
+  		?place :is_identified_by_toponym ?toponym ;
+         		geo:asWKT ?wktPlace .
+  		?toponym ecrm:P190_has_symbolic_content ?toponymName .
+		?manifestation ilrm:R7i_is_materialized_in ?manuscript .
+   		?manuscript ecrm:P1_is_identified_by/ecrm:P190_has_symbolic_content ?signature ;
+		              ecrm:P50_has_current_keeper ?library ;
+		              ecrm:P46_is_composed_of/ecrm:P1_is_identified_by/ecrm:P190_has_symbolic_content ?folios .
+  		?library ecrm:P74_has_current_or_former_residence ?libraryPlace ;
+		  			ecrm:P1_is_identified_by/ecrm:P190_has_symbolic_content ?libraryName .
+  		?libraryPlace :is_identified_by_toponym ?top .
+  ?top ecrm:P190_has_symbolic_content ?libraryPlaceName .
+	  	  ?manifestation_creation ilrm:R24_created  ?manifestation ;
+	 							  ecrm:P4_has_time-span/ecrm:P170i_time_is_defined_by ?date_manuscript ;
+	    							:has_start_date ?start_date_manuscript ;
+	 								:has_end_date ?end_date_manuscript .
+		    FILTER("1401-01-01T00:00:00Z"^^xsd:dateTime <= ?start_date_manuscript && ?start_date_manuscript <= "1500-01-01T00:00:00Z"^^xsd:dateTime)
+            FILTER("1401-01-01T00:00:00Z"^^xsd:dateTime <= ?end_date_manuscript && ?end_date_manuscript <= "1500-01-01T00:00:00Z"^^xsd:dateTime)
+  BIND(CONCAT(?libraryPlaceName, ", ", ?libraryName, ", ",?signature, ", ", ?folios) AS ?manuscriptString)
+  
+  { 
+    SELECT ?wktItaly 
+    WHERE {
+        SERVICE <https://qlever.cs.uni-freiburg.de/api/osm-planet> { 
+            ?osm_id osm2rdfkey:wikidata wd:Q38 ;
+                    a osm:relation ;
+                    geo:hasGeometry ?geometryItaly .
+            ?geometryItaly geo:asWKT ?wktItaly .     
+        } 
+    } LIMIT 1
+  }
+  FILTER(geof:sfWithin(?wktPlace,?wktItaly)). 
+    
+} 

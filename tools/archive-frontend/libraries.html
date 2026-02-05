@@ -1,0 +1,179 @@
+<!DOCTYPE HTML>
+<!--///////////////////////////////////////////////////////////////////////////
+//
+// Project:   IMAGO
+// Package:   Web application
+// Title:     IMAGO web app - Lemma page
+// File:      lemma.html
+// Path:      /var/www/html/archive/
+// Type:      html
+// Started:   2023.11.09
+// Author(s): Nicolò Pratelli
+// State:     online
+//
+// Version history.
+// - 2023.11.09  Nicolò
+//   First version
+//
+// ////////////////////////////////////////////////////////////////////////////
+//
+// This file is part of software developed by the HMR Project
+// Further information at: http://imagoarchive.it
+// Copyright (C) 2020-2023 CNR-ISTI, AIMH, AI&Digital Humanities group
+//
+// This is free software; you can redistribute it and/or modify
+// it under the terms of the GNU General Public License as published
+// by the Free Software Foundation; either version 3.0 of the License,
+// or (at your option) any later version.
+// This program is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty
+// of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+// See the GNU General Public License for more details.
+// You should have received a copy of the GNU General Public License
+// along with this program; if not, see <http://www.gnu.org/licenses/>.
+//
+//  ////////////////////////////////////////////////////////////////////////////
+// 	
+//	Templade based on:
+// 	Linear by TEMPLATED
+//  templated.co @templatedco
+//  Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+//
+// ///////////////////////////////////////////////////////////////////////-->
+<html lang="it">
+	<head>
+		
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>IMAGO: Opere geografiche</title>
+		<meta name="description" content="Pagina cerca dell'applicazione web del progetto PRIN IMAGO" />
+		<meta name="keywords" content="" />
+		<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700,500,900' rel='stylesheet' type='text/css'>
+
+		<!-- Libraries -->
+
+		<!-- External Libraries -->
+		<script src="libs/jquery/1.11.0/jquery.min.js"></script>
+		<script src="libs/selectize/0.12.6/selectize.min.js"></script>
+		<script src="libs/bootstrap/5.0.2/bootstrap.bundle.min.js"></script>
+		<link rel="stylesheet" href="libs/selectize/0.12.6/selectize.bootstrap3.min.css" />
+		<link rel="stylesheet" href="libs/bootstrap/5.0.2/boots	trap.min.css" />
+	
+
+		<!-- Linear Libraries -->
+		<script src="js/skel.min.js"></script>
+		<script src="js/skel-panels.min.js"></script>
+		<script src="js/init.js"></script>		
+		<noscript>
+			<link rel="stylesheet" href="css/skel-noscript.css" />
+			<link rel="stylesheet" href="css/style.css" />
+			<link rel="stylesheet" href="css/style-desktop.css" />
+		</noscript>
+
+		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css" />
+		<script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js"></script>
+	 
+		<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.css" />
+		<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.Default.css" />
+		<script src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster-src.js"></script>
+
+		<script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/Leaflet.fullscreen.min.js'></script>
+		<link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css' rel='stylesheet' />
+		
+		<!-- Custom Libraries -->
+		<script src="js/functions.js"></script>
+		<script src="js/libraries.js"></script>
+		<script src="js/include.js"></script>
+		<link rel="stylesheet" href="css/custom-style.css" />
+		<link rel="stylesheet" href="css/home-style.css" />
+
+		<meta property="og:title" content="IMAGO: Opere geografiche">
+		<meta property="og:type" content="web application" />
+		<meta property="og:description" content="Search page of the web application of the IMAGO project">
+		 <meta property="og:image" content=""> <!-- To fill -->
+		<meta property="og:url" content=""> <!-- To fill -->
+		<meta name="twitter:card" content=""> <!-- To fill -->
+
+
+	</head>
+	<body>
+
+
+	<!-- Header -->
+	<div id="header">
+		<div id="nav-wrapper"> 
+			<nav id="nav">
+				<ul>
+					<li><a href="../index.html">Homepage</a></li>
+					<li class="dropdown" >
+						<a href="../archivio.html" class="dropbtn">Archivio</a>
+						<div class="dropdown-content">
+						<a href="../archive/">Opere geografiche</a>
+						<a href="../toponimi/">Toponimi danteschi</a>
+						<a href="../storymaps.html">Story Maps</a>
+						</div>
+					</li>
+					<li class="dropdown" >
+						<a href="javascript:void(0)" class="dropbtn">Progetto</a>
+						<div class="dropdown-content">
+						<a href="../gruppo.html">Gruppo di Ricerca</a>
+						<a href="../bibliografia.html">Bibliografia</a>
+						<a href="../doc/index-en.html">Ontologia</a>
+						<a href="../sparql/">SPARQL endpoint</a>
+						</div>
+					</li>
+					<li ><a href="../pubblicazioni.html">Pubblicazioni</a></li>
+					<li><a href="../en/archive/libraries.html"><span class="flag-icon"><img src="images/united-kingdom.png" alt=""></span>English version</a></li>
+				</ul>
+			</nav>
+		</div>
+		<div class="container"> 
+			<!-- Logo -->
+				<img alt="Imago logo" src="../images/IMAGObianco-orizzontale2.svg"/>
+		</div>
+	</div>
+	<!-- Header -->
+
+	<!-- Main -->
+		<div id="main">
+			
+			<div id="content" class="container">
+				<nav aria-label="breadcrumb">
+					<ol class="breadcrumb">
+						<li class="breadcrumb-item"><a href="index.html">Opere geografiche</a></li>
+					  <li id="id-lemma-bread" class="breadcrumb-item active" aria-current="page">Ricerca per biblioteca</li>
+					</ol>
+				  </nav>
+				<section>
+					<header>
+					
+						<h2>Ricerca manoscritti per luogo biblioteca</h2>
+						<p class="card-text"><a href="librariesList.html" class="btn btn-primary">Lista di tutte le biblioteche</a></p>
+					</header>
+					
+					<div id="map-container">
+				<div id="map"></div>
+				</section>
+				<section>
+					<ol  id="manuscript-list" class="list-group list-group-numbered"></ol>
+					<!-- <table class="results-table" id="results-table"></table> -->
+				</section>
+
+				<div w3-include-html="html/altre_ricerche.html"></div>
+				
+			</div>
+		</div>
+		
+	<!-- /Main -->
+
+<!-- Copyright -->
+<div w3-include-html="html/footer_it.html"></div>
+
+<!-- Script to include static html part of the page (navbar, footer, ...) -->
+<script>
+	includeHTML();
+</script>
+
+	</body>
+</html>

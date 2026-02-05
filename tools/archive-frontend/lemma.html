@@ -1,0 +1,215 @@
+<!DOCTYPE HTML>
+<!--///////////////////////////////////////////////////////////////////////////
+//
+// Project:   IMAGO
+// Package:   Web application
+// Title:     IMAGO web app - Lemma page
+// File:      lemma.html
+// Path:      /var/www/html/archive/
+// Type:      html
+// Started:   2023.11.09
+// Author(s): Nicolò Pratelli
+// State:     online
+//
+// Version history.
+// - 2023.11.09  Nicolò
+//   First version
+//
+// ////////////////////////////////////////////////////////////////////////////
+//
+// This file is part of software developed by the HMR Project
+// Further information at: http://imagoarchive.it
+// Copyright (C) 2020-2023 CNR-ISTI, AIMH, AI&Digital Humanities group
+//
+// This is free software; you can redistribute it and/or modify
+// it under the terms of the GNU General Public License as published
+// by the Free Software Foundation; either version 3.0 of the License,
+// or (at your option) any later version.
+// This program is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty
+// of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+// See the GNU General Public License for more details.
+// You should have received a copy of the GNU General Public License
+// along with this program; if not, see <http://www.gnu.org/licenses/>.
+//
+//  ////////////////////////////////////////////////////////////////////////////
+// 	
+//	Templade based on:
+// 	Linear by TEMPLATED
+//  templated.co @templatedco
+//  Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+//
+// ///////////////////////////////////////////////////////////////////////-->
+<html lang="it">
+	<head>
+		
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>IMAGO: Opere geografiche</title>
+		<meta name="description" content="Pagina cerca dell'applicazione web del progetto PRIN IMAGO" />
+		<meta name="keywords" content="" />
+		<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700,500,900' rel='stylesheet' type='text/css'>
+
+		<!-- Libraries -->
+
+		<!-- External Libraries -->
+		<script src="libs/jquery/1.11.0/jquery.min.js"></script>
+		<script src="libs/selectize/0.12.6/selectize.min.js"></script>
+		<script src="libs/bootstrap/5.0.2/bootstrap.bundle.min.js"></script>
+		<link rel="stylesheet" href="libs/selectize/0.12.6/selectize.bootstrap3.min.css" />
+		<link rel="stylesheet" href="libs/bootstrap/5.0.2/boots	trap.min.css" />
+
+		<!-- Linear Libraries -->
+		<script src="js/skel.min.js"></script>
+		<script src="js/skel-panels.min.js"></script>
+		<script src="js/init.js"></script>		
+		<noscript>
+			<link rel="stylesheet" href="css/skel-noscript.css" />
+			<link rel="stylesheet" href="css/style.css" />
+			<link rel="stylesheet" href="css/style-desktop.css" />
+		</noscript>
+		
+		<!-- Custom Libraries -->
+		<script src="js/functions.js"></script>
+		<script src="js/lemma.js"></script>
+		<script src="js/include.js"></script>
+		<link rel="stylesheet" href="css/custom-style.css" />
+
+		<meta property="og:title" content="IMAGO: Opere geografiche">
+		<meta property="og:type" content="web application" />
+		<meta property="og:description" content="Search page of the web application of the IMAGO project">
+		 <meta property="og:image" content=""> <!-- To fill -->
+		<meta property="og:url" content=""> <!-- To fill -->
+		<meta name="twitter:card" content=""> <!-- To fill -->
+
+
+	</head>
+	<body>
+
+	<!-- Header -->
+	<div id="header">
+		<div id="nav-wrapper"> 
+			<nav id="nav">
+				<ul>
+					<li><a href="../index.html">Homepage</a></li>
+					<li class="dropdown" >
+						<a href="../archivio.html" class="dropbtn">Archivio</a>
+						<div class="dropdown-content">
+						<a href="../archive/">Opere geografiche</a>
+						<a href="../toponimi/">Toponimi Danteschi</a>
+						<a href="../storymaps.html">Story Maps</a>
+						</div>
+					</li>
+					<li class="dropdown" >
+						<a href="javascript:void(0)" class="dropbtn">Progetto</a>
+						<div class="dropdown-content">
+						<a href="../gruppo.html">Gruppo di Ricerca</a>
+						<a href="../bibliografia.html">Bibliografia</a>
+						<a href="../doc/index-en.html">Ontologia</a>
+						<a href="../sparql/">SPARQL endpoint</a>
+						</div>
+					</li>
+					<li ><a href="../pubblicazioni.html">Pubblicazioni</a></li>
+					<li><a href="../en/archive/lemma.html"><span class="flag-icon"><img src="images/united-kingdom.png" alt=""></span>English version</a></li>
+				</ul>
+			</nav>
+		</div>
+		<div class="container"> 
+			<!-- Logo -->
+				<img alt="Imago logo" src="../images/IMAGObianco-orizzontale2.svg"/>
+		</div>
+	</div>
+	<!-- Header -->
+
+	<!-- Main -->
+		<div id="main">
+			<div id="content" class="container">
+				<!-- <ul class="breadcrumb">
+					<li><a href="index.html">Mappa dei toponimi</a></li>
+					<li>Ricerca per opera</li>
+				  </ul> -->
+				<!-- <section>
+						<h2>Ricerca un lemma</h2>
+						<label for="fauthor">Autore:</label>
+						<input type="text" id="fauthor" name="fauthor"><br>
+						<label for="ftitle">Opera</label>
+						<input type="text" id="ftitle" name="ftitle"><br>
+						<span class="byline"></span>
+						 -->
+					<!-- <h3>Seleziona un'opera dalla lista</h3> -->
+					<!-- <select id="select-state" placeholder="Scegli un'opera..."></select> -->
+				<!-- </section> -->
+				
+				<nav aria-label="breadcrumb">
+					<ol class="breadcrumb">
+						<li class="breadcrumb-item"><a href="index.html">Opere geografiche</a></li>
+					  <li class="breadcrumb-item"><a href="search.html">Cerca</a></li>
+					  <li class="breadcrumb-item"><a id="id-lemma-author-bread" href="">Author</a></li>
+					  <li id="id-lemma-bread" class="breadcrumb-item active" aria-current="page">Lemma</li>
+					</ol>
+				  </nav>
+
+
+				  <div class="card">
+					<div class="card-header">
+					  <ul class="nav nav-tabs card-header-tabs"  id="myTab" role="tablist">
+						<li class="nav-item" role="presentation">
+							<button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Lemma</button>
+						  </li>
+						  <li class="nav-item" role="presentation">
+							<button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Manoscritti</button>
+						  </li>
+						  <li class="nav-item" role="presentation">
+							<button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">Edizioni a stampa</button>
+						  </li>
+						</ul>
+					</div>
+					<div class="card-body tab-content" id="myTabContent">
+						<div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+							<dl class="row">
+								<dt class="col-sm-3">Autore</dt>
+								<dd class="col-sm-9 border-bottom"><span id="author"></span></dd>
+							  
+								<dt class="col-sm-3">Titolo</dt>
+								<dd class="col-sm-9 border-bottom"><span id="work"></span></dd>
+							  
+								<dt class="col-sm-3">Generi</dt>
+								<dd class="col-sm-9 border-bottom"><span id="genres"></span></dd>
+							  
+								<dt class="col-sm-3">Luoghi descritti</dt>
+								<dd class="col-sm-9 border-bottom"><span id="places"></span></dd>
+
+								<dt class="col-sm-3">Abstract</dt>
+								<dd class="col-sm-9"><span id="abstract"></span></dd>
+							  
+							  </dl>
+							
+						</div>
+						<div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab"> 
+							<ol  id="manuscript-list" class="list-group list-group-numbered"></ol>
+						</div>
+						<div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+							<ul id="print-list" class="list-group list-group-numbered"></ul>
+						</div>
+					  </div>
+				  </div>
+
+
+
+				
+				</div>
+			</div>
+		</div>
+	<!-- /Main -->
+
+<!-- Copyright -->
+<div w3-include-html="html/footer_it.html"></div>
+
+<!-- Script to include static html part of the page (navbar, footer, ...) -->
+<script>
+	includeHTML();
+</script>
+
+	</body>
+</html>

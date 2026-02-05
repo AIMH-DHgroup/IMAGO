@@ -1,0 +1,88 @@
+{% extends 'annotation/base.html' %}
+
+
+{% block content %}
+<!-- Inserisci logo IMAGO -->
+<!-- {% load static %}
+<img id="logo" src="{% static 'imago/img/imago_archivio_logo.png' %}"/>
+
+<h1 class="mt-2">Index Medii Aevi Geographiae Operum</h1>
+<hr class="mt-0 mb-4">
+<ul>
+<li><a href="lemma/">Inserisci un nuovo lemma</a></li>
+<li><a href="authors/">Cerca un lemma</a></li>
+</ul> -->
+
+    <div class="row pt-5 m-auto">
+      <div class="col-md-6 col-lg-4 pb-3">
+
+        <!-- Copy the content below until next comment -->
+        <div class="card card-custom bg-white border-white border-0">
+          {% load static %}
+          <div class="card-custom-img"></div>
+          <div class="card-custom-avatar">
+            {% load static %}
+            <img class="img-fluid" src="{% static 'imago/img/imago_archivio_icon_search_c.png' %}" alt="IMAGO" />
+          </div>
+          <div class="card-body" style="overflow-y: auto">
+            <h5 class="card-title">Cerca lemmi per autore nella KB di IMAGO</h5>
+            <p class="card-text">Cerca un lemma per autore nella base di dati di IMAGO. Selezionato l'autore si apriranno le opere ad esso collegato, scegline una e inserisci le schede.</p>
+          </div>
+          <div class="card-footer" style="background: inherit; border-color: inherit;">
+            <a href="/tool/annotation/authors/" class="btn btn-outline-primary">Cerca</a>
+          </div>
+        </div>
+        <!-- Copy until here -->
+
+      </div>
+      <div class="col-md-6 col-lg-4 pb-3">
+
+       <!-- Copy the content below until next comment -->
+       <div class="card card-custom bg-white border-white border-0">
+        <div class="card-custom-img"></div>
+        <div class="card-custom-avatar">
+          <img class="img-fluid" src="{% static 'imago/img/imago_archivio_icon_user_c.png' %}" alt="Avatar" />
+        </div>
+        <div class="card-body" style="overflow-y: auto">
+          <h5 class="card-title">Lemmi assegnati a {{ user.first_name }} {{ user.last_name }}</h5>
+          <p class="card-text">La lista di lemmi assegnati allo schedatore. Nella prima colonna gli autori e nella seconda le opere, scegli un autore e inserisci una scheda. </p>
+        </div>
+        <div class="card-footer" style="background: inherit; border-color: inherit;">
+          <a href="/tool/annotation/assigned_lemmas/" class="btn btn-outline-primary">Vai alla lista</a>
+        </div>
+      </div>
+      <!-- Copy until here -->
+      
+
+      </div>
+
+      <div class="col-md-6 col-lg-4 pb-3">
+
+        <!-- Copy the content below until next comment -->
+        <div class="card card-custom bg-white border-white border-0">
+         <div class="card-custom-img"></div>
+         <div class="card-custom-avatar">
+           <img class="img-fluid" src="{% static 'imago/img/imago_archivio_icon_biblio_c.png' %}" alt="Avatar" />
+         </div>
+         <div class="card-body" style="overflow-y: auto">
+           <h5 class="card-title">Bibliografia</h5>
+           <p class="card-text">La lista delle fonti secondarie con le abbreviazioni e la forma estesa. Accedendo a questa pagina si possono gestire le modifiche delle fonti.  </p>
+         </div>
+         <div class="card-footer" style="background: inherit; border-color: inherit;">
+           <a href="/tool/annotation/sources/" class="btn btn-outline-primary">Vai alla lista</a>
+         </div>
+       </div>
+       <!-- Copy until here -->
+       
+ 
+       </div>
+    </div>
+
+
+{% endblock %} 
+{% block script %}
+{% load static %}
+
+<script src="{% static 'imago/js/search.js' %}"></script>
+{% endblock %} 
+

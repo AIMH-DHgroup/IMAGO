@@ -1,0 +1,174 @@
+/*
+	IMAGO Web Application style
+    CNR-ISTI AIMH lab, AI & Digital Humanities group 
+    Released for free under the Creative Commons Attribution-NonCommercial 4.0 International
+*/
+
+@charset 'UTF-8';
+
+/*********************************************************************************/
+/* Basic                                                                         */
+/*********************************************************************************/
+
+/* Style the list */
+ul.breadcrumb {
+	
+	list-style: none;
+	/*background-color: #eee;*/
+}
+
+/* Display list items side by side */
+ul.breadcrumb li {
+	display: inline;
+	font-size: 18px;
+}
+
+/* Add a slash symbol (/) before/behind each list item */
+ul.breadcrumb li+li:before {
+	padding: 8px;
+	color: black;
+	content: "/\00a0";
+}
+
+/* Add a color to all links inside the list */
+ul.breadcrumb li a {
+
+	text-decoration: none;
+}
+
+/* Add a color on mouse-over */
+ul.breadcrumb li a:hover {
+	
+	text-decoration: underline;
+}
+
+.results-table {
+	font-family: Arial, Helvetica, sans-serif;
+	border-collapse: collapse;
+	width: 100%;
+  }
+  
+  .results-table td, .results-table th {
+	border: 1px solid #ddd;
+	padding: 8px;
+  }
+  
+  .results-table tr:nth-child(even){background-color: #f2f2f2;}
+  
+  .results-table tr:hover {background-color: #ddd;}
+  
+  .toponyms-table th {
+	padding-top: 12px;
+	padding-bottom: 12px;
+	text-align: left;
+	background-color: #80BA8E;
+	color: white;
+	min-width: 8em;
+  }
+  .toponyms-table th:first-child {
+	min-width: 12em;
+  }
+
+  #toponyms-labels, #toponyms-place{
+	width: 50%;
+  }
+
+  #toponym-title{
+	  margin-bottom: 1em;
+  }
+.onside {
+	display: flex;
+	width: 100%;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+.onside:before,
+.onside:after {
+	content: '';
+	border-top: 2px solid;
+	margin: 0 20px 0 0;
+	flex: 1 0 20px;
+}
+
+.onside:after {
+	margin: 0 0 0 20px;
+}
+
+.icon{
+	display: flex;
+	width: 100%;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+.icon img{
+	text-align: center;
+	width: 40px;
+	margin: 10px;
+
+}
+
+i{
+	font-weight: 800;
+}
+
+#btn-cerca{
+	padding: 0.2em 2em;
+	vertical-align: top;
+}
+
+.selectize-control{
+	width: 40%;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+
+
+#title-occ h3, #title-context h3, #title-places h3{
+	display: inline-block;
+	font-size: 1.4em;
+
+}
+
+#toponyms-table th:nth-child(odd){
+	cursor: pointer;
+}
+
+#toponyms-table-2 th{
+	cursor: pointer;
+}
+
+.icon-arrow {
+	vertical-align: middle;
+}
+
+#sources ul{
+	list-style-type: square;
+}
+
+/*********************************************************************************/
+/* Custom                                                                         */
+/*********************************************************************************/
+		
+/*dl, dd{border-bottom:1px solid #000;}*/
+
+  .card img {
+	max-width: 12em;
+	/* height: 100%; */
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .list.card img{
+	max-width:  5em;
+  }
+
+  
+  .list.card {
+	border: none;
+  }

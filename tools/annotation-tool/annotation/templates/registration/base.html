@@ -1,0 +1,87 @@
+{% load static %}
+
+
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'imago/css/style.css' %}">
+    <script src="{% static 'bootstrap/js/jquery.min.js' %}"></script>
+    <script defer src="{% static 'fontawesome/js/all.min.js' %}"></script>
+    <script src="{% static 'bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'bootstrap-autocomplete/bootstrap-autocomplete.js' %}"></script>
+    <script src="{% static 'bootstrap/js/jquery.formset.js' %}"></script>
+    <script src="{% static 'tinymce/js/tinymce/tinymce.min.js' %}" referrerpolicy="origin"></script>
+  
+    {{ data|json_script:"json_data" }}
+    {{ id_data|json_script:"id_data"  }}
+	
+    <title>IMAGO tool</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="/tool/annotation/">
+          {% load static %}
+          <img src="{% static 'imago/img/imago_archivio_icon.png' %}" width="45" height="45" class="d-inline-block align-center" alt="">
+          IMAGO
+        </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="/tool/annotation/">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/tool/annotation/authors/">Cerca lemmi</a>
+          </li>
+          <!-- <li class="nav-item">
+            <a class="nav-link" href="/tool/annotation/lemma/">Nuovo lemma</a>
+          </li> -->
+          <li class="nav-item">
+            <a class="nav-link" href="/tool/annotation/assigned_lemmas/">Lemmi assegnati</a>
+          </li>
+          <!-- <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Lemmi
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="/tool/annotation/lemma/">Nuovo lemma</a>
+              <a class="dropdown-item" href="/tool/annotation/authors/">Cerca lemmi</a>
+              <a class="dropdown-item" href="/tool/annotation/assigned_lemmas/">Lemmi assegnati</a>
+            </div>
+          </li> -->
+        </ul>
+        <span class="navbar-text">
+          {% if user.is_authenticated %}
+              {{ user.first_name }} {{ user.last_name }}
+              <a href="/tool/accounts/logout/">log out</a>
+          {% else %}
+              Welcome, new user. Please log in.
+          {% endif %}
+        </span>
+      </div>
+    </nav>
+    <div class="containerLogin">
+      <!-- <div class="row justify-content-center"> -->
+        <!-- <div class="col-8"> -->
+          {% block content %}
+          {% endblock %}
+        <!-- </div>
+      </div> -->
+    </div>
+    <footer class="bg-light text-center text-lg-start fixed-bottom">
+      <!-- Copyright -->
+      <div class="text-center p-3" style="background-color: #161616; color: white;">
+        ©2020 
+        <a class="text-white" href="https://www.isti.cnr.it/">ISTI-CNR</a>
+      </div>
+      <!-- Copyright -->
+    </footer>
+    {% block script %}
+    {% endblock %}
+  </body>
+</html>

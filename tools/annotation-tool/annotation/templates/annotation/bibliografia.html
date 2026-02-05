@@ -1,0 +1,73 @@
+
+<!doctype html>
+ <head>
+    <meta charset="utf-8">
+   <title>Bibliografia</title>
+   <style>
+     
+
+     /* table {
+       border: 1px solid;
+       margin: 0 auto;
+       width: 100%;
+     }
+
+     td, th {
+       text-align: center;
+       border: 1px solid;
+     } */
+     @import url('https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400;500;700;900&display=swap');
+
+     body{
+        font-family: 'Frank Ruhl Libre', serif;
+     }
+
+     h1 {
+       text-align: center;
+     }
+
+     table {
+        font-size: 12px;
+    border-collapse: collapse;
+    width: 100%;
+    }
+
+    table td, table th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    }
+
+    table tr:nth-child(even){background-color: #f2f2f2;}
+
+    table tr:hover {background-color: #ddd;}
+
+    table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #1d6add;
+    color: white;
+    }
+   </style>
+   
+ </head>
+ <body>
+   <h1>Bibliografia</h1>
+   <table>
+     <thead>
+       <tr>
+         <th>Abbreviazione</th>
+         <th>Forma estesa</th>
+       </tr>
+     </thead>
+     <tbody>
+       {% for source in sources %}
+         <tr>
+           <td>{{ source.name }}</td>
+           <td>{{ source.description }}</td>
+         </tr>
+       {% endfor %}    
+     </tbody>
+   </table>
+ </body>
+</html>

@@ -1,0 +1,1151 @@
+{% extends 'annotation/base.html' %}
+
+{% block content %}
+<!-- <form class="form" action="" method="post">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Submit">
+</form>
+
+<p>{{ json}}</p> -->
+<!-- Sidebar -->
+<div id="mySidebar" class="sidebar">
+  {% if cookie == 1 %}
+  <span id="cookie"></span>
+  {% endif %}
+  <!-- <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a> -->
+<ul id="tree-view">
+    {% if inferno %}
+      <li><span id="Inferno" class="caret">Inferno</span>
+        <ul class="nested">
+          <li><span id="Inferno-01" class="caret">Canto 1</span>
+            <ul class="nested">
+            </ul>
+          </li>
+          <li><span id="Inferno-02" class="caret">Canto 2</span>
+            <ul class="nested">
+            </ul>
+          </li>
+          <li><span id="Inferno-03" class="caret">Canto 3</span>
+            <ul class="nested">
+            </ul>
+          </li>
+          <li><span id="Inferno-04" class="caret">Canto 4</span>
+            <ul class="nested">
+            </ul>
+          </li>
+          <li><span id="Inferno-05" class="caret">Canto 5</span>
+            <ul class="nested">
+            </ul>
+          </li>
+          <li><span id="Inferno-06" class="caret">Canto 6</span>
+            <ul class="nested">
+            </ul>
+          </li>
+          <li><span id="Inferno-07" class="caret">Canto 7</span>
+            <ul class="nested">
+            </ul>
+          </li>
+          <li><span id="Inferno-08" class="caret">Canto 8</span>
+            <ul class="nested">
+            </ul>
+          </li>
+          <li><span id="Inferno-09" class="caret">Canto 9</span>
+            <ul class="nested">
+            </ul>
+          </li>
+          <li><span id="Inferno-10" class="caret">Canto 10</span>
+            <ul class="nested">
+            </ul>
+          </li>
+          <li><span id="Inferno-11" class="caret">Canto 11</span>
+            <ul class="nested">
+            </ul>
+          </li>
+          <li><span id="Inferno-12" class="caret">Canto 12</span>
+            <ul class="nested">
+            </ul>
+          </li>
+          <li><span id="Inferno-13" class="caret">Canto 13</span>
+            <ul class="nested">
+            </ul>
+          </li>
+          <li><span id="Inferno-14" class="caret">Canto 14</span>
+            <ul class="nested">
+            </ul>
+          </li>
+          <li><span id="Inferno-15" class="caret">Canto 15</span>
+            <ul class="nested">
+            </ul>
+          </li>
+          <li><span id="Inferno-16" class="caret">Canto 16</span>
+            <ul class="nested">
+            </ul>
+          </li>
+          <li><span id="Inferno-17" class="caret">Canto 17</span>
+            <ul class="nested">
+            </ul>
+          </li>
+          <li><span id="Inferno-18" class="caret">Canto 18</span>
+            <ul class="nested">
+            </ul>
+          </li>
+          <li><span id="Inferno-19" class="caret">Canto 19</span>
+            <ul class="nested">
+            </ul>
+          </li>
+          <li><span id="Inferno-20" class="caret">Canto 20</span>
+            <ul class="nested">
+            </ul>
+          </li>
+          <li><span id="Inferno-21" class="caret">Canto 21</span>
+            <ul class="nested">
+            </ul>
+          </li>
+          <li><span id="Inferno-22" class="caret">Canto 22</span>
+            <ul class="nested">
+            </ul>
+          </li>
+          <li><span id="Inferno-23" class="caret">Canto 23</span>
+            <ul class="nested">
+            </ul>
+          </li>
+          <li><span id="Inferno-24" class="caret">Canto 24</span>
+            <ul class="nested">
+            </ul>
+          </li>
+          <li><span id="Inferno-25" class="caret">Canto 25</span>
+            <ul class="nested">
+            </ul>
+          </li>
+          <li><span id="Inferno-26" class="caret">Canto 26</span>
+            <ul class="nested">
+            </ul>
+          </li>
+          <li><span id="Inferno-27" class="caret">Canto 27</span>
+            <ul class="nested">
+            </ul>
+          </li>
+          <li><span id="Inferno-28" class="caret">Canto 28</span>
+            <ul class="nested">
+            </ul>
+          </li>
+          <li><span id="Inferno-29" class="caret">Canto 29</span>
+            <ul class="nested">
+            </ul>
+          </li>
+          <li><span id="Inferno-30" class="caret">Canto 30</span>
+            <ul class="nested">
+            </ul>
+          </li>
+          <li><span id="Inferno-31" class="caret">Canto 31</span>
+            <ul class="nested">
+            </ul>
+          </li>
+          <li><span id="Inferno-32" class="caret">Canto 32</span>
+            <ul class="nested">
+            </ul>
+          </li>
+          <li><span id="Inferno-33" class="caret">Canto 33</span>
+            <ul class="nested">
+            </ul>
+          </li>
+          <li><span id="Inferno-34" class="caret">Canto 34</span>
+            <ul class="nested">
+            </ul>
+          </li>
+        </ul>
+      </li>
+    {% endif %}
+    {% if purgatorio %}
+      <li><span id="Purgatorio" class="caret">Purgatorio</span>
+        <ul class="nested">
+          <li><span id="Purgatorio-01" class="caret">Canto 1</span>
+            <ul class="nested">
+            </ul>
+          </li>
+          <li><span id="Purgatorio-02" class="caret">Canto 2</span>
+            <ul class="nested">
+            </ul>
+          </li>
+          <li><span id="Purgatorio-03" class="caret">Canto 3</span>
+            <ul class="nested">
+            </ul>
+          </li>
+          <li><span id="Purgatorio-04" class="caret">Canto 4</span>
+            <ul class="nested">
+            </ul>
+          </li>
+          <li><span id="Purgatorio-05" class="caret">Canto 5</span>
+            <ul class="nested">
+            </ul>
+          </li>
+          <li><span id="Purgatorio-06" class="caret">Canto 6</span>
+            <ul class="nested">
+            </ul>
+          </li>
+          <li><span id="Purgatorio-07" class="caret">Canto 7</span>
+            <ul class="nested">
+            </ul>
+          </li>
+          <li><span id="Purgatorio-08" class="caret">Canto 8</span>
+            <ul class="nested">
+            </ul>
+          </li>
+          <li><span id="Purgatorio-09" class="caret">Canto 9</span>
+            <ul class="nested">
+            </ul>
+          </li>
+          <li><span id="Purgatorio-10" class="caret">Canto 10</span>
+            <ul class="nested">
+            </ul>
+          </li>
+          <li><span id="Purgatorio-11" class="caret">Canto 11</span>
+            <ul class="nested">
+            </ul>
+          </li>
+          <li><span id="Purgatorio-12" class="caret">Canto 12</span>
+            <ul class="nested">
+            </ul>
+          </li>
+          <li><span id="Purgatorio-13" class="caret">Canto 13</span>
+            <ul class="nested">
+            </ul>
+          </li>
+          <li><span id="Purgatorio-14" class="caret">Canto 14</span>
+            <ul class="nested">
+            </ul>
+          </li>
+          <li><span id="Purgatorio-15" class="caret">Canto 15</span>
+            <ul class="nested">
+            </ul>
+          </li>
+          <li><span id="Purgatorio-16" class="caret">Canto 16</span>
+            <ul class="nested">
+            </ul>
+          </li>
+          <li><span id="Purgatorio-17" class="caret">Canto 17</span>
+            <ul class="nested">
+            </ul>
+          </li>
+          <li><span id="Purgatorio-18" class="caret">Canto 18</span>
+            <ul class="nested">
+            </ul>
+          </li>
+          <li><span id="Purgatorio-19" class="caret">Canto 19</span>
+            <ul class="nested">
+            </ul>
+          </li>
+          <li><span id="Purgatorio-20" class="caret">Canto 20</span>
+            <ul class="nested">
+            </ul>
+          </li>
+          <li><span id="Purgatorio-21" class="caret">Canto 21</span>
+            <ul class="nested">
+            </ul>
+          </li>
+          <li><span id="Purgatorio-22" class="caret">Canto 22</span>
+            <ul class="nested">
+            </ul>
+          </li>
+          <li><span id="Purgatorio-23" class="caret">Canto 23</span>
+            <ul class="nested">
+            </ul>
+          </li>
+          <li><span id="Purgatorio-24" class="caret">Canto 24</span>
+            <ul class="nested">
+            </ul>
+          </li>
+          <li><span id="Purgatorio-25" class="caret">Canto 25</span>
+            <ul class="nested">
+            </ul>
+          </li>
+          <li><span id="Purgatorio-26" class="caret">Canto 26</span>
+            <ul class="nested">
+            </ul>
+          </li>
+          <li><span id="Purgatorio-27" class="caret">Canto 27</span>
+            <ul class="nested">
+            </ul>
+          </li>
+          <li><span id="Purgatorio-28" class="caret">Canto 28</span>
+            <ul class="nested">
+            </ul>
+          </li>
+          <li><span id="Purgatorio-29" class="caret">Canto 29</span>
+            <ul class="nested">
+            </ul>
+          </li>
+          <li><span id="Purgatorio-30" class="caret">Canto 30</span>
+            <ul class="nested">
+            </ul>
+          </li>
+          <li><span id="Purgatorio-31" class="caret">Canto 31</span>
+            <ul class="nested">
+            </ul>
+          </li>
+          <li><span id="Purgatorio-32" class="caret">Canto 32</span>
+            <ul class="nested">
+            </ul>
+          </li>
+          <li><span id="Purgatorio-33" class="caret">Canto 33</span>
+            <ul class="nested">
+            </ul>
+          </li>
+        </ul>
+      </li>
+    {% endif %}
+    {% if paradiso %}
+      <li><span id="Paradiso" class="caret">Paradiso</span>
+        <ul class="nested">
+          <li><span id="Paradiso-01" class="caret">Canto 1</span>
+            <ul class="nested">
+            </ul>
+          </li>
+          <li><span id="Paradiso-02" class="caret">Canto 2</span>
+            <ul class="nested">
+            </ul>
+          </li>
+          <li><span id="Paradiso-03" class="caret">Canto 3</span>
+            <ul class="nested">
+            </ul>
+          </li>
+          <li><span id="Paradiso-04" class="caret">Canto 4</span>
+            <ul class="nested">
+            </ul>
+          </li>
+          <li><span id="Paradiso-05" class="caret">Canto 5</span>
+            <ul class="nested">
+            </ul>
+          </li>
+          <li><span id="Paradiso-06" class="caret">Canto 6</span>
+            <ul class="nested">
+            </ul>
+          </li>
+          <li><span id="Paradiso-07" class="caret">Canto 7</span>
+            <ul class="nested">
+            </ul>
+          </li>
+          <li><span id="Paradiso-08" class="caret">Canto 8</span>
+            <ul class="nested">
+            </ul>
+          </li>
+          <li><span id="Paradiso-09" class="caret">Canto 9</span>
+            <ul class="nested">
+            </ul>
+          </li>
+          <li><span id="Paradiso-10" class="caret">Canto 10</span>
+            <ul class="nested">
+            </ul>
+          </li>
+          <li><span id="Paradiso-11" class="caret">Canto 11</span>
+            <ul class="nested">
+            </ul>
+          </li>
+          <li><span id="Paradiso-12" class="caret">Canto 12</span>
+            <ul class="nested">
+            </ul>
+          </li>
+          <li><span id="Paradiso-13" class="caret">Canto 13</span>
+            <ul class="nested">
+            </ul>
+          </li>
+          <li><span id="Paradiso-14" class="caret">Canto 14</span>
+            <ul class="nested">
+            </ul>
+          </li>
+          <li><span id="Paradiso-15" class="caret">Canto 15</span>
+            <ul class="nested">
+            </ul>
+          </li>
+          <li><span id="Paradiso-16" class="caret">Canto 16</span>
+            <ul class="nested">
+            </ul>
+          </li>
+          <li><span id="Paradiso-17" class="caret">Canto 17</span>
+            <ul class="nested">
+            </ul>
+          </li>
+          <li><span id="Paradiso-18" class="caret">Canto 18</span>
+            <ul class="nested">
+            </ul>
+          </li>
+          <li><span id="Paradiso-19" class="caret">Canto 19</span>
+            <ul class="nested">
+            </ul>
+          </li>
+          <li><span id="Paradiso-20" class="caret">Canto 20</span>
+            <ul class="nested">
+            </ul>
+          </li>
+          <li><span id="Paradiso-21" class="caret">Canto 21</span>
+            <ul class="nested">
+            </ul>
+          </li>
+          <li><span id="Paradiso-22" class="caret">Canto 22</span>
+            <ul class="nested">
+            </ul>
+          </li>
+          <li><span id="Paradiso-23" class="caret">Canto 23</span>
+            <ul class="nested">
+            </ul>
+          </li>
+          <li><span id="Paradiso-24" class="caret">Canto 24</span>
+            <ul class="nested">
+            </ul>
+          </li>
+          <li><span id="Paradiso-25" class="caret">Canto 25</span>
+            <ul class="nested">
+            </ul>
+          </li>
+          <li><span id="Paradiso-26" class="caret">Canto 26</span>
+            <ul class="nested">
+            </ul>
+          </li>
+          <li><span id="Paradiso-27" class="caret">Canto 27</span>
+            <ul class="nested">
+            </ul>
+          </li>
+          <li><span id="Paradiso-28" class="caret">Canto 28</span>
+            <ul class="nested">
+            </ul>
+          </li>
+          <li><span id="Paradiso-29" class="caret">Canto 29</span>
+            <ul class="nested">
+            </ul>
+          </li>
+          <li><span id="Paradiso-30" class="caret">Canto 30</span>
+            <ul class="nested">
+            </ul>
+          </li>
+          <li><span id="Paradiso-31" class="caret">Canto 31</span>
+            <ul class="nested">
+            </ul>
+          </li>
+          <li><span id="Paradiso-32" class="caret">Canto 32</span>
+            <ul class="nested">
+            </ul>
+          </li>
+          <li><span id="Paradiso-33" class="caret">Canto 33</span>
+            <ul class="nested">
+            </ul>
+          </li>
+        </ul>
+      </li> 
+    {% endif %}
+</ul>
+</div>
+
+
+<div id="main">
+<button id="sidebar-btn" class="openbtn"><i class="fas fa-sitemap"></i> Lista note</button>  
+<button id="homepage-btn" class="openbtn" href="../../"><i class="fas fa-bars"></i> &nbsp;Elenco commenti</button>
+
+
+<nav aria-label="Page navigation" id="general-info">
+    <ul class="pagination justify-content-center">
+      {% if first_id == note_id %}
+      <li class="page-item disabled">
+        <a class="page-link" href="../../{{ comment_id }}/{{ prev_id }}/" tabindex="-1">Precedente</a>
+      </li>
+        {% else %}
+        <li class="page-item">
+          <a class="page-link" href="../../{{ comment_id }}/{{ prev_id }}/" tabindex="-1">Precedente</a>
+        </li>
+        {% endif %}
+      </li>
+      <li class="page-item disabled">
+        <a class="page-link" href="#">{{ data.Nota.Commento.Nome }}</a>
+      </li>
+      <li class="page-item disabled">
+        <span class="page-link"> <span class="font-weight-bold">{{ data.Nota.OperaDante.Cantica }}</span>, Canto: {{ data.Nota.OperaDante.Canto }} v. {{ data.Nota.OperaDante.Verso }} </span>
+        </li>
+        {% if last_id == note_id %}
+      <li class="page-item disabled">
+        <a class="page-link" href="../../{{ comment_id }}/{{ next_id }}/">Successiva</a>
+      </li>
+        {% else %}
+        <li class="page-item">
+          <a class="page-link" href="../../{{ comment_id }}/{{ next_id }}/">Successiva</a>
+        </li>
+        {% endif %}
+      </li>
+    </ul>
+  </nav>
+
+
+<dl class="row" id="testi-nota">
+
+  <dt class="col-sm-3">Stato</dt>
+  <dd class="col-sm-9">
+  <div class="btn-group btn-group-justified">
+
+    <div class="btn-group">
+      <button type="button" id="done" class="btn btn-outline-success {% if  data.Stato == 'done' %} active{% endif %}">Completato</button>
+    </div>
+    <div class="btn-group">
+      <button type="button" id="doing" class="btn btn-outline-warning {% if  data.Stato == 'doing' %} active{% endif %}">Da completare</button>
+    </div>
+    <div class="btn-group">
+      <button type="button" id="to-do" class="btn btn-outline-secondary {% if  data.Stato == 'to-do' %} active{% endif %}">Non iniziato</button>
+    </div>
+  </div> </dd>
+
+    <dt class="col-sm-3">Ultima modifica</dt>
+    {% load timestamp_to_time %}
+    <dd class="col-sm-9">{{ data.LastMod|timestamp_to_time }}</dd>
+
+    <dt class="col-sm-3">Frammento dantesco</dt>
+    {% if data.Nota.FrammentoDante == "" %}
+    <dd class="col-sm-9">
+      
+      <span id="dante-text">{{ data.Nota.FrammentoDanteDDP}}</span>
+      {% csrf_token %}
+      {% for field in dante_text_form.visible_fields %}
+        <span id="dante-text-input">{{ field }}</span>
+      {% endfor %}
+
+      <button id="btn-edit-dante-text" type="button" class="btn btn-sm"><i class="fas fa-pencil-alt"></i></button>
+    </dd>
+    
+    {% else %}
+    <dd class="col-sm-9">
+      <span id="dante-text">{{ data.Nota.FrammentoDante}}</span>
+      {% csrf_token %}
+      {% for field in dante_text_form.visible_fields %}
+        <span id="dante-text-input">{{ field }}</span>
+      {% endfor %}
+      
+      <button id="btn-edit-dante-text" type="button" class="btn btn-sm"><i class="fas fa-pencil-alt"></i></button>
+    </dd>
+    {% endif %}
+
+    
+
+    <dt class="col-sm-3">Corpo della nota</dt>
+    
+    <!-- Parte per modificare il testo del corpo della nota -->
+    <!-- {% if data.Nota.BodyNota == "" %}
+    <dd class="col-sm-9">
+      
+      <span id="body-nota-text">{{ data.Nota.BodyNotaDDP|safe }}</span>
+      
+      {% csrf_token %}
+      {% for field in body_note_form.visible_fields %}
+        <span id="body-nota-input">{{ field }}</span>
+      {% endfor %}
+
+      <button id="btn-edit-body-nota-text" type="button" class="btn btn-sm"><i class="fas fa-pencil-alt"></i></button>
+    </dd>
+    
+    {% else %}
+    <dd class="col-sm-9">
+      <span id="body-nota-text">{{ data.Nota.BodyNota|safe }}</span>
+
+      {% csrf_token %}
+      {% for field in body_note_form.visible_fields %}
+        <span id="body-nota-input">{{ field }}</span>
+      {% endfor %}
+      
+      <button id="btn-edit-body-nota-text" type="button" class="btn btn-sm"><i class="fas fa-pencil-alt"></i></button>
+    </dd>
+    {% endif %} -->
+
+    <dd class="col-sm-9"><pre>{{ data.Nota.BodyNota|safe }}</pre></dd>
+
+</dl>
+
+<div id="accordion">
+    {% for citazione in data.Nota.Citazioni %}
+    <button id="btn-exp-cit-{{ forloop.counter0 }}" class="cit-accordion">Riferimento {{ forloop.counter }} ({{ citazione.NaturaRiferimento }})</button>
+    <div id="panel-cit-{{ forloop.counter0 }}" class="cit-panel">
+      <div class="referenceInformation">
+      <dl class="row">
+        <dt class="col-sm-3">Frammento nota</dt>
+        <dd class="col-sm-9 text-fragment">{{ citazione.FrammentoNota|safe}}</dd>
+
+        <dt class="col-sm-3">Natura del riferimento</dt>
+        <dd class="col-sm-9 reference-kind">{{ citazione.NaturaRiferimento}}</dd>
+      
+        {% if citazione.NaturaRiferimento == "CITAZIONE" or citazione.NaturaRiferimento == "LOCI PARALLELI" %}
+
+        <dt class="col-sm-3">Contenuto della citazione</dt>
+        <dd class="col-sm-9">
+        <dl class="row">
+        <!-- Characters -->
+        {% if citazione.ContenutoCitazione.Personaggi %}
+        <dt class="col-sm-3">Personaggi</dt>
+        <dd class="col-sm-9 characters">
+        {% for personaggio in citazione.ContenutoCitazione.Personaggi %}
+        <div class="is-iri">{{ personaggio }}</div>
+        {% endfor %}
+        </dd>
+        {% endif %}
+        <!-- Episodes -->
+        {% if citazione.ContenutoCitazione.Episodi %}
+        <dt class="col-sm-3">Episodi</dt>
+        <dd class="col-sm-9 episodes">
+        {% for episodio in citazione.ContenutoCitazione.Episodi %}
+        <div>{{ episodio }}</div>
+        {% endfor %}
+        </dd>
+        {% endif %}
+        <!-- Themes -->
+        {% if citazione.ContenutoCitazione.Motivi %}
+        <dt class="col-sm-3">Motivi</dt>
+        <dd class="col-sm-9 themes">
+        {% for motivo in citazione.ContenutoCitazione.Motivi %}
+        <div>{{ motivo }}</div>
+        {% endfor %}
+        </dd>
+        {% endif %}
+        <!-- Images -->
+        {% if citazione.ContenutoCitazione.Immagini %}
+        <dt class="col-sm-3">Immagini</dt>
+        <dd class="col-sm-9 images">
+        {% for immagine in citazione.ContenutoCitazione.Immagini %}
+        <div>{{ immagine }}</div>
+        {% endfor %}
+        </dd>
+        {% endif %}
+        <!-- Stylistic features -->
+        {% if citazione.ContenutoCitazione.Stilemi %}
+        <dt class="col-sm-3">Stilemi</dt>
+        <dd class="col-sm-9 stylistic-features">
+        {% for stilema in citazione.ContenutoCitazione.Stilemi %}
+        <div >{{ stilema }}</div>
+        {% endfor %}
+        </dd>
+        {% endif %}
+        <!-- Topographies -->
+        {% if citazione.ContenutoCitazione.Topografie %}
+        <dt class="col-sm-3">Topografie</dt>
+        <dd class="col-sm-9 topographies">
+        {% for topografia in citazione.ContenutoCitazione.Topografie %}
+        <div class="is-iri">{{ topografia }}</div>
+        {% endfor %}
+        </dd>
+        {% endif %}
+        <!-- Theories -->
+        {% if citazione.ContenutoCitazione.Teorie %}
+        <dt class="col-sm-3">Teorie</dt>
+        <dd class="col-sm-9 theories">
+        {% for teoria in citazione.ContenutoCitazione.Teorie %}
+        <div>{{ teoria }}</div>
+        {% endfor %}
+        </dd>
+        {% endif %}
+        </dl>
+      </dd>
+
+      {% endif %}
+        
+      {% if citazione.NaturaRiferimento == "CITAZIONE" %}
+        <dt class="col-sm-3">Tipo citazione</dt>
+        <dd class="col-sm-9 citation-type">{{ citazione.TipoCitazione }}</dd>
+      {% endif %}
+
+      {% if citazione.RapportoSoggettoOggetto %}
+        <dt class="col-sm-3">Rapporto testo fonte</dt>
+        <dd class="col-sm-9 relationship-text-source">{{ citazione.RapportoSoggettoOggetto }}</dd>
+      {% endif %}
+
+      {% if citazione.RapportoCommentoCommentatore %}
+      <dt class="col-sm-3">Riferimenti ad altri commentatori</dt>
+      <dd class="col-sm-9 reference-commentator">
+        {% for rapporto in citazione.RapportoCommentoCommentatore %}
+        <div>{{ rapporto.Rapporto }} <span class="is-iri">{{ rapporto.Commento }}</span></div>
+        {% endfor %}
+      </dd>
+    {% endif %}
+
+      {% if citazione.InfoCitazione.Fonte %}
+        <dt class="col-sm-3">Fonte citata</dt>
+        <dd class="col-sm-9 is-iri cited-source">{{ citazione.InfoCitazione.Fonte }}</dd>
+      {% endif %}
+
+      {% if citazione.InfoCitazione.Autore %}
+        <dt class="col-sm-3">Autore citato</dt>
+        <dd class="col-sm-9 is-iri cited-author">{{ citazione.InfoCitazione.Autore }}</dd>
+      {% endif %}
+      
+      {% if citazione.InfoCitazione.Area %}
+        <dt class="col-sm-3">Area tematica</dt>
+        <dd class="col-sm-9 is-iri theme-area">{{ citazione.InfoCitazione.Area }}</dd>
+      {% endif %}
+
+      {% if citazione.InfoCitazione.TestoFonte %}
+        <dt class="col-sm-3">Testo fonte</dt>
+        <dd class="col-sm-9 source-text">{{ citazione.InfoCitazione.TestoFonte|safe }}</dd>
+      {% endif %}
+
+      {% if citazione.InfoCitazione.UrlFonte %}
+        <dt class="col-sm-3">Link fonte</dt>
+        <dd class="col-sm-9 source-url">{{ citazione.InfoCitazione.UrlFonte }}</dd>
+      {% endif %}
+      
+      {% if citazione.InfoCitazione.NotaFonte %}
+        <dt class="col-sm-3">Nota fonte</dt>
+        <dd class="col-sm-9 free-note">{{ citazione.InfoCitazione.NotaFonte }}</dd>
+      {% endif %}
+
+    </dl>
+    <button type="button" id="cit-{{ forloop.counter0 }}" class="btn btn-primary btn-sm btn-cit float-right">
+      <i class="far fa-edit"></i> Modifica
+    </button>
+    <button type="button" id="btn-modal-{{ forloop.counter0 }}" class="btn btn-danger btn-sm btn-modal float-left"> 
+      <i class="fas fa-trash"></i> Cancella
+  </button>
+    </div>
+  
+  <div class="noteFormSpace"></div>
+</div>
+    {% endfor %}
+   
+  </div>
+
+<div id="containerForm" class="clearfix">
+<form action="" id="noteForm" method="post">
+    {% csrf_token %}
+    <div class="form-group">
+        <legend>{{ title }}</legend>
+        {% for field in note_form.visible_fields %}
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label font-weight-bold">{{ field.label }}</label>
+                <div class="form-field col-sm-9">
+                    {{ field }}
+                </div>
+                
+            </div>
+        {% endfor %}
+
+        <div id="citationForm" hidden>
+          {% for field in citation_form.visible_fields %}
+              <div class="form-group row">
+                  <label class="col-sm-3 col-form-label font-weight-bold">{{ field.label }}</label>
+                  <div class="form-field col-sm-9">
+                      {{ field }}
+                  </div>
+              </div>
+          {% endfor %}
+          </div>
+
+        <div id="referenceContentForm" hidden>
+        <div class="form-group row">
+        <label class="col-sm-3 col-form-label font-weight-bold">Contenuto della citazione</label>
+        <div class="form-field col-sm-9">
+        {% for field in reference_content_form.visible_fields %}
+            <div class="form-group row">
+                <div class="form-field col-sm-9">
+                    {{ field }} {{ field.label }}
+                </div>
+                {% if field.auto_id == "id_character" %}
+                <div id="{{ field.auto_id }}-group">
+                {{ character_formset.management_form }}
+                
+                {% for character_form in character_formset %}
+                    <div id="link-formset-{{ field.auto_id }}"class="link-formset">
+                        {{ character_form.quote_character }}
+                        {{ character_form.quote_character_iri }}
+                    </div>
+                    
+                {% endfor %}
+              </div>
+                {% elif field.auto_id == "id_topography" %}
+                <div id="{{ field.auto_id }}-group">
+                {{ topography_formset.management_form }}
+
+                {% for topography_form in topography_formset %}
+                    <div id="link-formset-{{ field.auto_id }}"class="link-formset">
+                        {{ topography_form.quote_topography }}
+                        {{ topography_form.quote_topography_iri }}
+                    </div>
+                {% endfor %}
+                </div>
+                {% elif field.auto_id == "id_episode" %}
+                <div id="{{ field.auto_id }}-group">
+                {{ episode_formset.management_form }}
+
+                {% for episode_form in episode_formset %}
+                    <div id="link-formset-{{ field.auto_id }}"class="link-formset">
+                        {{ episode_form.free_text }}
+                    </div>
+                {% endfor %}
+              </div>
+              {% elif field.auto_id == "id_theme" %}
+                <div id="{{ field.auto_id }}-group">
+                {{ theme_formset.management_form }}
+
+                {% for theme_form in theme_formset %}
+                    <div id="link-formset-{{ field.auto_id }}"class="link-formset">
+                        {{ theme_form.free_text }}
+                    </div>
+                {% endfor %}
+              </div>
+              {% elif field.auto_id == "id_image" %}
+                <div id="{{ field.auto_id }}-group">
+                {{ image_formset.management_form }}
+
+                {% for image_form in image_formset %}
+                    <div id="link-formset-{{ field.auto_id }}"class="link-formset">
+                        {{ image_form.free_text }}
+                    </div>
+                {% endfor %}
+              </div>
+              {% elif field.auto_id == "id_stylistic_feature" %}
+                <div id="{{ field.auto_id }}-group">
+                {{ stylistic_feature_formset.management_form }}
+
+                {% for stylistic_feature_form in stylistic_feature_formset %}
+                    <div id="link-formset-{{ field.auto_id }}"class="link-formset">
+                        {{ stylistic_feature_form.free_text }}
+                    </div>
+                {% endfor %}
+              </div>
+              {% elif field.auto_id == "id_theory" %}
+                <div id="{{ field.auto_id }}-group">
+                {{ theory_formset.management_form }}
+
+                {% for theory_form in theory_formset %}
+                    <div id="link-formset-{{ field.auto_id }}"class="link-formset">
+                        {{ theory_form.free_text }}
+                    </div>
+                {% endfor %}
+              </div>
+                {% endif %}
+                
+            </div>
+        {% endfor %}
+      </div>
+        </div>
+      </div>
+       
+        <div id="referenceForm" hidden>
+        {% for field in reference_relationship_form.visible_fields %}
+        <div class="form-group row">
+            <label class="col-sm-3 col-form-label font-weight-bold">{{ field.label }}</label>
+            <div class="form-field col-sm-9">
+                {{ field }}
+            {% if field.auto_id == "id_reference_commentator" %}
+            <div id="{{ field.auto_id }}-group">
+            {{ reference_commentators_formset.management_form }}
+
+                {% for reference_commentators_form in reference_commentators_formset %}
+                    <div id="link-formset-{{ field.auto_id }}"class="link-formset">
+                        {{ reference_commentators_form.relationship_reference_commentator }}
+                        {{ reference_commentators_form.commentator }}
+                        {{ reference_commentators_form.commentator_iri }}
+                    </div>
+                {% endfor %}
+                </div>
+            {% endif %}
+            </div>
+        </div>
+        {% endfor %}
+
+        {% for field in reference_form.visible_fields %}
+        {% if field.auto_id == "id_theme_area" %}
+        
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label font-weight-bold">{{ field.label }}</label>
+                <div class="form-field col-sm-9">
+                    <div>{{ field }} </div>
+                    <div> <a href="https://hdn.dantenetwork.it/files/AreeTematiche.pdf" target="_blank">Lista delle aree tematiche</a></div>
+                    
+                </div>
+                
+            </div>
+            {% else %}
+            <div class="form-group row">
+              <label class="col-sm-3 col-form-label font-weight-bold">{{ field.label }}</label>
+              <div class="form-field col-sm-9">
+                  {{ field }}
+              </div>
+              
+          </div>
+            {% endif %}
+        {% endfor %}
+    
+        {% for field in reference_form.hidden_fields %}
+            <div class="form-field col-sm-9">
+                {{ field }}
+            </div>
+        {% endfor %}
+    </div>
+    <div class="form-actions">
+        <button type="submit" id="add-cit" class="btn btn-success btn-sm float-right" disabled>
+          <i class="fas fa-save"></i> Salva riferimento
+            </button>
+            <button type="button" id="save-cit" class="btn btn-success btn-sm btn-save-cit float-right">
+              <i class="fas fa-save"></i>  Salva riferimento
+            </button>
+            <button type="button" id="new-cit" class="btn btn-danger btn-sm float-left">
+              <i class="far fa-file"></i>  Annulla
+            </button>
+    </div>
+</form>
+</div>
+</div>
+
+
+<div id="bottom" class="clearfix">
+<div class="clearfix"></div>
+<button id="btn-json" type="button" class="btn btn-info btn-sm float-right">Mostra JSON</button>
+<div class="clearfix"></div>
+<pre id="json-field">{{ json }}</pre> 
+
+
+<!-- Modal to delete citations -->
+<div id="del-cit-modal" class="del-modal">
+
+    <!-- Modal content -->
+    <div class="del-modal-content">
+      <span class="close-icon close-modal">&times;</span>
+      <br/>
+      <div class="modal-body">
+        Vuoi davvero cancellare il riferimento?
+      </div>
+      <div class="modal-footer">
+          <button type="button" class="btn btn-secondary close-modal">Annulla</button>
+          <button type="button" id="del-cit" class="btn btn-danger btn-del-cit">
+              <i class="fas fa-trash"></i> Cancella riferimento
+          </button>
+      </div>
+    </div>
+</div>
+
+<!-- Modal to add new sources -->
+<div id="add-source-modal" class="add-modal">
+    <div class="add-modal-content">
+        <span class="close-icon close-modal">&times;</span>
+        <h5 class="modal-title">Inserisci una nuova fonte</h5>
+        <div class="modal-body">
+            <ul class="nav nav-tabs" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" id="source-wd" data-toggle="tab" href="#source-wd-tab">
+                        Cerca in Wikidata
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="source-manual" data-toggle="tab" href="#source-manual-tab">
+                        Inserisci manualmente
+                    </a>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane fade show active" role="tabpanel" id="source-wd-tab" aria-labelledby="source-wd">
+                    <div class="form-group tab-form">
+                        <label for="add-source-wd">Inserisci il titolo da cercare:</label>
+                        <input id="add-source-wd" type="text" class="form-control autocomplete" autocomplete="off" />
+                        <input id="add-source-wd_iri" type="hidden" class="form-control" />
+                        <label><i>Se hai inserito un titolo parziale e la ricerca non
+                            restituisce risultati, prova a inserire più caratteri. Se la fonte
+                            non è presente in Wikidata, passa all'inserimento manuale.</i></label>
+                    </div>
+                </div>
+                <div class="tab-pane fade" role="tabpanel" id="source-manual-tab" aria-labelledby="source-manual">
+                    <div class="form-group tab-form">
+                        <label for="add-source-title">Inserisci il titolo della fonte:</label>
+                        <input id="add-source-title" type="text" class="form-control" autocomplete="off" />
+                        <label for="add-source-desc">Inserisci una breve descrizione:</label>
+                        <input id="add-source-desc" type="text" class="form-control" autocomplete="off" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary close-modal">Annulla</button>
+            <button type="button" id="source-btn" class="btn btn-danger btn-del-cit">
+                Inserisci Fonte
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- Modal to add new authors -->
+<div id="add-author-modal" class="add-modal">
+    <div class="add-modal-content">
+        <span class="close-icon close-modal">&times;</span>
+        <h5 class="modal-title">Inserisci un nuovo autore</h5>
+        <div class="modal-body">
+            <ul class="nav nav-tabs" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" id="author-wd" data-toggle="tab" href="#author-wd-tab">
+                        Cerca in Wikidata
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="author-manual" data-toggle="tab" href="#author-manual-tab">
+                        Inserisci manualmente
+                    </a>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane fade show active" role="tabpanel" id="author-wd-tab">
+                    <div class="form-group tab-form">
+                        <label for="add-author-wd">Inserisci il nome da cercare:</label>
+                        <input id="add-author-wd" type="text" class="form-control autocomplete" autocomplete="off" />
+                        <input id="add-author-wd_iri" type="hidden" class="form-control" />
+                        <label><i>Se hai inserito un nome parziale e la ricerca non
+                            restituisce risultati, prova a inserire più caratteri. Se l'autore
+                            non è presente in Wikidata, passa all'inserimento manuale.</i></label>
+                    </div>
+                </div>
+                <div class="tab-pane fade" role="tabpanel" id="author-manual-tab">
+                    <div class="form-group tab-form">
+                        <label for="add-author-name">Inserisci il nome dell'autore:</label>
+                        <input id="add-author-name" type="text" class="form-control" autocomplete="off" />
+                        <label for="add-author-desc">Inserisci una breve descrizione:</label>
+                        <input id="add-author-desc" type="text" class="form-control" autocomplete="off" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary close-modal">Annulla</button>
+            <button type="button" id="author-btn" class="btn btn-danger btn-del-cit">
+                Inserisci Autore
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- Modal to add new characters -->
+<div id="add-character-modal" class="add-modal">
+    <div class="add-modal-content">
+        <span class="close-icon close-modal">&times;</span>
+        <h5 class="modal-title">Inserisci un nuovo personaggio</h5>
+        <div class="modal-body">
+            <ul class="nav nav-tabs" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" id="character-wd" data-toggle="tab" href="#character-wd-tab">
+                        Cerca in Wikidata
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="character-manual" data-toggle="tab" href="#character-manual-tab">
+                        Inserisci manualmente
+                    </a>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane fade show active" role="tabpanel" id="character-wd-tab">
+                    <div class="form-group tab-form">
+                        <label for="add-character-wd">Inserisci il nome da cercare:</label>
+                        <input id="add-character-wd" type="text" class="form-control autocomplete" autocomplete="off" />
+                        <input id="add-character-wd_iri" type="hidden" class="form-control" />
+                        <label><i>Se hai inserito un nome parziale e la ricerca non
+                            restituisce risultati, prova a inserire più caratteri. Se il personaggio
+                            non è presente in Wikidata, passa all'inserimento manuale.</i></label>
+                    </div>
+                </div>
+                <div class="tab-pane fade" role="tabpanel" id="character-manual-tab">
+                    <div class="form-group tab-form">
+                        <label for="add-character-name">Inserisci il nome del personaggio:</label>
+                        <input id="add-character-name" type="text" class="form-control" autocomplete="off" />
+                        <label for="add-character-desc">Inserisci una breve descrizione:</label>
+                        <input id="add-character-desc" type="text" class="form-control" autocomplete="off" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary close-modal">Annulla</button>
+            <button type="button" id="character-btn" class="btn btn-danger btn-del-cit">
+                Inserisci Personaggio
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- Modal to add new places -->
+<div id="add-place-modal" class="add-modal">
+    <div class="add-modal-content">
+        <span class="close-icon close-modal">&times;</span>
+        <h5 class="modal-title">Inserisci un nuovo luogo</h5>
+        <div class="modal-body">
+            <ul class="nav nav-tabs" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" id="place-wd" data-toggle="tab" href="#place-wd-tab">
+                        Cerca in Wikidata
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="place-manual" data-toggle="tab" href="#place-manual-tab">
+                        Inserisci manualmente
+                    </a>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane fade show active" role="tabpanel" id="place-wd-tab">
+                    <div class="form-group tab-form">
+                        <label for="add-place-wd">Inserisci il nome da cercare:</label>
+                        <input id="add-place-wd" type="text" class="form-control autocomplete" autocomplete="off" />
+                        <input id="add-place-wd_iri" type="hidden" class="form-control" />
+                        <label><i>Se hai inserito un nome parziale e la ricerca non
+                            restituisce risultati, prova a inserire più caratteri. Se il luogo
+                            non è presente in Wikidata, passa all'inserimento manuale.</i></label>
+                    </div>
+                </div>
+                <div class="tab-pane fade" role="tabpanel" id="place-manual-tab">
+                    <div class="form-group tab-form">
+                        <label for="add-place-name">Inserisci il nome del luogo:</label>
+                        <input id="add-place-name" type="text" class="form-control" autocomplete="off" />
+                        <label for="add-place-desc">Inserisci una breve descrizione:</label>
+                        <input id="add-place-desc" type="text" class="form-control" autocomplete="off" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary close-modal">Annulla</button>
+            <button type="button" id="place-btn" class="btn btn-danger btn-del-cit">
+                Inserisci Luogo
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- 
+
+<form action="" method="post">
+    {% csrf_token %}
+    <div class="form-group">
+        <legend>{{ title }}</legend>
+        {% for field in form %}
+        <label>{{ field.label }}</label>
+        {{ field }}
+            {% if field.errors %}
+                <div class="form-group error">
+                    <label class="form-label">{{ field.label }}</label> 
+                     <div class="controls">{{ field }}
+                        <span class="help-inline">
+                            {% for error in  field.errors %}{{ error }}{% endfor %}
+                        </span>
+                    </div>
+                </div>
+            {% else %}
+                <div class="control-group">
+                    <label class="control-label">{{ field.label }}</label> 
+                    <div class="controls">{{ field }}
+                        {% if field.help_text %}
+                            <p class="help-inline"><small>{{ field.help_text }}</small></p>
+                        {% endif %}
+                    </div>
+                </div>
+            {% endif %}
+        {% endfor %}
+            </div>
+    <div class="form-actions">
+        <button type="submit" class="btn btn-primary" >Submit</button>
+    </div>
+</form>
+
+<p>{{ json }}</p> -->
+</div>
+
+{% endblock %} 
+{% block script %}
+{% load static %}
+<script src="{% static 'hdn/js/app.js' %}"></script>
+{% endblock %} 

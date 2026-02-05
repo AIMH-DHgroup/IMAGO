@@ -1,0 +1,15 @@
+/.project
+/.svn
+/.venv
+/backups
+/env
+/log
+/outputAuthorsFinal(I).json
+/outputAuthorsFinal.json
+/outputWorks(I).json
+/outputWorks.json
+/postgres_backup.sh
+.env
+
+/annotation/old_json
+annotation/management/commands/scrape_mirabile.py

@@ -1,0 +1,92 @@
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+	PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+	PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+	PREFIX ecrm: <http://erlangen-crm.org/200717/>
+	PREFIX ilrm: <http://imagoarchive.it/ilrmoo/>
+	PREFIX : <https://imagoarchive.it/ontology/>
+SELECT (COUNT(?exp_cre) AS ?count)
+	FROM <https://imagoarchive.it/fuseki/imago/archive>
+	WHERE {
+	?exp_cre a ilrm:F28_Expression_Creation ;
+	            :has_abstract ?abstract ;
+		  		 ilrm:R17_created ?work ;
+		  		 ecrm:P14_carried_out_by ?author .	
+		  ?author a :Author ;
+		     ecrm:P1_is_identified_by/ecrm:P190_has_symbolic_content ?authorName .
+		  ?work a ilrm:F2_Expression ;
+		  ecrm:P102_has_title/ecrm:P190_has_symbolic_content ?title .
+
+		} 
+
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+	PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+	PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+	PREFIX ecrm: <http://erlangen-crm.org/200717/>
+	PREFIX ilrm: <http://imagoarchive.it/ilrmoo/>
+	PREFIX : <https://imagoarchive.it/ontology/>
+SELECT (COUNT(?place) AS ?count)
+	FROM <https://imagoarchive.it/fuseki/imago/archive>
+	WHERE {
+ 		 ?work ecrm:P106_is_composed_of ?toponym .
+	   ?place :is_identified_by_toponym ?toponym .
+	   ?toponym ecrm:P190_has_symbolic_content ?placeName .
+	}
+
+    PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+	PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+	PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+	PREFIX ecrm: <http://erlangen-crm.org/200717/>
+	PREFIX ilrm: <http://imagoarchive.it/ilrmoo/>
+	PREFIX : <https://imagoarchive.it/ontology/>
+SELECT (COUNT(?library) AS ?count)
+	FROM <https://imagoarchive.it/fuseki/imago/archive>
+	WHERE {
+	
+	   ?library a :Library ;
+	            ecrm:P74_has_current_or_former_residence ?libraryPlace ;
+	  	ecrm:P1_is_identified_by/ecrm:P190_has_symbolic_content ?libraryName .
+	   ?libraryPlace :is_identified_by_toponym ?toponym ;
+	                  ecrm:P168_place_is_defined_by ?coordinates .
+	  	?coordinates ecrm:P190_has_symbolic_content ?s_coordinates .
+	   ?toponym ecrm:P190_has_symbolic_content ?placeName .
+	} 
+
+    PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX ecrm: <http://erlangen-crm.org/200717/>
+PREFIX ilrm: <http://imagoarchive.it/ilrmoo/>
+PREFIX : <https://imagoarchive.it/ontology/>
+SELECT (COUNT(?print_edition) AS ?coubt)
+FROM <https://imagoarchive.it/fuseki/imago/archive>
+WHERE {
+  ?exp_cre a ilrm:F28_Expression_Creation ;
+  		 ilrm:R17_created ?work .
+  ?printEditionCreation ilrm:R24_created ?print_edition  .
+  ?print_edition ilrm:R4_embodies ?work .
+  ?print_creation ilrm:R24_created ?print_edition .
+} 
+
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+	PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+	PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+	PREFIX ecrm: <http://erlangen-crm.org/200717/>
+	PREFIX ilrm: <http://imagoarchive.it/ilrmoo/>
+	PREFIX : <https://imagoarchive.it/ontology/>
+	SELECT (COUNT(?manuscript) AS ?count)
+	FROM <https://imagoarchive.it/fuseki/imago/archive>
+	WHERE {
+	  ?exp_cre ilrm:R18_created ?manuscript .
+	  ?manuscript ecrm:P1_is_identified_by/ecrm:P190_has_symbolic_content ?signature ;
+	              ecrm:P50_has_current_keeper ?library ;
+	              ecrm:P46_is_composed_of/ecrm:P1_is_identified_by/ecrm:P190_has_symbolic_content ?folios .
+	  ?manifestation ilrm:R7i_is_materialized_in ?manuscript .
+	  ?library ecrm:P74_has_current_or_former_residence ?libraryPlace ;
+	  	ecrm:P1_is_identified_by/ecrm:P190_has_symbolic_content ?libraryName .
+	   ?libraryPlace :is_identified_by_toponym ?toponym ;
+	                  ecrm:P168_place_is_defined_by ?coordinates .
+	  	?coordinates ecrm:P190_has_symbolic_content ?s_coordinates .
+	   ?toponym ecrm:P190_has_symbolic_content ?placeName .
+	
+	  
+	} 

@@ -1,0 +1,27 @@
+{
+    'Albi': 'http://www.wikidata.org/entity/Q132801',
+    # 'Bloomington, Indiana University, Lilly Libr.' : '?',
+    'Bridlington' : 'http://www.wikidata.org/entity/Q527391',
+    'Cambridge (MA)' : 'http://www.wikidata.org/entity/Q49111',
+    'Castro' : 'http://www.wikidata.org/entity/Q52129',
+    # 'Fiecht' : '?', Vomp https://www.wikidata.org/wiki/Q202007
+    'Gerleve' : 'http://www.wikidata.org/entity/Q47190461',
+    #'Göttweig' : 'http://www.wikidata.org/entity/Q581628', #Furth bei Göttweig
+    #'Helsinki, Universitetsbibliotek' : '?',
+    #'Hulne'  : 'http://www.wikidata.org/entity/Q2630513', #Denwick (Q2630513)
+    'Itacha' : 'http://www.wikidata.org/entity/Q217346', #Ithaca (Q217346)
+    #'Longleat House (Warminster, Wiltshire)' : 'http://www.wikidata.org/entity/Q1726158' , #Longleat (Q1726158)
+    'Michaelbeuern' : 'http://www.wikidata.org/entity/Q97499728',
+    'Notre Dame, Indiana' : 'http://www.wikidata.org/entity/Q746071' ,
+    'Opladen' : 'http://www.wikidata.org/entity/Q315138' ,
+    #'Oslo, National Archives' : '' ,
+    #'Porto di Laiazzo' : '' , #oggi Yumurtalık (Q939243)
+    'Roca Vecchia' : 'http://www.wikidata.org/entity/Q2727876' ,
+    'Romont' : 'http://www.wikidata.org/entity/Q67103' ,
+    #'Sankt Paul im Lavanttal, Bibliothek des Benediktinerstifts' : '?' ,
+    'San Marino (California)' : 'http://www.wikidata.org/entity/Q850869' , 
+    #'Sicilia' : '?' ,
+    'Toledo (Ohio)' : 'http://www.wikidata.org/entity/Q49239',
+    'Wellesley' : 'http://www.wikidata.org/entity/Q533317' 
+    #'Württemberg' : '?' , #forse Wolfegg (Q533735)
+}

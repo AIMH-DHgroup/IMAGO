@@ -1,0 +1,37 @@
+PREFIX : <https://imagoarchive.it/ontology/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX geo: <http://www.opengis.net/ont/geosparql#>
+PREFIX ecrm: <http://erlangen-crm.org/200717/>
+PREFIX ilrm: <http://imagoarchive.it/ilrmoo/>
+PREFIX osm: <https://www.openstreetmap.org/>
+PREFIX osm2rdfkey: <https://osm2rdf.cs.uni-freiburg.de/rdf/key#>
+PREFIX geof: <http://www.opengis.net/def/function/geosparql/> 
+
+SELECT DISTINCT ?title ?authorName ?toponymName ?wktPlace
+  FROM <https://geosparql.isti.cnr.it/fuseki/imago/archive>
+WHERE {
+  ?exp_cre a ilrm:F28_Expression_Creation ;
+  	         ilrm:R17_created ?work ;
+  	         ecrm:P14_carried_out_by ?author .	
+  ?author a :Author ;
+          ecrm:P1_is_identified_by/ecrm:P190_has_symbolic_content ?authorName .
+  ?work a ilrm:F2_Expression ;
+        ecrm:P102_has_title/ecrm:P190_has_symbolic_content ?title ;
+        ecrm:P106_is_composed_of ?toponym .
+  ?place :is_identified_by_toponym ?toponym ;
+         geo:asWKT ?wktPlace .
+  ?toponym ecrm:P190_has_symbolic_content ?toponymName .
+
+  { 
+    SELECT ?wktFrance 
+    WHERE {
+        SERVICE <https://qlever.cs.uni-freiburg.de/api/osm-planet> { 
+            ?osm_id osm2rdfkey:wikidata wd:Q142 ;
+                    a osm:relation ;
+                    geo:hasGeometry ?geometryFrance .
+            ?geometryFrance geo:asWKT ?wktFrance .     
+        } 
+    } LIMIT 1
+  }
+  FILTER(geof:sfWithin(?wktPlace,?wktFrance)). 
+} 

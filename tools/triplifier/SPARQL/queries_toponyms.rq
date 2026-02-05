@@ -1,0 +1,28 @@
+PREFIX : <https://www.imagoarchive.it/ontology/>
+PREFIX efrbroo: <http://erlangen-crm.org/efrbroo/>
+PREFIX ilrmoo: <http://imagoarchive.it/ilrmoo/>
+PREFIX ecrm: <http://erlangen-crm.org/200717/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+
+# Tutti i tooponimi con le opere in cui compaiono
+# Non abbiamo le label delle opere
+# Molteplici lingue per ogni toponimo, ho filtrato sull'italiano
+SELECT ?label ?work
+WHERE {
+  ?toponym a :Toponym ;
+   		rdfs:label ?label .
+  ?work a ilrmoo:F2_Expression ;
+  		ecrm:P106_is_composed_of ?toponym .
+  FILTER(LANG(?label) = "it") .
+  
+}
+
+SELECT (COUNT(?toponym) as ?n_toponym) ?work
+WHERE {
+  ?toponym a :Toponym ;
+   		rdfs:label ?label .
+  ?work a ilrmoo:F2_Expression ;
+  		ecrm:P106_is_composed_of ?toponym .
+  FILTER(LANG(?label) = "it") .
+} GROUP BY ?work

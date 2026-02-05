@@ -1,0 +1,703 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,100,300,700,500,900);
+
+body, input, select, textarea, .popover {
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+} 
+.container{
+  /* margin-top: 30px; */
+  /* padding-bottom: 100px; */
+  margin-left: auto;
+    margin-right: auto;
+  width: 960px;
+}
+
+[contenteditable="true"] {
+  color: #1d6add;
+}
+
+
+.lemma-link{
+  border-bottom: dashed 1px #1d6add;
+  text-decoration: none;
+  padding: 0;
+  font-weight: 400;
+  color: #1d6add;
+}
+
+.lemma-link:hover{
+  color:#007bff;
+  text-decoration: none;
+  border-bottom: dashed 1px #007bff;
+  cursor: pointer;
+
+}
+
+#error-source{
+  color: red;
+}
+
+/*
+*
+* ==========================================
+* CUSTOM UTIL CLASSES
+* ==========================================
+*
+*/
+.login,
+.image {
+  min-height: 100vh;
+}
+
+
+.table a {
+  text-decoration: none;
+  color: #525f7f;
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+}
+
+.table a:hover {
+  text-decoration: none;
+  color: black;
+}
+
+
+
+.bg-image {
+  background-image: url('https://imagoarchive.it/images/FraMauroMap1_r.jpeg');
+  background-size: cover;
+  background-position: center center;
+}
+
+
+.card-custom {
+  overflow: hidden;
+  min-height: 450px;
+  box-shadow: 0 0 15px rgba(10, 10, 10, 0.3);
+}
+
+.card-custom-img {
+  /* background-image: url('../img/Trianglify-3.png'); */
+  background-color: #80BA8E;
+  height: 140px;
+  min-height: 140px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-color: inherit;
+  /* border-color: #80BA8E; */
+}
+
+/* First border-left-width setting is a fallback */
+.card-custom-img::after {
+  position: absolute;
+  content: '';
+  top: 100px;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-top-width: 40px;
+  border-right-width: 0;
+  border-bottom-width: 0;
+  border-left-width: 545px;
+  border-left-width: calc(575px - 5vw);
+  border-top-color: transparent;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  border-left-color: inherit;
+}
+
+.card-custom-avatar img {
+  border-radius: 50%;
+  box-shadow: 0 0 15px rgba(10, 10, 10, 0.3);
+  position: absolute;
+  top: 25px;
+  left: 1.25rem;
+  width: 100px;
+  height: 100px;
+}
+
+/* .forms-sheets {
+  background:#f1f7fc;
+  padding:80px 0;
+} */
+
+/* @media (max-width:767px) {
+  .forms-sheets {
+    padding:20px 0;
+  }
+} */
+.table{
+  box-shadow:1px 1px 5px rgba(0,0,0,0.1);
+
+
+}
+.forms-sheets form {
+  /* max-width:480px; */
+  /* width:90%; */
+  margin:0 auto;
+  background-color:#ffffff;
+  padding:40px;
+  border-radius:4px;
+  color:#505e6c;
+  box-shadow:1px 1px 5px rgba(0,0,0,0.1);
+}
+
+#manuscriptForm, #printEditionForm {
+  padding-bottom: 100px;
+}
+
+@media (max-width:767px) {
+  .forms-sheets form {
+    padding:30px;
+  }
+}
+
+.forms-sheets h2 {
+  margin-top:5px;
+  font-weight:bold;
+  font-size:28px;
+  margin-bottom:36px;
+  color:inherit;
+}
+
+.forms-sheets .form-group:last-child {
+  margin-bottom:5px;
+}
+
+.forms-sheets form .form-control {
+  background:#fff;
+  border-radius:2px;
+  box-shadow:1px 1px 1px rgba(0,0,0,0.05);
+  outline:none;
+  color:inherit;
+  padding-left:12px;
+  height:42px;
+}
+
+.forms-sheets form .form-control:focus {
+  border:1px solid #b2b2b2;
+}
+
+.forms-sheets form textarea.form-control {
+  min-height:100px;
+  max-height:260px;
+  padding-top:10px;
+  resize:vertical;
+}
+
+#lemmaContainer .btn {
+  padding:16px 32px;
+  border:none;
+  background:none;
+  box-shadow:none;
+  text-shadow:none;
+  opacity:0.9;
+  text-transform:uppercase;
+  font-weight:bold;
+  font-size:13px;
+  letter-spacing:0.4px;
+  line-height:1;
+  outline:none !important;
+}
+
+#lemmaContainer .btn:hover {
+  opacity:1;
+}
+
+#lemmaContainer .btn:active {
+  transform:translateY(1px);
+}
+
+#lemmaContainer .btn-primary {
+  background-color:#055ada !important;
+  /* margin-top:15px; */
+  color:#fff;
+}
+
+#lemmaContainer .btn-danger {
+  background-color:#c82333 !important;
+  /* margin-top:15px; */
+  color:#fff;
+}
+
+#lemmaContainer .btn-success {
+  background-color:#28a745 !important;
+  /* margin-top:15px; */
+  color:#fff;
+}
+
+#lemmaContainer .add-row, #lemmaContainer .delete-row{
+  padding: 8px 16px;
+}
+
+
+
+#logo{
+  width: 95%;
+}
+
+#topography-text a{
+  font-size: 18px;
+}
+
+#lemmaContainer #insert-topography{
+  margin-top: 0px;
+  margin-bottom: 6px;
+  padding: 8px 16px;
+}
+
+#genre-text a{
+  font-size: 18px;
+}
+
+#lemmaContainer #insert-genre{
+  margin-top: 0px;
+  margin-bottom: 6px;
+  padding: 8px 16px;
+}
+
+#lemmaContainer #insert-abstract{
+  margin-top: 0px;
+  margin-bottom: 6px;
+  /* margin-left: 6px ; */
+  padding: 8px 16px;
+}
+
+#id_abstract{
+  margin-left: -8px;
+}
+
+#btn-new-work{
+  margin-top: 10px;
+}
+
+.btn-m, .btn-pe{
+  margin-top: 5px;
+  margin-bottom: 40px;
+  /* margin-right: 10px; */
+}
+
+.btn-modal-m, .btn-modal-pe{
+  margin-top: 5px;
+  margin-bottom: 40px;
+}
+
+input:disabled {
+  color: #212529;
+  background: white;
+  border: none;
+  /* needed for Firefox: */
+  overflow:hidden;
+  width: 120%;
+}
+
+.form-field input, .form-field textarea, .form-field select {
+  width: 100%;
+}
+
+
+
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  /* transition: 0.5s; */
+  padding-top: 60px;
+  padding-left: 2%;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.openbtn {
+  font-size: 12px;
+  cursor: pointer;
+  background-color: #b50000;
+  color: white;
+  padding: 5px 7px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color: #444;
+  color: white;
+  text-decoration: none;
+}
+
+#main {
+  /* transition: margin-left .5s; */
+  padding: 16px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+
+#general-info{
+  margin-top: 3%;
+}
+
+ /* The Modal (background) */
+
+ .del-modal, .add-modal, .dup-modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 9999; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content/Box */
+  .del-modal-content, .add-modal-content, .dup-modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 40%; /* Could be more or less, depending on screen size */
+  }
+  
+  /* The Close Button */
+  .close-icon {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close-icon:hover,
+  .close-icon:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  } 
+
+   /* Style the buttons that are used to open and close the accordion panel */
+.pe-accordion, .m-accordion {
+    background-color: #1d6add;
+    color: #fff;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+  }
+  
+  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+  .pe-accordion.active, .pe-accordion:hover, .m-accordion.active, .m-accordion:hover {
+    background-color: #fff;
+    color: #1d6add;
+    /* border: 1px solid #1d6add; */
+    box-shadow:1px 1px 5px rgba(0,0,0,0.1);
+  }
+  
+  .manuscript-information, .print-edition-information{
+    padding: 40px;
+  }
+
+  .manuscript-form-space, .print-edition-form-space{
+    padding: 40px;
+  }
+  /* Style the accordion panel. Note: hidden by default */
+  .pe-panel, .m-panel {
+    /* padding: 40px; */
+    /* background-color: white; */
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    background:#fff;
+    border-radius:2px;
+    /* box-shadow:1px 1px 1px rgba(0,0,0,0.05); */
+    box-shadow:1px 1px 5px rgba(0,0,0,0.1);
+    outline:none;
+    color:inherit;
+    padding-left:12px;
+  } 
+
+  .pe-accordion:after, .m-accordion:after {
+    content: '\02795'; /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+    color: #777;
+    float: right;
+    margin-left: 5px;
+  }
+  
+  .pe-accordion.active:after, .m-accordion.active:after {
+    content: "\2796"; /* Unicode character for "minus" sign (-) */
+  }
+
+  /* #update-lemma{
+    display: none;
+  }
+
+  #new-lemma{
+    display: none;
+  } */
+
+  /* #lemmaForm{
+    margin-top: 30px;
+  } */
+
+  ul#id_date_type li{
+    display: inline-block;
+    text-align: center;
+margin: 0 30px;
+    }
+
+  #btn-json{
+    margin-top: 3%;
+    margin-bottom: 3%;
+  }
+
+  #json-field{
+    display: none;
+  }
+
+  /* FIXME: should we use percentage width? */
+  .popover {
+	  max-width: 220px;
+  }
+
+/* Index page */
+  #search {
+    background-image: url('/css/searchicon.png'); /* Add a search icon to input */
+    background-position: 10px 12px; /* Position the search icon */
+    background-repeat: no-repeat; /* Do not repeat the icon image */
+    width: 100%; /* Full-width */
+    font-size: 16px; /* Increase font-size */
+    padding: 12px 20px 12px 40px; /* Add some padding */
+    border: 1px solid #ddd; /* Add a grey border */
+    margin-bottom: 12px; /* Add some space below the input */
+  }
+  
+  #tableNotes {
+    border-collapse: collapse; /* Collapse borders */
+    width: 100%; /* Full-width */
+    border: 1px solid #ddd; /* Add a grey border */
+    font-size: 18px; /* Increase font-size */
+  }
+  
+  #tableNotes th, #tableNotes td {
+    text-align: left; /* Left-align text */
+    padding: 12px; /* Add padding */
+    word-break: break-all;
+    
+  }
+  
+  #tableNotes tr {
+    /* Add a bottom border to all table rows */
+    border-bottom: 1px solid #ddd;
+  }
+  
+  #tableNotes tr.header, #tableNotes tr:hover {
+    /* Add a grey background color to the table header and on hover */
+    background-color: #f1f1f1;
+  }
+
+  #tableNotesPage {
+    border-collapse: collapse; /* Collapse borders */
+    width: 100%; /* Full-width */
+    border: 1px solid #ddd; /* Add a grey border */
+    font-size: 18px; /* Increase font-size */
+  }
+  
+  #tableNotesPage th, #tableNotesPage td {
+    text-align: left; /* Left-align text */
+    padding: 12px; /* Add padding */
+    word-break: break-all;
+    
+  }
+  
+  #tableNotesPage tr {
+    /* Add a bottom border to all table rows */
+    border-bottom: 1px solid #ddd;
+  }
+  
+  #tableNotesPage tr.header, #tableNotesPage tr:hover {
+    /* Add a grey background color to the table header and on hover */
+    background-color: #f1f1f1;
+  }
+
+
+  /* Tree view */
+
+  ul, #tree-view {
+    list-style-type: none;
+  }
+  
+  #tree-view {
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+  }
+  
+  .caret {
+    cursor: pointer;
+    -webkit-user-select: none; /* Safari 3.1+ */
+    -moz-user-select: none; /* Firefox 2+ */
+    -ms-user-select: none; /* IE 10+ */
+    user-select: none;
+  }
+
+  
+  
+  .caret::before {
+    content: "\25B6";
+    color: black;
+    display: inline-block;
+    margin-right: 4px;
+  }
+  
+  .caret-down::before {
+    -ms-transform: rotate(90deg); /* IE 9 */
+    -webkit-transform: rotate(90deg); /* Safari */
+    transform: rotate(90deg);  
+  }
+  
+  .nested {
+    display: none;
+    padding-left: 10px;
+  }
+  
+  #tree-view .active {
+    display: block;
+  }
+  
+  .activeNote{
+    border-width: 1px;
+    border-style: solid;
+  }
+  /* to do */
+   /* unvisited link */
+.to-do:link {
+  color: #6c757d;
+}
+
+/* visited link */
+.to-do:visited {
+  color: #6c757d;
+}
+
+/* mouse over link */
+.to-do:hover {
+  color: #6c757d;
+}
+
+/* selected link */
+.to-do:active {
+  color: #6c757d;
+} 
+
+  /* doing */
+   /* unvisited link */
+   .doing:link {
+    color: #ffc107;
+  }
+  
+  /* visited link */
+  .doing:visited {
+    color: #ffc107;
+  }
+  
+  /* mouse over link */
+  .doing:hover {
+    color: #ffc107;
+  }
+  
+  /* selected link */
+  .doing:active {
+    color: #ffc107;
+  } 
+
+    /* done*/
+   /* unvisited link */
+.done:link {
+  color: #28a745;
+}
+
+/* visited link */
+.done:visited {
+  color: #28a745;
+}
+
+/* mouse over link */
+.done:hover {
+  color: #28a745;
+}
+
+/* selected link */
+.done:active {
+  color: #28a745;
+} 
+
+
+.dynamic-form{
+  width: 100%;
+  display: inline;
+}
+.dynamic-form input{
+  width: 85%;
+}
+
+
+.delete-row{
+  margin: 2px;
+}
+
+.add-row{
+  font-size: .720em;
+}
+
+
+
+#link-formset-genre{
+  /* display: none; */
+  width: 100%;
+  /* padding-left: 15px; */
+}
+
+#link-formset-topography{
+  /* display: none; */
+  width: 100%;
+  /* padding-left: 15px; */
+}
+
+#id_secondary_sources-group input{
+  width: 43%;
+}
+
+#id_secondary_sources_pe-group input{
+  width: 43%;
+}
+
+.info-popover{
+  padding: 0;
+  border:none;
+  background:none;
+  box-shadow:none;
+  text-shadow:none;
+}
+
+/* .popover{
+  max-width : 400px;
+  z-index   : 1060;
+} */

@@ -1,0 +1,40 @@
+{% extends 'annotation/base.html' %}
+
+
+{% block content %}
+
+<h1 class="mt-2">{{ author_name }}</h1>
+<hr class="mt-0 mb-4">
+<!-- <input type="text" id="search" placeholder="Search..."> -->
+{% if works_list %}
+<table class="table" id="tableNotes">
+    <tr class="header">
+      <th>Titolo</th>
+    </tr>
+  
+    {% for work in works_list %}
+    <tr>
+        <td><a href="../lemma/{{ author_id }}/{{ work.id }}">{{ work.titolo }}</a>
+            {% if work.review %}
+            {% load static %}
+            <span><img src="{% static 'imago/img/review.png' %}" style="color: green;"></span>
+            {% endif %}
+        </td>
+    </tr>
+    {% endfor %}
+   
+</table>
+{% else %}
+    <p>No notes are available.</p>
+{% endif %}
+
+<!-- <a id="btn-new-work" class="btn btn-primary" href="../lemma/{{ author_id }}" role="button">Inserisci una nuova opera</a> -->
+
+
+{% endblock %} 
+{% block script %}
+{% load static %}
+
+<script src="{% static 'hdn/js/search.js' %}"></script>
+{% endblock %} 
+

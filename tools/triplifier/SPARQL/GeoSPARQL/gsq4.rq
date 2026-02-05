@@ -1,0 +1,38 @@
+PREFIX : <https://imagoarchive.it/ontology/>
+PREFIX igen: <https://imagoarchive.it/thes/tid/>
+PREFIX ecrm: <http://erlangen-crm.org/200717/>
+PREFIX ilrm: <http://imagoarchive.it/ilrmoo/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX geo: <http://www.opengis.net/ont/geosparql#>
+PREFIX geof: <http://www.opengis.net/def/function/geosparql/> 
+PREFIX uom: <http://www.opengis.net/def/uom/OGC/1.0/>
+
+SELECT DISTINCT ?authorName ?title
+FROM <https://geosparql.isti.cnr.it/fuseki/imago/archive>
+WHERE {
+  ?exp_cre a ilrm:F28_Expression_Creation ;
+  		     ilrm:R17_created ?work ;
+  		     ecrm:P14_carried_out_by ?author .	
+  ?author a :Author ;
+          ecrm:P1_is_identified_by/ecrm:P190_has_symbolic_content ?authorName .
+  ?work a ilrm:F2_Expression ;
+        ecrm:P102_has_title/ecrm:P190_has_symbolic_content ?title ;
+        ecrm:P106_is_composed_of ?toponym . 
+  ?place :is_identified_by_toponym ?toponym ;
+         geo:asWKT ?wktPlace .
+  ?toponym ecrm:P190_has_symbolic_content ?toponymName .
+  
+  ?work :has_genre igen:100026 . # Diario di viaggio genre
+  igen:100026  :has_genre_name ?labelGenre.
+  
+  { 
+    SELECT ?coord 
+    WHERE {
+      SERVICE <https://query.wikidata.org/bigdata/namespace/wdq/sparql> { 
+            wd:Q48175 wdt:P625 ?coord.    
+      } 
+    } LIMIT 1
+  }
+  FILTER(geof:sfIntersects(?wktPlace,geof:buffer(?coord,0.3, uom:degree))). 
+}  

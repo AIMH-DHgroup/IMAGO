@@ -1,0 +1,107 @@
+.onside {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.onside:before,
+.onside:after {
+    content: '';
+    border-top: 2px solid;
+    margin: 0 20px 0 0;
+    flex: 1 0 20px;
+}
+
+.onside:after {
+    margin: 0 0 0 20px;
+}
+
+.icon{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.icon img{
+    text-align: center;
+    width: 40px;
+    margin: 10px;
+
+}
+
+.leaflet-marker-icon.huechange{
+    filter: hue-rotate(120deg);
+}
+
+#map-container {
+    position: relative;
+    height: 34em;
+}
+
+#map {
+    position: relative;
+    height: inherit;
+    width: inherit;
+    margin-top:10px;
+}
+#main .dropbtn {
+    background: white;
+    border: 2px solid  #80BA8E;
+    color: #80BA8E;
+    padding: 16px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 0.25em;
+    position: relative;
+    
+    
+  }
+  
+  #main .dropdown {
+    /*position: absolute;
+    right: 50px;*/
+    display: inline-block;
+  }
+  
+  #main .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 5000;
+  }
+  
+  #main .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  #main .dropdown-content a:hover {background-color: #f1f1f1}
+  
+  #main .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  #main .dropdown:hover .dropbtn {
+    background-color: #80BA8E;
+    color: #FFF !important;
+  }
+
+  b{
+    font-weight: 800;
+  }
+
+  i{
+    font-weight: 800;
+  }
+
+  #warning i{
+    font-weight: 300;
+  }
