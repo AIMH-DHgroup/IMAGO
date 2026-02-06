@@ -198,33 +198,16 @@ Some illustrative queries include:
 | `queries_toponyms.rq`  | Count toponyms per work and list toponyms with the works in which they appear.                                                        |
 | `GeoSPARQL/gsq*.rq`    | GeoSPARQL queries: works mentioning places in France, places within a buffer around the Via Francigena, or places in Italy mentioned in fifteenth‑century manuscripts.                                   |
 
-Detailed explanations of the GeoSPARQL queries and their results are in
-SPARQL/GeoSPARQL/GeoSPARQL_queries.md. Many of the queries rely on
-GeoSPARQL functions such as geof:sfWithin and fetch country geometries
+Detailed explanations of the GeoSPARQL queries and their results are in `SPARQL/GeoSPARQL/GeoSPARQL_queries.md`. Many of the queries rely on GeoSPARQL functions such as geof:sfWithin and fetch country geometries
 from external endpoints.
 
-Extending the tool
+## Extending the tool
 
-The triplifier is designed for IMAGO’s needs but can be adapted to other
-datasets:
+The triplifier is designed for IMAGO’s needs but can be adapted to other datasets:
 
-Different ontologies: Point the imago.ontology property to a
-different ontology and adjust the Vocabulary class accordingly. Jena
-makes it straightforward to read alternative RDF/Turtle ontologies and
+- Different ontologies: Point the `imago.ontology` property to a different ontology and adjust the `Vocabulary` class accordingly. Jena makes it straightforward to read alternative RDF/Turtle ontologies and
 create instances.
 
-Additional input formats: The Jackson mapper expects JSON arrays.
-To support CSV or XML, add a new parser in the util package.
+- Additional input formats: The Jackson mapper expects JSON arrays. To support CSV or XML, add a new parser in the util package.
 
-Alternative output formats: Replace the calls to
-RDFDataMgr.write(…, Lang.TURTLE) with another language supported by
-Jena (e.g., Lang.JSONLD or Lang.TRIG).
-
-License
-
-The code in this repository is distributed under the Apache 2.0
-License
-. The IMAGO ontology
-and example datasets are maintained by their respective owners and may
-carry additional licensing terms. Please consult the IMAGO project
-website for more information.
+- Alternative output formats: Replace the calls to `RDFDataMgr.write(…, Lang.TURTLE)` with another language supported by Jena (e.g., `Lang.JSONLD` or `Lang.TRIG`).
