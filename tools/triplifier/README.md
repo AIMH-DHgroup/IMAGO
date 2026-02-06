@@ -162,44 +162,29 @@ Only a subset of fields is required; missing labels or Pleiades identifiers are 
 
 The IMAGO lemma dataset (`input_imago.json`) is an array of “root” objects. Each object has an id and a nested lemma containing rich metadata:
 
-- Author – An object with an `iri` linking to a MIRABILE or other authority record, the `name` of the author and optional `alias` list. An `authorDate` object may specify birth/death dates with uncertainty flags. These values are mapped to the `Author` resource in the ontology, and the alias list is attached using the `has_alias` property.
+- **Author** – An object with an `iri` linking to a MIRABILE or other authority record, the `name` of the author and optional `alias` list. An `authorDate` object may specify birth/death dates with uncertainty flags. These values are mapped to the `Author` resource in the ontology, and the alias list is attached using the `has_alias` property.
 
-- Work – Identified by an `iri`, `title` and optional alias list. The work is treated as an `F2_Expression` in FRBRoo terms. The main lemma resource (an `F28_Expression_Creation`) is linked to the work via R17_created and to the author via `P14_carried_out_by`.
+- **Work** – Identified by an `iri`, `title` and optional alias list. The work is treated as an `F2_Expression` in FRBRoo terms. The main lemma resource (an `F28_Expression_Creation`) is linked to the work via R17_created and to the author via `P14_carried_out_by`.
 
-- Abstract and review flags – Short descriptions or free text about the work; included in the model using the `has_abstract` property.
+- **Abstract** and review flags – Short descriptions or free text about the work; included in the model using the `has_abstract` property.
 
-Genres – A list of objects with iri and name; each is linked
-from the lemma using the has_genre property.
+- **Genres** – A list of objects with `iri` and `name`; each is linked from the lemma using the `has_genre` property.
 
-Places – Optional places associated with the work. Each place
-includes labels in multiple languages, a country object and
-coordinates (WKT Point strings). These become E53_Place
-individuals linked via P7_took_place_at or similar properties.
+- **Places** – Optional places associated with the work. Each place includes labels in multiple languages, a country object and `coordinates` (WKT `Point` strings). These become `E53_Place` individuals linked via `P7_took_place_at` or similar properties.
 
-Manuscripts – A list of manuscript descriptions. Each manuscript
-contains a signature (shelfmark), folios, notes, an optional date range,
-a library object (with IRIs and labels) and an author (copyist) name.
-Additional nested properties capture sources, digital images, decoration
-descriptions and URLs. Manuscripts are modelled as Manuscript
-individuals (F5_Item) with a corresponding F30_Manifestation_Creation.
+- **Manuscripts** – A list of manuscript descriptions. Each manuscript contains a signature (shelfmark), folios, notes, an optional date range, a `library` object (with IRIs and labels) and an `author` (copyist) name.
+Additional nested properties capture sources, digital images, decoration descriptions and URLs. Manuscripts are modelled as `Manuscript` individuals with a corresponding `Manifestation_Creation`.
 
-Print editions – Similar to manuscripts but represent printed editions
-of the work. Fields include publication place (with coordinates), notes,
-pages, format, editor/curator names and bibliographic sources.
+- **Print editions** – Similar to manuscripts but represent printed editions of the work. Fields include publication place (with coordinates), notes, pages, format, editor/curator names and bibliographic sources.
 
 The JSON schema is extensive; only the fields relevant to RDF are used.
 
-Uploading to Fuseki
+## Uploading to Fuseki
 
-If you specify dataset.url and credentials, the triplifier will attempt
-to connect to the dataset using Jena’s RDFConnectionFactory.connectPW.
-The model is then uploaded with a PUT to the graph at
-{dataset.url}/archive or {dataset.url}/toponyms. Ensure that the
-target dataset exists and that your user has permission to perform
-updates. You can verify the results by visiting the Fuseki UI at
-${dataset.url} and using the SPARQL editor to query the graphs.
+If you specify `dataset.url` and credentials, the triplifier will attempt to connect to the dataset using Jena’s `RDFConnectionFactory.connectPW`. The model is then uploaded with a `PUT` to the graph at
+`{dataset.url}/archive` or `{dataset.url}/toponyms`. Ensure that the target dataset exists and that your user has permission to perform updates. You can verify the results by visiting the Fuseki UI at `${dataset.url}` and using the SPARQL editor to query the graphs.
 
-Exploring the data with SPARQL
+## Exploring the data with SPARQL
 
 The SPARQL folder provides query examples for analysis and
 visualisation. You can run them from the command line with
@@ -208,16 +193,10 @@ curl/wget, via the Fuseki web interface or with a SPARQL client.
 Some illustrative queries include:
 | File                   | Description                                                         |
 | ---------------------- | ------------------------------------------------------------------- |
-| `queries.rq`           | Extract all lemmas, list manuscripts ordered by place and library,  |
-|                        | find works in the same manuscript or manuscripts for a given lemma. |
-| `queriesItineraria.rq` | Queries centred on travel literature (e.g., works of the genre      |
-|                        | `Cartography`, works mentioning the city of Genoa, or printed       |
-|                        | editions published in Bologna).                                     |
-| `queries_toponyms.rq`  | Count toponyms per work and list toponyms with the works in which   |
-|                        | they appear.                                                        |
-| `GeoSPARQL/gsq*.rq`    | GeoSPARQL queries: works mentioning places in France, places within |
-|                        | a buffer around the Via Francigena, or places in Italy mentioned    |
-|                        | in fifteenth‑century manuscripts.                                   |
+| `queries.rq`           | Extract all lemmas, list manuscripts ordered by place and library, find works in the same manuscript or manuscripts for a given lemma. |
+| `queriesItineraria.rq` | Queries centred on travel literature (e.g., works of the genre `Cartography`, works mentioning the city of Genoa, or printed editions published in Bologna).                                     |
+| `queries_toponyms.rq`  | Count toponyms per work and list toponyms with the works in which they appear.                                                        |
+| `GeoSPARQL/gsq*.rq`    | GeoSPARQL queries: works mentioning places in France, places within a buffer around the Via Francigena, or places in Italy mentioned in fifteenth‑century manuscripts.                                   |
 
 Detailed explanations of the GeoSPARQL queries and their results are in
 SPARQL/GeoSPARQL/GeoSPARQL_queries.md. Many of the queries rely on
