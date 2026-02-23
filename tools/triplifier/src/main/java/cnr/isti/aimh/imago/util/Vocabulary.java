@@ -12,7 +12,7 @@ public class Vocabulary {
 	public static final String efrbroo = "http://erlangen-crm.org/efrbroo/";
   public static final String ilrmoo = "http://imagoarchive.it/ilrmoo/";
 	public static final String cnt = "http://www.w3.org/2011/content#";
-	public static final String ecrm = "http://erlangen-crm.org/200717/";
+	public static final String ecrm = "http://erlangen-crm.org/211015/";
 	public static final String crminf = "https://dlnarratives.eu/crminf/";
 	public static final String dc = "http://purl.org/dc/elements/1.1/";
 	public static final String dctypes = "http://purl.org/dc/dcmitype/";
@@ -64,6 +64,7 @@ public class Vocabulary {
   public Property p3_has_note;
   public Property p4_has_time_span;
   public Property p7_took_place_at;
+  public Property p12_occurred_in_the_presence_of;
   public Property p14_carried_out_by;
   public Property p46_is_composed_of;
   public Property p50_has_current_keeper;
@@ -104,6 +105,8 @@ public class Vocabulary {
   public Property is_text_incipit_of;
   public Property is_text_explicit_of;
   public Property is_composed_of_place_name;
+  public Property is_composed_of_pages;
+  public Property is_composed_of_author;
   public Property is_identified_in_the_printed_edition_by;
   public Property has_url_manuscript;
   public Property has_url_manuscript_description;
@@ -161,6 +164,7 @@ public class Vocabulary {
     this.p3_has_note = model.getProperty(Vocabulary.ecrm + "P3_has_note");
     this.p4_has_time_span = model.getProperty(Vocabulary.ecrm + "P4_has_time-span");
     this.p7_took_place_at = model.getProperty(Vocabulary.ecrm + "P7_took_place_at");
+    this.p12_occurred_in_the_presence_of = model.getProperty(Vocabulary.ecrm + "P12_occurred_in_the_presence_of");
     this.p14_carried_out_by = model.getProperty(Vocabulary.ecrm + "P14_carried_out_by");
     this.p46_is_composed_of = model.getProperty(Vocabulary.ecrm + "P46_is_composed_of");
     this.p50_has_current_keeper = model.getProperty(Vocabulary.ecrm + "P50_has_current_keeper");
@@ -202,6 +206,8 @@ public class Vocabulary {
     this.is_text_incipit_of = model.getProperty(Vocabulary.imago + "is_text_incipit_of");
     this.is_text_explicit_of = model.getProperty(Vocabulary.imago + "is_text_explicit_of");
     this.is_composed_of_place_name = model.getProperty(Vocabulary.imago + "is_composed_of_place_name");
+    this.is_composed_of_author = model.getProperty(Vocabulary.imago + "is_composed_of_author");
+    this.is_composed_of_pages = model.getProperty(Vocabulary.imago + "is_composed_of_pages");
     this.is_identified_in_the_printed_edition_by = model.getProperty(Vocabulary.imago + "is_identified_in_the_printed_edition_by");
     this.has_url_manuscript = model.getProperty(Vocabulary.imago + "has_url_manuscript");
     this.has_url_manuscript_description = model.getProperty(Vocabulary.imago + "has_url_manuscript_description");

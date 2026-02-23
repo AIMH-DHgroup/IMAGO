@@ -12,11 +12,21 @@
     <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
     <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
-    <Import>http://erlangen-crm.org/200717/</Import>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/creator"/>
+        <IRI>https://www.isti.cnr.it/en/about/people-detail/820/Nicol%C3%B2_Pratelli</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://creativecommons.org/licenses/by-nc/4.0/</IRI>
+    </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <Literal xml:lang="en">Changelog:
-100222 (Nicolò Pratelli)
+260210 (Nicolò Pratelli)
+- updated documentation
+- fixed bug with R15i is fragment of
+220210 (Nicolò Pratelli)
 - Initial version</Literal>
     </Annotation>
     <Annotation>
@@ -25,13 +35,80 @@
 version 0.7, created by Digital Humanities Group at AIMH Lab at Institute of Information Science and Technologies &quot;Alessandro Faedo&quot;. It is based on the Draft Version v.0.7 of LRMoo (https://www.cidoc-crm.org/frbroo/sites/default/files/LRMoo_V0.7%28draft%202021-06-29%29.pdf). This implementation is currently under development by ISTI group. The ISTI-CNR LRMoo implementation is licensed under a Creative Commons Attribution-ShareAlike 3.0 Unported License.</Literal>
     </Annotation>
     <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>ontology.ttl</IRI>
+    </Annotation>
+    <Annotation>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <Literal xml:lang="en">ISTI CNR LRMoo</Literal>
+        <Literal xml:lang="en">CNR-ISTI LRMoo</Literal>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
-        <Literal xml:lang="en">ILRMoo 100222 / LRMoo v.0.7 / ECRM 200717 / CIDOC-CRM 6.2.9</Literal>
+        <Literal xml:lang="en">ILRMoo 100222 / LRMoo v.0.7 / ECRM 211015 / CIDOC-CRM 7.1.1</Literal>
     </Annotation>
+    <Declaration>
+        <Class IRI="http://erlangen-crm.org/211015/E12_Production"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://erlangen-crm.org/211015/E13_Attribute_Assignment"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://erlangen-crm.org/211015/E18_Physical_Thing"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://erlangen-crm.org/211015/E1_CRM_Entity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://erlangen-crm.org/211015/E24_Physical_Human-Made_Thing"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://erlangen-crm.org/211015/E28_Conceptual_Object"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://erlangen-crm.org/211015/E29_Design_or_Procedure"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://erlangen-crm.org/211015/E32_Authority_Document"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://erlangen-crm.org/211015/E39_Actor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://erlangen-crm.org/211015/E41_Appellation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://erlangen-crm.org/211015/E52_Time-Span"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://erlangen-crm.org/211015/E54_Dimension"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://erlangen-crm.org/211015/E55_Type"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://erlangen-crm.org/211015/E56_Language"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://erlangen-crm.org/211015/E65_Creation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://erlangen-crm.org/211015/E73_Information_Object"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://erlangen-crm.org/211015/E74_Group"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://erlangen-crm.org/211015/E7_Activity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://erlangen-crm.org/211015/E89_Propositional_Object"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://erlangen-crm.org/211015/E90_Symbolic_Object"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://erlangen-crm.org/211015/E99_Product_Type"/>
+    </Declaration>
     <Declaration>
         <Class IRI="F11_Corporate_Body"/>
     </Declaration>
@@ -97,6 +174,90 @@ version 0.7, created by Digital Humanities Group at AIMH Lab at Institute of Inf
     </Declaration>
     <Declaration>
         <Class IRI="F5_Item"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://erlangen-crm.org/211015/P106_is_composed_of"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://erlangen-crm.org/211015/P106i_forms_part_of"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://erlangen-crm.org/211015/P108_has_produced"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://erlangen-crm.org/211015/P108i_was_produced_by"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://erlangen-crm.org/211015/P128_carries"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://erlangen-crm.org/211015/P128i_is_carried_by"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://erlangen-crm.org/211015/P130_shows_features_of"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://erlangen-crm.org/211015/P130i_features_are_also_found_on"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://erlangen-crm.org/211015/P140_assigned_attribute_to"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://erlangen-crm.org/211015/P140i_was_attributed_by"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://erlangen-crm.org/211015/P148_has_component"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://erlangen-crm.org/211015/P148i_is_component_of"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://erlangen-crm.org/211015/P15_was_influenced_by"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://erlangen-crm.org/211015/P15i_influenced"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://erlangen-crm.org/211015/P165_incorporates"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://erlangen-crm.org/211015/P165i_is_incorporated_in"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://erlangen-crm.org/211015/P16_used_specific_object"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://erlangen-crm.org/211015/P16i_was_used_for"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://erlangen-crm.org/211015/P186_produced_thing_of_product_type"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://erlangen-crm.org/211015/P186i_is_produced_by"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://erlangen-crm.org/211015/P2_has_type"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://erlangen-crm.org/211015/P2i_is_type_of"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://erlangen-crm.org/211015/P43_has_dimension"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://erlangen-crm.org/211015/P43i_is_dimension_of"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://erlangen-crm.org/211015/P67_refers_to"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://erlangen-crm.org/211015/P67i_is_referred_to_by"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://erlangen-crm.org/211015/P94_has_created"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://erlangen-crm.org/211015/P94i_was_created_by"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="R10_has_member"/>
@@ -369,7 +530,16 @@ version 0.7, created by Digital Humanities Group at AIMH Lab at Institute of Inf
         <ObjectProperty IRI="R8i_is_combined_to_form"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="http://erlangen-crm.org/211015/P3_has_note"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="R33_has_content"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/creator"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/license"/>
     </Declaration>
     <SubClassOf>
         <Class IRI="F11_Corporate_Body"/>
@@ -377,7 +547,7 @@ version 0.7, created by Digital Humanities Group at AIMH Lab at Institute of Inf
     </SubClassOf>
     <SubClassOf>
         <Class IRI="F12_Nomen"/>
-        <Class IRI="http://erlangen-crm.org/200717/E89_Propositional_Object"/>
+        <Class IRI="http://erlangen-crm.org/211015/E89_Propositional_Object"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="F18_Serial_Work"/>
@@ -385,19 +555,19 @@ version 0.7, created by Digital Humanities Group at AIMH Lab at Institute of Inf
     </SubClassOf>
     <SubClassOf>
         <Class IRI="F1_Work"/>
-        <Class IRI="http://erlangen-crm.org/200717/E89_Propositional_Object"/>
+        <Class IRI="http://erlangen-crm.org/211015/E89_Propositional_Object"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="F27_Work_Conception"/>
-        <Class IRI="http://erlangen-crm.org/200717/E65_Creation"/>
+        <Class IRI="http://erlangen-crm.org/211015/E65_Creation"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="F28_Expression_Creation"/>
-        <Class IRI="http://erlangen-crm.org/200717/E12_Production"/>
+        <Class IRI="http://erlangen-crm.org/211015/E12_Production"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="F28_Expression_Creation"/>
-        <Class IRI="http://erlangen-crm.org/200717/E65_Creation"/>
+        <Class IRI="http://erlangen-crm.org/211015/E65_Creation"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="F28_Expression_Creation"/>
@@ -409,7 +579,7 @@ version 0.7, created by Digital Humanities Group at AIMH Lab at Institute of Inf
     </SubClassOf>
     <SubClassOf>
         <Class IRI="F2_Expression"/>
-        <Class IRI="http://erlangen-crm.org/200717/E73_Information_Object"/>
+        <Class IRI="http://erlangen-crm.org/211015/E73_Information_Object"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="F30_Manifestation_Creation"/>
@@ -421,11 +591,11 @@ version 0.7, created by Digital Humanities Group at AIMH Lab at Institute of Inf
     </SubClassOf>
     <SubClassOf>
         <Class IRI="F32_Carrier_Production_Event"/>
-        <Class IRI="http://erlangen-crm.org/200717/E12_Production"/>
+        <Class IRI="http://erlangen-crm.org/211015/E12_Production"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="F33_Reproduction_Event"/>
-        <Class IRI="http://erlangen-crm.org/200717/E12_Production"/>
+        <Class IRI="http://erlangen-crm.org/211015/E12_Production"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="F33_Reproduction_Event"/>
@@ -433,11 +603,11 @@ version 0.7, created by Digital Humanities Group at AIMH Lab at Institute of Inf
     </SubClassOf>
     <SubClassOf>
         <Class IRI="F34_Controlled_Vocabulary"/>
-        <Class IRI="http://erlangen-crm.org/200717/E29_Design_or_Procedure"/>
+        <Class IRI="http://erlangen-crm.org/211015/E29_Design_or_Procedure"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="F34_Controlled_Vocabulary"/>
-        <Class IRI="http://erlangen-crm.org/200717/E32_Authority_Document"/>
+        <Class IRI="http://erlangen-crm.org/211015/E32_Authority_Document"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="F34_Controlled_Vocabulary"/>
@@ -445,11 +615,11 @@ version 0.7, created by Digital Humanities Group at AIMH Lab at Institute of Inf
     </SubClassOf>
     <SubClassOf>
         <Class IRI="F36_Script_Conversion"/>
-        <Class IRI="http://erlangen-crm.org/200717/E29_Design_or_Procedure"/>
+        <Class IRI="http://erlangen-crm.org/211015/E29_Design_or_Procedure"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="F38_Character"/>
-        <Class IRI="http://erlangen-crm.org/200717/E28_Conceptual_Object"/>
+        <Class IRI="http://erlangen-crm.org/211015/E28_Conceptual_Object"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="F39_Family"/>
@@ -461,87 +631,87 @@ version 0.7, created by Digital Humanities Group at AIMH Lab at Institute of Inf
     </SubClassOf>
     <SubClassOf>
         <Class IRI="F51_Pursuit"/>
-        <Class IRI="http://erlangen-crm.org/200717/E7_Activity"/>
+        <Class IRI="http://erlangen-crm.org/211015/E7_Activity"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="F52_Name_Use_Activity"/>
-        <Class IRI="http://erlangen-crm.org/200717/E13_Attribute_Assignment"/>
+        <Class IRI="http://erlangen-crm.org/211015/E13_Attribute_Assignment"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="F55_Collective_Agent"/>
-        <Class IRI="http://erlangen-crm.org/200717/E74_Group"/>
+        <Class IRI="http://erlangen-crm.org/211015/E74_Group"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="F56_Externalization_Event"/>
-        <Class IRI="http://erlangen-crm.org/200717/E7_Activity"/>
+        <Class IRI="http://erlangen-crm.org/211015/E7_Activity"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="F5_Item"/>
-        <Class IRI="http://erlangen-crm.org/200717/E24_Physical_Human-Made_Thing"/>
+        <Class IRI="http://erlangen-crm.org/211015/E24_Physical_Human-Made_Thing"/>
     </SubClassOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="R10_has_member"/>
-        <ObjectProperty IRI="http://erlangen-crm.org/200717/P148_has_component"/>
+        <ObjectProperty IRI="http://erlangen-crm.org/211015/P148_has_component"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="R10i_is_member_of"/>
-        <ObjectProperty IRI="http://erlangen-crm.org/200717/P148i_is_component_of"/>
+        <ObjectProperty IRI="http://erlangen-crm.org/211015/P148i_is_component_of"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="R15_has_fragment"/>
-        <ObjectProperty IRI="http://erlangen-crm.org/200717/P106_is_composed_of"/>
+        <ObjectProperty IRI="http://erlangen-crm.org/211015/P106_is_composed_of"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="R15i_is_fragment_of"/>
-        <ObjectProperty IRI="http://erlangen-crm.org/200717/P106i_forms_part_of"/>
+        <ObjectProperty IRI="http://erlangen-crm.org/211015/P106i_forms_part_of"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="R16_initiated"/>
-        <ObjectProperty IRI="http://erlangen-crm.org/200717/P94_has_created"/>
+        <ObjectProperty IRI="http://erlangen-crm.org/211015/P94_has_created"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="R16i_was_initiated_by"/>
-        <ObjectProperty IRI="http://erlangen-crm.org/200717/P94i_was_created_by"/>
+        <ObjectProperty IRI="http://erlangen-crm.org/211015/P94i_was_created_by"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="R17_created"/>
-        <ObjectProperty IRI="http://erlangen-crm.org/200717/P94_has_created"/>
+        <ObjectProperty IRI="http://erlangen-crm.org/211015/P94_has_created"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="R17i_was_created_by"/>
-        <ObjectProperty IRI="http://erlangen-crm.org/200717/P94i_was_created_by"/>
+        <ObjectProperty IRI="http://erlangen-crm.org/211015/P94i_was_created_by"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="R18_created"/>
-        <ObjectProperty IRI="http://erlangen-crm.org/200717/P108_has_produced"/>
+        <ObjectProperty IRI="http://erlangen-crm.org/211015/P108_has_produced"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="R18i_was_created_by"/>
-        <ObjectProperty IRI="http://erlangen-crm.org/200717/P108i_was_produced_by"/>
+        <ObjectProperty IRI="http://erlangen-crm.org/211015/P108i_was_produced_by"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="R19_created_a_realisation_of"/>
-        <ObjectProperty IRI="http://erlangen-crm.org/200717/P16_used_specific_object"/>
+        <ObjectProperty IRI="http://erlangen-crm.org/211015/P16_used_specific_object"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="R19i_was_realised_through"/>
-        <ObjectProperty IRI="http://erlangen-crm.org/200717/P16i_was_used_for"/>
+        <ObjectProperty IRI="http://erlangen-crm.org/211015/P16i_was_used_for"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="R1_is_logical_successor_of"/>
-        <ObjectProperty IRI="http://erlangen-crm.org/200717/P130_shows_features_of"/>
+        <ObjectProperty IRI="http://erlangen-crm.org/211015/P130_shows_features_of"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="R1i_has_successor"/>
-        <ObjectProperty IRI="http://erlangen-crm.org/200717/P130i_features_are_also_found_on"/>
+        <ObjectProperty IRI="http://erlangen-crm.org/211015/P130i_features_are_also_found_on"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="R20_recorded"/>
-        <ObjectProperty IRI="http://erlangen-crm.org/200717/P15_was_influenced_by"/>
+        <ObjectProperty IRI="http://erlangen-crm.org/211015/P15_was_influenced_by"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="R20i_was_recorded_through"/>
-        <ObjectProperty IRI="http://erlangen-crm.org/200717/P15i_influenced"/>
+        <ObjectProperty IRI="http://erlangen-crm.org/211015/P15i_influenced"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="R24_created"/>
@@ -553,99 +723,99 @@ version 0.7, created by Digital Humanities Group at AIMH Lab at Institute of Inf
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="R26_produced_things_of_type"/>
-        <ObjectProperty IRI="http://erlangen-crm.org/200717/P186_produced_thing_of_product_type"/>
+        <ObjectProperty IRI="http://erlangen-crm.org/211015/P186_produced_thing_of_product_type"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="R26i_was_produced_by"/>
-        <ObjectProperty IRI="http://erlangen-crm.org/200717/P186i_is_produced_by"/>
+        <ObjectProperty IRI="http://erlangen-crm.org/211015/P186i_is_produced_by"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="R27_materialized"/>
-        <ObjectProperty IRI="http://erlangen-crm.org/200717/P16_used_specific_object"/>
+        <ObjectProperty IRI="http://erlangen-crm.org/211015/P16_used_specific_object"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="R27i_was_materialized_by"/>
-        <ObjectProperty IRI="http://erlangen-crm.org/200717/P16i_was_used_for"/>
+        <ObjectProperty IRI="http://erlangen-crm.org/211015/P16i_was_used_for"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="R28_produced"/>
-        <ObjectProperty IRI="http://erlangen-crm.org/200717/P108_has_produced"/>
+        <ObjectProperty IRI="http://erlangen-crm.org/211015/P108_has_produced"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="R28i_was_produced_by"/>
-        <ObjectProperty IRI="http://erlangen-crm.org/200717/P108i_was_produced_by"/>
+        <ObjectProperty IRI="http://erlangen-crm.org/211015/P108i_was_produced_by"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="R29_reproduced_object"/>
-        <ObjectProperty IRI="http://erlangen-crm.org/200717/P16_used_specific_object"/>
+        <ObjectProperty IRI="http://erlangen-crm.org/211015/P16_used_specific_object"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="R29i_was_object_reproduced_by"/>
-        <ObjectProperty IRI="http://erlangen-crm.org/200717/P16i_was_used_for"/>
+        <ObjectProperty IRI="http://erlangen-crm.org/211015/P16i_was_used_for"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="R2_is_derivative_of"/>
-        <ObjectProperty IRI="http://erlangen-crm.org/200717/P130_shows_features_of"/>
+        <ObjectProperty IRI="http://erlangen-crm.org/211015/P130_shows_features_of"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="R2i_has_derivative"/>
-        <ObjectProperty IRI="http://erlangen-crm.org/200717/P130i_features_are_also_found_on"/>
+        <ObjectProperty IRI="http://erlangen-crm.org/211015/P130i_features_are_also_found_on"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="R30_reproduced_publication"/>
-        <ObjectProperty IRI="http://erlangen-crm.org/200717/P16_used_specific_object"/>
+        <ObjectProperty IRI="http://erlangen-crm.org/211015/P16_used_specific_object"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="R30i_was_publication_reproduced_by"/>
-        <ObjectProperty IRI="http://erlangen-crm.org/200717/P16i_was_used_for"/>
+        <ObjectProperty IRI="http://erlangen-crm.org/211015/P16i_was_used_for"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="R35_is_specified_by"/>
-        <ObjectProperty IRI="http://erlangen-crm.org/200717/P67i_is_referred_to_by"/>
+        <ObjectProperty IRI="http://erlangen-crm.org/211015/P67i_is_referred_to_by"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="R35i_specifies"/>
-        <ObjectProperty IRI="http://erlangen-crm.org/200717/P67_refers_to"/>
+        <ObjectProperty IRI="http://erlangen-crm.org/211015/P67_refers_to"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="R3_is_realised_in"/>
-        <ObjectProperty IRI="http://erlangen-crm.org/200717/P130_shows_features_of"/>
+        <ObjectProperty IRI="http://erlangen-crm.org/211015/P130_shows_features_of"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="R3i_realises"/>
-        <ObjectProperty IRI="http://erlangen-crm.org/200717/P130i_features_are_also_found_on"/>
+        <ObjectProperty IRI="http://erlangen-crm.org/211015/P130i_features_are_also_found_on"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="R45_assigned_to"/>
-        <ObjectProperty IRI="http://erlangen-crm.org/200717/P140_assigned_attribute_to"/>
+        <ObjectProperty IRI="http://erlangen-crm.org/211015/P140_assigned_attribute_to"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="R45_was_assigned_by"/>
-        <ObjectProperty IRI="http://erlangen-crm.org/200717/P140i_was_attributed_by"/>
+        <ObjectProperty IRI="http://erlangen-crm.org/211015/P140i_was_attributed_by"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="R4_embodies"/>
-        <ObjectProperty IRI="http://erlangen-crm.org/200717/P165_incorporates"/>
+        <ObjectProperty IRI="http://erlangen-crm.org/211015/P165_incorporates"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="R4i_is_embodied_in"/>
-        <ObjectProperty IRI="http://erlangen-crm.org/200717/P165i_is_incorporated_in"/>
+        <ObjectProperty IRI="http://erlangen-crm.org/211015/P165i_is_incorporated_in"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="R54_has_language"/>
-        <ObjectProperty IRI="http://erlangen-crm.org/200717/P2_has_type"/>
+        <ObjectProperty IRI="http://erlangen-crm.org/211015/P2_has_type"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="R54i_is_language_of"/>
-        <ObjectProperty IRI="http://erlangen-crm.org/200717/P2i_is_type_of"/>
+        <ObjectProperty IRI="http://erlangen-crm.org/211015/P2i_is_type_of"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="R5_has_component"/>
-        <ObjectProperty IRI="http://erlangen-crm.org/200717/P148_has_component"/>
+        <ObjectProperty IRI="http://erlangen-crm.org/211015/P148_has_component"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="R5i_is_component_of"/>
-        <ObjectProperty IRI="http://erlangen-crm.org/200717/P148i_is_component_of"/>
+        <ObjectProperty IRI="http://erlangen-crm.org/211015/P148i_is_component_of"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="R62_was_used_for_membership_in"/>
@@ -653,35 +823,35 @@ version 0.7, created by Digital Humanities Group at AIMH Lab at Institute of Inf
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="R63_named"/>
-        <ObjectProperty IRI="http://erlangen-crm.org/200717/P140_assigned_attribute_to"/>
+        <ObjectProperty IRI="http://erlangen-crm.org/211015/P140_assigned_attribute_to"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="R63i_was_named_by"/>
-        <ObjectProperty IRI="http://erlangen-crm.org/200717/P140i_was_attributed_by"/>
+        <ObjectProperty IRI="http://erlangen-crm.org/211015/P140i_was_attributed_by"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="R64_used_name"/>
-        <ObjectProperty IRI="http://erlangen-crm.org/200717/P16_used_specific_object"/>
+        <ObjectProperty IRI="http://erlangen-crm.org/211015/P16_used_specific_object"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="R64i_was_name_used_by"/>
-        <ObjectProperty IRI="http://erlangen-crm.org/200717/P16i_was_used_for"/>
+        <ObjectProperty IRI="http://erlangen-crm.org/211015/P16i_was_used_for"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="R65_recorded_aspects_of"/>
-        <ObjectProperty IRI="http://erlangen-crm.org/200717/P15_was_influenced_by"/>
+        <ObjectProperty IRI="http://erlangen-crm.org/211015/P15_was_influenced_by"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="R65i_had_aspects_recorded_through"/>
-        <ObjectProperty IRI="http://erlangen-crm.org/200717/P15i_influenced"/>
+        <ObjectProperty IRI="http://erlangen-crm.org/211015/P15i_influenced"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="R66_included_performed_version_of"/>
-        <ObjectProperty IRI="http://erlangen-crm.org/200717/P16_used_specific_object"/>
+        <ObjectProperty IRI="http://erlangen-crm.org/211015/P16_used_specific_object"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="R66i_had_a_performed_version_through"/>
-        <ObjectProperty IRI="http://erlangen-crm.org/200717/P16i_was_used_for"/>
+        <ObjectProperty IRI="http://erlangen-crm.org/211015/P16i_was_used_for"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="R67_has_part"/>
@@ -701,56 +871,52 @@ version 0.7, created by Digital Humanities Group at AIMH Lab at Institute of Inf
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="R69_has_physical_form"/>
-        <ObjectProperty IRI="http://erlangen-crm.org/200717/P2_has_type"/>
+        <ObjectProperty IRI="http://erlangen-crm.org/211015/P2_has_type"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="R69i_is_physical_form_of"/>
-        <ObjectProperty IRI="http://erlangen-crm.org/200717/P2i_is_type_of"/>
+        <ObjectProperty IRI="http://erlangen-crm.org/211015/P2i_is_type_of"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="R70_has_dimension"/>
-        <ObjectProperty IRI="http://erlangen-crm.org/200717/P43_has_dimension"/>
+        <ObjectProperty IRI="http://erlangen-crm.org/211015/P43_has_dimension"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="R70i_is_dimension_of"/>
-        <ObjectProperty IRI="http://erlangen-crm.org/200717/P43i_is_dimension_of"/>
+        <ObjectProperty IRI="http://erlangen-crm.org/211015/P43i_is_dimension_of"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="R71_has_part"/>
-        <ObjectProperty IRI="http://erlangen-crm.org/200717/P148_has_component"/>
+        <ObjectProperty IRI="http://erlangen-crm.org/211015/P148_has_component"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="R71i_is_part_of"/>
-        <ObjectProperty IRI="http://erlangen-crm.org/200717/P148i_is_component_of"/>
+        <ObjectProperty IRI="http://erlangen-crm.org/211015/P148i_is_component_of"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="R74_uses_expression_of"/>
-        <ObjectProperty IRI="http://erlangen-crm.org/200717/P130_shows_features_of"/>
+        <ObjectProperty IRI="http://erlangen-crm.org/211015/P130_shows_features_of"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="R74i_has_expression_used_in"/>
-        <ObjectProperty IRI="http://erlangen-crm.org/200717/P130i_features_are_also_found_on"/>
+        <ObjectProperty IRI="http://erlangen-crm.org/211015/P130i_features_are_also_found_on"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="R75_incorporates"/>
-        <ObjectProperty IRI="http://erlangen-crm.org/200717/P165_incorporates"/>
+        <ObjectProperty IRI="http://erlangen-crm.org/211015/P165_incorporates"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="R75i_is_incorporated_in"/>
-        <ObjectProperty IRI="http://erlangen-crm.org/200717/P165i_is_incorporated_in"/>
+        <ObjectProperty IRI="http://erlangen-crm.org/211015/P165i_is_incorporated_in"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="R7_is_materialization_of"/>
-        <ObjectProperty IRI="http://erlangen-crm.org/200717/P128_carries"/>
+        <ObjectProperty IRI="http://erlangen-crm.org/211015/P128_carries"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="R7i_is_materialized_in"/>
-        <ObjectProperty IRI="http://erlangen-crm.org/200717/P128i_is_carried_by"/>
+        <ObjectProperty IRI="http://erlangen-crm.org/211015/P128i_is_carried_by"/>
     </SubObjectPropertyOf>
-    <InverseObjectProperties>
-        <ObjectProperty IRI="http://erlangen-crm.org/200717/P106i_forms_part_of"/>
-        <ObjectProperty IRI="R15_has_fragment"/>
-    </InverseObjectProperties>
     <InverseObjectProperties>
         <ObjectProperty IRI="R10_has_member"/>
         <ObjectProperty IRI="R10i_is_member_of"/>
@@ -758,6 +924,10 @@ version 0.7, created by Digital Humanities Group at AIMH Lab at Institute of Inf
     <InverseObjectProperties>
         <ObjectProperty IRI="R11_has_issuing_rule"/>
         <ObjectProperty IRI="R11i_is_issuing_rule_of"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="R15_has_fragment"/>
+        <ObjectProperty IRI="R15i_is_fragment_of"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
         <ObjectProperty IRI="R16_initiated"/>
@@ -937,7 +1107,7 @@ version 0.7, created by Digital Humanities Group at AIMH Lab at Institute of Inf
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="R11i_is_issuing_rule_of"/>
-        <Class IRI="http://erlangen-crm.org/200717/E29_Design_or_Procedure"/>
+        <Class IRI="http://erlangen-crm.org/211015/E29_Design_or_Procedure"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="R15_has_fragment"/>
@@ -1005,7 +1175,7 @@ version 0.7, created by Digital Humanities Group at AIMH Lab at Institute of Inf
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="R26i_was_produced_by"/>
-        <Class IRI="http://erlangen-crm.org/200717/E99_Product_Type"/>
+        <Class IRI="http://erlangen-crm.org/211015/E99_Product_Type"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="R27_materialized"/>
@@ -1053,7 +1223,7 @@ version 0.7, created by Digital Humanities Group at AIMH Lab at Institute of Inf
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="R34i_is_validity_period_of"/>
-        <Class IRI="http://erlangen-crm.org/200717/E52_Time-Span"/>
+        <Class IRI="http://erlangen-crm.org/211015/E52_Time-Span"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="R35_is_specified_by"/>
@@ -1189,7 +1359,7 @@ version 0.7, created by Digital Humanities Group at AIMH Lab at Institute of Inf
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="R8i_is_combined_to_form"/>
-        <Class IRI="http://erlangen-crm.org/200717/E89_Propositional_Object"/>
+        <Class IRI="http://erlangen-crm.org/211015/E89_Propositional_Object"/>
     </ObjectPropertyDomain>
     <ObjectPropertyRange>
         <ObjectProperty IRI="R10_has_member"/>
@@ -1201,7 +1371,7 @@ version 0.7, created by Digital Humanities Group at AIMH Lab at Institute of Inf
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="R11_has_issuing_rule"/>
-        <Class IRI="http://erlangen-crm.org/200717/E29_Design_or_Procedure"/>
+        <Class IRI="http://erlangen-crm.org/211015/E29_Design_or_Procedure"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="R11i_is_issuing_rule_of"/>
@@ -1209,7 +1379,7 @@ version 0.7, created by Digital Humanities Group at AIMH Lab at Institute of Inf
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="R15_has_fragment"/>
-        <Class IRI="http://erlangen-crm.org/200717/E90_Symbolic_Object"/>
+        <Class IRI="http://erlangen-crm.org/211015/E90_Symbolic_Object"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="R16_initiated"/>
@@ -1269,7 +1439,7 @@ version 0.7, created by Digital Humanities Group at AIMH Lab at Institute of Inf
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="R26_produced_things_of_type"/>
-        <Class IRI="http://erlangen-crm.org/200717/E99_Product_Type"/>
+        <Class IRI="http://erlangen-crm.org/211015/E99_Product_Type"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="R26i_was_produced_by"/>
@@ -1317,7 +1487,7 @@ version 0.7, created by Digital Humanities Group at AIMH Lab at Institute of Inf
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="R34_has_validity_period"/>
-        <Class IRI="http://erlangen-crm.org/200717/E52_Time-Span"/>
+        <Class IRI="http://erlangen-crm.org/211015/E52_Time-Span"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="R34i_is_validity_period_of"/>
@@ -1345,7 +1515,7 @@ version 0.7, created by Digital Humanities Group at AIMH Lab at Institute of Inf
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="R45_assigned_to"/>
-        <Class IRI="http://erlangen-crm.org/200717/E1_CRM_Entity"/>
+        <Class IRI="http://erlangen-crm.org/211015/E1_CRM_Entity"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="R4_embodies"/>
@@ -1357,7 +1527,7 @@ version 0.7, created by Digital Humanities Group at AIMH Lab at Institute of Inf
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="R54_has_language"/>
-        <Class IRI="http://erlangen-crm.org/200717/E55_Type"/>
+        <Class IRI="http://erlangen-crm.org/211015/E55_Type"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="R56_is_related_to"/>
@@ -1365,7 +1535,7 @@ version 0.7, created by Digital Humanities Group at AIMH Lab at Institute of Inf
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="R57_is_based_on"/>
-        <Class IRI="http://erlangen-crm.org/200717/E39_Actor"/>
+        <Class IRI="http://erlangen-crm.org/211015/E39_Actor"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="R58_has_fictional_member"/>
@@ -1373,7 +1543,7 @@ version 0.7, created by Digital Humanities Group at AIMH Lab at Institute of Inf
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="R59_had_typical_subject"/>
-        <Class IRI="http://erlangen-crm.org/200717/E1_CRM_Entity"/>
+        <Class IRI="http://erlangen-crm.org/211015/E1_CRM_Entity"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="R5_has_component"/>
@@ -1385,31 +1555,31 @@ version 0.7, created by Digital Humanities Group at AIMH Lab at Institute of Inf
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="R60_used_to_use_language"/>
-        <Class IRI="http://erlangen-crm.org/200717/E56_Language"/>
+        <Class IRI="http://erlangen-crm.org/211015/E56_Language"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="R61_occurred_in_kind_of_context"/>
-        <Class IRI="http://erlangen-crm.org/200717/E55_Type"/>
+        <Class IRI="http://erlangen-crm.org/211015/E55_Type"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="R62_was_used_for_membership_in"/>
-        <Class IRI="http://erlangen-crm.org/200717/E74_Group"/>
+        <Class IRI="http://erlangen-crm.org/211015/E74_Group"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="R63_named"/>
-        <Class IRI="http://erlangen-crm.org/200717/E1_CRM_Entity"/>
+        <Class IRI="http://erlangen-crm.org/211015/E1_CRM_Entity"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="R64_used_name"/>
-        <Class IRI="http://erlangen-crm.org/200717/E41_Appellation"/>
+        <Class IRI="http://erlangen-crm.org/211015/E41_Appellation"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="R65_recorded_aspects_of"/>
-        <Class IRI="http://erlangen-crm.org/200717/E18_Physical_Thing"/>
+        <Class IRI="http://erlangen-crm.org/211015/E18_Physical_Thing"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="R66_included_performed_version_of"/>
-        <Class IRI="http://erlangen-crm.org/200717/E89_Propositional_Object"/>
+        <Class IRI="http://erlangen-crm.org/211015/E89_Propositional_Object"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="R67_has_part"/>
@@ -1421,11 +1591,11 @@ version 0.7, created by Digital Humanities Group at AIMH Lab at Institute of Inf
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="R69_has_physical_form"/>
-        <Class IRI="http://erlangen-crm.org/200717/E55_Type"/>
+        <Class IRI="http://erlangen-crm.org/211015/E55_Type"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="R70_has_dimension"/>
-        <Class IRI="http://erlangen-crm.org/200717/E54_Dimension"/>
+        <Class IRI="http://erlangen-crm.org/211015/E54_Dimension"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="R71_has_part"/>
@@ -1453,7 +1623,7 @@ version 0.7, created by Digital Humanities Group at AIMH Lab at Institute of Inf
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="R8_combines"/>
-        <Class IRI="http://erlangen-crm.org/200717/E89_Propositional_Object"/>
+        <Class IRI="http://erlangen-crm.org/211015/E89_Propositional_Object"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="R8i_is_combined_to_form"/>
@@ -1461,7 +1631,7 @@ version 0.7, created by Digital Humanities Group at AIMH Lab at Institute of Inf
     </ObjectPropertyRange>
     <SubDataPropertyOf>
         <DataProperty IRI="R33_has_content"/>
-        <DataProperty IRI="http://erlangen-crm.org/200717/P3_has_note"/>
+        <DataProperty IRI="http://erlangen-crm.org/211015/P3_has_note"/>
     </SubDataPropertyOf>
     <DataPropertyDomain>
         <DataProperty IRI="R33_has_content"/>
@@ -1473,12 +1643,12 @@ version 0.7, created by Digital Humanities Group at AIMH Lab at Institute of Inf
     </DataPropertyRange>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://erlangen-crm.org/200717/P165_incorporates</IRI>
+        <IRI>http://erlangen-crm.org/211015/P165_incorporates</IRI>
         <Literal xml:lang="en">P165 incorporates</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://erlangen-crm.org/200717/P165i_is_incorporated_in</IRI>
+        <IRI>http://erlangen-crm.org/211015/P165i_is_incorporated_in</IRI>
         <Literal xml:lang="en">P165i is incorporated in</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>

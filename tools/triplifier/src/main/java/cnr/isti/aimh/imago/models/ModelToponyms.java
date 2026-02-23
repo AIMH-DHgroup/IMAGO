@@ -1,6 +1,8 @@
 package cnr.isti.aimh.imago.models;
 
 import java.util.List;
+
+import org.apache.jena.ontology.OntDocumentManager;
 import org.apache.jena.ontology.OntModel;
 import org.apache.jena.ontology.OntModelSpec;
 import org.apache.jena.rdf.model.Literal;
@@ -22,10 +24,22 @@ public class ModelToponyms {
 	
 	// Questa funzione crea e importa l'ontologia OWL
 	public static OntModel importModel(String url) {
-		OntModel onto = ModelFactory.createOntologyModel(
-		        OntModelSpec.OWL_DL_MEM, null );
-		onto.read(url); // Legge l'ontologia passata tramite l'url
-		return onto; // restituisce l'ontologia letta
+		// OntModel onto = ModelFactory.createOntologyModel(
+		//         OntModelSpec.OWL_DL_MEM, null );
+		// onto.read(url); // Legge l'ontologia passata tramite l'url
+		// return onto; // restituisce l'ontologia letta
+		OntDocumentManager mgr = new OntDocumentManager();
+		// set mgr's properties now
+		mgr.addIgnoreImport("http://imagoarchive.it/ilrmoo/");
+		mgr.addIgnoreImport("http://erlangen-crm.org/211015/");
+		mgr.addIgnoreImport("https://imagoarchive.it/thes/tid/");
+		// now use it
+		OntModelSpec s = new OntModelSpec( OntModelSpec.OWL_DL_MEM );
+		s.setDocumentManager( mgr );
+		OntModel onto = ModelFactory.createOntologyModel(s);
+		// System.out.println(url);
+		onto.read(url); // Jena function to read the remote ontology 
+		return onto;
 		
 	}
 	

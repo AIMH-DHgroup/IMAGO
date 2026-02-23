@@ -1,0 +1,779 @@
+<http://imagoarchive.it/thes/tid/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://imagoarchive.it/thes/tid/> <http://purl.org/dc/elements/1.1/description> "Il Thesaurus Geografico è lo strumento utilizzabile nell'indicizzazione dei generi geografici per l'ontologia Imago, realizzato a cura del gruppo di Digital Humanities del laboratorio AIMH dell'ISTI-CNR."@it .
+<http://imagoarchive.it/thes/tid/> <http://purl.org/dc/elements/1.1/format> "text/xml" .
+<http://imagoarchive.it/thes/tid/> <http://purl.org/dc/elements/1.1/identifier> <http://imagoarchive.it/thes/tid/> .
+<http://imagoarchive.it/thes/tid/> <http://purl.org/dc/elements/1.1/language> "it-IT" .
+<http://imagoarchive.it/thes/tid/> <http://purl.org/dc/elements/1.1/title> "Thesaurus Geografico Medioevale"@it .
+<http://imagoarchive.it/thes/tid/> <http://purl.org/dc/terms/audience> "Researchers, data curators, digital humanities scholars, cultural heritage institutions, and ontology engineers working on genre classification and semantic modelling of historical textual sources." .
+<http://imagoarchive.it/thes/tid/> <http://purl.org/dc/terms/conformsTo> "RDF (http://www.w3.org/TR/rdf-syntax-grammar/)" .
+<http://imagoarchive.it/thes/tid/> <http://purl.org/dc/terms/conformsTo> "SKOS (Simple Knowledge Organization System)" .
+<http://imagoarchive.it/thes/tid/> <http://purl.org/dc/terms/conformsTo> "SKOS (http://www.w3.org/TR/skos-reference/)" .
+<http://imagoarchive.it/thes/tid/> <http://purl.org/dc/terms/contributor> <https://www.isti.cnr.it/it/chi-siamo/people-detail/909/Emanuele_Lenzi> .
+<http://imagoarchive.it/thes/tid/> <http://purl.org/dc/terms/contributor> "Luca Ruggio" .
+<http://imagoarchive.it/thes/tid/> <http://purl.org/dc/terms/contributor> "Paolo Pontari" .
+<http://imagoarchive.it/thes/tid/> <http://purl.org/dc/terms/created> "2022-02-14" .
+<http://imagoarchive.it/thes/tid/> <http://purl.org/dc/terms/creator> <https://www.isti.cnr.it/en/about/people-detail/38/Valentina_Bartalesi_Lenzi> .
+<http://imagoarchive.it/thes/tid/> <http://purl.org/dc/terms/creator> <https://www.isti.cnr.it/en/about/people-detail/820/Nicol%C3%B2_Pratelli> .
+<http://imagoarchive.it/thes/tid/> <http://purl.org/dc/terms/description> "The IMAGO Thesaurus of Genres (TID) provides a controlled vocabulary \n                                     for describing literary genres represented in Middle Ages and Renaissance \n                                     manuscripts and printed editions within the IMAGO project. The thesaurus supports \n                                     semantic annotation, indexing, and interoperability of genre classifications \n                                     in digital humanities and cultural heritage datasets."@en .
+<http://imagoarchive.it/thes/tid/> <http://purl.org/dc/terms/issued> "2021-07-12" .
+<http://imagoarchive.it/thes/tid/> <http://purl.org/dc/terms/issued> "2022-03-01" .
+<http://imagoarchive.it/thes/tid/> <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by-nc/4.0/> .
+<http://imagoarchive.it/thes/tid/> <http://purl.org/dc/terms/license> "http://creativecommons.org/licenses/by/2.5/it/deed.it" .
+<http://imagoarchive.it/thes/tid/> <http://purl.org/dc/terms/modified> "2026-02-16" .
+<http://imagoarchive.it/thes/tid/> <http://purl.org/dc/terms/publisher> <https://www.isti.cnr.it/> .
+<http://imagoarchive.it/thes/tid/> <http://purl.org/dc/terms/rightsHolder> <https://www.isti.cnr.it/> .
+<http://imagoarchive.it/thes/tid/> <http://purl.org/dc/terms/rightsHolder> "ISTI - CNR" .
+<http://imagoarchive.it/thes/tid/> <http://purl.org/dc/terms/subject> "Literary genres"@en .
+<http://imagoarchive.it/thes/tid/> <http://purl.org/dc/terms/title> "IMAGO Thesaurus of Genres (TID)"@en .
+<http://imagoarchive.it/thes/tid/> <http://purl.org/vocab/vann/preferredNamespacePrefix> "tid" .
+<http://imagoarchive.it/thes/tid/> <http://www.w3.org/2000/01/rdf-schema#comment> "The TID thesaurus models genre concepts as SKOS concepts \n                                     organised in hierarchical and associative structures. It enables \n                                     semantic interoperability across manuscript catalogues, bibliographic \n                                     datasets, and image-based representations described in the IMAGO ontology."@en .
+<http://imagoarchive.it/thes/tid/> <http://www.w3.org/2000/01/rdf-schema#label> "Imago Genre Thesaurus"@en .
+<http://imagoarchive.it/thes/tid/> <http://www.w3.org/2002/07/owl#versionInfo> "1.0.0"@en .
+<http://imagoarchive.it/thes/tid/> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <https://imagoarchive.it/thes/tid/1000> .
+<http://imagoarchive.it/thes/tid/> <http://www.w3.org/ns/prov#wasGeneratedBy> "Developed within the IMAGO project following ontology engineering best practices and alignment with the IMAGO Ontology and CIDOC-CRM compatible models." .
+<http://imagoarchive.it/thes/tid/> <http://xmlns.com/foaf/0.1/homepage> <https://imagoarchive.it/documentation/doc/index-en.html> .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://prefix.cc/nsogiobsoleteTerm
+<http://prefix.cc/nsogiobsoleteTerm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/creator
+<http://purl.org/dc/elements/1.1/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/date
+<http://purl.org/dc/elements/1.1/date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/description
+<http://purl.org/dc/elements/1.1/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/format
+<http://purl.org/dc/elements/1.1/format> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/identifier
+<http://purl.org/dc/elements/1.1/identifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/language
+<http://purl.org/dc/elements/1.1/language> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/title
+<http://purl.org/dc/elements/1.1/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/audience
+<http://purl.org/dc/terms/audience> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/conformsTo
+<http://purl.org/dc/terms/conformsTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/contributor
+<http://purl.org/dc/terms/contributor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/created
+<http://purl.org/dc/terms/created> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/isPartOf
+<http://purl.org/dc/terms/isPartOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/issued
+<http://purl.org/dc/terms/issued> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/modified
+<http://purl.org/dc/terms/modified> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/publisher
+<http://purl.org/dc/terms/publisher> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/rightsHolder
+<http://purl.org/dc/terms/rightsHolder> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/subject
+<http://purl.org/dc/terms/subject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#altLabel
+<http://www.w3.org/2004/02/skos/core#altLabel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#broader
+<http://www.w3.org/2004/02/skos/core#broader> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#closeMatch
+<http://www.w3.org/2004/02/skos/core#closeMatch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#definition
+<http://www.w3.org/2004/02/skos/core#definition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#editorialNote
+<http://www.w3.org/2004/02/skos/core#editorialNote> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#example
+<http://www.w3.org/2004/02/skos/core#example> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#hasTopConcept
+<http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#historyNote
+<http://www.w3.org/2004/02/skos/core#historyNote> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#inScheme
+<http://www.w3.org/2004/02/skos/core#inScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#member
+<http://www.w3.org/2004/02/skos/core#member> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#narrower
+<http://www.w3.org/2004/02/skos/core#narrower> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#notation
+<http://www.w3.org/2004/02/skos/core#notation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#prefLabel
+<http://www.w3.org/2004/02/skos/core#prefLabel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#related
+<http://www.w3.org/2004/02/skos/core#related> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#scopeNote
+<http://www.w3.org/2004/02/skos/core#scopeNote> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#topConceptOf
+<http://www.w3.org/2004/02/skos/core#topConceptOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2008/05/skos-xl#altLabel
+<http://www.w3.org/2008/05/skos-xl#altLabel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2008/05/skos-xl#literalForm
+<http://www.w3.org/2008/05/skos-xl#literalForm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/ns/prov#wasGeneratedBy
+<http://www.w3.org/ns/prov#wasGeneratedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://xmlns.com/foaf/0.1/homepage
+<http://xmlns.com/foaf/0.1/homepage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/iso25964/skos-thes#SimpleNonPreferredTerm
+<http://purl.org/iso25964/skos-thes#SimpleNonPreferredTerm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://purl.org/iso25964/skos-thes#SplitNonPreferredTerm
+<http://purl.org/iso25964/skos-thes#SplitNonPreferredTerm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://rdfs.org/ns/void#Dataset
+<http://rdfs.org/ns/void#Dataset> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.w3.org/2004/02/skos/core#Collection
+<http://www.w3.org/2004/02/skos/core#Collection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.w3.org/2004/02/skos/core#Concept
+<http://www.w3.org/2004/02/skos/core#Concept> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.w3.org/2004/02/skos/core#ConceptScheme
+<http://www.w3.org/2004/02/skos/core#ConceptScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# http://imagoarchive.it/thes/tid/
+<http://imagoarchive.it/thes/tid/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://imagoarchive.it/thes/tid/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+# 
+# http://imagoarchive.it/thes/tid/1000
+<http://imagoarchive.it/thes/tid/1000> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://imagoarchive.it/thes/tid/1000> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://imagoarchive.it/thes/tid/1000> <http://purl.org/dc/elements/1.1/date> "2022-02-14"@it .
+<http://imagoarchive.it/thes/tid/1000> <http://www.w3.org/2004/02/skos/core#altLabel> "Forme letterarie"@it .
+<http://imagoarchive.it/thes/tid/1000> <http://www.w3.org/2004/02/skos/core#altLabel> "Literary forms"@en .
+<http://imagoarchive.it/thes/tid/1000> <http://www.w3.org/2004/02/skos/core#altLabel> "Literary genres"@en .
+<http://imagoarchive.it/thes/tid/1000> <http://www.w3.org/2004/02/skos/core#closeMatch> "http://data.bnf.fr/ark:/12148/cb119480714" .
+<http://imagoarchive.it/thes/tid/1000> <http://www.w3.org/2004/02/skos/core#closeMatch> "http://datos.bne.es/tema/XX525948.html" .
+<http://imagoarchive.it/thes/tid/1000> <http://www.w3.org/2004/02/skos/core#closeMatch> "http://id.loc.gov/authorities/subjects/sh85077490.html" .
+<http://imagoarchive.it/thes/tid/1000> <http://www.w3.org/2004/02/skos/core#closeMatch> "http://purl.org/bncf/tid/1948" .
+<http://imagoarchive.it/thes/tid/1000> <http://www.w3.org/2004/02/skos/core#closeMatch> "http://www.wikidata.org/wiki/Q223393" .
+<http://imagoarchive.it/thes/tid/1000> <http://www.w3.org/2004/02/skos/core#narrower> <http://imagoarchive.it/thes/tid/10001> .
+<http://imagoarchive.it/thes/tid/1000> <http://www.w3.org/2004/02/skos/core#narrower> <http://imagoarchive.it/thes/tid/10002> .
+<http://imagoarchive.it/thes/tid/1000> <http://www.w3.org/2004/02/skos/core#narrower> <http://imagoarchive.it/thes/tid/10003> .
+<http://imagoarchive.it/thes/tid/1000> <http://www.w3.org/2004/02/skos/core#narrower> <http://imagoarchive.it/thes/tid/10004> .
+<http://imagoarchive.it/thes/tid/1000> <http://www.w3.org/2004/02/skos/core#narrower> <http://imagoarchive.it/thes/tid/10005> .
+<http://imagoarchive.it/thes/tid/1000> <http://www.w3.org/2004/02/skos/core#narrower> <http://imagoarchive.it/thes/tid/10006> .
+<http://imagoarchive.it/thes/tid/1000> <http://www.w3.org/2004/02/skos/core#narrower> <http://imagoarchive.it/thes/tid/10007> .
+<http://imagoarchive.it/thes/tid/1000> <http://www.w3.org/2004/02/skos/core#narrower> <http://imagoarchive.it/thes/tid/10008> .
+<http://imagoarchive.it/thes/tid/1000> <http://www.w3.org/2004/02/skos/core#narrower> <http://imagoarchive.it/thes/tid/10009> .
+<http://imagoarchive.it/thes/tid/1000> <http://www.w3.org/2004/02/skos/core#narrower> <http://imagoarchive.it/thes/tid/10010> .
+<http://imagoarchive.it/thes/tid/1000> <http://www.w3.org/2004/02/skos/core#narrower> <http://imagoarchive.it/thes/tid/10011> .
+<http://imagoarchive.it/thes/tid/1000> <http://www.w3.org/2004/02/skos/core#prefLabel> "Generi letterari"@it .
+<http://imagoarchive.it/thes/tid/1000> <http://www.w3.org/2004/02/skos/core#scopeNote> "Le varie forme di espressione letteraria, nell'ambito della letteratura d'autore, a seconda dei mezzi formali impiegati (narrativa, poesia, poesia lirica, sonetti, tragedia, ecc.), dei temi e motivi trattati (poesia amorosa, fantasy, letteratura satirica, ecc.), del tipo di autori o della destinazione" .
+<http://imagoarchive.it/thes/tid/1000> <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://imagoarchive.it/Thes> .
+<http://imagoarchive.it/thes/tid/1000> <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://imagoarchive.it/thes/ThesCF1> .
+# 
+# http://imagoarchive.it/thes/tid/10001
+<http://imagoarchive.it/thes/tid/10001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://imagoarchive.it/thes/tid/10001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://imagoarchive.it/thes/tid/10001> <http://purl.org/dc/elements/1.1/date> "2022-02-14" .
+<http://imagoarchive.it/thes/tid/10001> <http://www.w3.org/2004/02/skos/core#altLabel> "Geographical treatises"@en .
+<http://imagoarchive.it/thes/tid/10001> <http://www.w3.org/2004/02/skos/core#broader> <http://imagoarchive.it/thes/tid/1000> .
+<http://imagoarchive.it/thes/tid/10001> <http://www.w3.org/2004/02/skos/core#narrower> <http://imagoarchive.it/thes/tid/100011> .
+<http://imagoarchive.it/thes/tid/10001> <http://www.w3.org/2004/02/skos/core#narrower> <http://imagoarchive.it/thes/tid/100012> .
+<http://imagoarchive.it/thes/tid/10001> <http://www.w3.org/2004/02/skos/core#narrower> <http://imagoarchive.it/thes/tid/100013> .
+<http://imagoarchive.it/thes/tid/10001> <http://www.w3.org/2004/02/skos/core#narrower> <http://imagoarchive.it/thes/tid/100014> .
+<http://imagoarchive.it/thes/tid/10001> <http://www.w3.org/2004/02/skos/core#prefLabel> "Trattatistica geografica"@it .
+# 
+# http://imagoarchive.it/thes/tid/100011
+<http://imagoarchive.it/thes/tid/100011> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://imagoarchive.it/thes/tid/100011> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://imagoarchive.it/thes/tid/100011> <http://purl.org/dc/elements/1.1/date> "2022-02-14" .
+<http://imagoarchive.it/thes/tid/100011> <http://www.w3.org/2004/02/skos/core#altLabel> "Cosmographies"@en .
+<http://imagoarchive.it/thes/tid/100011> <http://www.w3.org/2004/02/skos/core#broader> <http://imagoarchive.it/thes/tid/10001> .
+<http://imagoarchive.it/thes/tid/100011> <http://www.w3.org/2004/02/skos/core#closeMatch> "http://purl.org/bncf/tid/19024" .
+<http://imagoarchive.it/thes/tid/100011> <http://www.w3.org/2004/02/skos/core#prefLabel> "Cosmografie"@it .
+# 
+# http://imagoarchive.it/thes/tid/100012
+<http://imagoarchive.it/thes/tid/100012> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://imagoarchive.it/thes/tid/100012> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://imagoarchive.it/thes/tid/100012> <http://purl.org/dc/elements/1.1/date> "2022-02-14" .
+<http://imagoarchive.it/thes/tid/100012> <http://www.w3.org/2004/02/skos/core#altLabel> "Chorographies"@en .
+<http://imagoarchive.it/thes/tid/100012> <http://www.w3.org/2004/02/skos/core#broader> <http://imagoarchive.it/thes/tid/10001> .
+<http://imagoarchive.it/thes/tid/100012> <http://www.w3.org/2004/02/skos/core#closeMatch> "http://purl.org/bncf/tid/17638" .
+<http://imagoarchive.it/thes/tid/100012> <http://www.w3.org/2004/02/skos/core#prefLabel> "Corografie"@it .
+# 
+# http://imagoarchive.it/thes/tid/100013
+<http://imagoarchive.it/thes/tid/100013> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://imagoarchive.it/thes/tid/100013> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://imagoarchive.it/thes/tid/100013> <http://purl.org/dc/elements/1.1/date> "2022-02-14" .
+<http://imagoarchive.it/thes/tid/100013> <http://www.w3.org/2004/02/skos/core#altLabel> "Insulari"@en .
+<http://imagoarchive.it/thes/tid/100013> <http://www.w3.org/2004/02/skos/core#broader> <http://imagoarchive.it/thes/tid/10001> .
+<http://imagoarchive.it/thes/tid/100013> <http://www.w3.org/2004/02/skos/core#prefLabel> "Insulari"@it .
+# 
+# http://imagoarchive.it/thes/tid/100014
+<http://imagoarchive.it/thes/tid/100014> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://imagoarchive.it/thes/tid/100014> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://imagoarchive.it/thes/tid/100014> <http://purl.org/dc/elements/1.1/date> "2022-02-14" .
+<http://imagoarchive.it/thes/tid/100014> <http://www.w3.org/2004/02/skos/core#altLabel> "Descriptiones"@en .
+<http://imagoarchive.it/thes/tid/100014> <http://www.w3.org/2004/02/skos/core#broader> <http://imagoarchive.it/thes/tid/10001> .
+<http://imagoarchive.it/thes/tid/100014> <http://www.w3.org/2004/02/skos/core#prefLabel> "Descriptiones"@la .
+# 
+# http://imagoarchive.it/thes/tid/10002
+<http://imagoarchive.it/thes/tid/10002> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://imagoarchive.it/thes/tid/10002> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://imagoarchive.it/thes/tid/10002> <http://purl.org/dc/elements/1.1/date> "2022-02-14" .
+<http://imagoarchive.it/thes/tid/10002> <http://www.w3.org/2004/02/skos/core#altLabel> "Travel literature"@en .
+<http://imagoarchive.it/thes/tid/10002> <http://www.w3.org/2004/02/skos/core#broader> <http://imagoarchive.it/thes/tid/1000> .
+<http://imagoarchive.it/thes/tid/10002> <http://www.w3.org/2004/02/skos/core#closeMatch> "http://purl.org/bncf/tid/48098" .
+<http://imagoarchive.it/thes/tid/10002> <http://www.w3.org/2004/02/skos/core#narrower> <http://imagoarchive.it/thes/tid/100021> .
+<http://imagoarchive.it/thes/tid/10002> <http://www.w3.org/2004/02/skos/core#narrower> <http://imagoarchive.it/thes/tid/100022> .
+<http://imagoarchive.it/thes/tid/10002> <http://www.w3.org/2004/02/skos/core#narrower> <http://imagoarchive.it/thes/tid/100023> .
+<http://imagoarchive.it/thes/tid/10002> <http://www.w3.org/2004/02/skos/core#narrower> <http://imagoarchive.it/thes/tid/100024> .
+<http://imagoarchive.it/thes/tid/10002> <http://www.w3.org/2004/02/skos/core#narrower> <http://imagoarchive.it/thes/tid/100025> .
+<http://imagoarchive.it/thes/tid/10002> <http://www.w3.org/2004/02/skos/core#narrower> <http://imagoarchive.it/thes/tid/100026> .
+<http://imagoarchive.it/thes/tid/10002> <http://www.w3.org/2004/02/skos/core#prefLabel> "Letteratura odeporica"@it .
+# 
+# http://imagoarchive.it/thes/tid/100021
+<http://imagoarchive.it/thes/tid/100021> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://imagoarchive.it/thes/tid/100021> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://imagoarchive.it/thes/tid/100021> <http://purl.org/dc/elements/1.1/date> "2022-02-14" .
+<http://imagoarchive.it/thes/tid/100021> <http://www.w3.org/2004/02/skos/core#altLabel> "Itineraria"@en .
+<http://imagoarchive.it/thes/tid/100021> <http://www.w3.org/2004/02/skos/core#broader> <http://imagoarchive.it/thes/tid/10002> .
+<http://imagoarchive.it/thes/tid/100021> <http://www.w3.org/2004/02/skos/core#prefLabel> "Itineraria"@la .
+# 
+# http://imagoarchive.it/thes/tid/100022
+<http://imagoarchive.it/thes/tid/100022> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://imagoarchive.it/thes/tid/100022> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://imagoarchive.it/thes/tid/100022> <http://purl.org/dc/elements/1.1/date> "2022-02-14" .
+<http://imagoarchive.it/thes/tid/100022> <http://www.w3.org/2004/02/skos/core#altLabel> "Peregrinationes"@en .
+<http://imagoarchive.it/thes/tid/100022> <http://www.w3.org/2004/02/skos/core#broader> <http://imagoarchive.it/thes/tid/10002> .
+<http://imagoarchive.it/thes/tid/100022> <http://www.w3.org/2004/02/skos/core#prefLabel> "Peregrinationes"@la .
+# 
+# http://imagoarchive.it/thes/tid/100023
+<http://imagoarchive.it/thes/tid/100023> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://imagoarchive.it/thes/tid/100023> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://imagoarchive.it/thes/tid/100023> <http://purl.org/dc/elements/1.1/date> "2022-02-14" .
+<http://imagoarchive.it/thes/tid/100023> <http://www.w3.org/2004/02/skos/core#altLabel> "Periegesis"@en .
+<http://imagoarchive.it/thes/tid/100023> <http://www.w3.org/2004/02/skos/core#broader> <http://imagoarchive.it/thes/tid/10002> .
+<http://imagoarchive.it/thes/tid/100023> <http://www.w3.org/2004/02/skos/core#prefLabel> "Periegesi"@it .
+# 
+# http://imagoarchive.it/thes/tid/100024
+<http://imagoarchive.it/thes/tid/100024> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://imagoarchive.it/thes/tid/100024> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://imagoarchive.it/thes/tid/100024> <http://purl.org/dc/elements/1.1/date> "2022-02-14" .
+<http://imagoarchive.it/thes/tid/100024> <http://www.w3.org/2004/02/skos/core#altLabel> "Periplus"@en .
+<http://imagoarchive.it/thes/tid/100024> <http://www.w3.org/2004/02/skos/core#broader> <http://imagoarchive.it/thes/tid/10002> .
+<http://imagoarchive.it/thes/tid/100024> <http://www.w3.org/2004/02/skos/core#prefLabel> "Peripli"@it .
+# 
+# http://imagoarchive.it/thes/tid/100025
+<http://imagoarchive.it/thes/tid/100025> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://imagoarchive.it/thes/tid/100025> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://imagoarchive.it/thes/tid/100025> <http://purl.org/dc/elements/1.1/date> "2022-02-14" .
+<http://imagoarchive.it/thes/tid/100025> <http://www.w3.org/2004/02/skos/core#altLabel> "Navigations"@en .
+<http://imagoarchive.it/thes/tid/100025> <http://www.w3.org/2004/02/skos/core#broader> <http://imagoarchive.it/thes/tid/10002> .
+<http://imagoarchive.it/thes/tid/100025> <http://www.w3.org/2004/02/skos/core#prefLabel> "Navigazioni"@it .
+# 
+# http://imagoarchive.it/thes/tid/100026
+<http://imagoarchive.it/thes/tid/100026> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://imagoarchive.it/thes/tid/100026> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://imagoarchive.it/thes/tid/100026> <http://purl.org/dc/elements/1.1/date> "2022-02-14" .
+<http://imagoarchive.it/thes/tid/100026> <http://www.w3.org/2004/02/skos/core#altLabel> "Travel diaries"@en .
+<http://imagoarchive.it/thes/tid/100026> <http://www.w3.org/2004/02/skos/core#broader> <http://imagoarchive.it/thes/tid/10002> .
+<http://imagoarchive.it/thes/tid/100026> <http://www.w3.org/2004/02/skos/core#prefLabel> "Diari di viaggio"@it .
+# 
+# http://imagoarchive.it/thes/tid/10003
+<http://imagoarchive.it/thes/tid/10003> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://imagoarchive.it/thes/tid/10003> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://imagoarchive.it/thes/tid/10003> <http://purl.org/dc/elements/1.1/date> "2022-02-14" .
+<http://imagoarchive.it/thes/tid/10003> <http://www.w3.org/2004/02/skos/core#altLabel> "Cartography"@en .
+<http://imagoarchive.it/thes/tid/10003> <http://www.w3.org/2004/02/skos/core#broader> <http://imagoarchive.it/thes/tid/1000> .
+<http://imagoarchive.it/thes/tid/10003> <http://www.w3.org/2004/02/skos/core#closeMatch> "http://data.bnf.fr/ark:/12148/cb11936066v" .
+<http://imagoarchive.it/thes/tid/10003> <http://www.w3.org/2004/02/skos/core#closeMatch> "http://datos.bne.es/tema/XX4583634" .
+<http://imagoarchive.it/thes/tid/10003> <http://www.w3.org/2004/02/skos/core#closeMatch> "http://id.loc.gov/authorities/sh85020515" .
+<http://imagoarchive.it/thes/tid/10003> <http://www.w3.org/2004/02/skos/core#closeMatch> "http://purl.org/bncf/tid/1322" .
+<http://imagoarchive.it/thes/tid/10003> <http://www.w3.org/2004/02/skos/core#narrower> <http://imagoarchive.it/thes/tid/100031> .
+<http://imagoarchive.it/thes/tid/10003> <http://www.w3.org/2004/02/skos/core#narrower> <http://imagoarchive.it/thes/tid/100032> .
+<http://imagoarchive.it/thes/tid/10003> <http://www.w3.org/2004/02/skos/core#narrower> <http://imagoarchive.it/thes/tid/100033> .
+<http://imagoarchive.it/thes/tid/10003> <http://www.w3.org/2004/02/skos/core#narrower> <http://imagoarchive.it/thes/tid/100034> .
+<http://imagoarchive.it/thes/tid/10003> <http://www.w3.org/2004/02/skos/core#prefLabel> "Cartografia"@it .
+# 
+# http://imagoarchive.it/thes/tid/100031
+<http://imagoarchive.it/thes/tid/100031> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://imagoarchive.it/thes/tid/100031> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://imagoarchive.it/thes/tid/100031> <http://purl.org/dc/elements/1.1/date> "2022-02-14" .
+<http://imagoarchive.it/thes/tid/100031> <http://www.w3.org/2004/02/skos/core#altLabel> "Tabulae"@en .
+<http://imagoarchive.it/thes/tid/100031> <http://www.w3.org/2004/02/skos/core#broader> <http://imagoarchive.it/thes/tid/10003> .
+<http://imagoarchive.it/thes/tid/100031> <http://www.w3.org/2004/02/skos/core#prefLabel> "Tabulae"@la .
+# 
+# http://imagoarchive.it/thes/tid/100032
+<http://imagoarchive.it/thes/tid/100032> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://imagoarchive.it/thes/tid/100032> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://imagoarchive.it/thes/tid/100032> <http://purl.org/dc/elements/1.1/date> "2022-02-14" .
+<http://imagoarchive.it/thes/tid/100032> <http://www.w3.org/2004/02/skos/core#altLabel> "Planispheres and globes"@en .
+<http://imagoarchive.it/thes/tid/100032> <http://www.w3.org/2004/02/skos/core#broader> <http://imagoarchive.it/thes/tid/10003> .
+<http://imagoarchive.it/thes/tid/100032> <http://www.w3.org/2004/02/skos/core#closeMatch> "http://purl.org/bncf/tid/30293" .
+<http://imagoarchive.it/thes/tid/100032> <http://www.w3.org/2004/02/skos/core#prefLabel> "Planisferi e mappamondi"@it .
+# 
+# http://imagoarchive.it/thes/tid/100033
+<http://imagoarchive.it/thes/tid/100033> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://imagoarchive.it/thes/tid/100033> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://imagoarchive.it/thes/tid/100033> <http://purl.org/dc/elements/1.1/date> "2022-02-14" .
+<http://imagoarchive.it/thes/tid/100033> <http://www.w3.org/2004/02/skos/core#altLabel> "Portolans and nautical charts"@en .
+<http://imagoarchive.it/thes/tid/100033> <http://www.w3.org/2004/02/skos/core#broader> <http://imagoarchive.it/thes/tid/10003> .
+<http://imagoarchive.it/thes/tid/100033> <http://www.w3.org/2004/02/skos/core#closeMatch> "http://purl.org/bncf/tid/29748" .
+<http://imagoarchive.it/thes/tid/100033> <http://www.w3.org/2004/02/skos/core#prefLabel> "Portolani e carte nautiche"@it .
+# 
+# http://imagoarchive.it/thes/tid/100034
+<http://imagoarchive.it/thes/tid/100034> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://imagoarchive.it/thes/tid/100034> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://imagoarchive.it/thes/tid/100034> <http://purl.org/dc/elements/1.1/date> "2022-02-14" .
+<http://imagoarchive.it/thes/tid/100034> <http://www.w3.org/2004/02/skos/core#altLabel> "Topographic maps"@en .
+<http://imagoarchive.it/thes/tid/100034> <http://www.w3.org/2004/02/skos/core#broader> <http://imagoarchive.it/thes/tid/10003> .
+<http://imagoarchive.it/thes/tid/100034> <http://www.w3.org/2004/02/skos/core#closeMatch> "http://d-nb.info/gnd/4322897-5" .
+<http://imagoarchive.it/thes/tid/100034> <http://www.w3.org/2004/02/skos/core#closeMatch> "http://data.bnf.fr/ark:/12148/cb11958033s" .
+<http://imagoarchive.it/thes/tid/100034> <http://www.w3.org/2004/02/skos/core#closeMatch> "http://id.loc.gov/authorities/sh85136074" .
+<http://imagoarchive.it/thes/tid/100034> <http://www.w3.org/2004/02/skos/core#closeMatch> "http://purl.org/bncf/tid/9065" .
+<http://imagoarchive.it/thes/tid/100034> <http://www.w3.org/2004/02/skos/core#prefLabel> "Carte topografiche"@it .
+# 
+# http://imagoarchive.it/thes/tid/10004
+<http://imagoarchive.it/thes/tid/10004> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://imagoarchive.it/thes/tid/10004> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://imagoarchive.it/thes/tid/10004> <http://purl.org/dc/elements/1.1/date> "2022-02-14" .
+<http://imagoarchive.it/thes/tid/10004> <http://www.w3.org/2004/02/skos/core#altLabel> "Hagiography"@en .
+<http://imagoarchive.it/thes/tid/10004> <http://www.w3.org/2004/02/skos/core#broader> <http://imagoarchive.it/thes/tid/1000> .
+<http://imagoarchive.it/thes/tid/10004> <http://www.w3.org/2004/02/skos/core#closeMatch> "http://data.bnf.fr/ark:/12148/cb11948106z" .
+<http://imagoarchive.it/thes/tid/10004> <http://www.w3.org/2004/02/skos/core#closeMatch> "http://datos.bne.es/tema/XX5288271" .
+<http://imagoarchive.it/thes/tid/10004> <http://www.w3.org/2004/02/skos/core#closeMatch> "http://purl.org/bncf/tid/24527" .
+<http://imagoarchive.it/thes/tid/10004> <http://www.w3.org/2004/02/skos/core#narrower> <http://imagoarchive.it/thes/tid/100041> .
+<http://imagoarchive.it/thes/tid/10004> <http://www.w3.org/2004/02/skos/core#narrower> <http://imagoarchive.it/thes/tid/100042> .
+<http://imagoarchive.it/thes/tid/10004> <http://www.w3.org/2004/02/skos/core#narrower> <http://imagoarchive.it/thes/tid/100043> .
+<http://imagoarchive.it/thes/tid/10004> <http://www.w3.org/2004/02/skos/core#narrower> <http://imagoarchive.it/thes/tid/100044> .
+<http://imagoarchive.it/thes/tid/10004> <http://www.w3.org/2004/02/skos/core#prefLabel> "Agiografia"@it .
+# 
+# http://imagoarchive.it/thes/tid/100041
+<http://imagoarchive.it/thes/tid/100041> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://imagoarchive.it/thes/tid/100041> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://imagoarchive.it/thes/tid/100041> <http://purl.org/dc/elements/1.1/date> "2022-02-14" .
+<http://imagoarchive.it/thes/tid/100041> <http://www.w3.org/2004/02/skos/core#altLabel> "Passiones"@en .
+<http://imagoarchive.it/thes/tid/100041> <http://www.w3.org/2004/02/skos/core#broader> <http://imagoarchive.it/thes/tid/10004> .
+<http://imagoarchive.it/thes/tid/100041> <http://www.w3.org/2004/02/skos/core#prefLabel> "Passiones"@la .
+# 
+# http://imagoarchive.it/thes/tid/100042
+<http://imagoarchive.it/thes/tid/100042> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://imagoarchive.it/thes/tid/100042> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://imagoarchive.it/thes/tid/100042> <http://purl.org/dc/elements/1.1/date> "2022-02-14" .
+<http://imagoarchive.it/thes/tid/100042> <http://www.w3.org/2004/02/skos/core#altLabel> "Vitae"@en .
+<http://imagoarchive.it/thes/tid/100042> <http://www.w3.org/2004/02/skos/core#broader> <http://imagoarchive.it/thes/tid/10004> .
+<http://imagoarchive.it/thes/tid/100042> <http://www.w3.org/2004/02/skos/core#prefLabel> "Vitae"@la .
+# 
+# http://imagoarchive.it/thes/tid/100043
+<http://imagoarchive.it/thes/tid/100043> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://imagoarchive.it/thes/tid/100043> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://imagoarchive.it/thes/tid/100043> <http://purl.org/dc/elements/1.1/date> "2022-02-14" .
+<http://imagoarchive.it/thes/tid/100043> <http://www.w3.org/2004/02/skos/core#altLabel> "Translationes"@en .
+<http://imagoarchive.it/thes/tid/100043> <http://www.w3.org/2004/02/skos/core#broader> <http://imagoarchive.it/thes/tid/10004> .
+<http://imagoarchive.it/thes/tid/100043> <http://www.w3.org/2004/02/skos/core#prefLabel> "Translationes"@la .
+# 
+# http://imagoarchive.it/thes/tid/100044
+<http://imagoarchive.it/thes/tid/100044> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://imagoarchive.it/thes/tid/100044> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://imagoarchive.it/thes/tid/100044> <http://purl.org/dc/elements/1.1/date> "2022-02-14" .
+<http://imagoarchive.it/thes/tid/100044> <http://www.w3.org/2004/02/skos/core#altLabel> "Miracula"@en .
+<http://imagoarchive.it/thes/tid/100044> <http://www.w3.org/2004/02/skos/core#broader> <http://imagoarchive.it/thes/tid/10004> .
+<http://imagoarchive.it/thes/tid/100044> <http://www.w3.org/2004/02/skos/core#prefLabel> "Miracula"@la .
+# 
+# http://imagoarchive.it/thes/tid/10005
+<http://imagoarchive.it/thes/tid/10005> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://imagoarchive.it/thes/tid/10005> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://imagoarchive.it/thes/tid/10005> <http://purl.org/dc/elements/1.1/date> "2022-02-14" .
+<http://imagoarchive.it/thes/tid/10005> <http://www.w3.org/2004/02/skos/core#altLabel> "Antiquarian and archaeological treatises"@en .
+<http://imagoarchive.it/thes/tid/10005> <http://www.w3.org/2004/02/skos/core#broader> <http://imagoarchive.it/thes/tid/1000> .
+<http://imagoarchive.it/thes/tid/10005> <http://www.w3.org/2004/02/skos/core#prefLabel> "Trattatistica antiquaria e archeologica"@it .
+# 
+# http://imagoarchive.it/thes/tid/10006
+<http://imagoarchive.it/thes/tid/10006> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://imagoarchive.it/thes/tid/10006> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://imagoarchive.it/thes/tid/10006> <http://purl.org/dc/elements/1.1/date> "2022-02-14" .
+<http://imagoarchive.it/thes/tid/10006> <http://www.w3.org/2004/02/skos/core#altLabel> "Letter writing"@en .
+<http://imagoarchive.it/thes/tid/10006> <http://www.w3.org/2004/02/skos/core#broader> <http://imagoarchive.it/thes/tid/1000> .
+<http://imagoarchive.it/thes/tid/10006> <http://www.w3.org/2004/02/skos/core#closeMatch> "http://d-nb.info/gnd/4269486-3" .
+<http://imagoarchive.it/thes/tid/10006> <http://www.w3.org/2004/02/skos/core#closeMatch> "http://data.bnf.fr/ark:/12148/cb119473486" .
+<http://imagoarchive.it/thes/tid/10006> <http://www.w3.org/2004/02/skos/core#closeMatch> "http://id.loc.gov/authorities/sh85076220" .
+<http://imagoarchive.it/thes/tid/10006> <http://www.w3.org/2004/02/skos/core#closeMatch> "http://purl.org/bncf/tid/2921" .
+<http://imagoarchive.it/thes/tid/10006> <http://www.w3.org/2004/02/skos/core#prefLabel> "Epistolografia"@it .
+# 
+# http://imagoarchive.it/thes/tid/10007
+<http://imagoarchive.it/thes/tid/10007> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://imagoarchive.it/thes/tid/10007> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://imagoarchive.it/thes/tid/10007> <http://purl.org/dc/elements/1.1/date> "2022-02-14" .
+<http://imagoarchive.it/thes/tid/10007> <http://www.w3.org/2004/02/skos/core#altLabel> "Short stories"@en .
+<http://imagoarchive.it/thes/tid/10007> <http://www.w3.org/2004/02/skos/core#broader> <http://imagoarchive.it/thes/tid/1000> .
+<http://imagoarchive.it/thes/tid/10007> <http://www.w3.org/2004/02/skos/core#prefLabel> "Novellistica"@it .
+# 
+# http://imagoarchive.it/thes/tid/10008
+<http://imagoarchive.it/thes/tid/10008> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://imagoarchive.it/thes/tid/10008> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://imagoarchive.it/thes/tid/10008> <http://purl.org/dc/elements/1.1/date> "2022-02-14" .
+<http://imagoarchive.it/thes/tid/10008> <http://www.w3.org/2004/02/skos/core#altLabel> "Poetry"@en .
+<http://imagoarchive.it/thes/tid/10008> <http://www.w3.org/2004/02/skos/core#broader> <http://imagoarchive.it/thes/tid/1000> .
+<http://imagoarchive.it/thes/tid/10008> <http://www.w3.org/2004/02/skos/core#closeMatch> "http://data.bnf.fr/ark:/12148/cb11933161p" .
+<http://imagoarchive.it/thes/tid/10008> <http://www.w3.org/2004/02/skos/core#closeMatch> "http://datos.bne.es/tema/XX4576326" .
+<http://imagoarchive.it/thes/tid/10008> <http://www.w3.org/2004/02/skos/core#closeMatch> "http://id.loc.gov/authorities/sh85103704" .
+<http://imagoarchive.it/thes/tid/10008> <http://www.w3.org/2004/02/skos/core#closeMatch> "http://purl.org/bncf/tid/3066" .
+<http://imagoarchive.it/thes/tid/10008> <http://www.w3.org/2004/02/skos/core#narrower> <http://imagoarchive.it/thes/tid/100081> .
+<http://imagoarchive.it/thes/tid/10008> <http://www.w3.org/2004/02/skos/core#narrower> <http://imagoarchive.it/thes/tid/100082> .
+<http://imagoarchive.it/thes/tid/10008> <http://www.w3.org/2004/02/skos/core#narrower> <http://imagoarchive.it/thes/tid/100083> .
+<http://imagoarchive.it/thes/tid/10008> <http://www.w3.org/2004/02/skos/core#narrower> <http://imagoarchive.it/thes/tid/100084> .
+<http://imagoarchive.it/thes/tid/10008> <http://www.w3.org/2004/02/skos/core#narrower> <http://imagoarchive.it/thes/tid/100085> .
+<http://imagoarchive.it/thes/tid/10008> <http://www.w3.org/2004/02/skos/core#narrower> <http://imagoarchive.it/thes/tid/100086> .
+<http://imagoarchive.it/thes/tid/10008> <http://www.w3.org/2004/02/skos/core#prefLabel> "Poesia"@it .
+# 
+# http://imagoarchive.it/thes/tid/100081
+<http://imagoarchive.it/thes/tid/100081> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://imagoarchive.it/thes/tid/100081> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://imagoarchive.it/thes/tid/100081> <http://purl.org/dc/elements/1.1/date> "2022-02-14" .
+<http://imagoarchive.it/thes/tid/100081> <http://www.w3.org/2004/02/skos/core#altLabel> "Lyrical poetry"@en .
+<http://imagoarchive.it/thes/tid/100081> <http://www.w3.org/2004/02/skos/core#broader> <http://imagoarchive.it/thes/tid/10008> .
+<http://imagoarchive.it/thes/tid/100081> <http://www.w3.org/2004/02/skos/core#closeMatch> "http://data.bnf.fr/ark:/12148/cb119498002" .
+<http://imagoarchive.it/thes/tid/100081> <http://www.w3.org/2004/02/skos/core#closeMatch> "http://datos.bne.es/tema/XX530008" .
+<http://imagoarchive.it/thes/tid/100081> <http://www.w3.org/2004/02/skos/core#closeMatch> "http://id.loc.gov/authorities/sh85079180" .
+<http://imagoarchive.it/thes/tid/100081> <http://www.w3.org/2004/02/skos/core#closeMatch> "http://purl.org/bncf/tid/3466" .
+<http://imagoarchive.it/thes/tid/100081> <http://www.w3.org/2004/02/skos/core#prefLabel> "Poesia lirica"@it .
+# 
+# http://imagoarchive.it/thes/tid/100082
+<http://imagoarchive.it/thes/tid/100082> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://imagoarchive.it/thes/tid/100082> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://imagoarchive.it/thes/tid/100082> <http://purl.org/dc/elements/1.1/date> "2022-02-14" .
+<http://imagoarchive.it/thes/tid/100082> <http://www.w3.org/2004/02/skos/core#altLabel> "Elegies"@en .
+<http://imagoarchive.it/thes/tid/100082> <http://www.w3.org/2004/02/skos/core#broader> <http://imagoarchive.it/thes/tid/10008> .
+<http://imagoarchive.it/thes/tid/100082> <http://www.w3.org/2004/02/skos/core#closeMatch> "http://data.bnf.fr/ark:/12148/cb11934307p" .
+<http://imagoarchive.it/thes/tid/100082> <http://www.w3.org/2004/02/skos/core#closeMatch> "http://id.loc.gov/authorities/sh85042473" .
+<http://imagoarchive.it/thes/tid/100082> <http://www.w3.org/2004/02/skos/core#closeMatch> "http://purl.org/bncf/tid/24696" .
+<http://imagoarchive.it/thes/tid/100082> <http://www.w3.org/2004/02/skos/core#prefLabel> "Elegie"@it .
+# 
+# http://imagoarchive.it/thes/tid/100083
+<http://imagoarchive.it/thes/tid/100083> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://imagoarchive.it/thes/tid/100083> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://imagoarchive.it/thes/tid/100083> <http://purl.org/dc/elements/1.1/date> "2022-02-14" .
+<http://imagoarchive.it/thes/tid/100083> <http://www.w3.org/2004/02/skos/core#altLabel> "Satirical poetry"@en .
+<http://imagoarchive.it/thes/tid/100083> <http://www.w3.org/2004/02/skos/core#broader> <http://imagoarchive.it/thes/tid/10008> .
+<http://imagoarchive.it/thes/tid/100083> <http://www.w3.org/2004/02/skos/core#closeMatch> "http://data.bnf.fr/ark:/12148/cb12306307n" .
+<http://imagoarchive.it/thes/tid/100083> <http://www.w3.org/2004/02/skos/core#closeMatch> "http://datos.bne.es/tema/XX537425" .
+<http://imagoarchive.it/thes/tid/100083> <http://www.w3.org/2004/02/skos/core#closeMatch> "http://id.loc.gov/authorities/sh85142875" .
+<http://imagoarchive.it/thes/tid/100083> <http://www.w3.org/2004/02/skos/core#closeMatch> "http://purl.org/bncf/tid/34535" .
+<http://imagoarchive.it/thes/tid/100083> <http://www.w3.org/2004/02/skos/core#prefLabel> "Poesia satirica"@it .
+# 
+# http://imagoarchive.it/thes/tid/100084
+<http://imagoarchive.it/thes/tid/100084> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://imagoarchive.it/thes/tid/100084> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://imagoarchive.it/thes/tid/100084> <http://purl.org/dc/elements/1.1/date> "2022-02-14" .
+<http://imagoarchive.it/thes/tid/100084> <http://www.w3.org/2004/02/skos/core#altLabel> "Epic"@en .
+<http://imagoarchive.it/thes/tid/100084> <http://www.w3.org/2004/02/skos/core#broader> <http://imagoarchive.it/thes/tid/10008> .
+<http://imagoarchive.it/thes/tid/100084> <http://www.w3.org/2004/02/skos/core#closeMatch> "http://id.loc.gov/authorities/sh85044306" .
+<http://imagoarchive.it/thes/tid/100084> <http://www.w3.org/2004/02/skos/core#closeMatch> "http://purl.org/bncf/tid/11172" .
+<http://imagoarchive.it/thes/tid/100084> <http://www.w3.org/2004/02/skos/core#prefLabel> "Epica"@it .
+# 
+# http://imagoarchive.it/thes/tid/100085
+<http://imagoarchive.it/thes/tid/100085> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://imagoarchive.it/thes/tid/100085> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://imagoarchive.it/thes/tid/100085> <http://purl.org/dc/elements/1.1/date> "2022-02-14" .
+<http://imagoarchive.it/thes/tid/100085> <http://www.w3.org/2004/02/skos/core#altLabel> "Didactic poetry"@en .
+<http://imagoarchive.it/thes/tid/100085> <http://www.w3.org/2004/02/skos/core#broader> <http://imagoarchive.it/thes/tid/10008> .
+<http://imagoarchive.it/thes/tid/100085> <http://www.w3.org/2004/02/skos/core#closeMatch> "http://id.loc.gov/authorities/sh85037731" .
+<http://imagoarchive.it/thes/tid/100085> <http://www.w3.org/2004/02/skos/core#closeMatch> "http://purl.org/bncf/tid/6925" .
+<http://imagoarchive.it/thes/tid/100085> <http://www.w3.org/2004/02/skos/core#prefLabel> "Poesia didascalica"@it .
+# 
+# http://imagoarchive.it/thes/tid/100086
+<http://imagoarchive.it/thes/tid/100086> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://imagoarchive.it/thes/tid/100086> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://imagoarchive.it/thes/tid/100086> <http://purl.org/dc/elements/1.1/date> "2022-02-14" .
+<http://imagoarchive.it/thes/tid/100086> <http://www.w3.org/2004/02/skos/core#altLabel> "Poesia pastorale" .
+<http://imagoarchive.it/thes/tid/100086> <http://www.w3.org/2004/02/skos/core#broader> <http://imagoarchive.it/thes/tid/10008> .
+<http://imagoarchive.it/thes/tid/100086> <http://www.w3.org/2004/02/skos/core#closeMatch> "http://data.bnf.fr/ark:/12148/cb119532872" .
+<http://imagoarchive.it/thes/tid/100086> <http://www.w3.org/2004/02/skos/core#closeMatch> "http://id.loc.gov/authorities/sh85098584" .
+<http://imagoarchive.it/thes/tid/100086> <http://www.w3.org/2004/02/skos/core#closeMatch> "http://purl.org/bncf/tid/5439" .
+<http://imagoarchive.it/thes/tid/100086> <http://www.w3.org/2004/02/skos/core#prefLabel> "Poesia bucolica"@it .
+# 
+# http://imagoarchive.it/thes/tid/10009
+<http://imagoarchive.it/thes/tid/10009> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://imagoarchive.it/thes/tid/10009> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://imagoarchive.it/thes/tid/10009> <http://purl.org/dc/elements/1.1/date> "2022-02-14" .
+<http://imagoarchive.it/thes/tid/10009> <http://www.w3.org/2004/02/skos/core#altLabel> "Historiography"@en .
+<http://imagoarchive.it/thes/tid/10009> <http://www.w3.org/2004/02/skos/core#broader> <http://imagoarchive.it/thes/tid/1000> .
+<http://imagoarchive.it/thes/tid/10009> <http://www.w3.org/2004/02/skos/core#closeMatch> "http://data.bnf.fr/ark:/12148/cb11934225b" .
+<http://imagoarchive.it/thes/tid/10009> <http://www.w3.org/2004/02/skos/core#closeMatch> "http://datos.bne.es/tema/XX527052" .
+<http://imagoarchive.it/thes/tid/10009> <http://www.w3.org/2004/02/skos/core#closeMatch> "http://id.loc.gov/authorities/sh85061211" .
+<http://imagoarchive.it/thes/tid/10009> <http://www.w3.org/2004/02/skos/core#closeMatch> "http://purl.org/bncf/tid/9645" .
+<http://imagoarchive.it/thes/tid/10009> <http://www.w3.org/2004/02/skos/core#narrower> <http://imagoarchive.it/thes/tid/1000901> .
+<http://imagoarchive.it/thes/tid/10009> <http://www.w3.org/2004/02/skos/core#narrower> <http://imagoarchive.it/thes/tid/1000902> .
+<http://imagoarchive.it/thes/tid/10009> <http://www.w3.org/2004/02/skos/core#narrower> <http://imagoarchive.it/thes/tid/1000903> .
+<http://imagoarchive.it/thes/tid/10009> <http://www.w3.org/2004/02/skos/core#narrower> <http://imagoarchive.it/thes/tid/1000904> .
+<http://imagoarchive.it/thes/tid/10009> <http://www.w3.org/2004/02/skos/core#narrower> <http://imagoarchive.it/thes/tid/1000905> .
+<http://imagoarchive.it/thes/tid/10009> <http://www.w3.org/2004/02/skos/core#narrower> <http://imagoarchive.it/thes/tid/1000906> .
+<http://imagoarchive.it/thes/tid/10009> <http://www.w3.org/2004/02/skos/core#narrower> <http://imagoarchive.it/thes/tid/1000907> .
+<http://imagoarchive.it/thes/tid/10009> <http://www.w3.org/2004/02/skos/core#narrower> <http://imagoarchive.it/thes/tid/1000908> .
+<http://imagoarchive.it/thes/tid/10009> <http://www.w3.org/2004/02/skos/core#narrower> <http://imagoarchive.it/thes/tid/1000909> .
+<http://imagoarchive.it/thes/tid/10009> <http://www.w3.org/2004/02/skos/core#narrower> <http://imagoarchive.it/thes/tid/1000910> .
+<http://imagoarchive.it/thes/tid/10009> <http://www.w3.org/2004/02/skos/core#narrower> <http://imagoarchive.it/thes/tid/1000911> .
+<http://imagoarchive.it/thes/tid/10009> <http://www.w3.org/2004/02/skos/core#narrower> <http://imagoarchive.it/thes/tid/1000912> .
+<http://imagoarchive.it/thes/tid/10009> <http://www.w3.org/2004/02/skos/core#narrower> <http://imagoarchive.it/thes/tid/1000913> .
+<http://imagoarchive.it/thes/tid/10009> <http://www.w3.org/2004/02/skos/core#prefLabel> "Storiografia"@it .
+# 
+# http://imagoarchive.it/thes/tid/1000901
+<http://imagoarchive.it/thes/tid/1000901> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://imagoarchive.it/thes/tid/1000901> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://imagoarchive.it/thes/tid/1000901> <http://purl.org/dc/elements/1.1/date> "2022-02-14" .
+<http://imagoarchive.it/thes/tid/1000901> <http://www.w3.org/2004/02/skos/core#altLabel> "Annalists"@en .
+<http://imagoarchive.it/thes/tid/1000901> <http://www.w3.org/2004/02/skos/core#broader> <http://imagoarchive.it/thes/tid/10009> .
+<http://imagoarchive.it/thes/tid/1000901> <http://www.w3.org/2004/02/skos/core#prefLabel> "Annalistica"@it .
+# 
+# http://imagoarchive.it/thes/tid/1000902
+<http://imagoarchive.it/thes/tid/1000902> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://imagoarchive.it/thes/tid/1000902> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://imagoarchive.it/thes/tid/1000902> <http://purl.org/dc/elements/1.1/date> "2022-02-14" .
+<http://imagoarchive.it/thes/tid/1000902> <http://www.w3.org/2004/02/skos/core#altLabel> "Homeland history"@en .
+<http://imagoarchive.it/thes/tid/1000902> <http://www.w3.org/2004/02/skos/core#broader> <http://imagoarchive.it/thes/tid/10009> .
+<http://imagoarchive.it/thes/tid/1000902> <http://www.w3.org/2004/02/skos/core#prefLabel> "Storia patria"@it .
+# 
+# http://imagoarchive.it/thes/tid/1000903
+<http://imagoarchive.it/thes/tid/1000903> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://imagoarchive.it/thes/tid/1000903> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://imagoarchive.it/thes/tid/1000903> <http://purl.org/dc/elements/1.1/date> "2022-02-14" .
+<http://imagoarchive.it/thes/tid/1000903> <http://www.w3.org/2004/02/skos/core#altLabel> "Historical monographs"@en .
+<http://imagoarchive.it/thes/tid/1000903> <http://www.w3.org/2004/02/skos/core#broader> <http://imagoarchive.it/thes/tid/10009> .
+<http://imagoarchive.it/thes/tid/1000903> <http://www.w3.org/2004/02/skos/core#prefLabel> "Monografie storiche"@it .
+# 
+# http://imagoarchive.it/thes/tid/1000904
+<http://imagoarchive.it/thes/tid/1000904> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://imagoarchive.it/thes/tid/1000904> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://imagoarchive.it/thes/tid/1000904> <http://purl.org/dc/elements/1.1/date> "2022-02-14" .
+<http://imagoarchive.it/thes/tid/1000904> <http://www.w3.org/2004/02/skos/core#altLabel> "Laudes urbium"@en .
+<http://imagoarchive.it/thes/tid/1000904> <http://www.w3.org/2004/02/skos/core#broader> <http://imagoarchive.it/thes/tid/10009> .
+<http://imagoarchive.it/thes/tid/1000904> <http://www.w3.org/2004/02/skos/core#prefLabel> "Laudes urbium"@la .
+# 
+# http://imagoarchive.it/thes/tid/1000905
+<http://imagoarchive.it/thes/tid/1000905> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://imagoarchive.it/thes/tid/1000905> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://imagoarchive.it/thes/tid/1000905> <http://purl.org/dc/elements/1.1/date> "2022-02-14" .
+<http://imagoarchive.it/thes/tid/1000905> <http://www.w3.org/2004/02/skos/core#altLabel> "Origini delle città"@it .
+<http://imagoarchive.it/thes/tid/1000905> <http://www.w3.org/2004/02/skos/core#altLabel> "Origins of cities"@en .
+<http://imagoarchive.it/thes/tid/1000905> <http://www.w3.org/2004/02/skos/core#broader> <http://imagoarchive.it/thes/tid/10009> .
+<http://imagoarchive.it/thes/tid/1000905> <http://www.w3.org/2004/02/skos/core#prefLabel> "Ktiseis" .
+# 
+# http://imagoarchive.it/thes/tid/1000906
+<http://imagoarchive.it/thes/tid/1000906> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://imagoarchive.it/thes/tid/1000906> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://imagoarchive.it/thes/tid/1000906> <http://purl.org/dc/elements/1.1/date> "2022-02-14" .
+<http://imagoarchive.it/thes/tid/1000906> <http://www.w3.org/2004/02/skos/core#altLabel> "Panegyristics"@en .
+<http://imagoarchive.it/thes/tid/1000906> <http://www.w3.org/2004/02/skos/core#broader> <http://imagoarchive.it/thes/tid/10009> .
+<http://imagoarchive.it/thes/tid/1000906> <http://www.w3.org/2004/02/skos/core#prefLabel> "Panegiristica"@it .
+# 
+# http://imagoarchive.it/thes/tid/1000907
+<http://imagoarchive.it/thes/tid/1000907> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://imagoarchive.it/thes/tid/1000907> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://imagoarchive.it/thes/tid/1000907> <http://purl.org/dc/elements/1.1/date> "2022-02-14" .
+<http://imagoarchive.it/thes/tid/1000907> <http://www.w3.org/2004/02/skos/core#altLabel> "Memoirs"@en .
+<http://imagoarchive.it/thes/tid/1000907> <http://www.w3.org/2004/02/skos/core#broader> <http://imagoarchive.it/thes/tid/10009> .
+<http://imagoarchive.it/thes/tid/1000907> <http://www.w3.org/2004/02/skos/core#prefLabel> "Memorialistica"@it .
+# 
+# http://imagoarchive.it/thes/tid/1000908
+<http://imagoarchive.it/thes/tid/1000908> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://imagoarchive.it/thes/tid/1000908> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://imagoarchive.it/thes/tid/1000908> <http://purl.org/dc/elements/1.1/date> "2022-02-14" .
+<http://imagoarchive.it/thes/tid/1000908> <http://www.w3.org/2004/02/skos/core#altLabel> "Chronicles"@en .
+<http://imagoarchive.it/thes/tid/1000908> <http://www.w3.org/2004/02/skos/core#broader> <http://imagoarchive.it/thes/tid/10009> .
+<http://imagoarchive.it/thes/tid/1000908> <http://www.w3.org/2004/02/skos/core#closeMatch> "http://purl.org/bncf/tid/6654" .
+<http://imagoarchive.it/thes/tid/1000908> <http://www.w3.org/2004/02/skos/core#prefLabel> "Cronache"@it .
+# 
+# http://imagoarchive.it/thes/tid/1000909
+<http://imagoarchive.it/thes/tid/1000909> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://imagoarchive.it/thes/tid/1000909> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://imagoarchive.it/thes/tid/1000909> <http://purl.org/dc/elements/1.1/date> "2022-02-14" .
+<http://imagoarchive.it/thes/tid/1000909> <http://www.w3.org/2004/02/skos/core#altLabel> "Commentaries"@en .
+<http://imagoarchive.it/thes/tid/1000909> <http://www.w3.org/2004/02/skos/core#broader> <http://imagoarchive.it/thes/tid/10009> .
+<http://imagoarchive.it/thes/tid/1000909> <http://www.w3.org/2004/02/skos/core#prefLabel> "Commentari"@it .
+# 
+# http://imagoarchive.it/thes/tid/1000910
+<http://imagoarchive.it/thes/tid/1000910> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://imagoarchive.it/thes/tid/1000910> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://imagoarchive.it/thes/tid/1000910> <http://purl.org/dc/elements/1.1/date> "2022-02-14" .
+<http://imagoarchive.it/thes/tid/1000910> <http://www.w3.org/2004/02/skos/core#altLabel> "Autobiography"@en .
+<http://imagoarchive.it/thes/tid/1000910> <http://www.w3.org/2004/02/skos/core#broader> <http://imagoarchive.it/thes/tid/10009> .
+<http://imagoarchive.it/thes/tid/1000910> <http://www.w3.org/2004/02/skos/core#closeMatch> "http://datos.bne.es/tema/XX529325" .
+<http://imagoarchive.it/thes/tid/1000910> <http://www.w3.org/2004/02/skos/core#closeMatch> "http://purl.org/bncf/tid/13809" .
+<http://imagoarchive.it/thes/tid/1000910> <http://www.w3.org/2004/02/skos/core#prefLabel> "Autobiografie"@it .
+# 
+# http://imagoarchive.it/thes/tid/1000911
+<http://imagoarchive.it/thes/tid/1000911> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://imagoarchive.it/thes/tid/1000911> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://imagoarchive.it/thes/tid/1000911> <http://purl.org/dc/elements/1.1/date> "2022-02-14" .
+<http://imagoarchive.it/thes/tid/1000911> <http://www.w3.org/2004/02/skos/core#altLabel> "Biographies and biography series"@en .
+<http://imagoarchive.it/thes/tid/1000911> <http://www.w3.org/2004/02/skos/core#broader> <http://imagoarchive.it/thes/tid/10009> .
+<http://imagoarchive.it/thes/tid/1000911> <http://www.w3.org/2004/02/skos/core#closeMatch> "http://datos.bne.es/tema/XX558607" .
+<http://imagoarchive.it/thes/tid/1000911> <http://www.w3.org/2004/02/skos/core#closeMatch> "http://id.loc.gov/authorities/sh85014152" .
+<http://imagoarchive.it/thes/tid/1000911> <http://www.w3.org/2004/02/skos/core#closeMatch> "http://purl.org/bncf/tid/8985" .
+<http://imagoarchive.it/thes/tid/1000911> <http://www.w3.org/2004/02/skos/core#prefLabel> "Biografie e collane di biografie"@it .
+# 
+# http://imagoarchive.it/thes/tid/1000912
+<http://imagoarchive.it/thes/tid/1000912> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://imagoarchive.it/thes/tid/1000912> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://imagoarchive.it/thes/tid/1000912> <http://purl.org/dc/elements/1.1/date> "2022-02-14" .
+<http://imagoarchive.it/thes/tid/1000912> <http://www.w3.org/2004/02/skos/core#altLabel> "Genealogy"@en .
+<http://imagoarchive.it/thes/tid/1000912> <http://www.w3.org/2004/02/skos/core#broader> <http://imagoarchive.it/thes/tid/10009> .
+<http://imagoarchive.it/thes/tid/1000912> <http://www.w3.org/2004/02/skos/core#closeMatch> "http://data.bnf.fr/ark:/12148/cb11934650n" .
+<http://imagoarchive.it/thes/tid/1000912> <http://www.w3.org/2004/02/skos/core#closeMatch> "http://datos.bne.es/tema/XX525775" .
+<http://imagoarchive.it/thes/tid/1000912> <http://www.w3.org/2004/02/skos/core#closeMatch> "http://id.loc.gov/authorities/sh85053742" .
+<http://imagoarchive.it/thes/tid/1000912> <http://www.w3.org/2004/02/skos/core#closeMatch> "http://purl.org/bncf/tid/29255" .
+<http://imagoarchive.it/thes/tid/1000912> <http://www.w3.org/2004/02/skos/core#prefLabel> "Genealogie"@it .
+# 
+# http://imagoarchive.it/thes/tid/1000913
+<http://imagoarchive.it/thes/tid/1000913> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://imagoarchive.it/thes/tid/1000913> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://imagoarchive.it/thes/tid/1000913> <http://purl.org/dc/elements/1.1/date> "2022-02-14" .
+<http://imagoarchive.it/thes/tid/1000913> <http://www.w3.org/2004/02/skos/core#altLabel> "Anecdotal"@en .
+<http://imagoarchive.it/thes/tid/1000913> <http://www.w3.org/2004/02/skos/core#broader> <http://imagoarchive.it/thes/tid/10009> .
+<http://imagoarchive.it/thes/tid/1000913> <http://www.w3.org/2004/02/skos/core#prefLabel> "Aneddotica"@it .
+# 
+# http://imagoarchive.it/thes/tid/10010
+<http://imagoarchive.it/thes/tid/10010> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://imagoarchive.it/thes/tid/10010> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://imagoarchive.it/thes/tid/10010> <http://purl.org/dc/elements/1.1/date> "2022-02-14" .
+<http://imagoarchive.it/thes/tid/10010> <http://www.w3.org/2004/02/skos/core#altLabel> "Theater"@en .
+<http://imagoarchive.it/thes/tid/10010> <http://www.w3.org/2004/02/skos/core#broader> <http://imagoarchive.it/thes/tid/1000> .
+<http://imagoarchive.it/thes/tid/10010> <http://www.w3.org/2004/02/skos/core#closeMatch> "http://data.bnf.fr/ark:/12148/cb13162689q" .
+<http://imagoarchive.it/thes/tid/10010> <http://www.w3.org/2004/02/skos/core#closeMatch> "http://datos.bne.es/tema/XX524524" .
+<http://imagoarchive.it/thes/tid/10010> <http://www.w3.org/2004/02/skos/core#closeMatch> "http://id.loc.gov/authorities/sh85134522" .
+<http://imagoarchive.it/thes/tid/10010> <http://www.w3.org/2004/02/skos/core#closeMatch> "http://purl.org/bncf/tid/782" .
+<http://imagoarchive.it/thes/tid/10010> <http://www.w3.org/2004/02/skos/core#narrower> <http://imagoarchive.it/thes/tid/100101> .
+<http://imagoarchive.it/thes/tid/10010> <http://www.w3.org/2004/02/skos/core#narrower> <http://imagoarchive.it/thes/tid/100102> .
+<http://imagoarchive.it/thes/tid/10010> <http://www.w3.org/2004/02/skos/core#narrower> <http://imagoarchive.it/thes/tid/100103> .
+<http://imagoarchive.it/thes/tid/10010> <http://www.w3.org/2004/02/skos/core#narrower> <http://imagoarchive.it/thes/tid/100104> .
+<http://imagoarchive.it/thes/tid/10010> <http://www.w3.org/2004/02/skos/core#narrower> <http://imagoarchive.it/thes/tid/100105> .
+<http://imagoarchive.it/thes/tid/10010> <http://www.w3.org/2004/02/skos/core#prefLabel> "Teatro"@it .
+# 
+# http://imagoarchive.it/thes/tid/100101
+<http://imagoarchive.it/thes/tid/100101> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://imagoarchive.it/thes/tid/100101> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://imagoarchive.it/thes/tid/100101> <http://purl.org/dc/elements/1.1/date> "2022-02-14" .
+<http://imagoarchive.it/thes/tid/100101> <http://www.w3.org/2004/02/skos/core#altLabel> "Sacred drama"@en .
+<http://imagoarchive.it/thes/tid/100101> <http://www.w3.org/2004/02/skos/core#broader> <http://imagoarchive.it/thes/tid/10010> .
+<http://imagoarchive.it/thes/tid/100101> <http://www.w3.org/2004/02/skos/core#closeMatch> "http://purl.org/bncf/tid/29878" .
+<http://imagoarchive.it/thes/tid/100101> <http://www.w3.org/2004/02/skos/core#prefLabel> "Dramma sacro"@it .
+# 
+# http://imagoarchive.it/thes/tid/100102
+<http://imagoarchive.it/thes/tid/100102> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://imagoarchive.it/thes/tid/100102> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://imagoarchive.it/thes/tid/100102> <http://purl.org/dc/elements/1.1/date> "2022-02-14" .
+<http://imagoarchive.it/thes/tid/100102> <http://www.w3.org/2004/02/skos/core#altLabel> "Elegiac comedy"@en .
+<http://imagoarchive.it/thes/tid/100102> <http://www.w3.org/2004/02/skos/core#broader> <http://imagoarchive.it/thes/tid/10010> .
+<http://imagoarchive.it/thes/tid/100102> <http://www.w3.org/2004/02/skos/core#prefLabel> "Commedia elegiaca"@it .
+# 
+# http://imagoarchive.it/thes/tid/100103
+<http://imagoarchive.it/thes/tid/100103> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://imagoarchive.it/thes/tid/100103> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://imagoarchive.it/thes/tid/100103> <http://purl.org/dc/elements/1.1/date> "2022-02-14" .
+<http://imagoarchive.it/thes/tid/100103> <http://www.w3.org/2004/02/skos/core#altLabel> "Humanistic comedy"@en .
+<http://imagoarchive.it/thes/tid/100103> <http://www.w3.org/2004/02/skos/core#broader> <http://imagoarchive.it/thes/tid/10010> .
+<http://imagoarchive.it/thes/tid/100103> <http://www.w3.org/2004/02/skos/core#prefLabel> "Commedia umanistica"@it .
+# 
+# http://imagoarchive.it/thes/tid/100104
+<http://imagoarchive.it/thes/tid/100104> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://imagoarchive.it/thes/tid/100104> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://imagoarchive.it/thes/tid/100104> <http://purl.org/dc/elements/1.1/date> "2022-02-14" .
+<http://imagoarchive.it/thes/tid/100104> <http://www.w3.org/2004/02/skos/core#altLabel> "Humanistic tragedy"@en .
+<http://imagoarchive.it/thes/tid/100104> <http://www.w3.org/2004/02/skos/core#broader> <http://imagoarchive.it/thes/tid/10010> .
+<http://imagoarchive.it/thes/tid/100104> <http://www.w3.org/2004/02/skos/core#prefLabel> "Tragedia umanistica"@it .
+# 
+# http://imagoarchive.it/thes/tid/100105
+<http://imagoarchive.it/thes/tid/100105> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://imagoarchive.it/thes/tid/100105> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://imagoarchive.it/thes/tid/100105> <http://purl.org/dc/elements/1.1/date> "2022-02-14" .
+<http://imagoarchive.it/thes/tid/100105> <http://www.w3.org/2004/02/skos/core#altLabel> "Historical drama"@en .
+<http://imagoarchive.it/thes/tid/100105> <http://www.w3.org/2004/02/skos/core#broader> <http://imagoarchive.it/thes/tid/10010> .
+<http://imagoarchive.it/thes/tid/100105> <http://www.w3.org/2004/02/skos/core#closeMatch> "http://id.loc.gov/authorities/sh85061150" .
+<http://imagoarchive.it/thes/tid/100105> <http://www.w3.org/2004/02/skos/core#closeMatch> "http://purl.org/bncf/tid/8497" .
+<http://imagoarchive.it/thes/tid/100105> <http://www.w3.org/2004/02/skos/core#prefLabel> "Dramma storico"@it .
+# 
+# http://imagoarchive.it/thes/tid/10011
+<http://imagoarchive.it/thes/tid/10011> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://imagoarchive.it/thes/tid/10011> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://imagoarchive.it/thes/tid/10011> <http://purl.org/dc/elements/1.1/date> "2022-02-14" .
+<http://imagoarchive.it/thes/tid/10011> <http://www.w3.org/2004/02/skos/core#altLabel> "Spa treatise"@en .
+<http://imagoarchive.it/thes/tid/10011> <http://www.w3.org/2004/02/skos/core#broader> <http://imagoarchive.it/thes/tid/1000> .
+<http://imagoarchive.it/thes/tid/10011> <http://www.w3.org/2004/02/skos/core#prefLabel> "Trattatistica termale"@it .
+# 
+# https://imagoarchive.it/thes/ThesCF1
+<https://imagoarchive.it/thes/ThesCF1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://imagoarchive.it/thes/ThesCF1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+<https://imagoarchive.it/thes/ThesCF1> <http://purl.org/dc/elements/1.1/title> "Thesaurus IMAGO. Generi"@it .
+<https://imagoarchive.it/thes/ThesCF1> <http://purl.org/dc/terms/isPartOf> "http://imagoarchive.it/thes/tid/" .
+<https://imagoarchive.it/thes/ThesCF1> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <https://imagoarchive.it/thes/tid/1000> .
+<https://imagoarchive.it/thes/ThesCF1> <http://www.w3.org/2004/02/skos/core#inScheme> "http://imagoarchive.it/thes/tid/" .
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

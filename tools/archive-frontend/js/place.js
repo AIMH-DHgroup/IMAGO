@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', async function () {
     var search_query = "PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>" +
 	"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>" +
 	"PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>" +
-	"PREFIX ecrm: <http://erlangen-crm.org/200717/>" +
+	"PREFIX ecrm: <http://erlangen-crm.org/211015/>" +
 	"PREFIX ilrm: <http://imagoarchive.it/ilrmoo/>" +
 	"PREFIX : <https://imagoarchive.it/ontology/>" +
 	"SELECT ?placeName ?s_coordinates " +
@@ -108,7 +108,7 @@ document.addEventListener('DOMContentLoaded', async function () {
     var search_man = "PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>" +
 	"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>" +
 	"PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>" +
-	"PREFIX ecrm: <http://erlangen-crm.org/200717/>" +
+	"PREFIX ecrm: <http://erlangen-crm.org/211015/>" +
 	"PREFIX ilrm: <http://imagoarchive.it/ilrmoo/>" +
 	"PREFIX : <https://imagoarchive.it/ontology/>" +
 	"SELECT ?libraryName ?library " +
@@ -166,7 +166,7 @@ document.addEventListener('DOMContentLoaded', async function () {
     var search_work = "PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>" +
     "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>" +
     "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>" +
-    "PREFIX ecrm: <http://erlangen-crm.org/200717/>" +
+    "PREFIX ecrm: <http://erlangen-crm.org/211015/>" +
     "PREFIX ilrm: <http://imagoarchive.it/ilrmoo/>" +
     "PREFIX : <https://imagoarchive.it/ontology/>" +
     "SELECT ?exp_cre ?title ?authorName " +
@@ -230,7 +230,7 @@ document.addEventListener('DOMContentLoaded', async function () {
     var search_print = "PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>" +
 	"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>" +
 	"PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>" +
-	"PREFIX ecrm: <http://erlangen-crm.org/200717/>" +
+	"PREFIX ecrm: <http://erlangen-crm.org/211015/>" +
 	"PREFIX ilrm: <http://imagoarchive.it/ilrmoo/>" +
 	"PREFIX : <https://imagoarchive.it/ontology/>" +
 	"SELECT ?print_author ?print_edition ?print_title ?l_datazione ?placeName ?publisher " +

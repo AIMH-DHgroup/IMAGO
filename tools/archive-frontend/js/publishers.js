@@ -17,7 +17,7 @@ headers.append('X-Requested-With', 'XMLHttpRequest');
 var get_works = "PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>" +
 "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>" +
 "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>" +
-"PREFIX ecrm: <http://erlangen-crm.org/200717/>" +
+"PREFIX ecrm: <http://erlangen-crm.org/211015/>" +
 "PREFIX ilrm: <http://imagoarchive.it/ilrmoo/>" +
 "PREFIX : <https://imagoarchive.it/ontology/>" +
 "SELECT DISTINCT ?place ?coord ?placeName " +
@@ -31,7 +31,7 @@ var get_works = "PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>" +
 "  ?work a ilrm:F2_Expression ;" +
 "  ecrm:P102_has_title/ecrm:P190_has_symbolic_content ?title ." +
 "  ?print_edition ilrm:R4_embodies ?work ;" +
-" 				 ecrm:P106_is_composed_of/ecrm:P190_has_symbolic_content ?print_author ;" +
+" 				 :is_composed_of_author/ecrm:P190_has_symbolic_content ?print_author ;" +
 "   				 ecrm:P102_has_title/ecrm:P190_has_symbolic_content ?print_title ." +
 "  ?print_creation ilrm:R24_created ?print_edition ." +
 "                  " +
@@ -141,7 +141,7 @@ async function showManuscripts(btn_manuscripts) {
    var search_query = "PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>" +
 	"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>" +
 	"PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>" +
-	"PREFIX ecrm: <http://erlangen-crm.org/200717/>" +
+	"PREFIX ecrm: <http://erlangen-crm.org/211015/>" +
 	"PREFIX ilrm: <http://imagoarchive.it/ilrmoo/>" +
 	"PREFIX : <https://imagoarchive.it/ontology/>" +
 	"SELECT ?print_author ?print_edition ?print_title ?l_datazione ?placeName ?publisher " +
@@ -151,13 +151,13 @@ async function showManuscripts(btn_manuscripts) {
 	"  ?exp_cre a ilrm:F28_Expression_Creation ;" +
 	"  		 ilrm:R17_created ?work ;" +
 	"  		 ecrm:P14_carried_out_by ?author .	" +
-	"  ?author a :Author ;" +
+	"  ?author a :Author ;" + 
 	"     ecrm:P1_is_identified_by/ecrm:P190_has_symbolic_content ?authorName ." +
    "  ?printEditionCreation ilrm:R24_created ?print_edition  ." +
 	"  ?work a ilrm:F2_Expression ;" +
 	"  ecrm:P102_has_title/ecrm:P190_has_symbolic_content ?title ." +
 	"  ?print_edition ilrm:R4_embodies ?work ;" +
-	" 				 ecrm:P106_is_composed_of/ecrm:P190_has_symbolic_content ?print_author ;" +
+	" 				 :is_composed_of_author/ecrm:P190_has_symbolic_content ?print_author ;" +
 	"   				 ecrm:P102_has_title/ecrm:P190_has_symbolic_content ?print_title ." +
 	"  ?print_creation ilrm:R24_created ?print_edition ." +
    "  OPTIONAL{ ?printEditionCreation ecrm:P4_has_time-span/ecrm:P170i_time_is_defined_by ?l_datazione . }" +

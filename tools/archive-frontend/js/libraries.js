@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', async function () {
    var get_works = "PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>" +
    "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>" +
    "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>" +
-   "PREFIX ecrm: <http://erlangen-crm.org/200717/>" +
+   "PREFIX ecrm: <http://erlangen-crm.org/211015/>" +
    "PREFIX ilrm: <http://imagoarchive.it/ilrmoo/>" +
    "PREFIX : <https://imagoarchive.it/ontology/>" +
    "SELECT ?placeName ?coord ?libraryName ?library " +
@@ -167,7 +167,7 @@ async function showManuscripts(btn_manuscripts) {
    var search_query = "PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>" +
 	"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>" +
 	"PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>" +
-	"PREFIX ecrm: <http://erlangen-crm.org/200717/>" +
+	"PREFIX ecrm: <http://erlangen-crm.org/211015/>" +
 	"PREFIX ilrm: <http://imagoarchive.it/ilrmoo/>" +
 	"PREFIX : <https://imagoarchive.it/ontology/>" +
 	"SELECT ?manuscript ?placeName ?libraryName ?signature ?folios " +

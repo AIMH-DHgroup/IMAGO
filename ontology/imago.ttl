@@ -3,39 +3,60 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix doap: <http://usefulinc.com/ns/doap#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
-@base <http://www.w3.org/2002/07/owl#> .
+@base <https://imagoarchive.it/thes/tid/> .
 
-[ rdf:type owl:Ontology ;
-   owl:imports <http://imagoarchive.it/ilrmoo/> ,
-               <https://imagoarchive.it/thes/tid/> ;
-   dcterms:contributor "Emanuele Lenzi" ,
-                       "Irene Parlanti" ;
-   dcterms:creator <https://www.isti.cnr.it/en/about/people-detail/38/Valentina_Bartalesi_Lenzi> ,
-                   <https://www.isti.cnr.it/en/about/people-detail/820/Nicol%C3%B2_Pratelli> ;
-   dcterms:description "The IMAGO ontology provides elements of description for  Middle Ages and Renaissance manuscripts and printed edition, in particular those defined in the IMAGO project."@en ;
-   dcterms:issued "2021-07-12" ;
-   dcterms:modified "2022-11-22" ;
-   dcterms:publisher <https://www.isti.cnr.it/> ;
-   dcterms:title "The IMAGO Ontology" ;
-   vann:preferredNamespacePrefix "imago" ;
-   vann:preferredNamespaceUri : ;
-   rdfs:comment """Modifications from version 0.1:
+<https://imagoarchive.it/thes/tid/> rdf:type owl:Ontology ;
+                                     owl:versionIRI :imago-260210.ttl ;
+                                    #  owl:imports <http://erlangen-crm.org/211015/> ,
+                                    #              <http://imagoarchive.it/ilrmoo/> ,
+                                    #              <http://imagoarchive.it/thes/tid/> ;
+                                     dcterms:audience "Researchers, data curators, digital humanities scholars, cultural heritage institutions, and software developers who model, annotate, integrate, and analyse visual or image-based representations using semantic web technologies." ;
+                                     dcterms:conformsTo "<https://github.com/owlcs/miro/blob/master/miro.md>" ;
+                                     dcterms:contributor <https://www.isti.cnr.it/it/chi-siamo/people-detail/909/Emanuele_Lenzi> ,
+                                                         "Irene Parlanti" ;
+                                     dcterms:creator <https://www.isti.cnr.it/en/about/people-detail/38/Valentina_Bartalesi_Lenzi> ,
+                                                     <https://www.isti.cnr.it/en/about/people-detail/820/Nicol%C3%B2_Pratelli> ;
+                                     dcterms:description "The IMAGO ontology provides elements of description for  Middle Ages and Renaissance manuscripts and printed edition, in particular those defined in the IMAGO project."@en ;
+                                     dcterms:identifier "https://imagoarchive.it/ontology/" ;
+                                     dcterms:issued "2021-07-12" ;
+                                     dcterms:license <https://creativecommons.org/licenses/by-nc/4.0/> ;
+                                     dcterms:modified "2022-11-22" ;
+                                     dcterms:publisher <https://www.isti.cnr.it/> ;
+                                     dcterms:rightsHolder <https://www.isti.cnr.it/> ;
+                                     dcterms:subject "Geograpich Works"@en ,
+                                                     "Middle Ages"@en ,
+                                                     "Renaissance"@en ,
+                                                     "bibliography"@en ,
+                                                     "manuscripts"@en ,
+                                                     "printed editions"@en ;
+                                     dcterms:title "The IMAGO Ontology" ;
+                                     vann:preferredNamespacePrefix "imago" ;
+                                     vann:preferredNamespaceUri : ;
+                                     <http://schema.org/codeRepository> :ImagoGitHub ;
+                                     doap:bug-database :IssueTracker ;
+                                     rdfs:comment """Modifications from version 0.1:
           Deleted: Pubblication Place Appellation, is composed of place name
           Modified: unnecessary axioms in many classes"""@en ;
-   rdfs:isDefinedBy :imago-221122.ttl ;
-   owl:Import <http://imagoarchive.it/ilrmoo/> ;
-   owl:priorVersion <https://imagoarchive.it/onto/imago-220930.ttl> ;
-   foaf:homepage <https://imagoarchive.it/documentation/doc/index-en.html>
- ] .
+                                     rdfs:isDefinedBy :imago-221122.ttl ;
+                                     owl:priorVersion <https://imagoarchive.it/onto/imago-220930.ttl> ;
+                                     owl:versionInfo "1.1.0"@en ;
+                                     prov:wasGeneratedBy "The Imago Ontology was developed using the Methontology framework, ensuring a structured ontology engineering process including specification, conceptualisation, implementation, evaluation, and maintenance activities." ;
+                                     foaf:homepage <https://imagoarchive.it/documentation/doc/index-en.html> .
 
 #################################################################
 #    Annotation properties
 #################################################################
+
+###  http://purl.org/dc/terms/audience
+dcterms:audience rdf:type owl:AnnotationProperty .
+
 
 ###  http://purl.org/dc/terms/contributor
 dcterms:contributor rdf:type owl:AnnotationProperty .
@@ -47,6 +68,10 @@ dcterms:creator rdf:type owl:AnnotationProperty .
 
 ###  http://purl.org/dc/terms/description
 dcterms:description rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/identifier
+dcterms:identifier rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/terms/issued
@@ -61,6 +86,10 @@ dcterms:modified rdf:type owl:AnnotationProperty .
 dcterms:publisher rdf:type owl:AnnotationProperty .
 
 
+###  http://purl.org/dc/terms/subject
+dcterms:subject rdf:type owl:AnnotationProperty .
+
+
 ###  http://purl.org/dc/terms/title
 dcterms:title rdf:type owl:AnnotationProperty .
 
@@ -73,8 +102,24 @@ vann:preferredNamespacePrefix rdf:type owl:AnnotationProperty .
 vann:preferredNamespaceUri rdf:type owl:AnnotationProperty .
 
 
+###  http://schema.org/codeRepository
+<http://schema.org/codeRepository> rdf:type owl:AnnotationProperty .
+
+
+###  http://usefulinc.com/ns/doap#browse
+doap:browse rdf:type owl:AnnotationProperty .
+
+
+###  http://usefulinc.com/ns/doap#bug-database
+doap:bug-database rdf:type owl:AnnotationProperty .
+
+
 ###  http://www.w3.org/2002/07/owl#Import
 owl:Import rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/prov#wasGeneratedBy
+prov:wasGeneratedBy rdf:type owl:AnnotationProperty .
 
 
 ###  http://xmlns.com/foaf/0.1/homepage
@@ -184,6 +229,31 @@ foaf:workplaceHomepage rdf:type owl:AnnotationProperty .
                     rdfs:range <http://imagoarchive.it/ilrmoo/F3_Manifestation> ;
                     rdfs:comment "In the IMAGO Ontology 'is text incipit of' links E90 Symbolic Object to class Manuscript"@en ;
                     rdfs:label "is text incipit of"@en .
+
+
+###  https://imagoarchive.it/thes/is_composed_of_author
+<https://imagoarchive.it/thes/is_composed_of_author> rdf:type owl:ObjectProperty ;
+                                                     rdfs:subPropertyOf <http://erlangen-crm.org/211015/P106_is_composed_of> ;
+                                                     rdfs:domain :Printed_Edition ;
+                                                     rdfs:comment "In the IMAGO Ontology 'is composed of author\" links a Print Edition to a E90 Symbolic Object"@en ;
+                                                     rdfs:label "is composed of author"@en .
+
+
+###  https://imagoarchive.it/thes/is_composed_of_pages
+<https://imagoarchive.it/thes/is_composed_of_pages> rdf:type owl:ObjectProperty ;
+                                                    rdfs:subPropertyOf <http://erlangen-crm.org/211015/P106_is_composed_of> ;
+                                                    rdfs:domain :Printed_Edition ;
+                                                    rdfs:comment "In the IMAGO Ontology 'is composed of author\" links a Print Edition to a E90 Symbolic Object"@en ;
+                                                    rdfs:label "is composed of pages"@en .
+
+
+###  https://imagoarchive.it/thes/is_composed_of_place_name
+<https://imagoarchive.it/thes/is_composed_of_place_name> rdf:type owl:ObjectProperty ;
+                                                         rdfs:subPropertyOf <http://erlangen-crm.org/211015/P106_is_composed_of> ;
+                                                         rdfs:domain :Printed_Edition ;
+                                                         rdfs:range <http://erlangen-crm.org/211015/E41_Appellation> ;
+                                                         rdfs:comment "In the IMAGO Ontology 'is composed of author\" links a Print Edition to a Appellation of a Place"@en ;
+                                                         rdfs:label "is composed of place name"@en .
 
 
 #################################################################
@@ -361,6 +431,14 @@ foaf:name rdf:type owl:DatatypeProperty .
                                                                  ] .
 
 
+###  http://usefulinc.com/ns/doap#GitRepository
+doap:GitRepository rdf:type owl:Class .
+
+
+###  http://xmlns.com/foaf/0.1/Document
+foaf:Document rdf:type owl:Class .
+
+
 ###  http://xmlns.com/foaf/0.1/Organization
 foaf:Organization rdf:type owl:Class .
 
@@ -497,6 +575,26 @@ foaf:Person rdf:type owl:Class .
 #    Individuals
 #################################################################
 
+###  https://creativecommons.org/licenses/by-nc/4.0/
+<https://creativecommons.org/licenses/by-nc/4.0/> rdf:type owl:NamedIndividual ;
+                                                  rdfs:comment "Creative Commons Attribution-NonCommercial 4.0 International" ;
+                                                  rdfs:label "CC BY-NC 4.0" .
+
+
+###  https://imagoarchive.it/ontology/ImagoGitHub
+:ImagoGitHub rdf:type owl:NamedIndividual ,
+                      doap:GitRepository ;
+             doap:browse "https://github.com/AIMH-DHgroup/IMAGO" ;
+             rdfs:label "Imago GitHub repository" .
+
+
+###  https://imagoarchive.it/ontology/IssueTracker
+:IssueTracker rdf:type owl:NamedIndividual ,
+                       foaf:Document ;
+              rdfs:label "Issue tracker of IMAGO Ontology" ;
+              rdfs:seeAlso "https://github.com/AIMH-DHgroup/IMAGO/issues" .
+
+
 ###  https://www.isti.cnr.it/
 <https://www.isti.cnr.it/> rdf:type owl:NamedIndividual ,
                                     foaf:Organization ;
@@ -518,6 +616,12 @@ foaf:Person rdf:type owl:Class .
                                                                           foaf:name "Nicolò Pratelli" ;
                                                                           rdfs:label "Nicolò Pratelli" ;
                                                                           foaf:workplaceHomepage <https://www.isti.cnr.it/en/> .
+
+
+###  https://www.isti.cnr.it/it/chi-siamo/people-detail/909/Emanuele_Lenzi
+<https://www.isti.cnr.it/it/chi-siamo/people-detail/909/Emanuele_Lenzi> rdf:type owl:NamedIndividual ;
+                                                                        rdfs:label "Emanuele Lenzi" ;
+                                                                        foaf:workplaceHomepage "https://www.isti.cnr.it/" .
 
 
 ###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

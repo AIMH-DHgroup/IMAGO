@@ -9,3 +9,8 @@ SHA256: 69d87d2122cdd82eabfc543feeba13f378cee23627905e09779388df7f88bbe7
 Name: imago-toponyms.ttl.gz
 Size: 168064 bytes (164 KiB)
 SHA256: a125996e8c3846dac1223c26d510142062159df236954ff2db92a60c489f78a1
+
+Name: imago-archive-inferences.ttl.gz
+Size: 2269674 bytes (2216 KiB)
+SHA256: c8e94d0209c9f9f3a63079c5a0b26470c80978053aa57c544215b34cddc58469
+

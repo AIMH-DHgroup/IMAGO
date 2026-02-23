@@ -1,0 +1,1265 @@
+@prefix : <http://imagoarchive.it/ilrmoo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://imagoarchive.it/ilrmoo/> .
+
+<http://imagoarchive.it/ilrmoo/> rdf:type owl:Ontology ;
+                                  <http://purl.org/dc/terms/creator> <http://imagoarchive.it/ilrmoo> ,
+                                                                     <https://www.isti.cnr.it/en/about/people-detail/820/Nicol%C3%B2_Pratelli> ;
+                                  <http://purl.org/vocab/vann/preferredNamespacePrefix> "ilrmoo"@en ;
+                                  rdfs:comment <https://creativecommons.org/licenses/by-nc/4.0/> ,
+                                               """Changelog:
+260210 (Nicolò Pratelli)
+- updated documentation
+- fixed bug with R15i is fragment of
+220210 (Nicolò Pratelli)
+- Initial version"""@en ,
+                                               """ISTI-CNR LRMoo - An OWL DL implementation of the LRMoo (formerly FRBRoo)
+version 0.7, created by Digital Humanities Group at AIMH Lab at Institute of Information Science and Technologies \"Alessandro Faedo\". It is based on the Draft Version v.0.7 of LRMoo (https://www.cidoc-crm.org/frbroo/sites/default/files/LRMoo_V0.7%28draft%202021-06-29%29.pdf). This implementation is currently under development by ISTI group. The ISTI-CNR LRMoo implementation is licensed under a Creative Commons Attribution-ShareAlike 3.0 Unported License."""@en ;
+                                  rdfs:isDefinedBy :ontology.ttl ;
+                                  rdfs:label "CNR-ISTI LRMoo"@en ;
+                                  owl:priorVersion <https://imagoarchive.it/onto/ILRMoo-100222.owl> ;
+                                  owl:versionInfo "ILRMoo 100222 / LRMoo v.0.7 / ECRM 211015 / CIDOC-CRM 7.1.1"@en .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> rdf:type owl:AnnotationProperty .
+
+
+###  http://xmlns.com/foaf/0.1/homepage
+<http://xmlns.com/foaf/0.1/homepage> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://erlangen-crm.org/211015/P106_is_composed_of
+<http://erlangen-crm.org/211015/P106_is_composed_of> rdf:type owl:ObjectProperty .
+
+
+###  http://erlangen-crm.org/211015/P106i_forms_part_of
+<http://erlangen-crm.org/211015/P106i_forms_part_of> rdf:type owl:ObjectProperty .
+
+
+###  http://erlangen-crm.org/211015/P108_has_produced
+<http://erlangen-crm.org/211015/P108_has_produced> rdf:type owl:ObjectProperty .
+
+
+###  http://erlangen-crm.org/211015/P108i_was_produced_by
+<http://erlangen-crm.org/211015/P108i_was_produced_by> rdf:type owl:ObjectProperty .
+
+
+###  http://erlangen-crm.org/211015/P128_carries
+<http://erlangen-crm.org/211015/P128_carries> rdf:type owl:ObjectProperty .
+
+
+###  http://erlangen-crm.org/211015/P128i_is_carried_by
+<http://erlangen-crm.org/211015/P128i_is_carried_by> rdf:type owl:ObjectProperty .
+
+
+###  http://erlangen-crm.org/211015/P130_shows_features_of
+<http://erlangen-crm.org/211015/P130_shows_features_of> rdf:type owl:ObjectProperty .
+
+
+###  http://erlangen-crm.org/211015/P130i_features_are_also_found_on
+<http://erlangen-crm.org/211015/P130i_features_are_also_found_on> rdf:type owl:ObjectProperty .
+
+
+###  http://erlangen-crm.org/211015/P140_assigned_attribute_to
+<http://erlangen-crm.org/211015/P140_assigned_attribute_to> rdf:type owl:ObjectProperty .
+
+
+###  http://erlangen-crm.org/211015/P140i_was_attributed_by
+<http://erlangen-crm.org/211015/P140i_was_attributed_by> rdf:type owl:ObjectProperty .
+
+
+###  http://erlangen-crm.org/211015/P148_has_component
+<http://erlangen-crm.org/211015/P148_has_component> rdf:type owl:ObjectProperty .
+
+
+###  http://erlangen-crm.org/211015/P148i_is_component_of
+<http://erlangen-crm.org/211015/P148i_is_component_of> rdf:type owl:ObjectProperty .
+
+
+###  http://erlangen-crm.org/211015/P15_was_influenced_by
+<http://erlangen-crm.org/211015/P15_was_influenced_by> rdf:type owl:ObjectProperty .
+
+
+###  http://erlangen-crm.org/211015/P15i_influenced
+<http://erlangen-crm.org/211015/P15i_influenced> rdf:type owl:ObjectProperty .
+
+
+###  http://erlangen-crm.org/211015/P165_incorporates
+<http://erlangen-crm.org/211015/P165_incorporates> rdf:type owl:ObjectProperty ;
+                                                   rdfs:label "P165 incorporates"@en .
+
+
+###  http://erlangen-crm.org/211015/P165i_is_incorporated_in
+<http://erlangen-crm.org/211015/P165i_is_incorporated_in> rdf:type owl:ObjectProperty ;
+                                                          rdfs:label "P165i is incorporated in"@en .
+
+
+###  http://erlangen-crm.org/211015/P16_used_specific_object
+<http://erlangen-crm.org/211015/P16_used_specific_object> rdf:type owl:ObjectProperty .
+
+
+###  http://erlangen-crm.org/211015/P16i_was_used_for
+<http://erlangen-crm.org/211015/P16i_was_used_for> rdf:type owl:ObjectProperty .
+
+
+###  http://erlangen-crm.org/211015/P186_produced_thing_of_product_type
+<http://erlangen-crm.org/211015/P186_produced_thing_of_product_type> rdf:type owl:ObjectProperty .
+
+
+###  http://erlangen-crm.org/211015/P186i_is_produced_by
+<http://erlangen-crm.org/211015/P186i_is_produced_by> rdf:type owl:ObjectProperty .
+
+
+###  http://erlangen-crm.org/211015/P2_has_type
+<http://erlangen-crm.org/211015/P2_has_type> rdf:type owl:ObjectProperty .
+
+
+###  http://erlangen-crm.org/211015/P2i_is_type_of
+<http://erlangen-crm.org/211015/P2i_is_type_of> rdf:type owl:ObjectProperty .
+
+
+###  http://erlangen-crm.org/211015/P43_has_dimension
+<http://erlangen-crm.org/211015/P43_has_dimension> rdf:type owl:ObjectProperty .
+
+
+###  http://erlangen-crm.org/211015/P43i_is_dimension_of
+<http://erlangen-crm.org/211015/P43i_is_dimension_of> rdf:type owl:ObjectProperty .
+
+
+###  http://erlangen-crm.org/211015/P67_refers_to
+<http://erlangen-crm.org/211015/P67_refers_to> rdf:type owl:ObjectProperty .
+
+
+###  http://erlangen-crm.org/211015/P67i_is_referred_to_by
+<http://erlangen-crm.org/211015/P67i_is_referred_to_by> rdf:type owl:ObjectProperty .
+
+
+###  http://erlangen-crm.org/211015/P94_has_created
+<http://erlangen-crm.org/211015/P94_has_created> rdf:type owl:ObjectProperty .
+
+
+###  http://erlangen-crm.org/211015/P94i_was_created_by
+<http://erlangen-crm.org/211015/P94i_was_created_by> rdf:type owl:ObjectProperty .
+
+
+###  http://imagoarchive.it/ilrmoo/R10_has_member
+:R10_has_member rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf <http://erlangen-crm.org/211015/P148_has_component> ;
+                owl:inverseOf :R10i_is_member_of ;
+                rdfs:domain :F1_Work ;
+                rdfs:range :F1_Work ;
+                rdfs:comment "This property associates an instance of F1 Work with another instance of F1 Work that forms a part of it. This property is transitive. An instance of F1 Work may neither directly nor indirectly be a member of itself. Instances of F1 Work that are not members of one another may not share a common member."@en ;
+                rdfs:label "R10 has member"@en .
+
+
+###  http://imagoarchive.it/ilrmoo/R10i_is_member_of
+:R10i_is_member_of rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf <http://erlangen-crm.org/211015/P148i_is_component_of> ;
+                   rdfs:domain :F1_Work ;
+                   rdfs:range :F1_Work ;
+                   rdfs:label "R10i is member of"@en .
+
+
+###  http://imagoarchive.it/ilrmoo/R11_has_issuing_rule
+:R11_has_issuing_rule rdf:type owl:ObjectProperty ;
+                      owl:inverseOf :R11i_is_issuing_rule_of ;
+                      rdfs:domain :F18_Serial_Work ;
+                      rdfs:range <http://erlangen-crm.org/211015/E29_Design_or_Procedure> ;
+                      rdfs:label "R11 has issuing rule"@en .
+
+
+###  http://imagoarchive.it/ilrmoo/R11i_is_issuing_rule_of
+:R11i_is_issuing_rule_of rdf:type owl:ObjectProperty ;
+                         rdfs:domain <http://erlangen-crm.org/211015/E29_Design_or_Procedure> ;
+                         rdfs:range :F18_Serial_Work ;
+                         rdfs:label "R11i is issuing rule of"@en .
+
+
+###  http://imagoarchive.it/ilrmoo/R15_has_fragment
+:R15_has_fragment rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf <http://erlangen-crm.org/211015/P106_is_composed_of> ;
+                  owl:inverseOf :R15i_is_fragment_of ;
+                  rdfs:domain :F2_Expression ;
+                  rdfs:range <http://erlangen-crm.org/211015/E90_Symbolic_Object> ;
+                  rdfs:comment """This property associates an instance of E90 Symbolic Object with an instance of F2 Expression of which it is a fragment. The fragment is not itself an instance of F2 Expression as it does not express any instance of F1 Work. When the fragment consists of intelligible words it is an instance of E33 Linguistic Object.
+
+An instance of E90 Symbolic Object can be extracted from an instance of F2 Expression due to an accident, such as loss of material over time, e.g. the only remaining manuscript of an ancient text being partially eaten by worms, or due to deliberate isolation, such as excerpts taken from a text by the compiler of a collection of excerpts.
+
+An instance of E90 Symbolic Object is only considered a fragment of an instance of F2 Expression when related to its occurrence in a known or assumed whole by the R15 has fragment (is fragment of) property. The size of an instance of E90 Symbolic Object ranges from more than 99% of an instance of F2 Expression to tiny bits (a few words from a text, one bar from a musical composition, one detail from a still image, a two-second clip from a video, etc.)."""@en ;
+                  rdfs:label "R15 has fragment"@en .
+
+
+###  http://imagoarchive.it/ilrmoo/R15i_is_fragment_of
+:R15i_is_fragment_of rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf <http://erlangen-crm.org/211015/P106i_forms_part_of> ;
+                     rdfs:label "R15i is fragment of"@en .
+
+
+###  http://imagoarchive.it/ilrmoo/R16_initiated
+:R16_initiated rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf <http://erlangen-crm.org/211015/P94_has_created> ;
+               owl:inverseOf :R16i_was_initiated_by ;
+               rdfs:domain :F27_Work_Conception ;
+               rdfs:range :F1_Work ;
+               rdfs:comment """This property associates the first conception of a work and the instance of F1 Work itself that ensued from a given initial idea.
+
+It marks the origin of the causality chain that results in a work’s coming into existence."""@en ;
+               rdfs:label "R16 initiated"@en .
+
+
+###  http://imagoarchive.it/ilrmoo/R16i_was_initiated_by
+:R16i_was_initiated_by rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf <http://erlangen-crm.org/211015/P94i_was_created_by> ;
+                       rdfs:domain :F1_Work ;
+                       rdfs:range :F27_Work_Conception ;
+                       rdfs:label "R16i was initiated by"@en .
+
+
+###  http://imagoarchive.it/ilrmoo/R17_created
+:R17_created rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf <http://erlangen-crm.org/211015/P94_has_created> ;
+             owl:inverseOf :R17i_was_created_by ;
+             rdfs:domain :F28_Expression_Creation ;
+             rdfs:range :F2_Expression ;
+             rdfs:comment "This property associates the instance of F2 Expression that was first externalised during a particular instance of F28 Expression Creation event with that particular creation event."@en ;
+             rdfs:label "R17 created"@en .
+
+
+###  http://imagoarchive.it/ilrmoo/R17i_was_created_by
+:R17i_was_created_by rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf <http://erlangen-crm.org/211015/P94i_was_created_by> ;
+                     rdfs:domain :F2_Expression ;
+                     rdfs:range :F28_Expression_Creation ;
+                     rdfs:label "R17i was created by"@en .
+
+
+###  http://imagoarchive.it/ilrmoo/R18_created
+:R18_created rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf <http://erlangen-crm.org/211015/P108_has_produced> ;
+             owl:inverseOf :R18i_was_created_by ;
+             rdfs:domain :F28_Expression_Creation ;
+             rdfs:range :F5_Item ;
+             rdfs:comment "This property associates an instance of F28 Expression Creation with the first physical objects, instances of F5 Item, in which the resulting instance of F2 Expression was embodied."@en ;
+             rdfs:label "R18 created"@en .
+
+
+###  http://imagoarchive.it/ilrmoo/R18i_was_created_by
+:R18i_was_created_by rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf <http://erlangen-crm.org/211015/P108i_was_produced_by> ;
+                     rdfs:domain :F5_Item ;
+                     rdfs:range :F28_Expression_Creation ;
+                     rdfs:label "R18i was created by"@en .
+
+
+###  http://imagoarchive.it/ilrmoo/R19_created_a_realisation_of
+:R19_created_a_realisation_of rdf:type owl:ObjectProperty ;
+                              rdfs:subPropertyOf <http://erlangen-crm.org/211015/P16_used_specific_object> ;
+                              owl:inverseOf :R19i_was_realised_through ;
+                              rdfs:domain :F28_Expression_Creation ;
+                              rdfs:range :F1_Work ;
+                              rdfs:comment "This property associates an instance of F28 Expression Creation with the instance of F1 Work which was externalised in the instance of F2 Expression created by this creation event."@en ;
+                              rdfs:label "R19 created a realisation of"@en .
+
+
+###  http://imagoarchive.it/ilrmoo/R19i_was_realised_through
+:R19i_was_realised_through rdf:type owl:ObjectProperty ;
+                           rdfs:subPropertyOf <http://erlangen-crm.org/211015/P16i_was_used_for> ;
+                           rdfs:domain :F1_Work ;
+                           rdfs:range :F28_Expression_Creation ;
+                           rdfs:label "R19i was realised through"@en .
+
+
+###  http://imagoarchive.it/ilrmoo/R1_is_logical_successor_of
+:R1_is_logical_successor_of rdf:type owl:ObjectProperty ;
+                            rdfs:subPropertyOf <http://erlangen-crm.org/211015/P130_shows_features_of> ;
+                            owl:inverseOf :R1i_has_successor ;
+                            rdfs:domain :F1_Work ;
+                            rdfs:range :F1_Work ;
+                            rdfs:label "R1 is logical successor of"@en .
+
+
+###  http://imagoarchive.it/ilrmoo/R1i_has_successor
+:R1i_has_successor rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf <http://erlangen-crm.org/211015/P130i_features_are_also_found_on> ;
+                   rdfs:domain :F1_Work ;
+                   rdfs:range :F1_Work ;
+                   rdfs:label "R1i has successor"@en .
+
+
+###  http://imagoarchive.it/ilrmoo/R20_recorded
+:R20_recorded rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf <http://erlangen-crm.org/211015/P15_was_influenced_by> ;
+              owl:inverseOf :R20i_was_recorded_through ;
+              rdfs:domain :F29_Recording_Event ;
+              rdfs:range :F31_Performance ;
+              rdfs:label "R20 recorded"@en .
+
+
+###  http://imagoarchive.it/ilrmoo/R20i_was_recorded_through
+:R20i_was_recorded_through rdf:type owl:ObjectProperty ;
+                           rdfs:subPropertyOf <http://erlangen-crm.org/211015/P15i_influenced> ;
+                           rdfs:domain :F31_Performance ;
+                           rdfs:range :F29_Recording_Event ;
+                           rdfs:label "R20i was recorded through"@en .
+
+
+###  http://imagoarchive.it/ilrmoo/R24_created
+:R24_created rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf :R17_created ;
+             owl:inverseOf :R24i_was_created_through ;
+             rdfs:domain :F30_Manifestation_Creation ;
+             rdfs:range :F3_Manifestation ;
+             rdfs:comment "This property associates the instance of F3 Manifestation that was created during a particular instance of F30 Manifestation Creation with that instance of F30 Manifestation Creation event."@en ;
+             rdfs:label "R24 created"@en .
+
+
+###  http://imagoarchive.it/ilrmoo/R24i_was_created_through
+:R24i_was_created_through rdf:type owl:ObjectProperty ;
+                          rdfs:subPropertyOf :R17i_was_created_by ;
+                          rdfs:domain :F3_Manifestation ;
+                          rdfs:range :F30_Manifestation_Creation ;
+                          rdfs:label "R24i was created through"@en .
+
+
+###  http://imagoarchive.it/ilrmoo/R26_produced_things_of_type
+:R26_produced_things_of_type rdf:type owl:ObjectProperty ;
+                             rdfs:subPropertyOf <http://erlangen-crm.org/211015/P186_produced_thing_of_product_type> ;
+                             owl:inverseOf :R26i_was_produced_by ;
+                             rdfs:domain :F32_Carrier_Production_Event ;
+                             rdfs:range <http://erlangen-crm.org/211015/E99_Product_Type> ;
+                             rdfs:comment "This property associates an instance of F32 Carrier Production Event directly with the instance of E99 Product Type that is the prototype displaying the features that all of the F5 Items produced should display. This property is used in preference to R27 materialized (was materialized by) when the instance of F3 Manifestation that is materialized by the instance of F32 Carrier Production Event is also an instance of E99 Product Type."@en ;
+                             rdfs:label "R26 produced things of type"@en .
+
+
+###  http://imagoarchive.it/ilrmoo/R26i_was_produced_by
+:R26i_was_produced_by rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf <http://erlangen-crm.org/211015/P186i_is_produced_by> ;
+                      rdfs:domain <http://erlangen-crm.org/211015/E99_Product_Type> ;
+                      rdfs:range :F32_Carrier_Production_Event ;
+                      rdfs:label "R26i was produced by"@en .
+
+
+###  http://imagoarchive.it/ilrmoo/R27_materialized
+:R27_materialized rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf <http://erlangen-crm.org/211015/P16_used_specific_object> ;
+                  owl:inverseOf :R27i_was_materialized_by ;
+                  rdfs:domain :F32_Carrier_Production_Event ;
+                  rdfs:range :F3_Manifestation ;
+                  rdfs:comment "This property associates an instance of F32 Carrier Production Event with the set of signs provided by the publisher to be carried by all of the produced items (i.e., the instances of F5 Item) and any other physical features foreseen as integral to the instance of F3 Manifestation that is materialised."@en ;
+                  rdfs:label "R27 materialized"@en .
+
+
+###  http://imagoarchive.it/ilrmoo/R27i_was_materialized_by
+:R27i_was_materialized_by rdf:type owl:ObjectProperty ;
+                          rdfs:subPropertyOf <http://erlangen-crm.org/211015/P16i_was_used_for> ;
+                          rdfs:domain :F3_Manifestation ;
+                          rdfs:range :F32_Carrier_Production_Event ;
+                          rdfs:label "R27i was materialized by"@en .
+
+
+###  http://imagoarchive.it/ilrmoo/R28_produced
+:R28_produced rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf <http://erlangen-crm.org/211015/P108_has_produced> ;
+              owl:inverseOf :R28i_was_produced_by ;
+              rdfs:domain :F32_Carrier_Production_Event ;
+              rdfs:range :F5_Item ;
+              rdfs:comment "This property associates an instance of F32 Carrier Production Event with any one of the produced items (i.e., the instances of F5 Item)."@en ;
+              rdfs:label "R28 produced"@en .
+
+
+###  http://imagoarchive.it/ilrmoo/R28i_was_produced_by
+:R28i_was_produced_by rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf <http://erlangen-crm.org/211015/P108i_was_produced_by> ;
+                      rdfs:domain :F5_Item ;
+                      rdfs:range :F32_Carrier_Production_Event ;
+                      rdfs:label "R28i was produced by"@en .
+
+
+###  http://imagoarchive.it/ilrmoo/R29_reproduced_object
+:R29_reproduced_object rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf <http://erlangen-crm.org/211015/P16_used_specific_object> ;
+                       owl:inverseOf :R29i_was_object_reproduced_by ;
+                       rdfs:domain :F33_Reproduction_Event ;
+                       rdfs:range :F5_Item ;
+                       rdfs:comment "This property associates an instance of F33 Reproduction Event with an instance of F5 Item it reproduces."@en ;
+                       rdfs:label "R29 reproduced object"@en .
+
+
+###  http://imagoarchive.it/ilrmoo/R29i_was_object_reproduced_by
+:R29i_was_object_reproduced_by rdf:type owl:ObjectProperty ;
+                               rdfs:subPropertyOf <http://erlangen-crm.org/211015/P16i_was_used_for> ;
+                               rdfs:domain :F5_Item ;
+                               rdfs:range :F33_Reproduction_Event ;
+                               rdfs:label "R29i was object reproduced by"@en .
+
+
+###  http://imagoarchive.it/ilrmoo/R2_is_derivative_of
+:R2_is_derivative_of rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf <http://erlangen-crm.org/211015/P130_shows_features_of> ;
+                     owl:inverseOf :R2i_has_derivative ;
+                     rdfs:domain :F1_Work ;
+                     rdfs:range :F1_Work ;
+                     rdfs:comment """This property associates an instance of F1 Work which modifies the content of another instance of F1 Work with the latter. This property is transitive. 
+
+The property R2.1 has type of this property allows for specifying the kind of derivation, such as adaptation, summarisation, etc."""@en ;
+                     rdfs:label "R2 is derivative of"@en .
+
+
+###  http://imagoarchive.it/ilrmoo/R2i_has_derivative
+:R2i_has_derivative rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf <http://erlangen-crm.org/211015/P130i_features_are_also_found_on> ;
+                    rdfs:domain :F1_Work ;
+                    rdfs:range :F1_Work ;
+                    rdfs:label "R2i has derivative"@en .
+
+
+###  http://imagoarchive.it/ilrmoo/R30_reproduced_publication
+:R30_reproduced_publication rdf:type owl:ObjectProperty ;
+                            rdfs:subPropertyOf <http://erlangen-crm.org/211015/P16_used_specific_object> ;
+                            owl:inverseOf :R30i_was_publication_reproduced_by ;
+                            rdfs:domain :F33_Reproduction_Event ;
+                            rdfs:range :F3_Manifestation ;
+                            rdfs:comment "This property associates an instance of F33 Reproduction Event with an instance of F3 Manifestation it reproduces."@en ;
+                            rdfs:label "R30 reproduced publication"@en .
+
+
+###  http://imagoarchive.it/ilrmoo/R30i_was_publication_reproduced_by
+:R30i_was_publication_reproduced_by rdf:type owl:ObjectProperty ;
+                                    rdfs:subPropertyOf <http://erlangen-crm.org/211015/P16i_was_used_for> ;
+                                    rdfs:domain :F3_Manifestation ;
+                                    rdfs:range :F33_Reproduction_Event ;
+                                    rdfs:label "R30i was publication reproduced by"@en .
+
+
+###  http://imagoarchive.it/ilrmoo/R34_has_validity_period
+:R34_has_validity_period rdf:type owl:ObjectProperty ;
+                         owl:inverseOf :R34i_is_validity_period_of ;
+                         rdfs:domain :F34_Controlled_Vocabulary ;
+                         rdfs:range <http://erlangen-crm.org/211015/E52_Time-Span> ;
+                         rdfs:comment "This property associates an instance of F34 Controlled Vocabulary with the instance of E52 Time-Span describing the period for which the particular expression of the controlled vocabulary was regarded as valid by its maintainers. Each change of validity status of a nomen within the controlled vocabulary should be associated with a release change of the controlled vocabulary. The individual time-span of a validity state of a nomen would be the union of the time-spans of the controlled vocabulary in which the nomen was declared to have the particular validity status (provisional, accepted, obsolete, etc.)"@en ;
+                         rdfs:label "R34 has validity period"@en .
+
+
+###  http://imagoarchive.it/ilrmoo/R34i_is_validity_period_of
+:R34i_is_validity_period_of rdf:type owl:ObjectProperty ;
+                            rdfs:domain <http://erlangen-crm.org/211015/E52_Time-Span> ;
+                            rdfs:range :F34_Controlled_Vocabulary ;
+                            rdfs:label "R34i is validity period of"@en .
+
+
+###  http://imagoarchive.it/ilrmoo/R35_is_specified_by
+:R35_is_specified_by rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf <http://erlangen-crm.org/211015/P67i_is_referred_to_by> ;
+                     owl:inverseOf :R35i_specifies ;
+                     rdfs:domain :F12_Nomen ;
+                     rdfs:range :F2_Expression ;
+                     rdfs:label "R35 is specified by"@en .
+
+
+###  http://imagoarchive.it/ilrmoo/R35i_specifies
+:R35i_specifies rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf <http://erlangen-crm.org/211015/P67_refers_to> ;
+                rdfs:domain :F2_Expression ;
+                rdfs:range :F12_Nomen ;
+                rdfs:label "R35i specifies"@en .
+
+
+###  http://imagoarchive.it/ilrmoo/R36_uses_script_conversion
+:R36_uses_script_conversion rdf:type owl:ObjectProperty ;
+                            owl:inverseOf :R36i_is_script_conversion_used_in ;
+                            rdfs:domain :F12_Nomen ;
+                            rdfs:range :F36_Script_Conversion ;
+                            rdfs:comment "This property associates an instance of F12 Nomen with the instance of F36 Script Conversion that was used to create the instance of F12 Nomen. The source of this conversion may or may not be explicitly mentioned."@en ;
+                            rdfs:label "R36 uses script conversion"@en .
+
+
+###  http://imagoarchive.it/ilrmoo/R36i_is_script_conversion_used_in
+:R36i_is_script_conversion_used_in rdf:type owl:ObjectProperty ;
+                                   rdfs:label "R36i is script conversion used in"@en .
+
+
+###  http://imagoarchive.it/ilrmoo/R3_is_realised_in
+:R3_is_realised_in rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf <http://erlangen-crm.org/211015/P130_shows_features_of> ;
+                   owl:inverseOf :R3i_realises ;
+                   rdfs:domain :F1_Work ;
+                   rdfs:range :F2_Expression ;
+                   rdfs:comment """This property associates an instance of F2 Expression with an instance of F1 Work.
+
+This property expresses the association that exists between an expression and the work that this expression conveys. Our factual knowledge of how a given work is historically realised into expressions is often limited. Therefore, this property makes it possible to express the association between an instance of F2 Expression and the instance of F1 Work it conveys without identifying the particular instances of F2 Expression that were part of a chain of derivation from the source."""@en ;
+                   rdfs:label "R3 is realised in"@en .
+
+
+###  http://imagoarchive.it/ilrmoo/R3i_realises
+:R3i_realises rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf <http://erlangen-crm.org/211015/P130i_features_are_also_found_on> ;
+              rdfs:domain :F2_Expression ;
+              rdfs:range :F1_Work ;
+              rdfs:label "R3i realises"@en .
+
+
+###  http://imagoarchive.it/ilrmoo/R45_assigned_to
+:R45_assigned_to rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf <http://erlangen-crm.org/211015/P140_assigned_attribute_to> ;
+                 owl:inverseOf :R45_was_assigned_by ;
+                 rdfs:domain :F52_Name_Use_Activity ;
+                 rdfs:range <http://erlangen-crm.org/211015/E1_CRM_Entity> ;
+                 rdfs:label "R45 assigned to"@en .
+
+
+###  http://imagoarchive.it/ilrmoo/R45_was_assigned_by
+:R45_was_assigned_by rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf <http://erlangen-crm.org/211015/P140i_was_attributed_by> ;
+                     rdfs:label "R45i was assigned by"@en .
+
+
+###  http://imagoarchive.it/ilrmoo/R4_embodies
+:R4_embodies rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf <http://erlangen-crm.org/211015/P165_incorporates> ;
+             owl:inverseOf :R4i_is_embodied_in ;
+             rdfs:domain :F3_Manifestation ;
+             rdfs:range :F2_Expression ;
+             rdfs:comment "This property associates an instance of F3 Manifestation with one or more instances of F2 Expression which are rendered by this instance of F3 Manifestation. The manifestation formats the expression(s) in the way they are to be presented to some public, including specifying the intended sensory impression (such as visual appearance or audio rendition). The content of the embodied instances of F2 Expression should be defined at a symbolic level (such as a text or notated music) more abstract than the embodying instance of F3 Manifestation (such as a book or a notated score)."@en ;
+             rdfs:label "R4 embodies"@en .
+
+
+###  http://imagoarchive.it/ilrmoo/R4i_is_embodied_in
+:R4i_is_embodied_in rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf <http://erlangen-crm.org/211015/P165i_is_incorporated_in> ;
+                    rdfs:domain :F2_Expression ;
+                    rdfs:range :F3_Manifestation ;
+                    rdfs:label "R4i is embodied in"@en .
+
+
+###  http://imagoarchive.it/ilrmoo/R54_has_language
+:R54_has_language rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf <http://erlangen-crm.org/211015/P2_has_type> ;
+                  owl:inverseOf :R54i_is_language_of ;
+                  rdfs:domain :F12_Nomen ;
+                  rdfs:range <http://erlangen-crm.org/211015/E55_Type> ;
+                  rdfs:comment "This property associates an instance of F12 Nomen with an instance of E56 Language which is the language used for or associated with the nomen."@en ;
+                  rdfs:label "R54 has language"@en .
+
+
+###  http://imagoarchive.it/ilrmoo/R54i_is_language_of
+:R54i_is_language_of rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf <http://erlangen-crm.org/211015/P2i_is_type_of> ;
+                     rdfs:label "R54i is language of"@en .
+
+
+###  http://imagoarchive.it/ilrmoo/R56_is_related_to
+:R56_is_related_to rdf:type owl:ObjectProperty ;
+                   owl:inverseOf :R56i_is_related_to ;
+                   rdfs:domain :F12_Nomen ;
+                   rdfs:range :F12_Nomen ;
+                   rdfs:label "R56 is related to"@en .
+
+
+###  http://imagoarchive.it/ilrmoo/R56i_is_related_to
+:R56i_is_related_to rdf:type owl:ObjectProperty ;
+                    rdfs:label "R56i is related to"@en .
+
+
+###  http://imagoarchive.it/ilrmoo/R57_is_based_on
+:R57_is_based_on rdf:type owl:ObjectProperty ;
+                 owl:inverseOf :R57i_is_basis_for ;
+                 rdfs:domain :F38_Character ;
+                 rdfs:range <http://erlangen-crm.org/211015/E39_Actor> ;
+                 rdfs:comment "This property associates an instance of F38 Character with an instance of E39 Actor that the character is motivated by or is intended to represent. An instance of F38 Character may be based on a combination of features taken from several actors. This property is a shortcut of the more fully developed path from E28 Conceptual Object, restricted to F38 Character, through the inverse of P94 has created (was created by): E65 Creation. P17 was motivated by (motivated) to E1 CRM Entity restricted to E39 Actor."@en ;
+                 rdfs:label "R57 is based on"@en .
+
+
+###  http://imagoarchive.it/ilrmoo/R57i_is_basis_for
+:R57i_is_basis_for rdf:type owl:ObjectProperty ;
+                   rdfs:label "R57i is basis for"@en .
+
+
+###  http://imagoarchive.it/ilrmoo/R58_has_fictional_member
+:R58_has_fictional_member rdf:type owl:ObjectProperty ;
+                          owl:inverseOf :R58i_is_fictional_member_of ;
+                          rdfs:domain :F38_Character ;
+                          rdfs:range :F38_Character ;
+                          rdfs:comment "This property associates an instance of F38 Character representing a group with another instance of F38 Character that is presented in relevant fiction as a member of the fictional group"@en ;
+                          rdfs:label "R58 has fictional member"@en .
+
+
+###  http://imagoarchive.it/ilrmoo/R58i_is_fictional_member_of
+:R58i_is_fictional_member_of rdf:type owl:ObjectProperty ;
+                             rdfs:label "R58i is fictional member of"@en .
+
+
+###  http://imagoarchive.it/ilrmoo/R59_had_typical_subject
+:R59_had_typical_subject rdf:type owl:ObjectProperty ;
+                         rdfs:domain :F51_Pursuit ;
+                         rdfs:range <http://erlangen-crm.org/211015/E1_CRM_Entity> ;
+                         rdfs:label "R59 had typical subject"@en .
+
+
+###  http://imagoarchive.it/ilrmoo/R59i_was_typical_subject_of
+:R59i_was_typical_subject_of rdf:type owl:ObjectProperty ;
+                             rdfs:label "R59i was typical subject of"@en .
+
+
+###  http://imagoarchive.it/ilrmoo/R5_has_component
+:R5_has_component rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf <http://erlangen-crm.org/211015/P148_has_component> ;
+                  owl:inverseOf :R5i_is_component_of ;
+                  rdfs:domain :F2_Expression ;
+                  rdfs:range :F2_Expression ;
+                  rdfs:comment """This property associates an instance of an F2 Expression X with a structural component Y that conveys a part of the overall work realized by X, such as volumes, chapters, paragraphs. This property is transitive.
+
+Any part of an expression that conveys complete propositions, such as a single phrase, can be documented using the more general property P148 has component (is component of).
+
+Any part of an expression that does not completely follow meaningful boundaries, such as lines or pages of text or portions visible on images, can be documented using the property P106 is composed of (forms part of), and not with R5 has component (is component of). Fragments, in particular, can be documented with the more specific property R15 has fragment (is fragment of).
+
+This property does not cover the relationship that exists between pre-existing expressions that are re-used in a new, larger expression and that new, larger expression. Such a relationship is modelled by R75 incorporates (is incorporated in)."""@en ;
+                  rdfs:label "R5 has component"@en .
+
+
+###  http://imagoarchive.it/ilrmoo/R5i_is_component_of
+:R5i_is_component_of rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf <http://erlangen-crm.org/211015/P148i_is_component_of> ;
+                     rdfs:domain :F2_Expression ;
+                     rdfs:range :F2_Expression ;
+                     rdfs:label "R5i is component of"@en .
+
+
+###  http://imagoarchive.it/ilrmoo/R60_used_to_use_language
+:R60_used_to_use_language rdf:type owl:ObjectProperty ;
+                          owl:inverseOf :R60i_was_language_used_by ;
+                          rdfs:domain :F51_Pursuit ;
+                          rdfs:range <http://erlangen-crm.org/211015/E56_Language> ;
+                          rdfs:label "R60 used to use language"@en .
+
+
+###  http://imagoarchive.it/ilrmoo/R60i_was_language_used_by
+:R60i_was_language_used_by rdf:type owl:ObjectProperty ;
+                           rdfs:label "R60i was language used by"@en .
+
+
+###  http://imagoarchive.it/ilrmoo/R61_occurred_in_kind_of_context
+:R61_occurred_in_kind_of_context rdf:type owl:ObjectProperty ;
+                                 owl:inverseOf :R61i_was_kind_of_context_for ;
+                                 rdfs:domain :F52_Name_Use_Activity ;
+                                 rdfs:range <http://erlangen-crm.org/211015/E55_Type> ;
+                                 rdfs:label "R61 occurred in kind of context"@en .
+
+
+###  http://imagoarchive.it/ilrmoo/R61i_was_kind_of_context_for
+:R61i_was_kind_of_context_for rdf:type owl:ObjectProperty ;
+                              rdfs:label "R61i was kind of context for"@en .
+
+
+###  http://imagoarchive.it/ilrmoo/R62_was_used_for_membership_in
+:R62_was_used_for_membership_in rdf:type owl:ObjectProperty ;
+                                rdfs:subPropertyOf owl:topObjectProperty ;
+                                owl:inverseOf :R62i_was_context_for ;
+                                rdfs:domain :F52_Name_Use_Activity ;
+                                rdfs:range <http://erlangen-crm.org/211015/E74_Group> ;
+                                rdfs:label "R62 was used for membership in"@en .
+
+
+###  http://imagoarchive.it/ilrmoo/R62i_was_context_for
+:R62i_was_context_for rdf:type owl:ObjectProperty ;
+                      rdfs:label "R62i was context for"@en .
+
+
+###  http://imagoarchive.it/ilrmoo/R63_named
+:R63_named rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf <http://erlangen-crm.org/211015/P140_assigned_attribute_to> ;
+           owl:inverseOf :R63i_was_named_by ;
+           rdfs:domain :F52_Name_Use_Activity ;
+           rdfs:range <http://erlangen-crm.org/211015/E1_CRM_Entity> ;
+           rdfs:comment "This property associates an instance of F52 Name Use Activity with the instance of E1 CRM Entity that the associated name was used for."@en ;
+           rdfs:label "R63 named"@en .
+
+
+###  http://imagoarchive.it/ilrmoo/R63i_was_named_by
+:R63i_was_named_by rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf <http://erlangen-crm.org/211015/P140i_was_attributed_by> ;
+                   rdfs:label "R63i was named by"@en .
+
+
+###  http://imagoarchive.it/ilrmoo/R64_used_name
+:R64_used_name rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf <http://erlangen-crm.org/211015/P16_used_specific_object> ;
+               owl:inverseOf :R64i_was_name_used_by ;
+               rdfs:domain :F52_Name_Use_Activity ;
+               rdfs:range <http://erlangen-crm.org/211015/E41_Appellation> ;
+               rdfs:label "R64 used name"@en .
+
+
+###  http://imagoarchive.it/ilrmoo/R64i_was_name_used_by
+:R64i_was_name_used_by rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf <http://erlangen-crm.org/211015/P16i_was_used_for> ;
+                       rdfs:label "R64i was name used by"@en .
+
+
+###  http://imagoarchive.it/ilrmoo/R65_recorded_aspects_of
+:R65_recorded_aspects_of rdf:type owl:ObjectProperty ;
+                         rdfs:subPropertyOf <http://erlangen-crm.org/211015/P15_was_influenced_by> ;
+                         owl:inverseOf :R65i_had_aspects_recorded_through ;
+                         rdfs:domain :F29_Recording_Event ;
+                         rdfs:range <http://erlangen-crm.org/211015/E18_Physical_Thing> ;
+                         rdfs:label "R65 recorded aspects of"@en .
+
+
+###  http://imagoarchive.it/ilrmoo/R65i_had_aspects_recorded_through
+:R65i_had_aspects_recorded_through rdf:type owl:ObjectProperty ;
+                                   rdfs:subPropertyOf <http://erlangen-crm.org/211015/P15i_influenced> ;
+                                   rdfs:label "R65i had aspects recorded through"@en .
+
+
+###  http://imagoarchive.it/ilrmoo/R66_included_performed_version_of
+:R66_included_performed_version_of rdf:type owl:ObjectProperty ;
+                                   rdfs:subPropertyOf <http://erlangen-crm.org/211015/P16_used_specific_object> ;
+                                   owl:inverseOf :R66i_had_a_performed_version_through ;
+                                   rdfs:domain :F31_Performance ;
+                                   rdfs:range <http://erlangen-crm.org/211015/E89_Propositional_Object> ;
+                                   rdfs:label "R66 included performed version of"@en .
+
+
+###  http://imagoarchive.it/ilrmoo/R66i_had_a_performed_version_through
+:R66i_had_a_performed_version_through rdf:type owl:ObjectProperty ;
+                                      rdfs:subPropertyOf <http://erlangen-crm.org/211015/P16i_was_used_for> ;
+                                      rdfs:label "R66i had a performed version through"@en .
+
+
+###  http://imagoarchive.it/ilrmoo/R67_has_part
+:R67_has_part rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf :R10_has_member ;
+              owl:inverseOf :R67i_forms_part_of ;
+              rdfs:domain :F1_Work ;
+              rdfs:range :F1_Work ;
+              rdfs:comment """This property associates an instance of F1 Work with another instance of F1 Work that forms part of it in a complementary role to other sibling parts, conceived at some point in time to form together a logical whole, such as the parts of a trilogy. This property is transitive. 
+
+In contrast, the property R10 has member (is member of) may, for instance, also associate with the overall instance of F1 Work translations, adaptations and other derivative works that do not form a logical whole with sibling parts."""@en ;
+              rdfs:label "R67 has part"@en .
+
+
+###  http://imagoarchive.it/ilrmoo/R67i_forms_part_of
+:R67i_forms_part_of rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf :R10i_is_member_of ;
+                    rdfs:label "R67i forms part of"@en .
+
+
+###  http://imagoarchive.it/ilrmoo/R68_is_inspired_by
+:R68_is_inspired_by rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf :R2_is_derivative_of ;
+                    owl:inverseOf :R68i_is_inspiration_for ;
+                    rdfs:domain :F1_Work ;
+                    rdfs:range :F1_Work ;
+                    rdfs:comment "This property associates an instance of F1 Work with another instance of F1 Work whose content was inspired by that instance of F1 Work. The content of the range work instance served in some way as a source of ideas for the domain work instance. Neither instance of F1 Work may be a part of the other."@en ;
+                    rdfs:label "R68 is inspired by"@en .
+
+
+###  http://imagoarchive.it/ilrmoo/R68i_is_inspiration_for
+:R68i_is_inspiration_for rdf:type owl:ObjectProperty ;
+                         rdfs:subPropertyOf :R2i_has_derivative ;
+                         rdfs:label "R68i is inspiration for"@en .
+
+
+###  http://imagoarchive.it/ilrmoo/R69_has_physical_form
+:R69_has_physical_form rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf <http://erlangen-crm.org/211015/P2_has_type> ;
+                       owl:inverseOf :R69i_is_physical_form_of ;
+                       rdfs:domain :F3_Manifestation ;
+                       rdfs:range <http://erlangen-crm.org/211015/E55_Type> ;
+                       rdfs:label "R69 has physical form"@en .
+
+
+###  http://imagoarchive.it/ilrmoo/R69i_is_physical_form_of
+:R69i_is_physical_form_of rdf:type owl:ObjectProperty ;
+                          rdfs:subPropertyOf <http://erlangen-crm.org/211015/P2i_is_type_of> ;
+                          rdfs:label "R69i is physical form of"@en .
+
+
+###  http://imagoarchive.it/ilrmoo/R70_has_dimension
+:R70_has_dimension rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf <http://erlangen-crm.org/211015/P43_has_dimension> ;
+                   owl:inverseOf :R70i_is_dimension_of ;
+                   rdfs:domain :F3_Manifestation ;
+                   rdfs:range <http://erlangen-crm.org/211015/E54_Dimension> ;
+                   rdfs:label "R70 has dimension"@en .
+
+
+###  http://imagoarchive.it/ilrmoo/R70i_is_dimension_of
+:R70i_is_dimension_of rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf <http://erlangen-crm.org/211015/P43i_is_dimension_of> ;
+                      rdfs:label "R70i is dimension of"@en .
+
+
+###  http://imagoarchive.it/ilrmoo/R71_has_part
+:R71_has_part rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf <http://erlangen-crm.org/211015/P148_has_component> ;
+              owl:inverseOf :R71i_is_part_of ;
+              rdfs:domain :F3_Manifestation ;
+              rdfs:range :F3_Manifestation ;
+              rdfs:label "R71 has part"@en .
+
+
+###  http://imagoarchive.it/ilrmoo/R71i_is_part_of
+:R71i_is_part_of rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf <http://erlangen-crm.org/211015/P148i_is_component_of> ;
+                 rdfs:label "R71i is part of"@en .
+
+
+###  http://imagoarchive.it/ilrmoo/R73_takes_representative_attribute_from
+:R73_takes_representative_attribute_from rdf:type owl:ObjectProperty ;
+                                         owl:inverseOf :R73i_bears_representative_attribute_for ;
+                                         rdfs:domain :F1_Work ;
+                                         rdfs:range :F2_Expression ;
+                                         rdfs:label "R73 takes representative attribute from"@en .
+
+
+###  http://imagoarchive.it/ilrmoo/R73i_bears_representative_attribute_for
+:R73i_bears_representative_attribute_for rdf:type owl:ObjectProperty ;
+                                         rdfs:label "R73i bears representative attribute for"@en .
+
+
+###  http://imagoarchive.it/ilrmoo/R74_uses_expression_of
+:R74_uses_expression_of rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf <http://erlangen-crm.org/211015/P130_shows_features_of> ;
+                        owl:inverseOf :R74i_has_expression_used_in ;
+                        rdfs:domain :F1_Work ;
+                        rdfs:range :F1_Work ;
+                        rdfs:label "R74 uses expression of"@en .
+
+
+###  http://imagoarchive.it/ilrmoo/R74i_has_expression_used_in
+:R74i_has_expression_used_in rdf:type owl:ObjectProperty ;
+                             rdfs:subPropertyOf <http://erlangen-crm.org/211015/P130i_features_are_also_found_on> ;
+                             rdfs:label "R74i has expression used in"@en .
+
+
+###  http://imagoarchive.it/ilrmoo/R75_incorporates
+:R75_incorporates rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf <http://erlangen-crm.org/211015/P165_incorporates> ;
+                  owl:inverseOf :R75i_is_incorporated_in ;
+                  rdfs:domain :F2_Expression ;
+                  rdfs:range :F2_Expression ;
+                  rdfs:label "R75 incorporates"@en .
+
+
+###  http://imagoarchive.it/ilrmoo/R75i_is_incorporated_in
+:R75i_is_incorporated_in rdf:type owl:ObjectProperty ;
+                         rdfs:subPropertyOf <http://erlangen-crm.org/211015/P165i_is_incorporated_in> ;
+                         rdfs:label "R75i is incorporated in"@en .
+
+
+###  http://imagoarchive.it/ilrmoo/R7_is_materialization_of
+:R7_is_materialization_of rdf:type owl:ObjectProperty ;
+                          rdfs:subPropertyOf <http://erlangen-crm.org/211015/P128_carries> ;
+                          owl:inverseOf :R7i_is_materialized_in ;
+                          rdfs:domain :F5_Item ;
+                          rdfs:range :F3_Manifestation ;
+                          rdfs:comment """This property associates an instance of F3 Manifestation with an instance of F5 Item that is one of its exemplars or its only exemplar.
+
+Instances of F5 Item correspond to the kinds of physical unit(s) specified in the manifestation, regardless of possible later changes.
+
+Even though an item may exhibit defects with respect to the intended manifestation, it is still regarded to carry the manifestation, as long as it is produced or made accessible as a functional item by its creators."""@en ;
+                          rdfs:label "R7 is materialization of"@en .
+
+
+###  http://imagoarchive.it/ilrmoo/R7i_is_materialized_in
+:R7i_is_materialized_in rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf <http://erlangen-crm.org/211015/P128i_is_carried_by> ;
+                        rdfs:domain :F3_Manifestation ;
+                        rdfs:range :F5_Item ;
+                        rdfs:label "R7i is materialized in"@en .
+
+
+###  http://imagoarchive.it/ilrmoo/R8_combines
+:R8_combines rdf:type owl:ObjectProperty ;
+             owl:inverseOf :R8i_is_combined_to_form ;
+             rdfs:domain :F12_Nomen ;
+             rdfs:range <http://erlangen-crm.org/211015/E89_Propositional_Object> ;
+             rdfs:label "R8 combines"@en .
+
+
+###  http://imagoarchive.it/ilrmoo/R8i_is_combined_to_form
+:R8i_is_combined_to_form rdf:type owl:ObjectProperty ;
+                         rdfs:domain <http://erlangen-crm.org/211015/E89_Propositional_Object> ;
+                         rdfs:range :F12_Nomen ;
+                         rdfs:label "R8i is combined to form"@en .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://erlangen-crm.org/211015/P3_has_note
+<http://erlangen-crm.org/211015/P3_has_note> rdf:type owl:DatatypeProperty .
+
+
+###  http://imagoarchive.it/ilrmoo/R33_has_content
+:R33_has_content rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf <http://erlangen-crm.org/211015/P3_has_note> ;
+                 rdfs:domain :F12_Nomen ;
+                 rdfs:range xsd:string ;
+                 rdfs:comment "This property associates an instance of F12 Nomen with a sign or arrangement of signs that is used to refer to something through that instance of F12 Nomen."@en ;
+                 rdfs:label "R33 has content"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://erlangen-crm.org/211015/E12_Production
+<http://erlangen-crm.org/211015/E12_Production> rdf:type owl:Class .
+
+
+###  http://erlangen-crm.org/211015/E13_Attribute_Assignment
+<http://erlangen-crm.org/211015/E13_Attribute_Assignment> rdf:type owl:Class .
+
+
+###  http://erlangen-crm.org/211015/E18_Physical_Thing
+<http://erlangen-crm.org/211015/E18_Physical_Thing> rdf:type owl:Class .
+
+
+###  http://erlangen-crm.org/211015/E1_CRM_Entity
+<http://erlangen-crm.org/211015/E1_CRM_Entity> rdf:type owl:Class .
+
+
+###  http://erlangen-crm.org/211015/E24_Physical_Human-Made_Thing
+<http://erlangen-crm.org/211015/E24_Physical_Human-Made_Thing> rdf:type owl:Class .
+
+
+###  http://erlangen-crm.org/211015/E28_Conceptual_Object
+<http://erlangen-crm.org/211015/E28_Conceptual_Object> rdf:type owl:Class .
+
+
+###  http://erlangen-crm.org/211015/E29_Design_or_Procedure
+<http://erlangen-crm.org/211015/E29_Design_or_Procedure> rdf:type owl:Class .
+
+
+###  http://erlangen-crm.org/211015/E32_Authority_Document
+<http://erlangen-crm.org/211015/E32_Authority_Document> rdf:type owl:Class .
+
+
+###  http://erlangen-crm.org/211015/E39_Actor
+<http://erlangen-crm.org/211015/E39_Actor> rdf:type owl:Class .
+
+
+###  http://erlangen-crm.org/211015/E41_Appellation
+<http://erlangen-crm.org/211015/E41_Appellation> rdf:type owl:Class .
+
+
+###  http://erlangen-crm.org/211015/E52_Time-Span
+<http://erlangen-crm.org/211015/E52_Time-Span> rdf:type owl:Class .
+
+
+###  http://erlangen-crm.org/211015/E54_Dimension
+<http://erlangen-crm.org/211015/E54_Dimension> rdf:type owl:Class .
+
+
+###  http://erlangen-crm.org/211015/E55_Type
+<http://erlangen-crm.org/211015/E55_Type> rdf:type owl:Class .
+
+
+###  http://erlangen-crm.org/211015/E56_Language
+<http://erlangen-crm.org/211015/E56_Language> rdf:type owl:Class .
+
+
+###  http://erlangen-crm.org/211015/E65_Creation
+<http://erlangen-crm.org/211015/E65_Creation> rdf:type owl:Class .
+
+
+###  http://erlangen-crm.org/211015/E73_Information_Object
+<http://erlangen-crm.org/211015/E73_Information_Object> rdf:type owl:Class .
+
+
+###  http://erlangen-crm.org/211015/E74_Group
+<http://erlangen-crm.org/211015/E74_Group> rdf:type owl:Class .
+
+
+###  http://erlangen-crm.org/211015/E7_Activity
+<http://erlangen-crm.org/211015/E7_Activity> rdf:type owl:Class .
+
+
+###  http://erlangen-crm.org/211015/E89_Propositional_Object
+<http://erlangen-crm.org/211015/E89_Propositional_Object> rdf:type owl:Class .
+
+
+###  http://erlangen-crm.org/211015/E90_Symbolic_Object
+<http://erlangen-crm.org/211015/E90_Symbolic_Object> rdf:type owl:Class .
+
+
+###  http://erlangen-crm.org/211015/E99_Product_Type
+<http://erlangen-crm.org/211015/E99_Product_Type> rdf:type owl:Class .
+
+
+###  http://imagoarchive.it/ilrmoo/F11_Corporate_Body
+:F11_Corporate_Body rdf:type owl:Class ;
+                    rdfs:subClassOf :F55_Collective_Agent ;
+                    rdfs:comment """This class comprises organisations and groups of two or more people and/or organisations acting as a unit.
+
+To be considered an instance of F11 Corporate Body a gathering of people needs to bear a name and exhibit organisational characteristics sufficient to allow the body as a whole to participate in the creation, modification or production of an E73 Information Object. Groups such as conferences, congresses, expeditions, exhibitions, festivals, fairs, etc. are modelled as F11
+Corporate Bodies when they are named and can take collective action, such as approving a report or publishing their proceedings."""@en ;
+                    rdfs:label "F11 Corporate Body"@en .
+
+
+###  http://imagoarchive.it/ilrmoo/F12_Nomen
+:F12_Nomen rdf:type owl:Class ;
+           rdfs:subClassOf <http://erlangen-crm.org/211015/E89_Propositional_Object> ;
+           rdfs:comment """This class comprises associations between an instance of any class, and signs or arrangements of signs following a specific syntax (sequences of alphanumeric characters, chemical structure symbols, sound symbols, ideograms, etc.) that are used, or can be used, to refer to and identify
+that instance. The scripts or type sets for the types of symbols used to compose an instance of F12 Nomen have to be explicitly specified. Spelling variants are regarded as different nomina, whereas the use of different fonts (visual representation variants) or different digital encodings does not change the identity.
+
+An arbitrary combination of signs or symbols cannot be regarded as an appellation or designation until it is associated with something in some context. In that sense, the F12 Nomen class can be understood as the reification of a relationship between an instance of E1 CRM Entity and an instance of E41 Appellation. Two instances of F12 Nomen can happen to be
+associated with two identical instances of E62 String and yet remain distinct, as long as they either refer to distinct instances of E1 CRM Entity, or as long as they are associated with distinct instances of other classes through one or more than one of the other properties of the F12 Nomen class (while referring to the same instance of E1 CRM Entity).
+
+An instance of F12 Nomen associates a combination of signs with an instance of E1 CRM Entity on the basis of a cultural or linguistic convention: by associating a string with anything, the instance of F12 Nomen establishes a meaning that is not inherent in the instance of E62 String that is associated with it. Depending on context of use, nomens associated with identical strings
+can involve instances of different things in the real world even within the same language (polysemy and homonymy). Conversely, the same thing can be referred to through any number of nomens (synonymy). In the controlled environment of a bibliographic information system, though, synonymy is avoided and the instances of E62 String associated with a given instance of
+F12 Nomen would generally be disambiguated, so that each string is associated with only one instance of E1 CRM Entity within the specific scheme.
+
+The identity of an instance of F12 Nomen is determined by the combination of the thing it refers to, the choice and order of the symbols used within the instance of E62 String that represents it, and the specific instances of the various classes with which it is associated through all other properties of the F12 Nomen class. Variation in the symbols used (such as transliteration into
+another script), or variation in their ordering, usually results in a distinct instance of F12 Nomen, but variation in the visual representation of the symbols present in the instance of E62 String that represents the instance of F12 Nomen (such as different fonts that may be used to present alpha-numeric or character strings) does not result in a different instance of F12 Nomen.
+
+Instances of F12 Nomen are assigned and associated with instances of E1 CRM Entity either formally (such as by bibliographic agencies) or informally through common usage. When they are assigned formally, the construction of the instances of E62 String that represent them may follow predetermined rules.
+
+The act of naming something may involve the combination of various symbolic objects, which may be instances of F12 Nomen in their own right, and therefore refer to distinct instances of E1 CRM Entity, or just be used as qualifiers. A frequent example is provided by the tradition consisting of naming persons by juxtaposing a given name (such as ‘John’), and a last name
+(such as ‘Smith’) which is shared by all members of the same family. The given name alone can be sufficient to refer unambiguously to a given individual in a given context, but not in a wider context, in which the combination of given name plus last name proves necessary. Similarly, the
+combination of given name plus last name may be ambiguous in an even wider context, in which case the need for further qualifiers (such as a nickname, or, in the context of bibliographic control, dates and statement of occupation) can be felt. An instance of F12 Nomen can therefore
+be decomposed into further reifications that refer to distinct things through distinct strings, and/or instances of E90 Symbolic Object that serve merely as qualifiers and do not refer to anything in particular."""@en ;
+           rdfs:label "F12 Nomen"@en .
+
+
+###  http://imagoarchive.it/ilrmoo/F18_Serial_Work
+:F18_Serial_Work rdf:type owl:Class ;
+                 rdfs:subClassOf :F1_Work ;
+                 rdfs:comment """This class comprises works that are, or have been, planned to result in sequences of Expressions or Manifestations with common features. Whereas a work can acquire new members during the time it evolves, Expressions and Manifestations are identified with a certain state achieved at a particular point in time. Therefore there is in general no single Expression or Manifestation
+representing a complete serial work, unless the serial work has ended.
+
+Serial Works may or may not have a plan for an overall expression.
+
+The retrospective reprinting of all issues of a Serial Work at once, in the form of a monograph, is regarded to be another member of the F1 Work, which contains the Serial Work and the Work realised in the monograph. This does not make the monograph part of the Serial Work."""@en ;
+                 rdfs:label "F18 Serial Work"@en .
+
+
+###  http://imagoarchive.it/ilrmoo/F1_Work
+:F1_Work rdf:type owl:Class ;
+         rdfs:subClassOf <http://erlangen-crm.org/211015/E89_Propositional_Object> ;
+         rdfs:comment """This class comprises distinct intellectual ideas conveyed in artistic and intellectual creations, such a poems, stories or musical compositions. 
+
+A Work is the outcome of an intellectual process of one or more persons. Inherent to the notion of work is the existence of recognisable realizations of the work in the form of one or more expressions. Works are often regarded as finished and discrete e.g. when declared as such by the creator of the work or based on the elaboration or logical coherence of its content. However, works
+may be recognized as existing but unfinished e.g. if the creators deliberately or accidentally never explicitly finished a particular Expression but have left behind partial expressions.
+
+In the absence of explicit information about the initial conception, which is rarely available, the first expression created constitutes witness of the beginning of existence of a Work.
+
+A Work can evolve over time, such as through revised editions. A Work may be elaborated by one or more Actors simultaneously, in parallel, or over time. Additional expressions of a Work can continue to be created over time.
+
+The boundaries of a Work have nothing to do with the value of the intellectual achievement but only with the dominance of a concept. 
+
+The main purpose of this class is to enable bringing together intellectually equivalent Expressions in order to display to a user all available alternatives of the same intellectual or artistic content."""@en ;
+         rdfs:label "F1 Work"@en .
+
+
+###  http://imagoarchive.it/ilrmoo/F27_Work_Conception
+:F27_Work_Conception rdf:type owl:Class ;
+                     rdfs:subClassOf <http://erlangen-crm.org/211015/E65_Creation> ;
+                     rdfs:comment """This class comprises beginnings of evolutions of works.
+
+An instance of F27 Work Conception marks the initiation of the creation of an instance of F1 Work. The work, as an intellectual construction, evolves from this point on, until the last known expression of it. An instance of E39 Actor with which a work is associated through the chain of properties F1 Work. R16i was initiated by: F27 Work Conception. P14 carried out by: E39 Actor corresponds to the notion of the “creator” of the work. In the case of commissioned works, it
+is not the commissioning that is regarded as the work conception, but the acceptance of the commission.
+
+This event does not always correlate with the date assigned in common library practice to the work, which is usually a later event (such as the date of completion of the first clean draft).
+
+In addition, F27 Work Conception can serve to document the circumstances that surrounded the appearance of the original idea for a work, when these are known."""@en ;
+                     rdfs:label "F27 Work Conception"@en .
+
+
+###  http://imagoarchive.it/ilrmoo/F28_Expression_Creation
+:F28_Expression_Creation rdf:type owl:Class ;
+                         rdfs:subClassOf <http://erlangen-crm.org/211015/E12_Production> ,
+                                         <http://erlangen-crm.org/211015/E65_Creation> ,
+                                         :F56_Externalization_Event ;
+                         rdfs:comment """This class comprises activities that result in instances of F2 Expression coming into existence. This class characterises the externalisation of an F1 Work. The creation of an instance of F1 Work is considered to occur at the time of creation (F28) of its first F2 Expression.
+
+Although F2 Expression is an abstract entity, a conceptual object, the creation of an expression inevitably also affects the physical world: when you scribble the first draft of a poem on a sheet of paper, you produce an instance of F3 Manifestation. F28 Expression Creation is a subclass of E12 Production because the recording of the expression causes a physical modification of the
+E18 Physical Thing that serves as the carrier. The work becomes manifest by being expressed on a physical carrier other than the creator’s brain. The spatio-temporal circumstances under whichthe expression is created are necessarily the same spatio-temporal circumstances under which the first instance of F3 Manifestation is produced. 
+
+The mechanisms through which oral tradition (of myths, tales, music, etc.) operates are not further investigated in this model. As far as bibliographic practice is concerned, only those instances of F2 Expression that are externalised on physical carriers other than both the creator’s brain and the auditor’s brain are taken into account (for a discussion of the modelling of oral
+traditions, see: Nicolas, Yann. ‘Folklore Requirements for Bibliographic Records: oral traditions and FRBR.’ In: Cataloging & Classification Quarterly (2005). Vol. 39, No. 3-4. P. 179-195).
+
+It is possible to use the P2 has type (is type of) property in order to specify that the creation of a given expression of a given work played a particular role with regard to the overall bibliographic history of that work (e.g., that it was the  creation of the progenitor expression on which all other expressions of the same work are based; or that it was the creation of the critical edition that
+served as the basis for canonical references to the work).
+
+An instance of F28 Expression Creation may use as source material a specific existing instance of F2 Expression. The property P16 used specific object (was used for) can be used to specify the source expression for the derivation. In cases such as a translation or a revised edition, etc., a new instance of F2 Expression of the same F1 Work, a derived expression, is created. In the situation where an expression of one instance of F1 Work serves as source material for the creation of the first expression of a new instance of F1 Work, the relationship is indicated using the property R2 is derivative of (has derivative) between the two instances of F1 Work. Path: F1 Work(1). R3 is realised in: F2 Expression(1). P16i was used for: F28 Expression Creation. R17 created: F2 Expression(2). R3i realises: F1 Work(2). R2 is derivative of: F1 Work(1)"""@en ;
+                         rdfs:label "F28 Expression Creation"@en .
+
+
+###  http://imagoarchive.it/ilrmoo/F29_Recording_Event
+:F29_Recording_Event rdf:type owl:Class ;
+                     rdfs:subClassOf :F28_Expression_Creation ;
+                     rdfs:comment "This class comprises activities that intend to convey (and preserve) the features of perdurants in a recording, such as a live recording of a performance, a documentary, or other capture of a perdurant. Such activities may follow the directions of a recording plan. They may include postproduction."@en ;
+                     rdfs:label "F29 Recording Event"@en .
+
+
+###  http://imagoarchive.it/ilrmoo/F2_Expression
+:F2_Expression rdf:type owl:Class ;
+               rdfs:subClassOf <http://erlangen-crm.org/211015/E73_Information_Object> ;
+               rdfs:comment """This class comprises the intellectual or artistic realisations of Works in the form of identifiable immaterial objects, such as texts, poems, jokes, musical or choreographic notations, movement pattern, sound pattern, images, multimedia objects, or any combination of such forms that have objectively recognisable structures. The substance of F2 Expression is signs.
+
+An Expression is the outcome of the intellectual or creative process of realizing a Work. Subsequent expressions conveying the same work may be created over time.
+
+Expressions do not depend on a specific physical carrier and can exist on one or more carriers simultaneously, including human memory, but expressions cannot persist without a carrier.
+ 
+The form of F2 Expression is an inherent characteristic of the F2 Expression. Differences in form implies different Expressions (e.g., from text to spoken word, a transcript of a recording). Similarly, differences in language or means of performance imply different Expressions (e.g., translations or arrangements for different instruments). Thus, if a text is revised or modified, the result is considered to be a new F2 Expression. While theoretically any change in signs will result in a new Expression, conventionally the context and use will determine the rules for distinguishing among expressions."""@en ;
+               rdfs:label "F2 Expression"@en .
+
+
+###  http://imagoarchive.it/ilrmoo/F30_Manifestation_Creation
+:F30_Manifestation_Creation rdf:type owl:Class ;
+                            rdfs:subClassOf :F28_Expression_Creation ;
+                            rdfs:comment "This class comprises the activities of selecting, arranging and presenting one or more instances of F2 Expression on a carrier or other persistent presentation means with the purpose of communicating it to some public. It includes the specification of the presentation as to sensory impression (such as visual appearance or audio rendition)."@en ;
+                            rdfs:label "F30 Manifestation Creation"@en .
+
+
+###  http://imagoarchive.it/ilrmoo/F31_Performance
+:F31_Performance rdf:type owl:Class ;
+                 rdfs:subClassOf :F56_Externalization_Event ;
+                 rdfs:comment """This class comprises activities that follow the directions of a plan for any kind of performance, such as a theatrical play, an expression of a choreographic work or a musical work; i.e., they are intended to communicate directly or indirectly to an audience.
+
+Such activities can be identified at various levels of granularity, and can be contiguous or not. Any individual performance (with or without intermissions) is a single instance of F31 Performance. In addition, a complete run of performances can also be seen as an instance of F31 Performance, with individual performances as parts. A complete run of performances may comprise an original run plus any of its extensions and tours.
+
+Note that a performance plan may be more or less elaborate, and may even foresee just improvisation."""@en ;
+                 rdfs:label "F31 Performance"@en .
+
+
+###  http://imagoarchive.it/ilrmoo/F32_Carrier_Production_Event
+:F32_Carrier_Production_Event rdf:type owl:Class ;
+                              rdfs:subClassOf <http://erlangen-crm.org/211015/E12_Production> ;
+                              rdfs:comment """This class comprises activities that result in instances of F5 Item coming into existence. Both the production of a series of physical objects (printed books, scores, CDs, DVDs, CD-ROMs, etc.) and the creation of a new copy of a file on an electronic carrier are regarded as instances of F32 Carrier Production Event.
+
+Typically, the production of copies of a publication (no matter whether it is a book, a sound recording, a DVD, a cartographic resource, etc.) strives to produce items all as similar as possible to a prototype that displays all the features that all the copies of the publication should also display, which is reflected in the property R27 materialized: F3 Manifestation. In the case where the instance of F3 Manifestation that is materialized is also an instance of E99 Product Type, the property R26 produced things of type is the preferred method to associate the instance of F32 Carrier Production Event directly with the instance of E99 Product Type"""@en ;
+                              rdfs:label "F32 Carrier Production Event"@en .
+
+
+###  http://imagoarchive.it/ilrmoo/F33_Reproduction_Event
+:F33_Reproduction_Event rdf:type owl:Class ;
+                        rdfs:subClassOf <http://erlangen-crm.org/211015/E12_Production> ,
+                                        :F30_Manifestation_Creation ;
+                        rdfs:comment "This class comprises activities that consist in producing items of a new instance of F3 Manifestation that preserve both the content and layout found on items of a pre-existing instance of F3 Manifestation. The individual instance or instances of F5 Item that was or were used as a source for this process may be precisely identified or not. Such activities result in products known as facsimiles, reproductions, reprints, reissues, or new releases."@en ;
+                        rdfs:label "F33 Reproduction Event"@en .
+
+
+###  http://imagoarchive.it/ilrmoo/F34_Controlled_Vocabulary
+:F34_Controlled_Vocabulary rdf:type owl:Class ;
+                           rdfs:subClassOf <http://erlangen-crm.org/211015/E29_Design_or_Procedure> ,
+                                           <http://erlangen-crm.org/211015/E32_Authority_Document> ,
+                                           :F2_Expression ;
+                           rdfs:comment "This class comprises documents that establish controlled terminology (nomina) for consistent use. They may also describe relationships between entities and controlled terminology and relationships between entities. Note that any meaningful change in a Controlled vocabulary that affects the validity status of its elements defines a new release (instance of F2 Expression) of the Controlled vocabulary. Note that identifiers created following a rule in a Controlled vocabulary are to be regarded as being taken from this Controlled vocabulary, even though not explicitly spelled out. This definition of Controlled vocabulary reflects current library practice and not the use of the term in general. Knowledge Organisation Systems (KOS) are regarded as special cases of F34 Controlled Vocabulary."@en ;
+                           rdfs:label "F34 Controlled Vocabulary"@en .
+
+
+###  http://imagoarchive.it/ilrmoo/F36_Script_Conversion
+:F36_Script_Conversion rdf:type owl:Class ;
+                       rdfs:subClassOf <http://erlangen-crm.org/211015/E29_Design_or_Procedure> ;
+                       rdfs:label "F36 Script Conversion"@en ,
+                                  "This class comprises rule sets for converting signs or arrangements of signs from one script or type set to another."@en .
+
+
+###  http://imagoarchive.it/ilrmoo/F38_Character
+:F38_Character rdf:type owl:Class ;
+               rdfs:subClassOf <http://erlangen-crm.org/211015/E28_Conceptual_Object> ;
+               rdfs:comment "This class comprises fictional or iconographic individuals or groups of individuals (including families) appearing in works in a way relevant as subjects. Characters may be purely fictitious or based on real persons or groups, but as characters they may exhibit properties that would be inconsistent with a real person or group. Rather than merging characters with real persons, they should be described as disjoint, but related entities."@en ;
+               rdfs:label "F38 Character"@en .
+
+
+###  http://imagoarchive.it/ilrmoo/F39_Family
+:F39_Family rdf:type owl:Class ;
+            rdfs:subClassOf :F55_Collective_Agent ;
+            rdfs:comment "This class comprises groups of two or more persons presented as a family and justified by relationships of birth, marriage, adoption, civil union, or similar social or legal status and an assumed common tradition, including examples such as royal families, dynasties, houses of nobility, etc."@en ;
+            rdfs:label "F39 Family"@en .
+
+
+###  http://imagoarchive.it/ilrmoo/F3_Manifestation
+:F3_Manifestation rdf:type owl:Class ;
+                  rdfs:subClassOf :F2_Expression ;
+                  rdfs:comment """This class comprises products rendering one or more Expressions. A Manifestation is defined by both the overall content, and the form of its presentation. The substance of F3 Manifestation is not only signs, but also the manner in which they are presented to be consumed by users, including
+the kind of media adopted.
+
+An F3 Manifestation is the outcome of a publication process where one or more F2 Expressions are prepared for public dissemination, but it may also be a unique form created directly on some carrying material without the intent of being formally published.
+
+An instance of F3 Manifestation typically incorporates one or more instances of F2 Expression representing a distinct logical content and all additional input by a publisher such as text layout and cover design, in particular if labour is divided between an author and a publisher. Additionally an F3 Manifestation can be identified by the physical features for the medium of distribution, if applicable. For example, publications in the form of hardcover and paperback
+editions would be two distinct instances of F3 Manifestation, even though authorial and editorial content are otherwise identical in both publications.
+
+In the case of industrial products such as printed books or music CDs, but also digital material, an instance of F3 Manifestation can be regarded as the prototype for all copies of it. In these cases, an instance of F3 Manifestation specifies all of the features or traits that instances of F5 Item display in order to be copies of a particular publication. In the case of industrial products, instances of F3 Manifestation are also instances of E99 Product Type, normally nowadays
+identified by characteristic identifiers such as ISBN numbers."""@en ;
+                  rdfs:label "F3 Manifestation"@en .
+
+
+###  http://imagoarchive.it/ilrmoo/F51_Pursuit
+:F51_Pursuit rdf:type owl:Class ;
+             rdfs:subClassOf <http://erlangen-crm.org/211015/E7_Activity> ;
+             rdfs:comment "This class comprises periods of continuous activity of an Actor in a specific professional or creative domain or field."@en ;
+             rdfs:label "F51 Pursuit"@en .
+
+
+###  http://imagoarchive.it/ilrmoo/F52_Name_Use_Activity
+:F52_Name_Use_Activity rdf:type owl:Class ;
+                       rdfs:subClassOf <http://erlangen-crm.org/211015/E13_Attribute_Assignment> ;
+                       rdfs:comment """This class comprises periods of continuous use of a specific instance of E41 Appellation for a particular instance of E1 CRM Entity by an E39 Actor. It includes in particular the use of the name by its carrier. Characteristically, actors performing an activity may choose a particular appellation for themselves in the context of this activity. Such cases should be modelled by additionally classifying these activities as instances of F52 Name Use Activity.
+
+It is possible to specify the type of name use, through the P2 has type property, e.g.: use of a pseudonym, use of a married name, use of a birth name, use of a blended name, use of a religious name, etc."""@en ;
+                       rdfs:label "F52 Name Use Activity"@en .
+
+
+###  http://imagoarchive.it/ilrmoo/F55_Collective_Agent
+:F55_Collective_Agent rdf:type owl:Class ;
+                      rdfs:subClassOf <http://erlangen-crm.org/211015/E74_Group> ;
+                      rdfs:comment """This class comprises recognizable groups or organizations of persons that have the potential of acting as a unit to produce some intentional result of bibliographic interest for which they can be collectively considered responsible.
+
+A group of people becomes an instance of F55 Collective Agent when it identifies itself by a name that identifies it within an appropriate context and exhibits sufficient organizational characteristics to permit it to perform actions that reflect agency. Groups that are constituted as meetings, conferences, congresses, expeditions, festivals, fairs, etc. are examples of F55 Collective Agent as long as they self-identify by a specific name, rather than being referred to by a generic description of the gathering, and can act as a unit (such as by publishing their proceedings, or approving a report). These collective actions may be performed by representatives selected by the whole, rather than by all individual members acting together.
+
+Instances of F55 Collective Agent include commercial or corporate entities and other legally registered bodies, as well as organizations and associations, musical, artistic or performing groups, governments, and any of their sub-units. Collective Agents may be members of other Collective Agents, although directly or indirectly all Collective Agents are composed of persons.
+The membership of many types of Collective Agents will continue to evolve over time. A Collective Agent may continue to exist even if it has no members for a time (for example, a committee whose members all resign prior to the expiration of their terms but then a new complement of members is appointed). 
+
+Married couples and other concepts of family (F39) are regarded as particular examples of F55 Collective Agent.
+
+In the wider sense, this class also comprises holders of official positions viewed collectively, independent of the current holder of the office, such as the president of a country. In such cases, it is possible that the instance of F55 Collective Agent has only ever had a single member. 
+
+A group of persons known by/using a joint pseudonym (i.e., a name that seems indicative of an individual but that is actually adopted as a persona by two or more people acting together) is a particular case of F55 Collective Agent."""@en ;
+                      rdfs:label "F55 Collective Agent"@en .
+
+
+###  http://imagoarchive.it/ilrmoo/F56_Externalization_Event
+:F56_Externalization_Event rdf:type owl:Class ;
+                           rdfs:subClassOf <http://erlangen-crm.org/211015/E7_Activity> ;
+                           rdfs:comment """This class comprises activities that produce signs or sensory impressions as organized and complete wholes, typically intended to be received, in this completeness, by some audience, either directly via their senses or via persistent media at some later time. It comprises in particular novel externalizations of thought – art in all forms – including rendering existing
+expressions such as musical scores, theatre plays, scripts or texts, in a particular manner, including through the performing arts, writing or other methods of externalization."""@en ;
+                           rdfs:label "F56 Externalization Event"@en .
+
+
+###  http://imagoarchive.it/ilrmoo/F5_Item
+:F5_Item rdf:type owl:Class ;
+         rdfs:subClassOf <http://erlangen-crm.org/211015/E24_Physical_Human-Made_Thing> ;
+         rdfs:comment """This class comprises physical objects (printed books, scores, CDs, DVDs, CD-ROMS, etc.) that were produced by (P186i) an industrial process involving a given instance of F3 Manifestation. As a result, all the instances of F5 Item associated with a given instance of F3 Manifestation are expected to carry the content defined in that instance of F3 Manifestation, although some or even all of them may happen to carry a content that significantly differs from it, due to either an accident in the course of industrial production, or subsequent physical modification or degradation.
+
+An instance of F5 Item that consists of a physical object or set of objects with clear physical boundaries is also an instance of E22 Human-Made Object. An instance of F5 Item that is stored on a part of a larger physical support (such as an electronic file among others on a disc) can also be considered to be an instance of E25 Human-Made Feature.
+
+The notion of F5 Item is only relevant with regard to the production process, from a bibliographic point of view. Cultural heritage institutions' holdings are a distinct notion: a holding certainly can be equal to an instance of F5 Item, but it also can be either \"bigger\" than one (e.g., when two instances of F5 Item are bound together (in the case of printed books), or physically united in any other way, or when an instance of F5 Item is enhanced through the addition of manuscript annotations, or any material that was not intended by the publisher, such as press clippings, dried flowers, etc.), or \"smaller\" than one (e.g., when a one-volume instance of F5 Item (in the case of printed books) is interleaved and rebound as two volumes, or when pages were torn away from it, or when one CD from a two-CD set is missing, etc.). From an operational point of view, cultural heritage institutions do not deal with instances of F5 Item, but with storage units. However, it was not deemed necessary to declare an additional class for the notion of Storage Unit. Storage units can be easily accounted for through the E19 Physical Object class from CIDOC CRM, and the relationships between storage units and instances of F5 Item through the P46 is composed of (forms part of) property from CIDOC CRM. If needed, an instance of E19 Physical Object can be typed as a storage unit through the P2 has type (is type of) property."""@en ;
+         rdfs:label "F5 Item"@en .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

@@ -1,0 +1,218 @@
+<!DOCTYPE HTML>
+<!--///////////////////////////////////////////////////////////////////////////
+//
+// Project:   IMAGO
+// Package:   Web application
+// Title:     IMAGO web app - Lemma page
+// File:      lemma.html
+// Path:      /var/www/html/archive/
+// Type:      html
+// Started:   2023.11.09
+// Author(s): Nicolò Pratelli
+// State:     online
+//
+// Version history.
+// - 2023.11.09  Nicolò
+//   First version
+//
+// ////////////////////////////////////////////////////////////////////////////
+//
+// This file is part of software developed by the HMR Project
+// Further information at: http://imagoarchive.it
+// Copyright (C) 2020-2023 CNR-ISTI, AIMH, AI&Digital Humanities group
+//
+// This is free software; you can redistribute it and/or modify
+// it under the terms of the GNU General Public License as published
+// by the Free Software Foundation; either version 3.0 of the License,
+// or (at your option) any later version.
+// This program is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty
+// of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+// See the GNU General Public License for more details.
+// You should have received a copy of the GNU General Public License
+// along with this program; if not, see <http://www.gnu.org/licenses/>.
+//
+//  ////////////////////////////////////////////////////////////////////////////
+// 	
+//	Templade based on:
+// 	Linear by TEMPLATED
+//  templated.co @templatedco
+//  Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+//
+// ///////////////////////////////////////////////////////////////////////-->
+<html lang="it">
+	<head>
+		
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>IMAGO: Mappa dei toponimi danteschi</title>
+		<meta name="description" content="Pagina cerca dell'applicazione web del progetto PRIN IMAGO" />
+		<meta name="keywords" content="" />
+		<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700,500,900' rel='stylesheet' type='text/css'>
+
+		<!-- Libraries -->
+
+		<!-- External Libraries -->
+		<script src="libs/jquery/1.11.0/jquery.min.js"></script>
+		<script src="libs/selectize/0.12.6/selectize.min.js"></script>
+		<script src="libs/bootstrap/5.0.2/bootstrap.bundle.min.js"></script>
+		<link rel="stylesheet" href="libs/selectize/0.12.6/selectize.bootstrap3.min.css" />
+		<link rel="stylesheet" href="libs/bootstrap/5.0.2/boots	trap.min.css" />
+
+		<!-- Linear Libraries -->
+		<script src="js/skel.min.js"></script>
+		<script src="js/skel-panels.min.js"></script>
+		<script src="js/init.js"></script>		
+		<noscript>
+			<link rel="stylesheet" href="css/skel-noscript.css" />
+			<link rel="stylesheet" href="css/style.css" />
+			<link rel="stylesheet" href="css/style-desktop.css" />
+		</noscript>
+		
+		<!-- Custom Libraries -->
+		<script src="js/functions.js"></script>
+		<script src="js/app_work.js"></script>
+		<script src="js/include.js"></script>
+		<link rel="stylesheet" href="css/custom-style.css" />
+
+		<meta property="og:title" content="IMAGO web app - Cerca un lemma">
+		<meta property="og:type" content="web application" />
+		<meta property="og:description" content="Search page of the web application of the IMAGO project">
+		 <meta property="og:image" content=""> <!-- To fill -->
+		<meta property="og:url" content=""> <!-- To fill -->
+		<meta name="twitter:card" content=""> <!-- To fill -->
+
+		<!-- Matomo -->
+		<script>
+			var _paq = window._paq = window._paq || [];
+			/* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+			_paq.push(['trackPageView']);
+			_paq.push(['enableLinkTracking']);
+			(function() {
+			var u="https://dlnarratives.eu/matomo/";
+			_paq.push(['setTrackerUrl', u+'matomo.php']);
+			_paq.push(['setSiteId', '2']);
+			var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+			g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+			})();
+		</script>
+		<!-- End Matomo Code -->
+
+	</head>
+	<body>
+
+	<!-- Header -->
+	<div id="header">
+		<div id="nav-wrapper"> 
+			<nav id="nav">
+				<ul>
+					<li><a href="../index.html">Homepage</a></li>
+					<li class="dropdown" >
+						<a href="../archivio.html" class="dropbtn">Archivio</a>
+						<div class="dropdown-content">
+						<a href="../archive/">Opere geografiche</a>
+						<a href="../toponimi/">Toponimi danteschi</a>
+						<a href="../storymaps.html">Story Maps</a>
+						</div>
+					</li>
+					<li class="dropdown" >
+						<a href="javascript:void(0)" class="dropbtn">Progetto</a>
+						<div class="dropdown-content">
+						<a href="../gruppo.html">Gruppo di Ricerca</a>
+						<a href="../bibliografia.html">Bibliografia</a>
+						<a href="../doc/index-en.html">Ontologia</a>
+						<a href="../sparql/">SPARQL endpoint</a>
+						</div>
+					</li>
+					<li ><a href="../pubblicazioni.html">Pubblicazioni</a></li>
+					<li><a href="../en/toponimi/opere.html"><span class="flag-icon"><img src="images/united-kingdom.png" alt=""></span>English version</a></li>
+				</ul>
+			</nav>
+		</div>
+		<div class="container"> 
+			<!-- Logo -->
+				<img alt="Imago logo" src="../images/IMAGObianco-orizzontale2.svg"/>
+		</div>
+	</div>
+	<!-- Header -->
+
+	<!-- Main -->
+		<div id="main">
+			<div id="content" class="container">
+				<ul class="breadcrumb">
+					<li><a href="index.html">Mappa dei toponimi</a></li>
+					<li>Ricerca per opera</li>
+				  </ul>
+				<section>
+						<h2>Ricerca toponimi per opera</h2>
+						<h3>Seleziona l'opera e visualizza i <strong>toponimi</strong>, le <strong>occorrenze</strong>, i <strong>luoghi testuali</strong> e i <strong>contesti</strong>.</h3>
+						
+						<span class="byline"></span>
+						
+					<h3>Seleziona un'opera dalla lista</h3>
+					<select id="select-state" title="works" placeholder="Scegli un'opera..."></select>
+				</section>
+				
+				<section>
+
+
+				</section>
+					<h2 id="toponym-title"></h2>
+					
+					<div id="title-places" hidden><h3>Toponimi nell'opera</h3><button id="btn-mostra-luoghi" class="button btn-show">Mostra</button></div>
+					
+					<!-- <table class="toponyms-table" id="toponyms-labels"></table> -->
+					<table class="toponyms-table" id="toponyms-place"></table>
+
+				<section>
+					
+					<div id="title-occ" hidden><h3>Toponimi e loro occorrenze</h3><button id="btn-mostra-occ" class="button btn-show">Mostra</button><button id="btn-hide-occ" class="button btn-show" >Chiudi</button></div>
+					<table class="toponyms-table" id="toponyms-table-2"></table>
+					<a id="download-toponyms-table-2" class="dowload-csv" href="#" onclick="download_table_as_csv('toponyms-table-2');">Scarica come CSV</a>
+					<div id="title-context" hidden><h3>Toponimi, luoghi testuali e contesti</h3><button id="btn-mostra-context" class="button btn-show">Mostra</button><button id="btn-hide-context" class="button btn-show">Chiudi</button></div>
+					<table class="toponyms-table" id="toponyms-table"></table>
+					<a id="download-toponyms-table" class="dowload-csv" href="#" onclick="download_table_as_csv('toponyms-table');">Scarica come CSV</a>
+					
+			</section>
+				<section>
+					<header>
+					</header>
+					<span class="icon"><img src="images/tools.png" alt=""></span>
+					<h2 class="onside">Altre ricerche</h2>
+				</section>
+				<div class="row">
+					<section class="6u">
+						<a href="toponimi.html" class="button centered">Per toponimo</a>
+						
+						<p>Ricerca le <strong>occorrenze</strong>, i <strong>luoghi</strong> del testo e i <strong>contesti</strong> di un toponimo.</p>
+					</section>				
+					<section class="6u">
+						<a href="#" class="button centered">Per opera</a>
+						
+						<p>Seleziona l'opera e visualizza i <strong>toponimi</strong>, le <strong>occorrenze</strong>, i <strong>luoghi testuali</strong> e i <strong>contesti</strong>. </p>
+					</section>
+					<!-- <section class="4u">
+						<a href="autori.html" class="button centered">Per autore</a>
+						
+						<p>Seleziona l'autore e visualizza i <strong>toponimi</strong> citati nelle sue opere.</p>
+					</section>		 -->
+				
+				</div>
+			</div>
+		</div>
+	<!-- /Main -->
+
+
+<!-- Copyright -->
+		<div id="copyright">
+			<div class="container">
+				<h6><a href="../contatti.html"> Contatti</a></h6>
+				<h6><a href="../privacy.html"> Informativa sulla Privacy</a></h6>
+                    ©2020 <a href="https://www.isti.cnr.it/">ISTI-CNR</a>
+				<!--Design: <a href="http://templated.co">TEMPLATED</a>-->
+			</div>
+		</div>
+
+	</body>
+</html>

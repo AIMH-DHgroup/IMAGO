@@ -59,7 +59,7 @@ console.log(iriParam);
     var search_query = "PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>" +
 	"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>" +
 	"PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>" +
-	"PREFIX ecrm: <http://erlangen-crm.org/200717/>" +
+	"PREFIX ecrm: <http://erlangen-crm.org/211015/>" +
 	"PREFIX ilrm: <http://imagoarchive.it/ilrmoo/>" +
 	"PREFIX : <https://imagoarchive.it/ontology/>" +
 	"SELECT ?exp_cre ?title ?author ?authorName ?abstract (group_concat(distinct ?genreName;separator=\", \") as ?genres) (group_concat(distinct ?placeName;separator=\", \") as ?places) " +
@@ -131,7 +131,7 @@ console.log(iriParam);
     var search_man = "PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>" +
 	"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>" +
 	"PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>" +
-	"PREFIX ecrm: <http://erlangen-crm.org/200717/>" +
+	"PREFIX ecrm: <http://erlangen-crm.org/211015/>" +
 	"PREFIX ilrm: <http://imagoarchive.it/ilrmoo/>" +
 	"PREFIX : <https://imagoarchive.it/ontology/>" +
 	"SELECT DISTINCT ?manuscript ?placeName ?libraryName ?signature ?folios ?l_manuscript_author ?l_m_title " +
@@ -204,7 +204,7 @@ console.log(iriParam);
     var search_prin = "PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>" +
     "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>" +
     "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>" +
-    "PREFIX ecrm: <http://erlangen-crm.org/200717/>" +
+    "PREFIX ecrm: <http://erlangen-crm.org/211015/>" +
     "PREFIX ilrm: <http://imagoarchive.it/ilrmoo/>" +
     "PREFIX : <https://imagoarchive.it/ontology/>" +
     "SELECT ?print_edition ?placeName ?publisher ?l_datazione " +

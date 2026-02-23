@@ -1,0 +1,52 @@
+
+abstract=
+ontologyTitle=IMAGO Thesaurus of Genres (TID)
+ontologyPrefix=tid
+ontologyNamespaceURI=http://imagoarchive.it/thes/tid/
+ontologyName=IMAGO Thesaurus of Genres (TID)
+thisVersionURI=http://imagoarchive.it/thes/tid/1.0.1/
+latestVersionURI=http://imagoarchive.it/thes/tid/
+previousVersionURI=http://imagoarchive.it/thes/tid/1.0/
+dateCreated=2022-02-14
+dateModified=2026-02-16
+ontologyRevisionNumber=1.0.1
+licenseURI=http://creativecommons.org/licenses/by/2.5/it/deed.it
+licenseName=http://creativecommons.org/licenses/by/2.5/it/deed.it
+licenseIconURL=null
+citeAs=Bartalesi V., Pratelli N. IMAGO Thesaurus of Genres (TID). Revision: 1.0.1. Retrieved from: http://imagoarchive.it/thes/tid/1.0.1/
+DOI=
+status=Ontology Specification Draft
+logo=
+description=The TID thesaurus models genre concepts as SKOS concepts 
+                                     organised in hierarchical and associative structures. It enables 
+                                     semantic interoperability across manuscript catalogues, bibliographic 
+                                     datasets, and image-based representations described in the IMAGO ontology.
+introduction=The IMAGO Thesaurus of Genres (TID) is a controlled vocabulary developed within the IMAGO project to support the semantic description and classification of literary genres found in Middle Ages and Renaissance manuscripts and early printed editions.
+
+The thesaurus provides a structured and interoperable framework for identifying, annotating, and relating genre concepts in geographic latin works datasets, with particular attention to genres documented in the IMAGO knowledge base.
+backwardsCompatibleWith=
+publisher=https://www.isti.cnr.it/
+publisherURI=https://www.isti.cnr.it/
+publisherInstitution=
+publisherInstitutionURI=
+authors=Valentina Bartalesi;Nicolò Pratelli
+authorsURI=https://www.isti.cnr.it/en/about/people-detail/38/Valentina_Bartalesi_Lenzi;https://www.isti.cnr.it/en/about/people-detail/820/Nicol%C3%B2_Pratelli
+authorsInstitution=CNR-ISTI;CNR-ISTI
+authorsInstitutionURI=https://www.isti.cnr.it/;https://www.isti.cnr.it/
+contributors=Emanuele Lenzi;Luca Ruggio;Paolo Pontari
+contributorsURI=https://www.isti.cnr.it/it/chi-siamo/people-detail/909/Emanuele_Lenzi;;
+contributorsInstitution=CNR-ISTI;;
+contributorsInstitutionURI=https://www.isti.cnr.it/;;
+importedOntologyNames=
+importedOntologyURIs=
+extendedOntologyNames=
+extendedOntologyURIs=
+RDFXMLSerialization=ontology.owl
+TurtleSerialization=ontology.ttl
+NTSerialization=ontology.nt
+JSONLDSerialization=ontology.jsonld
+images=
+source=
+seeAlso=
+fundingGrants=
+funders=

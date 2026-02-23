@@ -136,7 +136,7 @@ public class ImagoTriplifier {
 // 		// String sparqlUpdate = datasetURL + "/update";
 // 		// String graphStore = datasetURL + "/data";
 		
-// 		RDFConnection conneg = RDFConnectionFactory.connectPW(datasetURL,"fusekitomcat", "C4mbiam1Adess0" );
+// 		RDFConnection conneg = RDFConnectionFactory.connectPW(datasetURL,"", "" );
 // 		conneg.update("CLEAR DEFAULT" );
 // 		conneg.put(datasetURL+"/toponyms", model);
 //         // conneg.load(model); // add the content of model to the triplestore

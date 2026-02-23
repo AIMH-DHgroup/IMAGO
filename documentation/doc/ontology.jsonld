@@ -1,0 +1,1166 @@
+[ {
+  "@id" : "_:genid1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://erlangen-crm.org/211015/P190_has_symbolic_content"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "_:genid10",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://erlangen-crm.org/211015/P1_is_identified_by"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://erlangen-crm.org/211015/E41_Appellation"
+  } ]
+}, {
+  "@id" : "_:genid11",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://erlangen-crm.org/211015/P1_is_identified_by"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://erlangen-crm.org/211015/E41_Appellation"
+  } ]
+}, {
+  "@id" : "_:genid12",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://imagoarchive.it/ontology/has_genre_name"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "_:genid13",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://erlangen-crm.org/211015/P74_has_current_or_former_residence"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://erlangen-crm.org/211015/E53_Place"
+  } ]
+}, {
+  "@id" : "_:genid14",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://erlangen-crm.org/211015/P1_is_identified_by"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://erlangen-crm.org/211015/E42_Identifier"
+  } ]
+}, {
+  "@id" : "_:genid15",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://erlangen-crm.org/211015/P50_has_current_keeper"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://imagoarchive.it/ontology/Library"
+  } ]
+}, {
+  "@id" : "_:genid16",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://imagoarchive.it/ilrmoo/R7_is_materialization_of"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://imagoarchive.it/ilrmoo/F3_Manifestation"
+  } ]
+}, {
+  "@id" : "_:genid17",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://erlangen-crm.org/211015/P1_is_identified_by"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://erlangen-crm.org/211015/E41_Appellation"
+  } ]
+}, {
+  "@id" : "_:genid2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://erlangen-crm.org/211015/P190_has_symbolic_content"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "_:genid3",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://erlangen-crm.org/211015/P190_has_symbolic_content"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "_:genid4",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://erlangen-crm.org/211015/P14_carried_out_by"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://imagoarchive.it/ontology/Author"
+  } ]
+}, {
+  "@id" : "_:genid5",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://imagoarchive.it/ilrmoo/R17_created"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://imagoarchive.it/ilrmoo/F2_Expression"
+  } ]
+}, {
+  "@id" : "_:genid6",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://imagoarchive.it/ilrmoo/R24_created"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://imagoarchive.it/ilrmoo/F3_Manifestation"
+  } ]
+}, {
+  "@id" : "_:genid7",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://imagoarchive.it/ilrmoo/R4_embodies"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://imagoarchive.it/ilrmoo/F2_Expression"
+  } ]
+}, {
+  "@id" : "_:genid8",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://erlangen-crm.org/211015/P1_is_identified_by"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://erlangen-crm.org/211015/E41_Appellation"
+  } ]
+}, {
+  "@id" : "_:genid9",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://erlangen-crm.org/211015/P1_is_identified_by"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://erlangen-crm.org/211015/E41_Appellation"
+  } ]
+}, {
+  "@id" : "http://erlangen-crm.org/211015/E19_Physical_Object",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://erlangen-crm.org/211015/E1_CRM_Entity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://erlangen-crm.org/211015/E39_Actor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://erlangen-crm.org/211015/E41_Appellation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid1"
+  } ]
+}, {
+  "@id" : "http://erlangen-crm.org/211015/E42_Identifier",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid2"
+  } ]
+}, {
+  "@id" : "http://erlangen-crm.org/211015/E53_Place",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://erlangen-crm.org/211015/E55_Type",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://erlangen-crm.org/211015/E90_Symbolic_Object",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid3"
+  } ]
+}, {
+  "@id" : "http://erlangen-crm.org/211015/P106_is_composed_of",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "http://erlangen-crm.org/211015/P106i_forms_part_of",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "http://erlangen-crm.org/211015/P14_carried_out_by",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "http://erlangen-crm.org/211015/P190_has_symbolic_content",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
+}, {
+  "@id" : "http://erlangen-crm.org/211015/P1_is_identified_by",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "http://erlangen-crm.org/211015/P2_has_type",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "http://erlangen-crm.org/211015/P3_has_note",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
+}, {
+  "@id" : "http://erlangen-crm.org/211015/P50_has_current_keeper",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "http://erlangen-crm.org/211015/P74_has_current_or_former_residence",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "http://imagoarchive.it/ilrmoo/F11_Corporate_Body",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://imagoarchive.it/ilrmoo/F28_Expression_Creation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid4"
+  }, {
+    "@id" : "_:genid5"
+  } ]
+}, {
+  "@id" : "http://imagoarchive.it/ilrmoo/F2_Expression",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://imagoarchive.it/ilrmoo/F30_Manifestation_Creation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid6"
+  } ]
+}, {
+  "@id" : "http://imagoarchive.it/ilrmoo/F3_Manifestation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid7"
+  } ]
+}, {
+  "@id" : "http://imagoarchive.it/ilrmoo/F5_Item",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://imagoarchive.it/ilrmoo/R17_created",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "http://imagoarchive.it/ilrmoo/R24_created",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "http://imagoarchive.it/ilrmoo/R4_embodies",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "http://imagoarchive.it/ilrmoo/R7_is_materialization_of",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/audience",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/conformsTo",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/contributor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/creator",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/description",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/identifier",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/issued",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/license",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/modified",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/publisher",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/rightsHolder",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/subject",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/title",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/vocab/vann/preferredNamespacePrefix",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/vocab/vann/preferredNamespaceUri",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://schema.org/codeRepository",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://usefulinc.com/ns/doap#GitRepository",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://usefulinc.com/ns/doap#browse",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://usefulinc.com/ns/doap#bug-database",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2002/07/owl#Import",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/ns/prov#wasGeneratedBy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://xmlns.com/foaf/0.1/Document",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://xmlns.com/foaf/0.1/Organization",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://xmlns.com/foaf/0.1/Person",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://xmlns.com/foaf/0.1/homepage",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://xmlns.com/foaf/0.1/name",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
+}, {
+  "@id" : "http://xmlns.com/foaf/0.1/workplaceHomepage",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://creativecommons.org/licenses/by-nc/4.0/",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Creative Commons Attribution-NonCommercial 4.0 International"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "CC BY-NC 4.0"
+  } ]
+}, {
+  "@id" : "https://imagoarchive.it/ontology/",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://purl.org/dc/terms/audience" : [ {
+    "@value" : "Researchers, data curators, digital humanities scholars, cultural heritage institutions, and software developers who model, annotate, integrate, and analyse visual or image-based representations using semantic web technologies."
+  } ],
+  "http://purl.org/dc/terms/conformsTo" : [ {
+    "@value" : "<https://github.com/owlcs/miro/blob/master/miro.md>"
+  } ],
+  "http://purl.org/dc/terms/contributor" : [ {
+    "@id" : "https://www.isti.cnr.it/it/chi-siamo/people-detail/909/Emanuele_Lenzi"
+  }, {
+    "@value" : "Irene Parlanti"
+  } ],
+  "http://purl.org/dc/terms/creator" : [ {
+    "@id" : "https://www.isti.cnr.it/en/about/people-detail/38/Valentina_Bartalesi_Lenzi"
+  }, {
+    "@id" : "https://www.isti.cnr.it/en/about/people-detail/820/Nicol%C3%B2_Pratelli"
+  } ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@language" : "en",
+    "@value" : "The IMAGO ontology provides elements of description for  Middle Ages and Renaissance manuscripts and printed edition, in particular those defined in the IMAGO project."
+  } ],
+  "http://purl.org/dc/terms/identifier" : [ {
+    "@value" : "https://imagoarchive.it/ontology/"
+  } ],
+  "http://purl.org/dc/terms/issued" : [ {
+    "@value" : "2021-07-12"
+  } ],
+  "http://purl.org/dc/terms/license" : [ {
+    "@id" : "https://creativecommons.org/licenses/by-nc/4.0/"
+  } ],
+  "http://purl.org/dc/terms/modified" : [ {
+    "@value" : "2022-11-22"
+  } ],
+  "http://purl.org/dc/terms/publisher" : [ {
+    "@id" : "https://www.isti.cnr.it/"
+  } ],
+  "http://purl.org/dc/terms/rightsHolder" : [ {
+    "@id" : "https://www.isti.cnr.it/"
+  } ],
+  "http://purl.org/dc/terms/subject" : [ {
+    "@language" : "en",
+    "@value" : "Geograpich Works"
+  }, {
+    "@language" : "en",
+    "@value" : "Middle Ages"
+  }, {
+    "@language" : "en",
+    "@value" : "Renaissance"
+  }, {
+    "@language" : "en",
+    "@value" : "bibliography"
+  }, {
+    "@language" : "en",
+    "@value" : "manuscripts"
+  }, {
+    "@language" : "en",
+    "@value" : "printed editions"
+  } ],
+  "http://purl.org/dc/terms/title" : [ {
+    "@value" : "The IMAGO Ontology"
+  } ],
+  "http://purl.org/vocab/vann/preferredNamespacePrefix" : [ {
+    "@value" : "imago"
+  } ],
+  "http://purl.org/vocab/vann/preferredNamespaceUri" : [ {
+    "@id" : "https://imagoarchive.it/ontology/"
+  } ],
+  "http://schema.org/codeRepository" : [ {
+    "@id" : "https://imagoarchive.it/ontology/ImagoGitHub"
+  } ],
+  "http://usefulinc.com/ns/doap#bug-database" : [ {
+    "@id" : "https://imagoarchive.it/ontology/IssueTracker"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Modifications from version 0.1:\n          Deleted: Pubblication Place Appellation, is composed of place name\n          Modified: unnecessary axioms in many classes"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://imagoarchive.it/ontology/imago-221122.ttl"
+  } ],
+  "http://www.w3.org/2002/07/owl#priorVersion" : [ {
+    "@id" : "https://imagoarchive.it/onto/imago-220930.ttl"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionIRI" : [ {
+    "@id" : "https://imagoarchive.it/ontology/imago-260210.ttl"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionInfo" : [ {
+    "@language" : "en",
+    "@value" : "1.1.0"
+  } ],
+  "http://www.w3.org/ns/prov#wasGeneratedBy" : [ {
+    "@value" : "The Imago Ontology was developed using the Methontology framework, ensuring a structured ontology engineering process including specification, conceptualisation, implementation, evaluation, and maintenance activities."
+  } ],
+  "http://xmlns.com/foaf/0.1/homepage" : [ {
+    "@id" : "https://imagoarchive.it/documentation/doc/index-en.html"
+  } ]
+}, {
+  "@id" : "https://imagoarchive.it/ontology/Author",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "In the IMAGO Ontology class Author represents one of the main categories of the conceptualization, the Author."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Author"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://erlangen-crm.org/211015/E39_Actor"
+  }, {
+    "@id" : "_:genid8"
+  } ]
+}, {
+  "@id" : "https://imagoarchive.it/ontology/Curator",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "In the IMAGO Ontology Curator class expresses knowledge about the curator of a printed edition."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Curator"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://erlangen-crm.org/211015/E39_Actor"
+  }, {
+    "@id" : "_:genid9"
+  } ]
+}, {
+  "@id" : "https://imagoarchive.it/ontology/Edition",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "In the IMAGO Ontology Edition is defined in order to express knowledge about first editions or reprinted editions"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Edition"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://erlangen-crm.org/211015/E55_Type"
+  } ]
+}, {
+  "@id" : "https://imagoarchive.it/ontology/Folios",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "In the IMAGO Ontology class Folios is used to represent the folios of a manuscript."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Folios"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://erlangen-crm.org/211015/E19_Physical_Object"
+  }, {
+    "@id" : "_:genid10"
+  } ]
+}, {
+  "@id" : "https://imagoarchive.it/ontology/Format",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "In the IMAGO Ontology Format class expresses knowledge about the format of a printed edition."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Format"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://erlangen-crm.org/211015/E55_Type"
+  }, {
+    "@id" : "_:genid11"
+  } ]
+}, {
+  "@id" : "https://imagoarchive.it/ontology/Genre",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "In the IMAGO Ontology the Genre class represents the literary genre of a F2 Expression, namely a work."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Genre"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://erlangen-crm.org/211015/E55_Type"
+  }, {
+    "@id" : "_:genid12"
+  } ]
+}, {
+  "@id" : "https://imagoarchive.it/ontology/ImagoGitHub",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://usefulinc.com/ns/doap#browse" : [ {
+    "@value" : "https://github.com/AIMH-DHgroup/IMAGO"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://usefulinc.com/ns/doap#GitRepository"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Imago GitHub repository"
+  } ]
+}, {
+  "@id" : "https://imagoarchive.it/ontology/IssueTracker",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://xmlns.com/foaf/0.1/Document"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Issue tracker of IMAGO Ontology"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@value" : "https://github.com/AIMH-DHgroup/IMAGO/issues"
+  } ]
+}, {
+  "@id" : "https://imagoarchive.it/ontology/Library",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "In the IMAGO Ontology class Library represents the library where a manuscript is stored."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Library"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://imagoarchive.it/ilrmoo/F11_Corporate_Body"
+  }, {
+    "@id" : "_:genid13"
+  } ]
+}, {
+  "@id" : "https://imagoarchive.it/ontology/Manuscript",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "In the IMAGO Ontology class Manuscript represents a kind of resource, the manuscript of a work."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Manuscript"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://imagoarchive.it/ilrmoo/F5_Item"
+  }, {
+    "@id" : "_:genid14"
+  }, {
+    "@id" : "_:genid15"
+  }, {
+    "@id" : "_:genid16"
+  } ]
+}, {
+  "@id" : "https://imagoarchive.it/ontology/Printed_Edition",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "In the IMAGO Ontology class Printed Edition represents a kind of resource, the printed edition of a work."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Printed Edition"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://imagoarchive.it/ilrmoo/F3_Manifestation"
+  } ]
+}, {
+  "@id" : "https://imagoarchive.it/ontology/Publisher",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "In the IMAGO Ontology Publisher class expresses knowledge about the editor/publisher of a printed edition."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Publisher"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://erlangen-crm.org/211015/E39_Actor"
+  }, {
+    "@id" : "_:genid17"
+  } ]
+}, {
+  "@id" : "https://imagoarchive.it/ontology/Toponym",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "In the IMAGO Ontology Toponym class is defined as a subclass of CRM E41 Appellation class to represents toponyms."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Toponym"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://erlangen-crm.org/211015/E41_Appellation"
+  } ]
+}, {
+  "@id" : "https://imagoarchive.it/ontology/Typology",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "In the IMAGO Ontology Typology is defined in order to express knowledge about ecdotic typology"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Typology"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://erlangen-crm.org/211015/E55_Type"
+  } ]
+}, {
+  "@id" : "https://imagoarchive.it/ontology/has_VDL_explanation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://imagoarchive.it/ontology/Toponym"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has VDL explanation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "https://imagoarchive.it/ontology/has_curator",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "In the IMAGO Ontology 'has curator' links a F30 Manifestation Creation to a Curator"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://imagoarchive.it/ilrmoo/F30_Manifestation_Creation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has curator"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://imagoarchive.it/ontology/Curator"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://erlangen-crm.org/211015/P14_carried_out_by"
+  } ]
+}, {
+  "@id" : "https://imagoarchive.it/ontology/has_figure_note",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "In the IMAGO Ontology 'has figure note' links Print Edition to a literal (string) in order to express knowledge about figures in the print edition"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://imagoarchive.it/ontology/Printed_Edition"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has figure note"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://erlangen-crm.org/211015/P3_has_note"
+  } ]
+}, {
+  "@id" : "https://imagoarchive.it/ontology/has_genre",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "In the IMAGO Ontology property hasGenre links F2 Expression to class Genre."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://imagoarchive.it/ilrmoo/F2_Expression"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has genre"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://imagoarchive.it/ontology/Genre"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://erlangen-crm.org/211015/P2_has_type"
+  } ]
+}, {
+  "@id" : "https://imagoarchive.it/ontology/has_genre_name",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "In the IMAGO Ontology has genre name links tha class Genre to the corresponding literal (a string)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://imagoarchive.it/ontology/Genre"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has genre name"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "https://imagoarchive.it/ontology/has_iconographic_apparatus",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "In the IMAGO Ontology has iconographic apparatus links Manuscript to a literal ( a string) in order to express knowledge about the iconographic apparatus of a manuscript."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://imagoarchive.it/ontology/Manuscript"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has iconographic apparatus"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://erlangen-crm.org/211015/P3_has_note"
+  } ]
+}, {
+  "@id" : "https://imagoarchive.it/ontology/has_introduction_note",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "In the IMAGO Ontology has introduction note links Print Edition to a literal (string) in order to express knowledge about the author of the introduction and dedications in a print edition"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://imagoarchive.it/ontology/Printed_Edition"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has introduction note"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://erlangen-crm.org/211015/P3_has_note"
+  } ]
+}, {
+  "@id" : "https://imagoarchive.it/ontology/has_other_contents",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "In the IMAGO Ontology 'has other contents' links Print Edition to a literal (string) in order to express knowledge about other contents in the print edition"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://imagoarchive.it/ontology/Printed_Edition"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has other contents"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://erlangen-crm.org/211015/P3_has_note"
+  } ]
+}, {
+  "@id" : "https://imagoarchive.it/ontology/has_primary_source",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "In the IMAGO Ontology 'has primary source' links Print Edition to a literal (string) in order to express knowledge about primary sources in the print edition"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://erlangen-crm.org/211015/E1_CRM_Entity"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has primary source"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://erlangen-crm.org/211015/P3_has_note"
+  } ]
+}, {
+  "@id" : "https://imagoarchive.it/ontology/has_publisher",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "In the IMAGO Ontology 'has publisher' links a F30 Manifestation Creation to a Publisher"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://imagoarchive.it/ilrmoo/F30_Manifestation_Creation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has publisher"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://imagoarchive.it/ontology/Publisher"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://erlangen-crm.org/211015/P14_carried_out_by"
+  } ]
+}, {
+  "@id" : "https://imagoarchive.it/ontology/has_reprint_date",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "In the IMAGO Ontology 'has reprint date' links Print Edition to a literal (string) in order to express knowledge about the date of reprints, facsimile or anastatic edition in the print edition"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://erlangen-crm.org/211015/E1_CRM_Entity"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has reprint date"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://erlangen-crm.org/211015/P3_has_note"
+  } ]
+}, {
+  "@id" : "https://imagoarchive.it/ontology/has_secondary_source",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "In the IMAGO Ontology 'has figure note' links Print Edition to a literal (string) in order to express knowledge about figures in the print edition and manuscript"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://erlangen-crm.org/211015/E1_CRM_Entity"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has secondary source"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://erlangen-crm.org/211015/P3_has_note"
+  } ]
+}, {
+  "@id" : "https://imagoarchive.it/ontology/has_textual_place",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://erlangen-crm.org/211015/E90_Symbolic_Object"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has textual place"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
+  } ]
+}, {
+  "@id" : "https://imagoarchive.it/ontology/has_url_manuscript",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "In the IMAGO Ontology 'has url manuscript' links Manuscript to a literal (anyURI) in order to express the URI of the digital representation of the manuscript"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://imagoarchive.it/ontology/Manuscript"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has url manuscript"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://erlangen-crm.org/211015/P3_has_note"
+  } ]
+}, {
+  "@id" : "https://imagoarchive.it/ontology/has_url_manuscript_description",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "In the IMAGO Ontology 'has url manuscript description' links Manuscript to a literal (anyURI) in order to express the URI of the digital description of the manuscript"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://imagoarchive.it/ontology/Manuscript"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has url manuscript description"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://erlangen-crm.org/211015/P3_has_note"
+  } ]
+}, {
+  "@id" : "https://imagoarchive.it/ontology/is_explicit_dedication",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "In the IMAGO Ontology 'is explicit dedication of' links E90 Symbolic Object to Manuscript class"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://erlangen-crm.org/211015/E90_Symbolic_Object"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "is explicit dedication of"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://imagoarchive.it/ilrmoo/F3_Manifestation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://erlangen-crm.org/211015/P106i_forms_part_of"
+  } ]
+}, {
+  "@id" : "https://imagoarchive.it/ontology/is_identified_by_toponym",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "In the IMAGO Ontology is identified by toponym relates a place to its toponym."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://erlangen-crm.org/211015/E53_Place"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "is identified by toponym"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://imagoarchive.it/ontology/Toponym"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://erlangen-crm.org/211015/P1_is_identified_by"
+  } ]
+}, {
+  "@id" : "https://imagoarchive.it/ontology/is_identified_in_the_printed_edition_by",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "In the IMAGO Ontology is identified in the printed edition by links E53 Place to E41 Appellation, hence a place to the name it is identified by in a printed edition."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://erlangen-crm.org/211015/E53_Place"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "is identified in the printed edition by"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://erlangen-crm.org/211015/E41_Appellation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://erlangen-crm.org/211015/P1_is_identified_by"
+  } ]
+}, {
+  "@id" : "https://imagoarchive.it/ontology/is_incipit_dedication_of",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "In the IMAGO Ontology 'is incipit dedication of' links E90 Symbolic Object to class Manuscript"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://erlangen-crm.org/211015/E90_Symbolic_Object"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "is incipit dedication of"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://imagoarchive.it/ilrmoo/F3_Manifestation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://erlangen-crm.org/211015/P106i_forms_part_of"
+  } ]
+}, {
+  "@id" : "https://imagoarchive.it/ontology/is_text_explicit_of",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "In the IMAGO Ontology 'is text explicit of' links E90 Symbolic Object to class Manuscript"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://erlangen-crm.org/211015/E90_Symbolic_Object"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "is text explicit of"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://imagoarchive.it/ilrmoo/F3_Manifestation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://erlangen-crm.org/211015/P106i_forms_part_of"
+  } ]
+}, {
+  "@id" : "https://imagoarchive.it/ontology/is_text_incipit_of",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "In the IMAGO Ontology 'is text incipit of' links E90 Symbolic Object to class Manuscript"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://erlangen-crm.org/211015/E90_Symbolic_Object"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "is text incipit of"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://imagoarchive.it/ilrmoo/F3_Manifestation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://erlangen-crm.org/211015/P106i_forms_part_of"
+  } ]
+}, {
+  "@id" : "https://imagoarchive.it/thes/is_composed_of_author",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "In the IMAGO Ontology 'is composed of author\" links a Print Edition to a E90 Symbolic Object"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://imagoarchive.it/ontology/Printed_Edition"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "is composed of author"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://erlangen-crm.org/211015/P106_is_composed_of"
+  } ]
+}, {
+  "@id" : "https://imagoarchive.it/thes/is_composed_of_pages",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "In the IMAGO Ontology 'is composed of author\" links a Print Edition to a E90 Symbolic Object"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://imagoarchive.it/ontology/Printed_Edition"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "is composed of pages"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://erlangen-crm.org/211015/P106_is_composed_of"
+  } ]
+}, {
+  "@id" : "https://imagoarchive.it/thes/is_composed_of_place_name",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "In the IMAGO Ontology 'is composed of author\" links a Print Edition to a Appellation of a Place"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://imagoarchive.it/ontology/Printed_Edition"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "is composed of place name"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://erlangen-crm.org/211015/E41_Appellation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://erlangen-crm.org/211015/P106_is_composed_of"
+  } ]
+}, {
+  "@id" : "https://www.isti.cnr.it/",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://xmlns.com/foaf/0.1/Organization"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "ISTI-CNR"
+  } ],
+  "http://xmlns.com/foaf/0.1/homepage" : [ {
+    "@id" : "https://www.isti.cnr.it/en/"
+  } ]
+}, {
+  "@id" : "https://www.isti.cnr.it/en/about/people-detail/38/Valentina_Bartalesi_Lenzi",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://xmlns.com/foaf/0.1/Person"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Valentina Bartalesi"
+  } ],
+  "http://xmlns.com/foaf/0.1/name" : [ {
+    "@value" : "Valentina Bartalesi Lenzi"
+  } ],
+  "http://xmlns.com/foaf/0.1/workplaceHomepage" : [ {
+    "@id" : "https://www.isti.cnr.it/en/"
+  } ]
+}, {
+  "@id" : "https://www.isti.cnr.it/en/about/people-detail/820/Nicol%C3%B2_Pratelli",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://xmlns.com/foaf/0.1/Person"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Nicolò Pratelli"
+  } ],
+  "http://xmlns.com/foaf/0.1/name" : [ {
+    "@value" : "Nicolò Pratelli"
+  } ],
+  "http://xmlns.com/foaf/0.1/workplaceHomepage" : [ {
+    "@id" : "https://www.isti.cnr.it/en/"
+  } ]
+}, {
+  "@id" : "https://www.isti.cnr.it/it/chi-siamo/people-detail/909/Emanuele_Lenzi",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Emanuele Lenzi"
+  } ],
+  "http://xmlns.com/foaf/0.1/workplaceHomepage" : [ {
+    "@value" : "https://www.isti.cnr.it/"
+  } ]
+} ]

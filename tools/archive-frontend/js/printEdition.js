@@ -26,7 +26,7 @@ console.log(sectionName);
     var search_prin =  "PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>" +
 	"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>" +
 	"PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>" +
-	"PREFIX ecrm: <http://erlangen-crm.org/200717/>" +
+	"PREFIX ecrm: <http://erlangen-crm.org/211015/>" +
 	"PREFIX ilrm: <http://imagoarchive.it/ilrmoo/>" +
 	"PREFIX : <https://imagoarchive.it/ontology/>" +
 	"SELECT DISTINCT ?printEditionCreation ?printEdition ?exp_cre ?author ?authorName ?titleWork ?l_author ?l_title ?l_curator ?r_place_print_edition ?l_place_print_edition ?l_coordinates ?l_place_name_as_appear ?l_date_print_edition ?l_publisher ?l_format ?l_pages ?l_figure ?l_notes ?l_prefatore ?l_edition ?l_date_edition ?l_primary_sources ?l_ecdotic ?l_sources ?l_other_contents ?annotator ?timestamp " +
@@ -43,17 +43,17 @@ console.log(sectionName);
 	" ?printEdition :compiled_form ?annotator ;" +
 	"               :last_mod_form ?timestamp ." +
 	"  ?printEditionCreation ilrm:R24_created ?printEdition ." +
-	"   OPTIONAL{ ?printEdition ecrm:P106_is_composed_of/ecrm:P190_has_symbolic_content ?l_author . }" +
+	"   OPTIONAL{ ?printEdition :is_composed_of_author/ecrm:P190_has_symbolic_content ?l_author . }" +
 	"   OPTIONAL{ ?printEdition ecrm:P102_has_title/ecrm:P190_has_symbolic_content ?l_title . }" +
 	"   OPTIONAL{ ?printEditionCreation :has_curator/ecrm:P1_is_identified_by/ecrm:P190_has_symbolic_content ?l_curator . }" +
 	"   OPTIONAL{ ?printEditionCreation ecrm:P7_took_place_at ?r_place_print_edition . }" +
 	"   OPTIONAL{ ?r_place_print_edition :is_identified_by_toponym/ecrm:P190_has_symbolic_content ?l_place_print_edition . } " +
 	"   OPTIONAL{ ?r_place_print_edition :P168_place_is_defined_by/ecrm:P190_has_symbolic_content ?l_coordinates . }" +
-	"   OPTIONAL{ ?printEdition :is_identified_in_the_printed_edition_by/ecrm:P190_has_symbolic_content ?l_place_name_as_appear . }" +
+	"   OPTIONAL{ ?printEdition :is_composed_of_place_name/ecrm:P190_has_symbolic_content ?l_place_name_as_appear . }" +
 	"   OPTIONAL{ ?printEditionCreation ecrm:P4_has_time-span/ecrm:P170i_time_is_defined_by ?l_date_print_edition . }" +
 	"   OPTIONAL{ ?printEditionCreation :has_publisher/ecrm:P1_is_identified_by/ecrm:P190_has_symbolic_content ?l_publisher . }" +
 	"   OPTIONAL{ ?printEdition ilrm:R69_has_physical_form/ecrm:P1_is_identified_by/ecrm:P190_has_symbolic_content ?l_format . }" +
-	"   OPTIONAL{ ?printEdition ecrm:P106_is_composed_of/ecrm:P1_is_identified_by/ecrm:P190_has_symbolic_content ?l_pages . }" +
+	"   OPTIONAL{ ?printEdition :is_composed_of_pages/ecrm:P190_has_symbolic_content ?l_pages . }" +
 	"   OPTIONAL{ ?printEdition :has_figure_note ?l_figure . }" +
 	"   OPTIONAL{ ?printEdition ecrm:P3_has_note ?l_notes . }" +
 	"   OPTIONAL{ ?printEdition :has_introduction_note ?l_prefatore . }" +
@@ -130,11 +130,11 @@ console.log(sectionName);
 
         prefatore = data.results.bindings[i].l_prefatore.value;
         otherContents = data.results.bindings[i].l_other_contents.value;
-        edition_text = data.results.bindings[i].l_edition.value;
+        try{edition_text = data.results.bindings[i].l_edition.value;} catch(e){edition_text = "-";}
         console.log(edition);
         dateEdition_text = data.results.bindings[i].l_date_edition.value;
         primarySources = data.results.bindings[i].l_primary_sources.value;
-        ecdotic = data.results.bindings[i].l_ecdotic.value;
+        try{ecdotic = data.results.bindings[i].l_ecdotic.value;} catch(e){ecdotic = "-";}
         
         sources = data.results.bindings[i].l_sources.value;
         var ulSources = document.createElement('ul');

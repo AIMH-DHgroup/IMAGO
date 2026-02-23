@@ -1,0 +1,2616 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" href="resources/primer.css" media="screen"/>
+<link rel="stylesheet" href="resources/rec.css" media="screen"/>
+<link rel="stylesheet" href="resources/extra.css" media="screen"/>
+<link rel="stylesheet" href="resources/owl.css" media="screen"/>
+<link rel="stylesheet" href="resources/dark.css" media="(prefers-color-scheme: dark)"/>
+<link rel="stylesheet" href="resources/light.css" media="(prefers-color-scheme: light)"/>
+<link rel="stylesheet" href="resources/slider.css" media="screen"/>
+<meta name="color-scheme" content="dark light">
+<script type="module" src="resources/dark-mode-toggle.mjs"></script><div class="darkmode">
+	<dark-mode-toggle class="slider"></dark-mode-toggle>
+</div>
+ <title>IMAGO Thesaurus of Genres (TID)</title>
+
+
+<!-- SCHEMA.ORG METADATA -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"http://imagoarchive.it/thes/tid/","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://imagoarchive.it/thes/tid/","name":"IMAGO Thesaurus of Genres (TID)", "headline":"Document describing the ontology http://imagoarchive.it/thes/tid/", "dateReleased":"2022-02-14", "dateModified":"2026-02-16", "version":"1.0.0", "license":"https://creativecommons.org/licenses/by-nc/4.0/", "author":[{"@type":"Person","name":"Valentina Bartalesi","url":"https://www.isti.cnr.it/en/about/people-detail/38/Valentina_Bartalesi_Lenzi"},{"@type":"Person","name":"Nicolò Pratelli","url":"https://www.isti.cnr.it/en/about/people-detail/820/Nicol%C3%B2_Pratelli"}], "contributor":[{"@type":"Person","name":"Emanuele Lenzi","url":"https://www.isti.cnr.it/it/chi-siamo/people-detail/909/Emanuele_Lenzi"},{"@type":"Person","name":"Luca Ruggio"},{"@type":"Person","name":"Paolo Pontari"}]}</script>
+
+<script src="resources/jquery.js"></script> 
+<script src="resources/marked.min.js"></script> 
+    <script> 
+function loadHash() {
+  jQuery(".markdown").each(function(el){jQuery(this).after(marked.parse(jQuery(this).text())).remove()});
+	var hash = location.hash;
+	if($(hash).offset()!=null){
+	  $('html, body').animate({scrollTop: $(hash).offset().top}, 0);
+}
+	loadTOC();
+}
+function loadTOC(){
+	//process toc dynamically
+	  var t='<h2>Table of contents</h2><ul>';i = 1;j=0;
+	  jQuery(".list").each(function(){
+		if(jQuery(this).is('h2')){
+			if(j>0){
+				t+='</ul>';
+				j=0;
+			}
+			t+= '<li>'+i+'. <a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+			i++;
+		}
+		if(jQuery(this).is('h3')){
+			if(j==0){
+				t+='<ul>';
+			}
+			j++;
+			t+= '<li>'+(i-1)+'.'+j+'. '+'<a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+		}
+	  });
+	  t+='</ul>';
+	  $("#toc").html(t); 
+}
+$(function(){
+    loadHash();
+}); $.fn.ignore = function(sel){
+        return this.clone().find(sel||">*").remove().end();
+ }; 
+   </script> 
+  </head> 
+
+<body>
+<div class="container">
+<div class="head">
+<div style="float:right">language <a href="index-en.html"><b>en</b></a> </div>
+<h1>IMAGO Thesaurus of Genres (TID)</h1>
+<h2>Release: 2022-02-14</h2>
+
+
+<dl>
+<dt>Modified on: 2026-02-16</dt>
+<dt>Latest version:</dt>
+<dd><a href="http://imagoarchive.it/thes/tid/">http://imagoarchive.it/thes/tid/</a></dd>
+<dt>Revision:</dt>
+<dd>1.0.0</dd>
+<dt>Issued on:</dt>
+<dd>2022-03-01</dd>
+<dt>Authors:</dt>
+<dd><a href="https://www.isti.cnr.it/en/about/people-detail/38/Valentina_Bartalesi_Lenzi">Valentina Bartalesi</a>, <a href="https://www.isti.cnr.it/">CNR-ISTI</a></dd><dd><a href="https://www.isti.cnr.it/en/about/people-detail/820/Nicol%C3%B2_Pratelli">Nicolò Pratelli</a>, CNR-ISTI</dd>
+
+<dt>Contributors:</dt>
+<dd><a href="https://www.isti.cnr.it/it/chi-siamo/people-detail/909/Emanuele_Lenzi">Emanuele Lenzi</a>, <a href="https://www.isti.cnr.it/">CNR-ISTI</a></dd><dd>Luca Ruggio, University of Pisa</dd><dd>Paolo Pontari, University of Pisa</dd>
+
+<dt>Publisher:</dt>
+<dd><a href="https://www.isti.cnr.it/">https://www.isti.cnr.it/</a></dd>
+<dt>Download serialization:</dt><dd><span><a href="ontology.jsonld" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ontology.owl" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License:</dt><dd><a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank"><img src="https://img.shields.io/badge/License-http://creativecommons.org/licenses/by/2.5/it/deed.it-blue.svg" alt="https://creativecommons.org/licenses/by-nc/4.0/" /></a>
+</dd><!-- <dt>Evaluation:</dt><dd><a href="OOPSevaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> --><dt>Cite as:</dt>
+<dd>Bartalesi V., Pratelli N. IMAGO Thesaurus of Genres (TID). Revision: 1.0.0.</dd>
+</dl>
+
+<hr/>
+</div>
+<div class="status">
+<div>
+<span>Ontology Specification Draft</span>
+</div>
+</div>     <div id="abstract"><h2>Abstract</h2><span class="markdown">
+This is a placeholder text for the abstract. The abstract should contain a couple of sentences summarizing the ontology and its purpose.</span>
+</div>
+<div id="toc"></div> 
+
+<!--INTRODUCTION SECTION-->
+    <div id="introduction"> <p>
+    This thesaurus has been designed to provide a controlled vocabulary for the
+    <strong>IMAGO genres</strong>, as defined and annotated within the IMAGO ontology
+    (<a href="https://imagoarchive.it/ontology" target="_blank" rel="noopener noreferrer">https://imagoarchive.it/ontology</a>).
+    Its primary purpose is to ensure terminological consistency, semantic clarity, and interoperability
+    in the description and indexing of genre-related concepts.
+  </p>
+  <p>
+    By establishing standardized preferred terms and structured semantic relationships, the thesaurus supports
+    coherent cataloguing, data integration, and advanced information retrieval. It is conceived not only as a
+    reference tool for human users but also as a machine-readable resource aligned with semantic web standards.
+  </p>
+  <p>
+    A further key objective of this thesaurus is to enable meaningful alignment and linking with external
+    controlled vocabularies, including the <em>Nuovo soggettario</em>, thereby enhancing cross-system
+    interoperability and enriching semantic connections across knowledge organization systems.
+  </p></div>
+  
+
+<!--OVERVIEW SECTION-->
+    <div id="overview"><p>
+    The thesaurus organizes IMAGO genre concepts into a structured semantic framework consistent with the IMAGO
+    ontology. Each concept is uniquely identified and embedded within a network of hierarchical and associative
+    relationships.
+  </p>
+  <ul>
+    <li><strong>Preferred Terms</strong> – Official genre labels used within the IMAGO ontology.</li>
+    <li><strong>Alternative Terms (Synonyms)</strong> – Variants and equivalent expressions.</li>
+    <li><strong>Broader and Narrower Terms</strong> – Hierarchical relationships that organize genres by scope and specificity.</li>
+    <li><strong>Related Terms</strong> – Associative links reflecting thematic or contextual proximity.</li>
+    <li><strong>Mappings to External Vocabularies</strong> – Cross-references to controlled vocabularies such as the <em>Nuovo soggettario</em> to promote semantic interoperability.</li>
+  </ul>
+  <p>
+    The thesaurus is represented using ontology modeling practices and semantic web standards to ensure both
+    human readability and machine interpretability.
+  </p></div>
+  
+
+<!--DESCRIPTION SECTION-->
+    <div id="description"> <p>
+    The IMAGO Genre Thesaurus functions as a semantic extension and controlled vocabulary layer for the IMAGO
+    ontology. It provides authoritative terminology for genre classification while maintaining flexibility for
+    future expansion and refinement.
+  </p>
+  <p>Each genre concept is assigned:</p>
+  <ul>
+    <li>a persistent identifier (URI)</li>
+    <li>a preferred label</li>
+    <li>alternative labels where applicable</li>
+    <li>defined semantic relationships</li>
+    <li>external mappings when available</li>
+  </ul>
+  <p>
+    Special attention has been given to interoperability. Concepts are linked, where possible, to equivalent or
+    closely related entries in the <em>Nuovo soggettario</em>, enabling integration with national and
+    institutional cataloguing systems.
+  </p>
+  <p>The guiding principles of the thesaurus include:</p>
+  <ul>
+    <li><strong>Terminological precision</strong> – Clear and unambiguous genre definitions.</li>
+    <li><strong>Semantic coherence</strong> – Logical hierarchical and associative structuring.</li>
+    <li><strong>Interoperability</strong> – Alignment with external vocabularies and semantic web standards.</li>
+    <li><strong>Sustainability</strong> – Capacity for updates and conceptual evolution over time.</li>
+  </ul>
+  <p>
+    Overall, this thesaurus supports consistent genre annotation within IMAGO while fostering broader semantic
+    connectivity across cultural heritage and bibliographic knowledge systems.
+  </p></div>
+   
+
+<!--CROSSREF SECTION-->
+   <div id="crossref"><h2 id="crossreference" class="list">Cross-reference for Imago Genre Thesaurus classes, object properties and data properties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by Imago Genre Thesaurus.
+<div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="annotationproperties">
+ <h3 id="annotationproperties" class="list">Annotation Properties</h3>
+ <ul class="hlist">
+  <li><a href="#http://www.w3.org/2004/02/skos/core#altLabel" title="http://www.w3.org/2004/02/skos/core#altLabel"> <span>alt Label</span> </a></li>
+  <li><a href="#http://www.w3.org/2008/05/skos-xl#altLabel" title="http://www.w3.org/2008/05/skos-xl#altLabel"> <span>alt Label</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/audience" title="http://purl.org/dc/terms/audience"> <span>audience</span> </a></li>
+  <li><a href="#http://www.w3.org/2004/02/skos/core#broader" title="http://www.w3.org/2004/02/skos/core#broader"> <span>broader</span> </a></li>
+  <li><a href="#http://www.w3.org/2004/02/skos/core#closeMatch" title="http://www.w3.org/2004/02/skos/core#closeMatch"> <span>close Match</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/conformsTo" title="http://purl.org/dc/terms/conformsTo"> <span>conforms To</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/contributor" title="http://purl.org/dc/terms/contributor"> <span>contributor</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/created" title="http://purl.org/dc/terms/created"> <span>created</span> </a></li>
+  <li><a href="#http://purl.org/dc/elements/1.1/creator" title="http://purl.org/dc/elements/1.1/creator"> <span>creator</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/creator" title="http://purl.org/dc/terms/creator"> <span>creator</span> </a></li>
+  <li><a href="#http://purl.org/dc/elements/1.1/date" title="http://purl.org/dc/elements/1.1/date"> <span>date</span> </a></li>
+  <li><a href="#http://www.w3.org/2004/02/skos/core#definition" title="http://www.w3.org/2004/02/skos/core#definition"> <span>definition</span> </a></li>
+  <li><a href="#http://purl.org/dc/elements/1.1/description" title="http://purl.org/dc/elements/1.1/description"> <span>description</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/description" title="http://purl.org/dc/terms/description"> <span>description</span> </a></li>
+  <li><a href="#http://www.w3.org/2004/02/skos/core#editorialNote" title="http://www.w3.org/2004/02/skos/core#editorialNote"> <span>editorial Note</span> </a></li>
+  <li><a href="#http://www.w3.org/2004/02/skos/core#example" title="http://www.w3.org/2004/02/skos/core#example"> <span>example</span> </a></li>
+  <li><a href="#http://purl.org/dc/elements/1.1/format" title="http://purl.org/dc/elements/1.1/format"> <span>format</span> </a></li>
+  <li><a href="#http://www.w3.org/2004/02/skos/core#hasTopConcept" title="http://www.w3.org/2004/02/skos/core#hasTopConcept"> <span>has Top Concept</span> </a></li>
+  <li><a href="#http://www.w3.org/2004/02/skos/core#historyNote" title="http://www.w3.org/2004/02/skos/core#historyNote"> <span>history Note</span> </a></li>
+  <li><a href="#http://xmlns.com/foaf/0.1/homepage" title="http://xmlns.com/foaf/0.1/homepage"> <span>homepage</span> </a></li>
+  <li><a href="#http://purl.org/dc/elements/1.1/identifier" title="http://purl.org/dc/elements/1.1/identifier"> <span>identifier</span> </a></li>
+  <li><a href="#http://www.w3.org/2004/02/skos/core#inScheme" title="http://www.w3.org/2004/02/skos/core#inScheme"> <span>in Scheme</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/isPartOf" title="http://purl.org/dc/terms/isPartOf"> <span>is Part Of</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/issued" title="http://purl.org/dc/terms/issued"> <span>issued</span> </a></li>
+  <li><a href="#http://purl.org/dc/elements/1.1/language" title="http://purl.org/dc/elements/1.1/language"> <span>language</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/license" title="http://purl.org/dc/terms/license"> <span>license</span> </a></li>
+  <li><a href="#http://www.w3.org/2008/05/skos-xl#literalForm" title="http://www.w3.org/2008/05/skos-xl#literalForm"> <span>literal Form</span> </a></li>
+  <li><a href="#http://www.w3.org/2004/02/skos/core#member" title="http://www.w3.org/2004/02/skos/core#member"> <span>member</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/modified" title="http://purl.org/dc/terms/modified"> <span>modified</span> </a></li>
+  <li><a href="#http://www.w3.org/2004/02/skos/core#narrower" title="http://www.w3.org/2004/02/skos/core#narrower"> <span>narrower</span> </a></li>
+  <li><a href="#http://www.w3.org/2004/02/skos/core#notation" title="http://www.w3.org/2004/02/skos/core#notation"> <span>notation</span> </a></li>
+  <li><a href="#http://prefix.cc/nsogiobsoleteTerm" title="http://prefix.cc/nsogiobsoleteTerm"> <span>nsogiobsolete Term</span> </a></li>
+  <li><a href="#http://www.w3.org/2004/02/skos/core#prefLabel" title="http://www.w3.org/2004/02/skos/core#prefLabel"> <span>pref Label</span> </a></li>
+  <li><a href="#http://purl.org/vocab/vann/preferredNamespacePrefix" title="http://purl.org/vocab/vann/preferredNamespacePrefix"> <span>preferred Namespace Prefix</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/publisher" title="http://purl.org/dc/terms/publisher"> <span>publisher</span> </a></li>
+  <li><a href="#http://www.w3.org/2004/02/skos/core#related" title="http://www.w3.org/2004/02/skos/core#related"> <span>related</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/rightsHolder" title="http://purl.org/dc/terms/rightsHolder"> <span>rights Holder</span> </a></li>
+  <li><a href="#http://www.w3.org/2004/02/skos/core#scopeNote" title="http://www.w3.org/2004/02/skos/core#scopeNote"> <span>scope Note</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/subject" title="http://purl.org/dc/terms/subject"> <span>subject</span> </a></li>
+  <li><a href="#http://purl.org/dc/elements/1.1/title" title="http://purl.org/dc/elements/1.1/title"> <span>title</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/title" title="http://purl.org/dc/terms/title"> <span>title</span> </a></li>
+  <li><a href="#http://www.w3.org/2004/02/skos/core#topConceptOf" title="http://www.w3.org/2004/02/skos/core#topConceptOf"> <span>top Concept Of</span> </a></li>
+  <li><a href="#http://www.w3.org/ns/prov#wasGeneratedBy" title="http://www.w3.org/ns/prov#wasGeneratedBy"> <span>was Generated By</span> </a></li>
+ </ul>
+ <div class="entity" id="http://www.w3.org/2004/02/skos/core#altLabel">
+  <h3>alt Label<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/2004/02/skos/core#altLabel</p>
+ </div>
+ <div class="entity" id="http://www.w3.org/2008/05/skos-xl#altLabel">
+  <h3>alt Label<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/2008/05/skos-xl#altLabel</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/audience">
+  <h3>audience<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/audience</p>
+ </div>
+ <div class="entity" id="http://www.w3.org/2004/02/skos/core#broader">
+  <h3>broader<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/2004/02/skos/core#broader</p>
+ </div>
+ <div class="entity" id="http://www.w3.org/2004/02/skos/core#closeMatch">
+  <h3>close Match<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/2004/02/skos/core#closeMatch</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/conformsTo">
+  <h3>conforms To<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/conformsTo</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/contributor">
+  <h3>contributor<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/contributor</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/created">
+  <h3>created<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/created</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/elements/1.1/creator">
+  <h3>creator<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/elements/1.1/creator</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/creator">
+  <h3>creator<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/creator</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/elements/1.1/date">
+  <h3>date<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/elements/1.1/date</p>
+ </div>
+ <div class="entity" id="http://www.w3.org/2004/02/skos/core#definition">
+  <h3>definition<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/2004/02/skos/core#definition</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/elements/1.1/description">
+  <h3>description<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/elements/1.1/description</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/description">
+  <h3>description<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/description</p>
+ </div>
+ <div class="entity" id="http://www.w3.org/2004/02/skos/core#editorialNote">
+  <h3>editorial Note<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/2004/02/skos/core#editorialNote</p>
+ </div>
+ <div class="entity" id="http://www.w3.org/2004/02/skos/core#example">
+  <h3>example<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/2004/02/skos/core#example</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/elements/1.1/format">
+  <h3>format<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/elements/1.1/format</p>
+ </div>
+ <div class="entity" id="http://www.w3.org/2004/02/skos/core#hasTopConcept">
+  <h3>has Top Concept<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/2004/02/skos/core#hasTopConcept</p>
+ </div>
+ <div class="entity" id="http://www.w3.org/2004/02/skos/core#historyNote">
+  <h3>history Note<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/2004/02/skos/core#historyNote</p>
+ </div>
+ <div class="entity" id="http://xmlns.com/foaf/0.1/homepage">
+  <h3>homepage<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://xmlns.com/foaf/0.1/homepage</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/elements/1.1/identifier">
+  <h3>identifier<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/elements/1.1/identifier</p>
+ </div>
+ <div class="entity" id="http://www.w3.org/2004/02/skos/core#inScheme">
+  <h3>in Scheme<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/2004/02/skos/core#inScheme</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/isPartOf">
+  <h3>is Part Of<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/isPartOf</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/issued">
+  <h3>issued<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/issued</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/elements/1.1/language">
+  <h3>language<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/elements/1.1/language</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/license">
+  <h3>license<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/license</p>
+ </div>
+ <div class="entity" id="http://www.w3.org/2008/05/skos-xl#literalForm">
+  <h3>literal Form<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/2008/05/skos-xl#literalForm</p>
+ </div>
+ <div class="entity" id="http://www.w3.org/2004/02/skos/core#member">
+  <h3>member<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/2004/02/skos/core#member</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/modified">
+  <h3>modified<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/modified</p>
+ </div>
+ <div class="entity" id="http://www.w3.org/2004/02/skos/core#narrower">
+  <h3>narrower<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/2004/02/skos/core#narrower</p>
+ </div>
+ <div class="entity" id="http://www.w3.org/2004/02/skos/core#notation">
+  <h3>notation<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/2004/02/skos/core#notation</p>
+ </div>
+ <div class="entity" id="http://prefix.cc/nsogiobsoleteTerm">
+  <h3>nsogiobsolete Term<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://prefix.cc/nsogiobsoleteTerm</p>
+ </div>
+ <div class="entity" id="http://www.w3.org/2004/02/skos/core#prefLabel">
+  <h3>pref Label<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/2004/02/skos/core#prefLabel</p>
+ </div>
+ <div class="entity" id="http://purl.org/vocab/vann/preferredNamespacePrefix">
+  <h3>preferred Namespace Prefix<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/vocab/vann/preferredNamespacePrefix</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/publisher">
+  <h3>publisher<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/publisher</p>
+ </div>
+ <div class="entity" id="http://www.w3.org/2004/02/skos/core#related">
+  <h3>related<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/2004/02/skos/core#related</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/rightsHolder">
+  <h3>rights Holder<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/rightsHolder</p>
+ </div>
+ <div class="entity" id="http://www.w3.org/2004/02/skos/core#scopeNote">
+  <h3>scope Note<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/2004/02/skos/core#scopeNote</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/subject">
+  <h3>subject<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/subject</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/elements/1.1/title">
+  <h3>title<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/elements/1.1/title</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/title">
+  <h3>title<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/title</p>
+ </div>
+ <div class="entity" id="http://www.w3.org/2004/02/skos/core#topConceptOf">
+  <h3>top Concept Of<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/2004/02/skos/core#topConceptOf</p>
+ </div>
+ <div class="entity" id="http://www.w3.org/ns/prov#wasGeneratedBy">
+  <h3>was Generated By<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/ns/prov#wasGeneratedBy</p>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="namedindividuals">
+ <h3 id="namedindividuals" class="list">Named Individuals</h3>
+ <ul class="hlist">
+  <li><a href="#10004" title="http://imagoarchive.it/thes/tid/10004">Agiografia</a></li>
+  <li><a href="#1000913" title="http://imagoarchive.it/thes/tid/1000913">Aneddotica</a></li>
+  <li><a href="#1000901" title="http://imagoarchive.it/thes/tid/1000901">Annalistica</a></li>
+  <li><a href="#1000910" title="http://imagoarchive.it/thes/tid/1000910">Autobiografie</a></li>
+  <li><a href="#1000911" title="http://imagoarchive.it/thes/tid/1000911">Biografie e collane di biografie</a></li>
+  <li><a href="#100034" title="http://imagoarchive.it/thes/tid/100034">Carte topografiche</a></li>
+  <li><a href="#10003" title="http://imagoarchive.it/thes/tid/10003">Cartografia</a></li>
+  <li><a href="#100102" title="http://imagoarchive.it/thes/tid/100102">Commedia elegiaca</a></li>
+  <li><a href="#100103" title="http://imagoarchive.it/thes/tid/100103">Commedia umanistica</a></li>
+  <li><a href="#1000909" title="http://imagoarchive.it/thes/tid/1000909">Commentari</a></li>
+  <li><a href="#100012" title="http://imagoarchive.it/thes/tid/100012">Corografie</a></li>
+  <li><a href="#100011" title="http://imagoarchive.it/thes/tid/100011">Cosmografie</a></li>
+  <li><a href="#1000908" title="http://imagoarchive.it/thes/tid/1000908">Cronache</a></li>
+  <li><a href="#100014" title="http://imagoarchive.it/thes/tid/100014">Descriptiones</a></li>
+  <li><a href="#100026" title="http://imagoarchive.it/thes/tid/100026">Diari di viaggio</a></li>
+  <li><a href="#100101" title="http://imagoarchive.it/thes/tid/100101">Dramma sacro</a></li>
+  <li><a href="#100105" title="http://imagoarchive.it/thes/tid/100105">Dramma storico</a></li>
+  <li><a href="#100082" title="http://imagoarchive.it/thes/tid/100082">Elegie</a></li>
+  <li><a href="#100084" title="http://imagoarchive.it/thes/tid/100084">Epica</a></li>
+  <li><a href="#10006" title="http://imagoarchive.it/thes/tid/10006">Epistolografia</a></li>
+  <li><a href="#1000912" title="http://imagoarchive.it/thes/tid/1000912">Genealogie</a></li>
+  <li><a href="#1000" title="http://imagoarchive.it/thes/tid/1000">Generi letterari</a></li>
+  <li><a href="#" title="http://imagoarchive.it/thes/tid/"> <span>Imago Genre Thesaurus</span> </a></li>
+  <li><a href="#100013" title="http://imagoarchive.it/thes/tid/100013">Insulari</a></li>
+  <li><a href="#100021" title="http://imagoarchive.it/thes/tid/100021">Itineraria</a></li>
+  <li><a href="#1000905" title="http://imagoarchive.it/thes/tid/1000905">Ktiseis</a></li>
+  <li><a href="#1000904" title="http://imagoarchive.it/thes/tid/1000904">Laudes urbium</a></li>
+  <li><a href="#10002" title="http://imagoarchive.it/thes/tid/10002">Letteratura odeporica</a></li>
+  <li><a href="#1000907" title="http://imagoarchive.it/thes/tid/1000907">Memorialistica</a></li>
+  <li><a href="#100044" title="http://imagoarchive.it/thes/tid/100044">Miracula</a></li>
+  <li><a href="#1000903" title="http://imagoarchive.it/thes/tid/1000903">Monografie storiche</a></li>
+  <li><a href="#100025" title="http://imagoarchive.it/thes/tid/100025">Navigazioni</a></li>
+  <li><a href="#10007" title="http://imagoarchive.it/thes/tid/10007">Novellistica</a></li>
+  <li><a href="#1000906" title="http://imagoarchive.it/thes/tid/1000906">Panegiristica</a></li>
+  <li><a href="#100041" title="http://imagoarchive.it/thes/tid/100041">Passiones</a></li>
+  <li><a href="#100022" title="http://imagoarchive.it/thes/tid/100022">Peregrinationes</a></li>
+  <li><a href="#100023" title="http://imagoarchive.it/thes/tid/100023">Periegesi</a></li>
+  <li><a href="#100024" title="http://imagoarchive.it/thes/tid/100024">Peripli</a></li>
+  <li><a href="#100032" title="http://imagoarchive.it/thes/tid/100032">Planisferi e mappamondi</a></li>
+  <li><a href="#10008" title="http://imagoarchive.it/thes/tid/10008">Poesia</a></li>
+  <li><a href="#100086" title="http://imagoarchive.it/thes/tid/100086">Poesia bucolica</a></li>
+  <li><a href="#100085" title="http://imagoarchive.it/thes/tid/100085">Poesia didascalica</a></li>
+  <li><a href="#100081" title="http://imagoarchive.it/thes/tid/100081">Poesia lirica</a></li>
+  <li><a href="#100083" title="http://imagoarchive.it/thes/tid/100083">Poesia satirica</a></li>
+  <li><a href="#100033" title="http://imagoarchive.it/thes/tid/100033">Portolani e carte nautiche</a></li>
+  <li><a href="#1000902" title="http://imagoarchive.it/thes/tid/1000902">Storia patria</a></li>
+  <li><a href="#10009" title="http://imagoarchive.it/thes/tid/10009">Storiografia</a></li>
+  <li><a href="#100031" title="http://imagoarchive.it/thes/tid/100031">Tabulae</a></li>
+  <li><a href="#10010" title="http://imagoarchive.it/thes/tid/10010">Teatro</a></li>
+  <li><a href="#https://imagoarchive.it/thes/ThesCF1" title="https://imagoarchive.it/thes/ThesCF1"> <span>Thes C F1</span> </a></li>
+  <li><a href="#100104" title="http://imagoarchive.it/thes/tid/100104">Tragedia umanistica</a></li>
+  <li><a href="#100043" title="http://imagoarchive.it/thes/tid/100043">Translationes</a></li>
+  <li><a href="#10005" title="http://imagoarchive.it/thes/tid/10005">Trattatistica antiquaria e archeologica</a></li>
+  <li><a href="#10001" title="http://imagoarchive.it/thes/tid/10001">Trattatistica geografica</a></li>
+  <li><a href="#10011" title="http://imagoarchive.it/thes/tid/10011">Trattatistica termale</a></li>
+  <li><a href="#100042" title="http://imagoarchive.it/thes/tid/100042">Vitae</a></li>
+ </ul>
+ <div class="entity" id="10004">
+  <h3>Agiografia<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://imagoarchive.it/thes/tid/10004</p>
+  <dl>
+   <dt>
+    Date:
+   </dt>
+   <dd>
+    14/02/2022
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#Concept" target="_blank" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#altLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#altLabel">alt Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Hagiography"@en</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#broader" target="_blank" title="http://www.w3.org/2004/02/skos/core#broader">broader</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#1000" title="http://imagoarchive.it/thes/tid/1000">Generi letterari</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#closeMatch" target="_blank" title="http://www.w3.org/2004/02/skos/core#closeMatch">close Match</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"http://data.bnf.fr/ark:/12148/cb11948106z"</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#closeMatch" target="_blank" title="http://www.w3.org/2004/02/skos/core#closeMatch">close Match</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"http://datos.bne.es/tema/XX5288271"</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#closeMatch" target="_blank" title="http://www.w3.org/2004/02/skos/core#closeMatch">close Match</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"http://purl.org/bncf/tid/24527"</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#narrower" target="_blank" title="http://www.w3.org/2004/02/skos/core#narrower">narrower</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#100041" title="http://imagoarchive.it/thes/tid/100041">Passiones</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#narrower" target="_blank" title="http://www.w3.org/2004/02/skos/core#narrower">narrower</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#100042" title="http://imagoarchive.it/thes/tid/100042">Vitae</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#narrower" target="_blank" title="http://www.w3.org/2004/02/skos/core#narrower">narrower</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#100043" title="http://imagoarchive.it/thes/tid/100043">Translationes</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#narrower" target="_blank" title="http://www.w3.org/2004/02/skos/core#narrower">narrower</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#100044" title="http://imagoarchive.it/thes/tid/100044">Miracula</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Agiografia"@it</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="1000913">
+  <h3>Aneddotica<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://imagoarchive.it/thes/tid/1000913</p>
+  <dl>
+   <dt>
+    Date:
+   </dt>
+   <dd>
+    14/02/2022
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#Concept" target="_blank" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#altLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#altLabel">alt Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Anecdotal"@en</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#broader" target="_blank" title="http://www.w3.org/2004/02/skos/core#broader">broader</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#10009" title="http://imagoarchive.it/thes/tid/10009">Storiografia</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Aneddotica"@it</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="1000901">
+  <h3>Annalistica<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://imagoarchive.it/thes/tid/1000901</p>
+  <dl>
+   <dt>
+    Date:
+   </dt>
+   <dd>
+    14/02/2022
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#Concept" target="_blank" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#altLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#altLabel">alt Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Annalists"@en</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#broader" target="_blank" title="http://www.w3.org/2004/02/skos/core#broader">broader</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#10009" title="http://imagoarchive.it/thes/tid/10009">Storiografia</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Annalistica"@it</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="1000910">
+  <h3>Autobiografie<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://imagoarchive.it/thes/tid/1000910</p>
+  <dl>
+   <dt>
+    Date:
+   </dt>
+   <dd>
+    14/02/2022
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#Concept" target="_blank" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#altLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#altLabel">alt Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Autobiography"@en</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#broader" target="_blank" title="http://www.w3.org/2004/02/skos/core#broader">broader</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#10009" title="http://imagoarchive.it/thes/tid/10009">Storiografia</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#closeMatch" target="_blank" title="http://www.w3.org/2004/02/skos/core#closeMatch">close Match</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"http://datos.bne.es/tema/XX529325"</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#closeMatch" target="_blank" title="http://www.w3.org/2004/02/skos/core#closeMatch">close Match</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"http://purl.org/bncf/tid/13809"</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Autobiografie"@it</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="1000911">
+  <h3>Biografie e collane di biografie<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://imagoarchive.it/thes/tid/1000911</p>
+  <dl>
+   <dt>
+    Date:
+   </dt>
+   <dd>
+    14/02/2022
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#Concept" target="_blank" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#altLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#altLabel">alt Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Biographies and biography series"@en</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#broader" target="_blank" title="http://www.w3.org/2004/02/skos/core#broader">broader</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#10009" title="http://imagoarchive.it/thes/tid/10009">Storiografia</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#closeMatch" target="_blank" title="http://www.w3.org/2004/02/skos/core#closeMatch">close Match</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"http://datos.bne.es/tema/XX558607"</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#closeMatch" target="_blank" title="http://www.w3.org/2004/02/skos/core#closeMatch">close Match</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"http://id.loc.gov/authorities/sh85014152"</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#closeMatch" target="_blank" title="http://www.w3.org/2004/02/skos/core#closeMatch">close Match</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"http://purl.org/bncf/tid/8985"</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Biografie e collane di biografie"@it</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="100034">
+  <h3>Carte topografiche<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://imagoarchive.it/thes/tid/100034</p>
+  <dl>
+   <dt>
+    Date:
+   </dt>
+   <dd>
+    14/02/2022
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#Concept" target="_blank" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#altLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#altLabel">alt Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Topographic maps"@en</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#broader" target="_blank" title="http://www.w3.org/2004/02/skos/core#broader">broader</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#10003" title="http://imagoarchive.it/thes/tid/10003">Cartografia</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#closeMatch" target="_blank" title="http://www.w3.org/2004/02/skos/core#closeMatch">close Match</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"http://d-nb.info/gnd/4322897-5"</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#closeMatch" target="_blank" title="http://www.w3.org/2004/02/skos/core#closeMatch">close Match</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"http://data.bnf.fr/ark:/12148/cb11958033s"</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#closeMatch" target="_blank" title="http://www.w3.org/2004/02/skos/core#closeMatch">close Match</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"http://id.loc.gov/authorities/sh85136074"</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#closeMatch" target="_blank" title="http://www.w3.org/2004/02/skos/core#closeMatch">close Match</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"http://purl.org/bncf/tid/9065"</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Carte topografiche"@it</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="10003">
+  <h3>Cartografia<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://imagoarchive.it/thes/tid/10003</p>
+  <dl>
+   <dt>
+    Date:
+   </dt>
+   <dd>
+    14/02/2022
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#Concept" target="_blank" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#altLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#altLabel">alt Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Cartography"@en</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#broader" target="_blank" title="http://www.w3.org/2004/02/skos/core#broader">broader</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#1000" title="http://imagoarchive.it/thes/tid/1000">Generi letterari</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#closeMatch" target="_blank" title="http://www.w3.org/2004/02/skos/core#closeMatch">close Match</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"http://data.bnf.fr/ark:/12148/cb11936066v"</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#closeMatch" target="_blank" title="http://www.w3.org/2004/02/skos/core#closeMatch">close Match</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"http://datos.bne.es/tema/XX4583634"</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#closeMatch" target="_blank" title="http://www.w3.org/2004/02/skos/core#closeMatch">close Match</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"http://id.loc.gov/authorities/sh85020515"</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#closeMatch" target="_blank" title="http://www.w3.org/2004/02/skos/core#closeMatch">close Match</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"http://purl.org/bncf/tid/1322"</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#narrower" target="_blank" title="http://www.w3.org/2004/02/skos/core#narrower">narrower</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#100031" title="http://imagoarchive.it/thes/tid/100031">Tabulae</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#narrower" target="_blank" title="http://www.w3.org/2004/02/skos/core#narrower">narrower</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#100032" title="http://imagoarchive.it/thes/tid/100032">Planisferi e mappamondi</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#narrower" target="_blank" title="http://www.w3.org/2004/02/skos/core#narrower">narrower</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#100033" title="http://imagoarchive.it/thes/tid/100033">Portolani e carte nautiche</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#narrower" target="_blank" title="http://www.w3.org/2004/02/skos/core#narrower">narrower</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#100034" title="http://imagoarchive.it/thes/tid/100034">Carte topografiche</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Cartografia"@it</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="100102">
+  <h3>Commedia elegiaca<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://imagoarchive.it/thes/tid/100102</p>
+  <dl>
+   <dt>
+    Date:
+   </dt>
+   <dd>
+    14/02/2022
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#Concept" target="_blank" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#altLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#altLabel">alt Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Elegiac comedy"@en</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#broader" target="_blank" title="http://www.w3.org/2004/02/skos/core#broader">broader</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#10010" title="http://imagoarchive.it/thes/tid/10010">Teatro</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Commedia elegiaca"@it</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="100103">
+  <h3>Commedia umanistica<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://imagoarchive.it/thes/tid/100103</p>
+  <dl>
+   <dt>
+    Date:
+   </dt>
+   <dd>
+    14/02/2022
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#Concept" target="_blank" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#altLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#altLabel">alt Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Humanistic comedy"@en</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#broader" target="_blank" title="http://www.w3.org/2004/02/skos/core#broader">broader</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#10010" title="http://imagoarchive.it/thes/tid/10010">Teatro</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Commedia umanistica"@it</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="1000909">
+  <h3>Commentari<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://imagoarchive.it/thes/tid/1000909</p>
+  <dl>
+   <dt>
+    Date:
+   </dt>
+   <dd>
+    14/02/2022
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#Concept" target="_blank" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#altLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#altLabel">alt Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Commentaries"@en</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#broader" target="_blank" title="http://www.w3.org/2004/02/skos/core#broader">broader</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#10009" title="http://imagoarchive.it/thes/tid/10009">Storiografia</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Commentari"@it</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="100012">
+  <h3>Corografie<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://imagoarchive.it/thes/tid/100012</p>
+  <dl>
+   <dt>
+    Date:
+   </dt>
+   <dd>
+    14/02/2022
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#Concept" target="_blank" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#altLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#altLabel">alt Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Chorographies"@en</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#broader" target="_blank" title="http://www.w3.org/2004/02/skos/core#broader">broader</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#10001" title="http://imagoarchive.it/thes/tid/10001">Trattatistica geografica</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#closeMatch" target="_blank" title="http://www.w3.org/2004/02/skos/core#closeMatch">close Match</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"http://purl.org/bncf/tid/17638"</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Corografie"@it</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="100011">
+  <h3>Cosmografie<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://imagoarchive.it/thes/tid/100011</p>
+  <dl>
+   <dt>
+    Date:
+   </dt>
+   <dd>
+    14/02/2022
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#Concept" target="_blank" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#altLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#altLabel">alt Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Cosmographies"@en</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#broader" target="_blank" title="http://www.w3.org/2004/02/skos/core#broader">broader</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#10001" title="http://imagoarchive.it/thes/tid/10001">Trattatistica geografica</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#closeMatch" target="_blank" title="http://www.w3.org/2004/02/skos/core#closeMatch">close Match</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"http://purl.org/bncf/tid/19024"</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Cosmografie"@it</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="1000908">
+  <h3>Cronache<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://imagoarchive.it/thes/tid/1000908</p>
+  <dl>
+   <dt>
+    Date:
+   </dt>
+   <dd>
+    14/02/2022
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#Concept" target="_blank" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#altLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#altLabel">alt Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Chronicles"@en</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#broader" target="_blank" title="http://www.w3.org/2004/02/skos/core#broader">broader</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#10009" title="http://imagoarchive.it/thes/tid/10009">Storiografia</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#closeMatch" target="_blank" title="http://www.w3.org/2004/02/skos/core#closeMatch">close Match</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"http://purl.org/bncf/tid/6654"</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Cronache"@it</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="100014">
+  <h3>Descriptiones<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://imagoarchive.it/thes/tid/100014</p>
+  <dl>
+   <dt>
+    Date:
+   </dt>
+   <dd>
+    14/02/2022
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#Concept" target="_blank" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#altLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#altLabel">alt Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Descriptiones"@en</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#broader" target="_blank" title="http://www.w3.org/2004/02/skos/core#broader">broader</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#10001" title="http://imagoarchive.it/thes/tid/10001">Trattatistica geografica</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Descriptiones"@la</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="100026">
+  <h3>Diari di viaggio<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://imagoarchive.it/thes/tid/100026</p>
+  <dl>
+   <dt>
+    Date:
+   </dt>
+   <dd>
+    14/02/2022
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#Concept" target="_blank" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#altLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#altLabel">alt Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Travel diaries"@en</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#broader" target="_blank" title="http://www.w3.org/2004/02/skos/core#broader">broader</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#10002" title="http://imagoarchive.it/thes/tid/10002">Letteratura odeporica</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Diari di viaggio"@it</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="100101">
+  <h3>Dramma sacro<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://imagoarchive.it/thes/tid/100101</p>
+  <dl>
+   <dt>
+    Date:
+   </dt>
+   <dd>
+    14/02/2022
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#Concept" target="_blank" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#altLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#altLabel">alt Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Sacred drama"@en</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#broader" target="_blank" title="http://www.w3.org/2004/02/skos/core#broader">broader</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#10010" title="http://imagoarchive.it/thes/tid/10010">Teatro</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#closeMatch" target="_blank" title="http://www.w3.org/2004/02/skos/core#closeMatch">close Match</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"http://purl.org/bncf/tid/29878"</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Dramma sacro"@it</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="100105">
+  <h3>Dramma storico<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://imagoarchive.it/thes/tid/100105</p>
+  <dl>
+   <dt>
+    Date:
+   </dt>
+   <dd>
+    14/02/2022
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#Concept" target="_blank" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#altLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#altLabel">alt Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Historical drama"@en</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#broader" target="_blank" title="http://www.w3.org/2004/02/skos/core#broader">broader</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#10010" title="http://imagoarchive.it/thes/tid/10010">Teatro</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#closeMatch" target="_blank" title="http://www.w3.org/2004/02/skos/core#closeMatch">close Match</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"http://id.loc.gov/authorities/sh85061150"</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#closeMatch" target="_blank" title="http://www.w3.org/2004/02/skos/core#closeMatch">close Match</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"http://purl.org/bncf/tid/8497"</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Dramma storico"@it</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="100082">
+  <h3>Elegie<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://imagoarchive.it/thes/tid/100082</p>
+  <dl>
+   <dt>
+    Date:
+   </dt>
+   <dd>
+    14/02/2022
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#Concept" target="_blank" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#altLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#altLabel">alt Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Elegies"@en</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#broader" target="_blank" title="http://www.w3.org/2004/02/skos/core#broader">broader</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#10008" title="http://imagoarchive.it/thes/tid/10008">Poesia</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#closeMatch" target="_blank" title="http://www.w3.org/2004/02/skos/core#closeMatch">close Match</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"http://data.bnf.fr/ark:/12148/cb11934307p"</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#closeMatch" target="_blank" title="http://www.w3.org/2004/02/skos/core#closeMatch">close Match</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"http://id.loc.gov/authorities/sh85042473"</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#closeMatch" target="_blank" title="http://www.w3.org/2004/02/skos/core#closeMatch">close Match</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"http://purl.org/bncf/tid/24696"</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Elegie"@it</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="100084">
+  <h3>Epica<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://imagoarchive.it/thes/tid/100084</p>
+  <dl>
+   <dt>
+    Date:
+   </dt>
+   <dd>
+    14/02/2022
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#Concept" target="_blank" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#altLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#altLabel">alt Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Epic"@en</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#broader" target="_blank" title="http://www.w3.org/2004/02/skos/core#broader">broader</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#10008" title="http://imagoarchive.it/thes/tid/10008">Poesia</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#closeMatch" target="_blank" title="http://www.w3.org/2004/02/skos/core#closeMatch">close Match</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"http://id.loc.gov/authorities/sh85044306"</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#closeMatch" target="_blank" title="http://www.w3.org/2004/02/skos/core#closeMatch">close Match</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"http://purl.org/bncf/tid/11172"</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Epica"@it</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="10006">
+  <h3>Epistolografia<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://imagoarchive.it/thes/tid/10006</p>
+  <dl>
+   <dt>
+    Date:
+   </dt>
+   <dd>
+    14/02/2022
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#Concept" target="_blank" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#altLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#altLabel">alt Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Letter writing"@en</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#broader" target="_blank" title="http://www.w3.org/2004/02/skos/core#broader">broader</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#1000" title="http://imagoarchive.it/thes/tid/1000">Generi letterari</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#closeMatch" target="_blank" title="http://www.w3.org/2004/02/skos/core#closeMatch">close Match</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"http://d-nb.info/gnd/4269486-3"</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#closeMatch" target="_blank" title="http://www.w3.org/2004/02/skos/core#closeMatch">close Match</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"http://data.bnf.fr/ark:/12148/cb119473486"</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#closeMatch" target="_blank" title="http://www.w3.org/2004/02/skos/core#closeMatch">close Match</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"http://id.loc.gov/authorities/sh85076220"</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#closeMatch" target="_blank" title="http://www.w3.org/2004/02/skos/core#closeMatch">close Match</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"http://purl.org/bncf/tid/2921"</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Epistolografia"@it</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="1000912">
+  <h3>Genealogie<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://imagoarchive.it/thes/tid/1000912</p>
+  <dl>
+   <dt>
+    Date:
+   </dt>
+   <dd>
+    14/02/2022
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#Concept" target="_blank" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#altLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#altLabel">alt Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Genealogy"@en</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#broader" target="_blank" title="http://www.w3.org/2004/02/skos/core#broader">broader</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#10009" title="http://imagoarchive.it/thes/tid/10009">Storiografia</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#closeMatch" target="_blank" title="http://www.w3.org/2004/02/skos/core#closeMatch">close Match</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"http://data.bnf.fr/ark:/12148/cb11934650n"</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#closeMatch" target="_blank" title="http://www.w3.org/2004/02/skos/core#closeMatch">close Match</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"http://datos.bne.es/tema/XX525775"</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#closeMatch" target="_blank" title="http://www.w3.org/2004/02/skos/core#closeMatch">close Match</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"http://id.loc.gov/authorities/sh85053742"</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#closeMatch" target="_blank" title="http://www.w3.org/2004/02/skos/core#closeMatch">close Match</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"http://purl.org/bncf/tid/29255"</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Genealogie"@it</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="1000">
+  <h3>Generi letterari<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://imagoarchive.it/thes/tid/1000</p>
+  <dl>
+   <dt>
+    Date:
+   </dt>
+   <dd>
+    14/02/2022
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#Concept" target="_blank" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#altLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#altLabel">alt Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Forme letterarie"@it</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#altLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#altLabel">alt Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Literary forms"@en</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#altLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#altLabel">alt Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Literary genres"@en</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#closeMatch" target="_blank" title="http://www.w3.org/2004/02/skos/core#closeMatch">close Match</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"http://data.bnf.fr/ark:/12148/cb119480714"</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#closeMatch" target="_blank" title="http://www.w3.org/2004/02/skos/core#closeMatch">close Match</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"http://datos.bne.es/tema/XX525948.html"</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#closeMatch" target="_blank" title="http://www.w3.org/2004/02/skos/core#closeMatch">close Match</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"http://id.loc.gov/authorities/subjects/sh85077490.html"</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#closeMatch" target="_blank" title="http://www.w3.org/2004/02/skos/core#closeMatch">close Match</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"http://purl.org/bncf/tid/1948"</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#closeMatch" target="_blank" title="http://www.w3.org/2004/02/skos/core#closeMatch">close Match</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"http://www.wikidata.org/wiki/Q223393"</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#narrower" target="_blank" title="http://www.w3.org/2004/02/skos/core#narrower">narrower</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#10001" title="http://imagoarchive.it/thes/tid/10001">Trattatistica geografica</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#narrower" target="_blank" title="http://www.w3.org/2004/02/skos/core#narrower">narrower</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#10002" title="http://imagoarchive.it/thes/tid/10002">Letteratura odeporica</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#narrower" target="_blank" title="http://www.w3.org/2004/02/skos/core#narrower">narrower</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#10003" title="http://imagoarchive.it/thes/tid/10003">Cartografia</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#narrower" target="_blank" title="http://www.w3.org/2004/02/skos/core#narrower">narrower</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#10004" title="http://imagoarchive.it/thes/tid/10004">Agiografia</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#narrower" target="_blank" title="http://www.w3.org/2004/02/skos/core#narrower">narrower</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#10005" title="http://imagoarchive.it/thes/tid/10005">Trattatistica antiquaria e archeologica</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#narrower" target="_blank" title="http://www.w3.org/2004/02/skos/core#narrower">narrower</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#10006" title="http://imagoarchive.it/thes/tid/10006">Epistolografia</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#narrower" target="_blank" title="http://www.w3.org/2004/02/skos/core#narrower">narrower</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#10007" title="http://imagoarchive.it/thes/tid/10007">Novellistica</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#narrower" target="_blank" title="http://www.w3.org/2004/02/skos/core#narrower">narrower</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#10008" title="http://imagoarchive.it/thes/tid/10008">Poesia</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#narrower" target="_blank" title="http://www.w3.org/2004/02/skos/core#narrower">narrower</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#10009" title="http://imagoarchive.it/thes/tid/10009">Storiografia</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#narrower" target="_blank" title="http://www.w3.org/2004/02/skos/core#narrower">narrower</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#10010" title="http://imagoarchive.it/thes/tid/10010">Teatro</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#narrower" target="_blank" title="http://www.w3.org/2004/02/skos/core#narrower">narrower</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#10011" title="http://imagoarchive.it/thes/tid/10011">Trattatistica termale</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Generi letterari"@it</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#scopeNote" target="_blank" title="http://www.w3.org/2004/02/skos/core#scopeNote">scope Note</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Le varie forme di espressione letteraria, nell'ambito della letteratura d'autore, a seconda dei mezzi formali impiegati (narrativa, poesia, poesia lirica, sonetti, tragedia, ecc.), dei temi e motivi trattati (poesia amorosa, fantasy, letteratura satirica, ecc.), del tipo di autori o della destinazione"</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#topConceptOf" target="_blank" title="http://www.w3.org/2004/02/skos/core#topConceptOf">top Concept Of</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="https://imagoarchive.it/Thes" target="_blank" title="https://imagoarchive.it/Thes">Thes</a> <sup class="type-ep" title="external property">ep</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#topConceptOf" target="_blank" title="http://www.w3.org/2004/02/skos/core#topConceptOf">top Concept Of</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#https://imagoarchive.it/thes/ThesCF1" title="https://imagoarchive.it/thes/ThesCF1">Thes C F1</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="">
+  <h3>Imago Genre Thesaurus<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://imagoarchive.it/thes/tid/</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#ConceptScheme" target="_blank" title="http://www.w3.org/2004/02/skos/core#ConceptScheme">Concept Scheme</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="100013">
+  <h3>Insulari<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://imagoarchive.it/thes/tid/100013</p>
+  <dl>
+   <dt>
+    Date:
+   </dt>
+   <dd>
+    14/02/2022
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#Concept" target="_blank" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#altLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#altLabel">alt Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Insulari"@en</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#broader" target="_blank" title="http://www.w3.org/2004/02/skos/core#broader">broader</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#10001" title="http://imagoarchive.it/thes/tid/10001">Trattatistica geografica</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Insulari"@it</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="100021">
+  <h3>Itineraria<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://imagoarchive.it/thes/tid/100021</p>
+  <dl>
+   <dt>
+    Date:
+   </dt>
+   <dd>
+    14/02/2022
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#Concept" target="_blank" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#altLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#altLabel">alt Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Itineraria"@en</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#broader" target="_blank" title="http://www.w3.org/2004/02/skos/core#broader">broader</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#10002" title="http://imagoarchive.it/thes/tid/10002">Letteratura odeporica</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Itineraria"@la</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="1000905">
+  <h3>Ktiseis<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://imagoarchive.it/thes/tid/1000905</p>
+  <dl>
+   <dt>
+    Date:
+   </dt>
+   <dd>
+    14/02/2022
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#Concept" target="_blank" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#altLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#altLabel">alt Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Origini delle città"@it</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#altLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#altLabel">alt Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Origins of cities"@en</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#broader" target="_blank" title="http://www.w3.org/2004/02/skos/core#broader">broader</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#10009" title="http://imagoarchive.it/thes/tid/10009">Storiografia</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Ktiseis"</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="1000904">
+  <h3>Laudes urbium<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://imagoarchive.it/thes/tid/1000904</p>
+  <dl>
+   <dt>
+    Date:
+   </dt>
+   <dd>
+    14/02/2022
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#Concept" target="_blank" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#altLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#altLabel">alt Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Laudes urbium"@en</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#broader" target="_blank" title="http://www.w3.org/2004/02/skos/core#broader">broader</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#10009" title="http://imagoarchive.it/thes/tid/10009">Storiografia</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Laudes urbium"@la</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="10002">
+  <h3>Letteratura odeporica<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://imagoarchive.it/thes/tid/10002</p>
+  <dl>
+   <dt>
+    Date:
+   </dt>
+   <dd>
+    14/02/2022
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#Concept" target="_blank" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#altLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#altLabel">alt Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Travel literature"@en</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#broader" target="_blank" title="http://www.w3.org/2004/02/skos/core#broader">broader</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#1000" title="http://imagoarchive.it/thes/tid/1000">Generi letterari</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#closeMatch" target="_blank" title="http://www.w3.org/2004/02/skos/core#closeMatch">close Match</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"http://purl.org/bncf/tid/48098"</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#narrower" target="_blank" title="http://www.w3.org/2004/02/skos/core#narrower">narrower</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#100021" title="http://imagoarchive.it/thes/tid/100021">Itineraria</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#narrower" target="_blank" title="http://www.w3.org/2004/02/skos/core#narrower">narrower</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#100022" title="http://imagoarchive.it/thes/tid/100022">Peregrinationes</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#narrower" target="_blank" title="http://www.w3.org/2004/02/skos/core#narrower">narrower</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#100023" title="http://imagoarchive.it/thes/tid/100023">Periegesi</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#narrower" target="_blank" title="http://www.w3.org/2004/02/skos/core#narrower">narrower</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#100024" title="http://imagoarchive.it/thes/tid/100024">Peripli</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#narrower" target="_blank" title="http://www.w3.org/2004/02/skos/core#narrower">narrower</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#100025" title="http://imagoarchive.it/thes/tid/100025">Navigazioni</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#narrower" target="_blank" title="http://www.w3.org/2004/02/skos/core#narrower">narrower</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#100026" title="http://imagoarchive.it/thes/tid/100026">Diari di viaggio</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Letteratura odeporica"@it</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="1000907">
+  <h3>Memorialistica<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://imagoarchive.it/thes/tid/1000907</p>
+  <dl>
+   <dt>
+    Date:
+   </dt>
+   <dd>
+    14/02/2022
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#Concept" target="_blank" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#altLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#altLabel">alt Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Memoirs"@en</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#broader" target="_blank" title="http://www.w3.org/2004/02/skos/core#broader">broader</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#10009" title="http://imagoarchive.it/thes/tid/10009">Storiografia</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Memorialistica"@it</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="100044">
+  <h3>Miracula<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://imagoarchive.it/thes/tid/100044</p>
+  <dl>
+   <dt>
+    Date:
+   </dt>
+   <dd>
+    14/02/2022
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#Concept" target="_blank" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#altLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#altLabel">alt Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Miracula"@en</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#broader" target="_blank" title="http://www.w3.org/2004/02/skos/core#broader">broader</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#10004" title="http://imagoarchive.it/thes/tid/10004">Agiografia</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Miracula"@la</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="1000903">
+  <h3>Monografie storiche<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://imagoarchive.it/thes/tid/1000903</p>
+  <dl>
+   <dt>
+    Date:
+   </dt>
+   <dd>
+    14/02/2022
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#Concept" target="_blank" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#altLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#altLabel">alt Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Historical monographs"@en</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#broader" target="_blank" title="http://www.w3.org/2004/02/skos/core#broader">broader</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#10009" title="http://imagoarchive.it/thes/tid/10009">Storiografia</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Monografie storiche"@it</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="100025">
+  <h3>Navigazioni<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://imagoarchive.it/thes/tid/100025</p>
+  <dl>
+   <dt>
+    Date:
+   </dt>
+   <dd>
+    14/02/2022
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#Concept" target="_blank" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#altLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#altLabel">alt Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Navigations"@en</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#broader" target="_blank" title="http://www.w3.org/2004/02/skos/core#broader">broader</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#10002" title="http://imagoarchive.it/thes/tid/10002">Letteratura odeporica</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Navigazioni"@it</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="10007">
+  <h3>Novellistica<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://imagoarchive.it/thes/tid/10007</p>
+  <dl>
+   <dt>
+    Date:
+   </dt>
+   <dd>
+    14/02/2022
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#Concept" target="_blank" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#altLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#altLabel">alt Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Short stories"@en</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#broader" target="_blank" title="http://www.w3.org/2004/02/skos/core#broader">broader</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#1000" title="http://imagoarchive.it/thes/tid/1000">Generi letterari</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Novellistica"@it</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="1000906">
+  <h3>Panegiristica<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://imagoarchive.it/thes/tid/1000906</p>
+  <dl>
+   <dt>
+    Date:
+   </dt>
+   <dd>
+    14/02/2022
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#Concept" target="_blank" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#altLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#altLabel">alt Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Panegyristics"@en</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#broader" target="_blank" title="http://www.w3.org/2004/02/skos/core#broader">broader</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#10009" title="http://imagoarchive.it/thes/tid/10009">Storiografia</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Panegiristica"@it</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="100041">
+  <h3>Passiones<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://imagoarchive.it/thes/tid/100041</p>
+  <dl>
+   <dt>
+    Date:
+   </dt>
+   <dd>
+    14/02/2022
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#Concept" target="_blank" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#altLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#altLabel">alt Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Passiones"@en</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#broader" target="_blank" title="http://www.w3.org/2004/02/skos/core#broader">broader</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#10004" title="http://imagoarchive.it/thes/tid/10004">Agiografia</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Passiones"@la</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="100022">
+  <h3>Peregrinationes<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://imagoarchive.it/thes/tid/100022</p>
+  <dl>
+   <dt>
+    Date:
+   </dt>
+   <dd>
+    14/02/2022
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#Concept" target="_blank" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#altLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#altLabel">alt Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Peregrinationes"@en</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#broader" target="_blank" title="http://www.w3.org/2004/02/skos/core#broader">broader</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#10002" title="http://imagoarchive.it/thes/tid/10002">Letteratura odeporica</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Peregrinationes"@la</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="100023">
+  <h3>Periegesi<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://imagoarchive.it/thes/tid/100023</p>
+  <dl>
+   <dt>
+    Date:
+   </dt>
+   <dd>
+    14/02/2022
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#Concept" target="_blank" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#altLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#altLabel">alt Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Periegesis"@en</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#broader" target="_blank" title="http://www.w3.org/2004/02/skos/core#broader">broader</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#10002" title="http://imagoarchive.it/thes/tid/10002">Letteratura odeporica</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Periegesi"@it</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="100024">
+  <h3>Peripli<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://imagoarchive.it/thes/tid/100024</p>
+  <dl>
+   <dt>
+    Date:
+   </dt>
+   <dd>
+    14/02/2022
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#Concept" target="_blank" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#altLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#altLabel">alt Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Periplus"@en</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#broader" target="_blank" title="http://www.w3.org/2004/02/skos/core#broader">broader</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#10002" title="http://imagoarchive.it/thes/tid/10002">Letteratura odeporica</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Peripli"@it</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="100032">
+  <h3>Planisferi e mappamondi<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://imagoarchive.it/thes/tid/100032</p>
+  <dl>
+   <dt>
+    Date:
+   </dt>
+   <dd>
+    14/02/2022
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#Concept" target="_blank" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#altLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#altLabel">alt Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Planispheres and globes"@en</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#broader" target="_blank" title="http://www.w3.org/2004/02/skos/core#broader">broader</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#10003" title="http://imagoarchive.it/thes/tid/10003">Cartografia</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#closeMatch" target="_blank" title="http://www.w3.org/2004/02/skos/core#closeMatch">close Match</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"http://purl.org/bncf/tid/30293"</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Planisferi e mappamondi"@it</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="10008">
+  <h3>Poesia<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://imagoarchive.it/thes/tid/10008</p>
+  <dl>
+   <dt>
+    Date:
+   </dt>
+   <dd>
+    14/02/2022
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#Concept" target="_blank" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#altLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#altLabel">alt Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Poetry"@en</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#broader" target="_blank" title="http://www.w3.org/2004/02/skos/core#broader">broader</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#1000" title="http://imagoarchive.it/thes/tid/1000">Generi letterari</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#closeMatch" target="_blank" title="http://www.w3.org/2004/02/skos/core#closeMatch">close Match</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"http://data.bnf.fr/ark:/12148/cb11933161p"</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#closeMatch" target="_blank" title="http://www.w3.org/2004/02/skos/core#closeMatch">close Match</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"http://datos.bne.es/tema/XX4576326"</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#closeMatch" target="_blank" title="http://www.w3.org/2004/02/skos/core#closeMatch">close Match</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"http://id.loc.gov/authorities/sh85103704"</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#closeMatch" target="_blank" title="http://www.w3.org/2004/02/skos/core#closeMatch">close Match</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"http://purl.org/bncf/tid/3066"</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#narrower" target="_blank" title="http://www.w3.org/2004/02/skos/core#narrower">narrower</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#100081" title="http://imagoarchive.it/thes/tid/100081">Poesia lirica</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#narrower" target="_blank" title="http://www.w3.org/2004/02/skos/core#narrower">narrower</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#100082" title="http://imagoarchive.it/thes/tid/100082">Elegie</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#narrower" target="_blank" title="http://www.w3.org/2004/02/skos/core#narrower">narrower</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#100083" title="http://imagoarchive.it/thes/tid/100083">Poesia satirica</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#narrower" target="_blank" title="http://www.w3.org/2004/02/skos/core#narrower">narrower</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#100084" title="http://imagoarchive.it/thes/tid/100084">Epica</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#narrower" target="_blank" title="http://www.w3.org/2004/02/skos/core#narrower">narrower</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#100085" title="http://imagoarchive.it/thes/tid/100085">Poesia didascalica</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#narrower" target="_blank" title="http://www.w3.org/2004/02/skos/core#narrower">narrower</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#100086" title="http://imagoarchive.it/thes/tid/100086">Poesia bucolica</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Poesia"@it</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="100086">
+  <h3>Poesia bucolica<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://imagoarchive.it/thes/tid/100086</p>
+  <dl>
+   <dt>
+    Date:
+   </dt>
+   <dd>
+    14/02/2022
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#Concept" target="_blank" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#altLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#altLabel">alt Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Poesia pastorale"</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#broader" target="_blank" title="http://www.w3.org/2004/02/skos/core#broader">broader</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#10008" title="http://imagoarchive.it/thes/tid/10008">Poesia</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#closeMatch" target="_blank" title="http://www.w3.org/2004/02/skos/core#closeMatch">close Match</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"http://data.bnf.fr/ark:/12148/cb119532872"</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#closeMatch" target="_blank" title="http://www.w3.org/2004/02/skos/core#closeMatch">close Match</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"http://id.loc.gov/authorities/sh85098584"</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#closeMatch" target="_blank" title="http://www.w3.org/2004/02/skos/core#closeMatch">close Match</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"http://purl.org/bncf/tid/5439"</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Poesia bucolica"@it</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="100085">
+  <h3>Poesia didascalica<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://imagoarchive.it/thes/tid/100085</p>
+  <dl>
+   <dt>
+    Date:
+   </dt>
+   <dd>
+    14/02/2022
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#Concept" target="_blank" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#altLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#altLabel">alt Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Didactic poetry"@en</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#broader" target="_blank" title="http://www.w3.org/2004/02/skos/core#broader">broader</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#10008" title="http://imagoarchive.it/thes/tid/10008">Poesia</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#closeMatch" target="_blank" title="http://www.w3.org/2004/02/skos/core#closeMatch">close Match</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"http://id.loc.gov/authorities/sh85037731"</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#closeMatch" target="_blank" title="http://www.w3.org/2004/02/skos/core#closeMatch">close Match</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"http://purl.org/bncf/tid/6925"</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Poesia didascalica"@it</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="100081">
+  <h3>Poesia lirica<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://imagoarchive.it/thes/tid/100081</p>
+  <dl>
+   <dt>
+    Date:
+   </dt>
+   <dd>
+    14/02/2022
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#Concept" target="_blank" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#altLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#altLabel">alt Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Lyrical poetry"@en</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#broader" target="_blank" title="http://www.w3.org/2004/02/skos/core#broader">broader</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#10008" title="http://imagoarchive.it/thes/tid/10008">Poesia</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#closeMatch" target="_blank" title="http://www.w3.org/2004/02/skos/core#closeMatch">close Match</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"http://data.bnf.fr/ark:/12148/cb119498002"</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#closeMatch" target="_blank" title="http://www.w3.org/2004/02/skos/core#closeMatch">close Match</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"http://datos.bne.es/tema/XX530008"</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#closeMatch" target="_blank" title="http://www.w3.org/2004/02/skos/core#closeMatch">close Match</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"http://id.loc.gov/authorities/sh85079180"</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#closeMatch" target="_blank" title="http://www.w3.org/2004/02/skos/core#closeMatch">close Match</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"http://purl.org/bncf/tid/3466"</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Poesia lirica"@it</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="100083">
+  <h3>Poesia satirica<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://imagoarchive.it/thes/tid/100083</p>
+  <dl>
+   <dt>
+    Date:
+   </dt>
+   <dd>
+    14/02/2022
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#Concept" target="_blank" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#altLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#altLabel">alt Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Satirical poetry"@en</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#broader" target="_blank" title="http://www.w3.org/2004/02/skos/core#broader">broader</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#10008" title="http://imagoarchive.it/thes/tid/10008">Poesia</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#closeMatch" target="_blank" title="http://www.w3.org/2004/02/skos/core#closeMatch">close Match</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"http://data.bnf.fr/ark:/12148/cb12306307n"</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#closeMatch" target="_blank" title="http://www.w3.org/2004/02/skos/core#closeMatch">close Match</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"http://datos.bne.es/tema/XX537425"</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#closeMatch" target="_blank" title="http://www.w3.org/2004/02/skos/core#closeMatch">close Match</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"http://id.loc.gov/authorities/sh85142875"</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#closeMatch" target="_blank" title="http://www.w3.org/2004/02/skos/core#closeMatch">close Match</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"http://purl.org/bncf/tid/34535"</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Poesia satirica"@it</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="100033">
+  <h3>Portolani e carte nautiche<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://imagoarchive.it/thes/tid/100033</p>
+  <dl>
+   <dt>
+    Date:
+   </dt>
+   <dd>
+    14/02/2022
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#Concept" target="_blank" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#altLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#altLabel">alt Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Portolans and nautical charts"@en</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#broader" target="_blank" title="http://www.w3.org/2004/02/skos/core#broader">broader</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#10003" title="http://imagoarchive.it/thes/tid/10003">Cartografia</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#closeMatch" target="_blank" title="http://www.w3.org/2004/02/skos/core#closeMatch">close Match</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"http://purl.org/bncf/tid/29748"</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Portolani e carte nautiche"@it</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="1000902">
+  <h3>Storia patria<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://imagoarchive.it/thes/tid/1000902</p>
+  <dl>
+   <dt>
+    Date:
+   </dt>
+   <dd>
+    14/02/2022
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#Concept" target="_blank" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#altLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#altLabel">alt Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Homeland history"@en</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#broader" target="_blank" title="http://www.w3.org/2004/02/skos/core#broader">broader</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#10009" title="http://imagoarchive.it/thes/tid/10009">Storiografia</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Storia patria"@it</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="10009">
+  <h3>Storiografia<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://imagoarchive.it/thes/tid/10009</p>
+  <dl>
+   <dt>
+    Date:
+   </dt>
+   <dd>
+    14/02/2022
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#Concept" target="_blank" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#altLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#altLabel">alt Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Historiography"@en</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#broader" target="_blank" title="http://www.w3.org/2004/02/skos/core#broader">broader</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#1000" title="http://imagoarchive.it/thes/tid/1000">Generi letterari</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#closeMatch" target="_blank" title="http://www.w3.org/2004/02/skos/core#closeMatch">close Match</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"http://data.bnf.fr/ark:/12148/cb11934225b"</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#closeMatch" target="_blank" title="http://www.w3.org/2004/02/skos/core#closeMatch">close Match</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"http://datos.bne.es/tema/XX527052"</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#closeMatch" target="_blank" title="http://www.w3.org/2004/02/skos/core#closeMatch">close Match</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"http://id.loc.gov/authorities/sh85061211"</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#closeMatch" target="_blank" title="http://www.w3.org/2004/02/skos/core#closeMatch">close Match</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"http://purl.org/bncf/tid/9645"</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#narrower" target="_blank" title="http://www.w3.org/2004/02/skos/core#narrower">narrower</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#1000901" title="http://imagoarchive.it/thes/tid/1000901">Annalistica</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#narrower" target="_blank" title="http://www.w3.org/2004/02/skos/core#narrower">narrower</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#1000902" title="http://imagoarchive.it/thes/tid/1000902">Storia patria</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#narrower" target="_blank" title="http://www.w3.org/2004/02/skos/core#narrower">narrower</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#1000903" title="http://imagoarchive.it/thes/tid/1000903">Monografie storiche</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#narrower" target="_blank" title="http://www.w3.org/2004/02/skos/core#narrower">narrower</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#1000904" title="http://imagoarchive.it/thes/tid/1000904">Laudes urbium</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#narrower" target="_blank" title="http://www.w3.org/2004/02/skos/core#narrower">narrower</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#1000905" title="http://imagoarchive.it/thes/tid/1000905">Ktiseis</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#narrower" target="_blank" title="http://www.w3.org/2004/02/skos/core#narrower">narrower</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#1000906" title="http://imagoarchive.it/thes/tid/1000906">Panegiristica</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#narrower" target="_blank" title="http://www.w3.org/2004/02/skos/core#narrower">narrower</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#1000907" title="http://imagoarchive.it/thes/tid/1000907">Memorialistica</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#narrower" target="_blank" title="http://www.w3.org/2004/02/skos/core#narrower">narrower</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#1000908" title="http://imagoarchive.it/thes/tid/1000908">Cronache</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#narrower" target="_blank" title="http://www.w3.org/2004/02/skos/core#narrower">narrower</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#1000909" title="http://imagoarchive.it/thes/tid/1000909">Commentari</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#narrower" target="_blank" title="http://www.w3.org/2004/02/skos/core#narrower">narrower</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#1000910" title="http://imagoarchive.it/thes/tid/1000910">Autobiografie</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#narrower" target="_blank" title="http://www.w3.org/2004/02/skos/core#narrower">narrower</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#1000911" title="http://imagoarchive.it/thes/tid/1000911">Biografie e collane di biografie</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#narrower" target="_blank" title="http://www.w3.org/2004/02/skos/core#narrower">narrower</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#1000912" title="http://imagoarchive.it/thes/tid/1000912">Genealogie</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#narrower" target="_blank" title="http://www.w3.org/2004/02/skos/core#narrower">narrower</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#1000913" title="http://imagoarchive.it/thes/tid/1000913">Aneddotica</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Storiografia"@it</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="100031">
+  <h3>Tabulae<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://imagoarchive.it/thes/tid/100031</p>
+  <dl>
+   <dt>
+    Date:
+   </dt>
+   <dd>
+    14/02/2022
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#Concept" target="_blank" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#altLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#altLabel">alt Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Tabulae"@en</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#broader" target="_blank" title="http://www.w3.org/2004/02/skos/core#broader">broader</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#10003" title="http://imagoarchive.it/thes/tid/10003">Cartografia</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Tabulae"@la</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="10010">
+  <h3>Teatro<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://imagoarchive.it/thes/tid/10010</p>
+  <dl>
+   <dt>
+    Date:
+   </dt>
+   <dd>
+    14/02/2022
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#Concept" target="_blank" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#altLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#altLabel">alt Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Theater"@en</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#broader" target="_blank" title="http://www.w3.org/2004/02/skos/core#broader">broader</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#1000" title="http://imagoarchive.it/thes/tid/1000">Generi letterari</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#closeMatch" target="_blank" title="http://www.w3.org/2004/02/skos/core#closeMatch">close Match</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"http://data.bnf.fr/ark:/12148/cb13162689q"</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#closeMatch" target="_blank" title="http://www.w3.org/2004/02/skos/core#closeMatch">close Match</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"http://datos.bne.es/tema/XX524524"</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#closeMatch" target="_blank" title="http://www.w3.org/2004/02/skos/core#closeMatch">close Match</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"http://id.loc.gov/authorities/sh85134522"</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#closeMatch" target="_blank" title="http://www.w3.org/2004/02/skos/core#closeMatch">close Match</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"http://purl.org/bncf/tid/782"</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#narrower" target="_blank" title="http://www.w3.org/2004/02/skos/core#narrower">narrower</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#100101" title="http://imagoarchive.it/thes/tid/100101">Dramma sacro</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#narrower" target="_blank" title="http://www.w3.org/2004/02/skos/core#narrower">narrower</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#100102" title="http://imagoarchive.it/thes/tid/100102">Commedia elegiaca</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#narrower" target="_blank" title="http://www.w3.org/2004/02/skos/core#narrower">narrower</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#100103" title="http://imagoarchive.it/thes/tid/100103">Commedia umanistica</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#narrower" target="_blank" title="http://www.w3.org/2004/02/skos/core#narrower">narrower</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#100104" title="http://imagoarchive.it/thes/tid/100104">Tragedia umanistica</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#narrower" target="_blank" title="http://www.w3.org/2004/02/skos/core#narrower">narrower</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#100105" title="http://imagoarchive.it/thes/tid/100105">Dramma storico</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Teatro"@it</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://imagoarchive.it/thes/ThesCF1">
+  <h3>Thes C F1<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://imagoarchive.it/thes/ThesCF1</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#ConceptScheme" target="_blank" title="http://www.w3.org/2004/02/skos/core#ConceptScheme">Concept Scheme</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://purl.org/dc/terms/isPartOf" target="_blank" title="http://purl.org/dc/terms/isPartOf">is Part Of</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"http://imagoarchive.it/thes/tid/"</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#hasTopConcept" target="_blank" title="http://www.w3.org/2004/02/skos/core#hasTopConcept">has Top Concept</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="https://imagoarchive.it/thes/tid/1000" target="_blank" title="https://imagoarchive.it/thes/tid/1000">1000</a> <sup class="type-ep" title="external property">ep</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#inScheme" target="_blank" title="http://www.w3.org/2004/02/skos/core#inScheme">in Scheme</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"http://imagoarchive.it/thes/tid/"</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="100104">
+  <h3>Tragedia umanistica<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://imagoarchive.it/thes/tid/100104</p>
+  <dl>
+   <dt>
+    Date:
+   </dt>
+   <dd>
+    14/02/2022
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#Concept" target="_blank" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#altLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#altLabel">alt Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Humanistic tragedy"@en</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#broader" target="_blank" title="http://www.w3.org/2004/02/skos/core#broader">broader</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#10010" title="http://imagoarchive.it/thes/tid/10010">Teatro</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Tragedia umanistica"@it</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="100043">
+  <h3>Translationes<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://imagoarchive.it/thes/tid/100043</p>
+  <dl>
+   <dt>
+    Date:
+   </dt>
+   <dd>
+    14/02/2022
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#Concept" target="_blank" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#altLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#altLabel">alt Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Translationes"@en</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#broader" target="_blank" title="http://www.w3.org/2004/02/skos/core#broader">broader</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#10004" title="http://imagoarchive.it/thes/tid/10004">Agiografia</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Translationes"@la</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="10005">
+  <h3>Trattatistica antiquaria e archeologica<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://imagoarchive.it/thes/tid/10005</p>
+  <dl>
+   <dt>
+    Date:
+   </dt>
+   <dd>
+    14/02/2022
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#Concept" target="_blank" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#altLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#altLabel">alt Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Antiquarian and archaeological treatises"@en</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#broader" target="_blank" title="http://www.w3.org/2004/02/skos/core#broader">broader</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#1000" title="http://imagoarchive.it/thes/tid/1000">Generi letterari</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Trattatistica antiquaria e archeologica"@it</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="10001">
+  <h3>Trattatistica geografica<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://imagoarchive.it/thes/tid/10001</p>
+  <dl>
+   <dt>
+    Date:
+   </dt>
+   <dd>
+    14/02/2022
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#Concept" target="_blank" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#altLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#altLabel">alt Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Geographical treatises"@en</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#broader" target="_blank" title="http://www.w3.org/2004/02/skos/core#broader">broader</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#1000" title="http://imagoarchive.it/thes/tid/1000">Generi letterari</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#narrower" target="_blank" title="http://www.w3.org/2004/02/skos/core#narrower">narrower</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#100011" title="http://imagoarchive.it/thes/tid/100011">Cosmografie</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#narrower" target="_blank" title="http://www.w3.org/2004/02/skos/core#narrower">narrower</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#100012" title="http://imagoarchive.it/thes/tid/100012">Corografie</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#narrower" target="_blank" title="http://www.w3.org/2004/02/skos/core#narrower">narrower</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#100013" title="http://imagoarchive.it/thes/tid/100013">Insulari</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#narrower" target="_blank" title="http://www.w3.org/2004/02/skos/core#narrower">narrower</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#100014" title="http://imagoarchive.it/thes/tid/100014">Descriptiones</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Trattatistica geografica"@it</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="10011">
+  <h3>Trattatistica termale<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://imagoarchive.it/thes/tid/10011</p>
+  <dl>
+   <dt>
+    Date:
+   </dt>
+   <dd>
+    14/02/2022
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#Concept" target="_blank" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#altLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#altLabel">alt Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Spa treatise"@en</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#broader" target="_blank" title="http://www.w3.org/2004/02/skos/core#broader">broader</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#1000" title="http://imagoarchive.it/thes/tid/1000">Generi letterari</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Trattatistica termale"@it</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="100042">
+  <h3>Vitae<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://imagoarchive.it/thes/tid/100042</p>
+  <dl>
+   <dt>
+    Date:
+   </dt>
+   <dd>
+    14/02/2022
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#Concept" target="_blank" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#altLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#altLabel">alt Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Vitae"@en</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#broader" target="_blank" title="http://www.w3.org/2004/02/skos/core#broader">broader</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#10004" title="http://imagoarchive.it/thes/tid/10004">Agiografia</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Vitae"@la</span>
+   </dd>
+  </dl>
+ </div>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-ni" title="Named Individuals">ni</sup>: Named Individuals <br/>
+<sup class="type-ep" title="External Properties">ep</sup>: External Properties
+</div>
+</div>
+</div>
+<div id="acknowledgments">
+<h2 id="ack" class="list">Acknowledgments <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<p>
+The authors would like to thank <a href="http://www.essepuntato.it/">Silvio Peroni</a> for developing <a href="http://www.essepuntato.it/lode">LODE</a>, a Live OWL Documentation Environment, which is used for representing the Cross Referencing Section of this document and <a href="https://w3id.org/people/dgarijo">Daniel Garijo</a> for developing <a href="https://github.com/dgarijo/Widoco">Widoco</a>, the program used to create the template used in this documentation.</p>
+</div>
+
+
+</div>
+</body>
+</html>

@@ -10,3 +10,6 @@ config.properties
 #exclude turtle
 data/dumps/*.ttl
 catalog-v001.xml
+
+# widoco
+widoco-1.4.25-jar-with-dependencies_JDK-17.jar
