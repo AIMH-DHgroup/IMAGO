@@ -21694,9 +21694,9 @@ dcterms:subject  rdf:type  owl:AnnotationProperty .
         <http://erlangen-crm.org/211015/P74_has_current_or_former_residence>
                 <http://www.wikidata.org/entity/Q220> .
 
-<https://imagoarchive.it/thes/is_composed_of_place_name>
+<https://imagoarchive.it/ontology/is_composed_of_place_name>
         rdf:type            owl:ObjectProperty ;
-        rdfs:comment        "In the IMAGO Ontology 'is composed of author\" links a Print Edition to a Appellation of a Place"@en ;
+        rdfs:comment        "In the IMAGO Ontology 'is composed of place name\" links a Print Edition to a Appellation of a Place"@en ;
         rdfs:domain         :Printed_Edition ;
         rdfs:label          "is composed of place name"@en ;
         rdfs:range          <http://erlangen-crm.org/211015/E41_Appellation> ;
@@ -94537,7 +94537,7 @@ dcterms:audience  rdf:type  owl:AnnotationProperty .
         <http://erlangen-crm.org/211015/P190_has_symbolic_content>
                 "Theol. et phil. 8° 57" .
 
-<https://imagoarchive.it/thes/is_composed_of_author>
+<https://imagoarchive.it/ontology/is_composed_of_author>
         rdf:type            owl:ObjectProperty ;
         rdfs:comment        "In the IMAGO Ontology 'is composed of author\" links a Print Edition to a E90 Symbolic Object"@en ;
         rdfs:domain         :Printed_Edition ;
@@ -109504,9 +109504,9 @@ prov:wasGeneratedBy  rdf:type  owl:AnnotationProperty .
         :has_end_date    "1500-01-01T00:00:00Z"^^xsd:dateTime ;
         :has_start_date  "1401-01-01T00:00:00Z"^^xsd:dateTime .
 
-<https://imagoarchive.it/thes/is_composed_of_pages>
+<https://imagoarchive.it/ontology/is_composed_of_pages>
         rdf:type            owl:ObjectProperty ;
-        rdfs:comment        "In the IMAGO Ontology 'is composed of author\" links a Print Edition to a E90 Symbolic Object"@en ;
+        rdfs:comment        "In the IMAGO Ontology 'is composed of pages\" links a Print Edition to a E90 Symbolic Object"@en ;
         rdfs:domain         :Printed_Edition ;
         rdfs:label          "is composed of pages"@en ;
         rdfs:subPropertyOf  <http://erlangen-crm.org/211015/P106_is_composed_of> .

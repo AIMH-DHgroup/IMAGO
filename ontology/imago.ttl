@@ -231,28 +231,28 @@ foaf:workplaceHomepage rdf:type owl:AnnotationProperty .
                     rdfs:label "is text incipit of"@en .
 
 
-###  https://imagoarchive.it/thes/is_composed_of_author
-<https://imagoarchive.it/thes/is_composed_of_author> rdf:type owl:ObjectProperty ;
+###  https://imagoarchive.it/ontology/is_composed_of_author
+<https://imagoarchive.it/ontology/is_composed_of_author> rdf:type owl:ObjectProperty ;
                                                      rdfs:subPropertyOf <http://erlangen-crm.org/211015/P106_is_composed_of> ;
                                                      rdfs:domain :Printed_Edition ;
                                                      rdfs:comment "In the IMAGO Ontology 'is composed of author\" links a Print Edition to a E90 Symbolic Object"@en ;
                                                      rdfs:label "is composed of author"@en .
 
 
-###  https://imagoarchive.it/thes/is_composed_of_pages
-<https://imagoarchive.it/thes/is_composed_of_pages> rdf:type owl:ObjectProperty ;
+###  https://imagoarchive.it/ontology/is_composed_of_pages
+<https://imagoarchive.it/ontology//is_composed_of_pages> rdf:type owl:ObjectProperty ;
                                                     rdfs:subPropertyOf <http://erlangen-crm.org/211015/P106_is_composed_of> ;
                                                     rdfs:domain :Printed_Edition ;
-                                                    rdfs:comment "In the IMAGO Ontology 'is composed of author\" links a Print Edition to a E90 Symbolic Object"@en ;
+                                                    rdfs:comment "In the IMAGO Ontology 'is composed of pages\" links a Print Edition to a E90 Symbolic Object"@en ;
                                                     rdfs:label "is composed of pages"@en .
 
 
-###  https://imagoarchive.it/thes/is_composed_of_place_name
-<https://imagoarchive.it/thes/is_composed_of_place_name> rdf:type owl:ObjectProperty ;
+###  https://imagoarchive.it/ontology/is_composed_of_place_name
+<https://imagoarchive.it/ontology/is_composed_of_place_name> rdf:type owl:ObjectProperty ;
                                                          rdfs:subPropertyOf <http://erlangen-crm.org/211015/P106_is_composed_of> ;
                                                          rdfs:domain :Printed_Edition ;
                                                          rdfs:range <http://erlangen-crm.org/211015/E41_Appellation> ;
-                                                         rdfs:comment "In the IMAGO Ontology 'is composed of author\" links a Print Edition to a Appellation of a Place"@en ;
+                                                         rdfs:comment "In the IMAGO Ontology 'is composed of place name\" links a Print Edition to a Appellation of a Place"@en ;
                                                          rdfs:label "is composed of place name"@en .
 
 

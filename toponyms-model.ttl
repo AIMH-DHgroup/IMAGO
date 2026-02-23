@@ -29,7 +29,7 @@
 <https://pleiades.stoa.org/places/383804>
         rdf:type  <http://erlangen-crm.org/211015/E53_Place> .
 
-<https://imagoarchive.it/thes/is_composed_of_author>
+<https://imagoarchive.it/ontology/is_composed_of_author>
         rdf:type            owl:ObjectProperty ;
         rdfs:comment        "In the IMAGO Ontology 'is composed of author\" links a Print Edition to a E90 Symbolic Object"@en ;
         rdfs:domain         :Printed_Edition ;
@@ -887,9 +887,9 @@ foaf:name  rdf:type  owl:DatatypeProperty .
 <https://pleiades.stoa.org/places/59822>
         rdf:type  <http://erlangen-crm.org/211015/E53_Place> .
 
-<https://imagoarchive.it/thes/is_composed_of_place_name>
+<https://imagoarchive.it/ontology/is_composed_of_place_name>
         rdf:type            owl:ObjectProperty ;
-        rdfs:comment        "In the IMAGO Ontology 'is composed of author\" links a Print Edition to a Appellation of a Place"@en ;
+        rdfs:comment        "In the IMAGO Ontology 'is composed of place name\" links a Print Edition to a Appellation of a Place"@en ;
         rdfs:domain         :Printed_Edition ;
         rdfs:label          "is composed of place name"@en ;
         rdfs:range          <http://erlangen-crm.org/211015/E41_Appellation> ;
@@ -3585,9 +3585,9 @@ vann:preferredNamespacePrefix
                 "Ex precedenter memorata confusione linguarum non leviter opinamur per universa mundi climata climatumque plagas incolendas et angulos tunc primum homines fuisse dispersos. Et cum radix humane propaginis principalis in oris orientalibus sit plantata, nec non ab inde ad utrunque latus per diffusos multipliciter palmites nostra sit extensa propago, demumque ad fines occidentales protracta, forte primitus tunc vel totius <i class='1'>Europe</i> flumina, vel saltim quedam, rationalia guctura potaverunt." ;
         :has_textual_place  "De vulg. I viii 1" .
 
-<https://imagoarchive.it/thes/is_composed_of_pages>
+<https://imagoarchive.it/ontology/is_composed_of_pages>
         rdf:type            owl:ObjectProperty ;
-        rdfs:comment        "In the IMAGO Ontology 'is composed of author\" links a Print Edition to a E90 Symbolic Object"@en ;
+        rdfs:comment        "In the IMAGO Ontology 'is composed of pages\" links a Print Edition to a E90 Symbolic Object"@en ;
         rdfs:domain         :Printed_Edition ;
         rdfs:label          "is composed of pages"@en ;
         rdfs:subPropertyOf  <http://erlangen-crm.org/211015/P106_is_composed_of> .
