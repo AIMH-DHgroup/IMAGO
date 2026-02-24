@@ -30,7 +30,7 @@ WHERE {
 }
 ```
 
-2️⃣ Subproperties of P3 has note
+## 2️⃣ Subproperties of P3 has note
 
 This query retrieves assertions made via subproperties of P3 has note.
 When reasoning is enabled, triples asserted using subproperties defined in the IMAGO ontology are also retrieved as instances of crm:P3_has_note.
@@ -52,7 +52,7 @@ WHERE {
   }
 }
 ```
-3️⃣ Items retrieved via inverse property R7i
+## 3️⃣ Items retrieved via inverse property R7i
 
 This query retrieves manuscript items connected to a manifestation through the inverse of R7i is materialized in.
 The reasoner infers the triple using ilrmoo:R7_is_materialization_of from assertions made with its inverse (R7i).
