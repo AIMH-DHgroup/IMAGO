@@ -1,6 +1,6 @@
 # IMAGO Knowledge Graph – Reasoning-based SPARQL Queries
 
-This repository provides a small set of SPARQL queries designed to demonstrate reasoning over the IMAGO Knowledge Graph (KG).  
+This repository provides a set of SPARQL queries designed to demonstrate reasoning over the IMAGO Knowledge Graph (KG).  
 By enabling OWL reasoning with Openllet, the queries retrieve not only explicitly asserted triples, but also implicit knowledge inferred from class hierarchies, subproperty axioms, and inverse property definitions defined in the IMAGO ontology and its imported reference ontologies.
 
 The following queries show how the reasoner allows the extraction of inferred class memberships, subproperty relations, and inverse property assertions from the IMAGO KG.
@@ -28,6 +28,7 @@ WHERE {
     FILTER(?roleClass IN (imago:Author, imago:Curator, imago:Publisher)) 
   }
 }
+```
 
 2️⃣ Subproperties of P3 has note
 
@@ -50,6 +51,8 @@ WHERE {
     FILTER(STRSTARTS(STR(?whichSubprop), STR(imago:)))
   }
 }
+```
+3️⃣ Items retrieved via inverse property R7i
 
 This query retrieves manuscript items connected to a manifestation through the inverse of R7i is materialized in.
 The reasoner infers the triple using ilrmoo:R7_is_materialization_of from assertions made with its inverse (R7i).
@@ -65,3 +68,4 @@ WHERE {
   ?item ilrmoo:R7_is_materialization_of ?manifestation .
   # inferred from ?manifestation R7i ?item
 }
+```
