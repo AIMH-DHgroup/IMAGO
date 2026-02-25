@@ -13,8 +13,7 @@ To test these queries, load the IMAGO KG (https://github.com/AIMH-DHgroup/IMAGO/
 
 ## 1️⃣ Individuals belonging to subclasses of E39 Actor
 
-This query retrieves all individuals inferred to belong to subclasses of **:contentReference[oaicite:0]{index=0}** (e.g., `imago:Author`, `imago:Curator`, `imago:Publisher`).  
-Thanks to reasoning, individuals explicitly typed as these subclasses are also returned as instances of `crm:E39_Actor`.
+This query retrieves all individuals inferred to belong to subclasses `crm:E39_Actor` (e.g., `imago:Author`, `imago:Curator`, `imago:Publisher`).  
 
 ```sparql
 PREFIX rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
@@ -52,9 +51,9 @@ WHERE {
   }
 }
 ```
-## 3️⃣ Items retrieved via inverse property R7i
+## 3️⃣ Manuscripts retrieved via inverse property R7i
 
-This query retrieves manuscript items connected to a manifestation through the inverse of R7i is materialized in.
+This query retrieves manuscripts connected to a manifestation through the inverse of R7i is materialized in.
 The reasoner infers the triple using ilrmoo:R7_is_materialization_of from assertions made with its inverse (R7i).
 
 ```sparql
