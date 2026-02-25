@@ -5,6 +5,10 @@ By enabling OWL reasoning with Openllet, the queries retrieve not only explicitl
 
 The following queries show how the reasoner allows the extraction of inferred class memberships, subproperty relations, and inverse property assertions from the IMAGO KG.
 
+To test these queries, load the Imago KG (https://github.com/AIMH-DHgroup/IMAGO/blob/main/data/dumps/imago-archive.ttl.gz
+) into a triplestore such as Fuseki with Openlet enabled, and execute the SPARQL queries through the endpoint. Alternatively, if running Openlet is not possible, a version of the Imago KG containing all triples already inferred by Openlet is available (https://github.com/AIMH-DHgroup/IMAGO/blob/main/data/dumps/imago-archive-inferences.ttl.gz
+)
+
 ---
 
 ## 1️⃣ Individuals belonging to subclasses of E39 Actor
