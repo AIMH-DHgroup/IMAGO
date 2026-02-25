@@ -25,8 +25,6 @@ PREFIX imago: <https://imagoarchive.it/ontology/>
 SELECT ?actor ?roleClass 
 WHERE {
   ?actor rdf:type crm:E39_Actor .          
-  # inferred from rdf:type imago:Author/Curator/Publisher
-
   OPTIONAL { 
     ?actor rdf:type ?roleClass .
     FILTER(?roleClass IN (imago:Author, imago:Curator, imago:Publisher)) 
@@ -47,8 +45,6 @@ PREFIX imago: <https://imagoarchive.it/ontology/>
 SELECT ?s ?whichSubprop
 WHERE {
   ?s crm:P3_has_note ?note .                 
-  # returns triples asserted via subproperties under reasoning
-
   OPTIONAL {
     ?whichSubprop rdfs:subPropertyOf crm:P3_has_note .
     ?s ?whichSubprop ?note .
@@ -70,6 +66,5 @@ SELECT ?item ?manifestation
 WHERE {
   ?item rdf:type imago:Manuscript .
   ?item ilrmoo:R7_is_materialization_of ?manifestation .
-  # inferred from ?manifestation R7i ?item
 }
 ```
