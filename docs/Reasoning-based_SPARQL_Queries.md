@@ -13,7 +13,7 @@ To test these queries, load the IMAGO KG (https://github.com/AIMH-DHgroup/IMAGO/
 
 ## 1️⃣ Individuals belonging to subclasses of E39 Actor
 
-This query retrieves all individuals inferred to belong to subclasses `crm:E39_Actor` (e.g., `imago:Author`, `imago:Curator`, `imago:Publisher`).  
+This query retrieves all individuals inferred to belong to subclasses of `crm:E39_Actor` (e.g., `imago:Author`, `imago:Curator`, `imago:Publisher`).  
 
 ```sparql
 PREFIX rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
