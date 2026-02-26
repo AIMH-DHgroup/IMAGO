@@ -33,8 +33,8 @@ WHERE {
 
 ## 2️⃣ Subproperties of P3 has note
 
-This query retrieves assertions made via subproperties of P3 has note.
-When reasoning is enabled, triples asserted using subproperties defined in the IMAGO ontology are also retrieved as instances of crm:P3_has_note.
+This query retrieves assertions made via subproperties of `crm:P3_has_note`.
+When reasoning is enabled, triples asserted using subproperties of `crm:P3_has_note` defined in the IMAGO ontology are also retrieved as instances of crm:P3_has_note.
 
 ```sparql
 PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
